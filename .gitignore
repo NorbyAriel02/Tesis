@@ -2,6 +2,16 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
 #
+/DeathOrPrize_v2/[Ll]ibrary/
+/DeathOrPrize_v2/[Ll]ibrary/
+/DeathOrPrize_v2/[Tt]emp/
+/DeathOrPrize_v2/[Oo]bj/
+/DeathOrPrize_v2/[Bb]uild/
+/DeathOrPrize_v2/[Bb]uilds/
+/DeathOrPrize_v2/[Ll]ogs/
+/DeathOrPrize_v2/[Mm]emoryCaptures/
+
+//[Ll]ibrary/
 /[Ll]ibrary/
 /[Tt]emp/
 /[Oo]bj/
