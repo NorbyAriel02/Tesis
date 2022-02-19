@@ -66,6 +66,15 @@ public class PathHelper {
             return GetPlatformPath(FilePath);
         }
     }
+    public static string PlayerPositionDataFile
+    {
+        get
+        {
+            string FilePath = MyAppConfig.PlayerPositionDataFile;
+
+            return GetPlatformPath(FilePath);
+        }
+    }
     public static string LogFile
     {
         get

@@ -40,6 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3571907579613733595}
   - component: {fileID: 3571907579613733594}
+  - component: {fileID: 2877109622112691694}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -78,6 +79,18 @@ MonoBehaviour:
   diceValue: 0
   moveSpeed: 1
   playerMovePoint: {fileID: 3571907578530289257}
+--- !u!114 &2877109622112691694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3571907579613733596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 763feb4508ae2b94995dac95bfe9598e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3571907579757138260
 GameObject:
   m_ObjectHideFlags: 0

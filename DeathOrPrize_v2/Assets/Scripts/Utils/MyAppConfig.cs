@@ -29,7 +29,8 @@ public class MyAppConfig
     public static string NeighborDataFile { get { return "ADN.qti"; } }
     public static string CellTypesDataFile { get { return "typesOfCells.qti"; } }
     public static string CellSubTypesDataFile { get { return "subTypesOfCells.qti"; } }
-    
+    public static string PlayerPositionDataFile { get { return "playerPosition.qti"; } }
+
 
     #endregion
 

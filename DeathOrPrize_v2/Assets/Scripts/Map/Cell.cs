@@ -15,6 +15,7 @@ public class Cell : MonoBehaviour
     private GameObject border;
     private PlayerMove playerMove;
     private CamaraMove cam;
+    private int _kingdomID;
     void Start()
     {
         neighboringKingdomsController = GetComponentInParent<NeighboringKingdomsController>();

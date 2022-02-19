@@ -8,10 +8,21 @@ public class CamaraMove : MonoBehaviour
     public Transform playerPosition;
     public GameObject LoadKingdom;
     Vector3 newPos;
-    // Start is called before the first frame update
+    private void Awake()
+    {
+        if (playerPosition == null)
+            playerPosition = GameObject.FindGameObjectWithTag("Player").transform;
+
+        if (LoadKingdom == null)
+            LoadKingdom = GameObject.FindGameObjectWithTag("LoadKingdom");
+    }
     void Start()
     {
-        
+        if(playerPosition != null)
+            transform.position = new Vector3(playerPosition.position.x, playerPosition.position.y, transform.position.z);
+
+        if (LoadKingdom != null)
+            LoadKingdom.SetActive(false);
     }
 
     // Update is called once per frame

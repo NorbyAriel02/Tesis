@@ -11,18 +11,22 @@ public class LoadMaps : MonoBehaviour
     public GameObject[] prefabLimit;
     List<CellModel> dataMap = new List<CellModel>();
     DataFileController fileController = new DataFileController();
+    PlayerPosition playerPosition;
     void Start()
     {
-        LoadGrid(0);
+        playerPosition = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerPosition>();
+        LoadGrid(playerPosition.kingdomID);
     }
 
     public void LoadGrid(int idKingdom)
-    {
+    {   
         ChildrenController.RemoveAllChildren(gameObject);
         dataMap = fileController.GetData<List<CellModel>>(PathHelper.WolrdDataFile(idKingdom));
 
         if (dataMap == null)
             Debug.Log("no se cargan los datos del mapa");
+
+        playerPosition.kingdomID = idKingdom;
 
         foreach (CellModel cellData in dataMap)
         {

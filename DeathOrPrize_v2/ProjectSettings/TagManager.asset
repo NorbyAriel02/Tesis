@@ -8,6 +8,7 @@ TagManager:
   - Weapons
   - Armors
   - Inventory
+  - LoadKingdom
   layers:
   - Default
   - TransparentFX

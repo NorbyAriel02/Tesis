@@ -17,7 +17,8 @@ public class InventoryManager : MonoBehaviour
         items = new List<ItemProperties>();
         
         GetSlots();
-        Load();   
+        Load();
+        inventory.SetActive(false);
     }
     void GetSlots()
     {
