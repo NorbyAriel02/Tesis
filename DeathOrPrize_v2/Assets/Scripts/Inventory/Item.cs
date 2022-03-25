@@ -13,6 +13,7 @@ public class Item : MonoBehaviour
     private SpriteList weaponList;
     private SpriteList armorList;
     private DataFileController fileController = new DataFileController();
+    
     private void Awake()
     {
         ReferenceComponents();

@@ -23,13 +23,15 @@ public class MyAppConfig
     #region Files
     
     public static string WorldDataFile { get { return "ADR{0}.qti"; } }
+    public static string EnemiesDataFile { get { return "ADE{0}.qti"; } }
+    public static string NeighborDataFile { get { return "ADN.qti"; } }
     public static string BiomesDataFile { get { return "typesOfBiomes.qti"; } }
     public static string InventoryDataFile { get { return "Inventory.qti"; } }
     public static string EquipmentDataFile { get { return "Equipment.qti"; } }
-    public static string NeighborDataFile { get { return "ADN.qti"; } }
     public static string CellTypesDataFile { get { return "typesOfCells.qti"; } }
     public static string CellSubTypesDataFile { get { return "subTypesOfCells.qti"; } }
     public static string PlayerPositionDataFile { get { return "playerPosition.qti"; } }
+    public static string PlayerStatsDataFile { get { return "playerStats.qti"; } }
 
 
     #endregion

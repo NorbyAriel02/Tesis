@@ -9,6 +9,9 @@ TagManager:
   - Armors
   - Inventory
   - LoadKingdom
+  - TargetPositionPlayer
+  - Battle
+  - City
   layers:
   - Default
   - TransparentFX

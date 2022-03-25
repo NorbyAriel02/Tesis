@@ -12,7 +12,7 @@ public class WorldCreator : MonoBehaviour
     List<CellModel> cells;
     List<BiomeType> biomes;    
     DataFileController fileController = new DataFileController();
-    // Start is called before the first frame update
+    
     void Start()
     {
         LoadBiomes();

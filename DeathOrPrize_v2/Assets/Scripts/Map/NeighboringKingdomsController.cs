@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NeighboringKingdomsController : MonoBehaviour
 {
-    private DataFileController fileController = new DataFileController();
-    private List<KingdomModel> listKingdomNeighbor;
+    public Text textReino;
     private int IdKingdom = 0;
+    private DataFileController fileController = new DataFileController();
+    private List<KingdomModel> listKingdomNeighbor;    
     private LoadMaps loadMaps;    
     void Start()
     {        
@@ -16,21 +18,25 @@ public class NeighboringKingdomsController : MonoBehaviour
     public void LoadMapNorth()
     {
         IdKingdom = listKingdomNeighbor[IdKingdom].NorthernNeighbor;
+        textReino.text = "Reino " + IdKingdom;
         loadMaps.LoadGrid(IdKingdom);         
     }
     public void LoadMapSouth()
     {
         IdKingdom = listKingdomNeighbor[IdKingdom].SouthNeighbor;
+        textReino.text = "Reino " + IdKingdom;
         loadMaps.LoadGrid(IdKingdom);
     }
     public void LoadMapEast()
     {
         IdKingdom = listKingdomNeighbor[IdKingdom].EastNeighbor;
+        textReino.text = "Reino " + IdKingdom;
         loadMaps.LoadGrid(IdKingdom);
     }
     public void LoadMapWest()
     {
         IdKingdom = listKingdomNeighbor[IdKingdom].WestNeighbor;
+        textReino.text = "Reino " + IdKingdom;
         loadMaps.LoadGrid(IdKingdom);
     }
 

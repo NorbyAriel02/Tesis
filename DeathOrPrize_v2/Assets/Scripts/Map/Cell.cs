@@ -6,7 +6,7 @@ public class Cell : MonoBehaviour
 {
     public float x;
     public float y;
-    public float index;
+    public int index;
     public int sizeKingdom;
     public CellType type;
     public SubCellType subtype;
@@ -16,26 +16,38 @@ public class Cell : MonoBehaviour
     private PlayerMove playerMove;
     private CamaraMove cam;
     private int _kingdomID;
+    private IdleBattleManager battleManager;
+    private CityController city;
     void Start()
     {
         neighboringKingdomsController = GetComponentInParent<NeighboringKingdomsController>();
         border = ChildrenController.GetChildWithTag(gameObject, "Border");
         playerMove = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMove>();
         cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CamaraMove>();
+        battleManager = GameObject.FindGameObjectWithTag("Battle").GetComponent<IdleBattleManager>();
+        city = GameObject.FindGameObjectWithTag("City").GetComponent<CityController>();
     }
-
     void ActionCell()
     {
         switch (type.id)
         {
+            case 1:
+                EnterCity();
+                break;
             case 0:
             case 2:
                 MovePlayer();
+                StartBattle();
                 break;
             case 3:
                 Limit();
                 break;
         }
+    }
+    void EnterCity()
+    {
+        playerMove.diceValue = 0;
+        city.Enter(x, y, subtype.id);
     }
     void MovePlayer()
     {
@@ -46,6 +58,13 @@ public class Cell : MonoBehaviour
         }            
         else
             Debug.Log("No es posible");
+    }
+    void StartBattle()
+    {
+        if (playerMove.diceValue == 0)
+        {
+            battleManager.StartBattle(index, _kingdomID);
+        }
     }
     void Limit()
     {
@@ -99,7 +118,7 @@ public class Cell : MonoBehaviour
     }
     void OnMouseOver()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0) && IsIntoDistance)
+        if (Input.GetKeyDown(KeyCode.Mouse0) && IsIntoDistance && playerMove.diceValue > 0)
         {
             ActionCell();
         }

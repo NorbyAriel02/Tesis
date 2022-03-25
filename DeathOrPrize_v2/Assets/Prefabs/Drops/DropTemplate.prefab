@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: a939593e94a6103459530a158d9f5185, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e6b12d0261b6a274a8a8a08bb7def7bc, type: 3}
   m_Color: {r: 0.8509804, g: 0.90588236, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -109,3 +109,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fb124935f77db84da4c16c778fccc20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  item:
+    tItem: 0
+    IndexSlot: -1
+    strength: 0
+    dexterity: 0
+    agility: 0
+    resistance: 0
+    constitution: 0
+    SubType: 0
+    level: 0
+    area: 0
+    labelData: 
+    EnergyPerAttacksEquipped: 0
+    EnergyPerAttacksBase: 0
+    timeBetweenAttacksEquipped: 0
+    timeBetweenAttacksBase: 0
+    attackSpeedEquipped: 0
+    attackSpeedBase: 0
+    weight: 0
+    critical: 0
+    damageAreaEquipped: 0
+    damageAreaBase: 0
+    damageAreaMax: 0
+    damageEquipped: 0
+    damageBase: 0
+    damageMax: 0
+    defending: 0
+    plusEnergy: 0
+    plusHealth: 0
+    regenereHelth: 0
+    regenereEnergy: 0

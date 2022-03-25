@@ -30,6 +30,21 @@ public class PathHelper {
 
         return FilePath;        
     }
+    public static string EnemiesDataFile(int IdKingdom)
+    {
+        string FilePath = string.Format(MyAppConfig.EnemiesDataFile, IdKingdom);
+
+        if (Application.platform == RuntimePlatform.Android)
+        {
+            FilePath = Path.Combine(Application.persistentDataPath, FilePath);
+        }
+        else
+        {
+            FilePath = Path.Combine(Application.streamingAssetsPath, FilePath);
+        }
+
+        return FilePath;
+    }
     public static string BiomesDataFile
     {
         get { 
@@ -71,6 +86,15 @@ public class PathHelper {
         get
         {
             string FilePath = MyAppConfig.PlayerPositionDataFile;
+
+            return GetPlatformPath(FilePath);
+        }
+    }
+    public static string PlayerStatsDataFile
+    {
+        get
+        {
+            string FilePath = MyAppConfig.PlayerStatsDataFile;
 
             return GetPlatformPath(FilePath);
         }

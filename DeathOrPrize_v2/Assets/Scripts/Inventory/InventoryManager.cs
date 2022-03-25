@@ -116,6 +116,7 @@ public class InventoryManager : MonoBehaviour
     {
         newItem.IndexSlot = GetIndexSlotEmpty();
         items.Add(newItem);
+        
     }
     void UpdateData()
     {

@@ -26,17 +26,21 @@ public class LoadMaps : MonoBehaviour
         if (dataMap == null)
             Debug.Log("no se cargan los datos del mapa");
 
+        /* ESTO ESTA MAL, LA NUEVA POSICION DEL PLAYER SE DEBE ASIGNAR
+         * DESDE NeighboringKingdomsController O DESDE UN CONTROLADOR DEL JUEGO 
+         * QUE SE OCUPE DE CARGAR EL MAPA, PASAR EL PLAYER DE REINO 
+         * Y ASIGANR LA NUEVA POSICION DEL PLAYER #ARREGLAR */
         playerPosition.kingdomID = idKingdom;
 
         foreach (CellModel cellData in dataMap)
         {
-            if (cellData.type.id == 0)
+            if (cellData.type.id == 0)//campo
                 InstantiateDefault(cellData);
-            if (cellData.type.id == 1)
+            if (cellData.type.id == 1)//city
                 InstantiateCity(cellData);
-            if (cellData.type.id == 2)
+            if (cellData.type.id == 2)//camino
                 InstantiateRoad(cellData);
-            if (cellData.type.id == 3)
+            if (cellData.type.id == 3)//limite del mapa
                 InstantiateLimit(cellData);
         }
     }
