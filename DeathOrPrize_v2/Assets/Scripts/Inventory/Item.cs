@@ -61,12 +61,18 @@ public class Item : MonoBehaviour
     
     void AssignWeapon()
     {
-        if(weaponList != null)
+        if(weaponList == null)
+            weaponList = GameObject.FindGameObjectWithTag("Weapons").GetComponent<SpriteList>();
+
+        if (weaponList != null)
             image.sprite = weaponList.GetSprite(properties.SubType);
     }
     void AssignArmor()
     {
-        if(armorList != null)
+        if(armorList == null)
+            armorList = GameObject.FindGameObjectWithTag("Armors").GetComponent<SpriteList>();
+
+        if (armorList != null)
             image.sprite = armorList.GetSprite(properties.SubType);
     }
     

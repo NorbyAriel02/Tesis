@@ -16,6 +16,7 @@ public class ItemProperties
     public float constitution;
 
     /*propiedades*/
+    public int value = 1;
     public int SubType = 0;
     public int level;
     public bool area;

@@ -72,6 +72,15 @@ public class PathHelper {
             return GetPlatformPath(FilePath);
         }
     }
+    public static string MarketDataFile
+    {
+        get
+        {
+            string FilePath = MyAppConfig.MarketDataFile;
+
+            return GetPlatformPath(FilePath);
+        }
+    }
     public static string NeighborKingdomDataFile
     {
         get

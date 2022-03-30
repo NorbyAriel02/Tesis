@@ -28,6 +28,7 @@ public class MyAppConfig
     public static string BiomesDataFile { get { return "typesOfBiomes.qti"; } }
     public static string InventoryDataFile { get { return "Inventory.qti"; } }
     public static string EquipmentDataFile { get { return "Equipment.qti"; } }
+    public static string MarketDataFile { get { return "Market.qti"; } }
     public static string CellTypesDataFile { get { return "typesOfCells.qti"; } }
     public static string CellSubTypesDataFile { get { return "subTypesOfCells.qti"; } }
     public static string PlayerPositionDataFile { get { return "playerPosition.qti"; } }

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 
-public enum TypeSlot { SlotInventory, SlotWeapon, SlotArmor }
+public enum TypeSlot { SlotInventory, SlotWeapon, SlotArmor, NoDropSlot }
 public class Slot : MonoBehaviour, IDropHandler
 {
     public GameObject Item;
@@ -14,7 +14,8 @@ public class Slot : MonoBehaviour, IDropHandler
     public string description;
     public Sprite icon;
     public bool empty;
-    
+    public bool cancelar;
+
     private void OnEnable()
     {        
         GetComponent<Image>().raycastTarget = true;
@@ -40,7 +41,7 @@ public class Slot : MonoBehaviour, IDropHandler
         if (eventData.pointerDrag != null)
         {
             Item i = eventData.pointerDrag.GetComponent<Item>();
-            if (ValidateTypeSlot(i.properties.tItem) && this.empty)
+            if (ValidateTypeSlot(i.properties.tItem) && this.empty && !cancelar)
             {
                 i.properties.IndexSlot = this.ID;
                 eventData.pointerDrag.gameObject.transform.SetParent(transform);
@@ -52,6 +53,9 @@ public class Slot : MonoBehaviour, IDropHandler
 
     bool ValidateTypeSlot(TypeItemInventory tItem)
     {
+        if (tSlot == TypeSlot.NoDropSlot)
+            return false;
+
         if (tSlot == TypeSlot.SlotArmor && tItem == TypeItemInventory.Armor)
             return true;
 

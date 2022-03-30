@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 
 public class Trash : MonoBehaviour, IDropHandler
 {
-    public GameObject panel;
+    public GameObject panelMensaje;
     public Button btnDelete;
     public Button btnCancel;
     private GameObject item;
@@ -51,12 +51,12 @@ public class Trash : MonoBehaviour, IDropHandler
     {
         SlotEmptyTrue();
         Destroy(item);
-        panel.SetActive(false);        
+        panelMensaje.SetActive(false);        
     }
     void Cancel()
     {
         SlotEmptyFalse();
-        panel.SetActive(false);        
+        panelMensaje.SetActive(false);        
     }
     
 
@@ -65,7 +65,7 @@ public class Trash : MonoBehaviour, IDropHandler
         if (eventData.pointerDrag != null)
         {
             item = eventData.pointerDrag.gameObject;
-            panel.SetActive(true); 
+            panelMensaje.SetActive(true); 
         }
     }
 }

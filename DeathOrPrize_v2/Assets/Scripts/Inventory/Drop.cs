@@ -27,9 +27,15 @@ public class Drop : MonoBehaviour
         {
             if (hit.transform.name == gameObject.name)
             {
-                inventory.AddItem(item);
-                Destroy(gameObject);
-            }
+                if (inventory.AddItem(item))
+                    Destroy(gameObject);
+                else
+                    CantGetUp();
+            }            
         }
+    }
+    public void CantGetUp()
+    {
+        Debug.Log("Inventario llego");
     }
 }

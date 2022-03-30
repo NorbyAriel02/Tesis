@@ -12,6 +12,7 @@ TagManager:
   - TargetPositionPlayer
   - Battle
   - City
+  - Market
   layers:
   - Default
   - TransparentFX
