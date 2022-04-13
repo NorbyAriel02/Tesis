@@ -22,7 +22,8 @@ public class SellController : MonoBehaviour, IDropHandler
         if (eventData.pointerDrag != null && slot.empty)
         {
             Item i = eventData.pointerDrag.GetComponent<Item>();
-            market.Sell(i.properties);
+            if (i.properties.owner == Owner.player)
+                market.Sell(i.properties);
         }
     }
 }

@@ -10,14 +10,23 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IDragHandler, IEn
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
     public bool HaveParent = false;
-    private Transform PadreActual;
+    public Transform PadreActual;
     
     void Start()
     {
-        fatherMaster = GameObject.FindGameObjectWithTag("Inventory").transform;
+        fatherMaster = GetFatherMaster();
         rectTransform = GetComponent<RectTransform>();
         canvasInventario = FindObjectOfType<Canvas>();
         canvasGroup = GetComponentInParent<CanvasGroup>();
+    }
+    Transform GetFatherMaster()
+    {
+        Transform father = transform.parent;
+        for(int x = 0; x < 4; x++)
+        {
+            father = father.parent;
+        }
+        return father;
     }
 
     private void Update()

@@ -12,20 +12,36 @@ public class BuyController : MonoBehaviour, IDropHandler
     void Start()
     {
         slot = GetComponent<Slot>();
-        market = GameObject.FindGameObjectWithTag("Market").GetComponent<MarketController>();
+        SetMarket();
+    }
+    void SetMarket()
+    {
+        GameObject goMarket = GameObject.FindGameObjectWithTag("Market");
+        if(goMarket == null)
+        {
+            //Debug.Log("Script buy dice Game Object Market is null");
+            return;
+        }            
+        
+        market = goMarket.GetComponent<MarketController>();
         if (market == null)
-            Debug.Log("Script buy dice Market script null");
+            Debug.Log("Script buy dice Market script is null");
     }
     public void OnDrop(PointerEventData eventData)
     {
-        if (market.IsClose)
+
+        if (market == null)
+            SetMarket();
+
+        if (market == null || market.IsClose)
             return;
 
         if (eventData.pointerDrag != null && slot.empty)
         {
             Item i = eventData.pointerDrag.GetComponent<Item>();
-            if(!market.Buy(i.properties))
-                slot.cancelar = true;
+            if(i.properties.owner == Owner.seller)
+                if(!market.Buy(i.properties))
+                    slot.cancelar = true;
         }
     }
 }

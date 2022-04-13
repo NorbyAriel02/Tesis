@@ -29,24 +29,21 @@ public class InventoryManager : MonoBehaviour
     }    
     void Update()
     {
-        if (Input.GetKeyDown(keyInventory))
-        {
-            inventory.SetActive(!inventory.activeSelf);
-            if (!inventory.activeSelf) 
-                CloseInventory();
-
-            if (inventory.activeSelf) 
-                OpenInventory();
-        }   
+        if (Input.GetKeyDown(keyInventory) && !inventory.activeSelf)
+            OpenInventory();
+        else if (Input.GetKeyDown(keyInventory) && inventory.activeSelf)
+            CloseInventory();
     }
-    void CloseInventory()
+    public void CloseInventory()
     {
         List<ItemProperties> items = InventoryHelper.GetListItemsFromPanel(Slots);
         InventoryHelper.Save(items, PathHelper.InventoryDataFile);        
         equipment.Save();
+        inventory.SetActive(false);
     }
-    void OpenInventory()
+    public void OpenInventory()
     {
+        inventory.SetActive(true);
         InventoryHelper.ShowItems(Slots, prefabItemTemplate, PathHelper.InventoryDataFile);        
         equipment.ShowEquipment();
     }    

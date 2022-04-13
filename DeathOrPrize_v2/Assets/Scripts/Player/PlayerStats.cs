@@ -6,21 +6,22 @@ public class PlayerStats : MonoBehaviour
 {
     public float attackSpeedBase = 1;    
     public float attackSpeedTimer = 1;
-    public PlayerStatsModel stats;
+    public PlayerStatsModel stats;    
     EquipmentManager equipment;
     InventoryManager inventory;
     DataFileController fileController = new DataFileController();
     void Start()
     {
-        stats = fileController.GetData<PlayerStatsModel>(PathHelper.PlayerStatsDataFile);
-        if (stats == null)
-        {
-            stats = new PlayerStatsModel();
-            stats.attackSpeed = attackSpeedBase;
-            stats.damage = 0;
-            stats.defending = 0;
-            stats.health = 10;
-        }
+        stats = PlayerDataHelper.GetStats();
+        //stats = fileController.GetData<PlayerStatsModel>(PathHelper.PlayerStatsDataFile);
+        //if (stats == null)
+        //{
+        //    stats = new PlayerStatsModel();
+        //    stats.attackSpeed = attackSpeedBase;
+        //    stats.damage = 0;
+        //    stats.defending = 0;
+        //    stats.currentHealth = 10;
+        //}
         attackSpeedTimer = stats.attackSpeed;
         equipment = GameObject.FindGameObjectWithTag("Inventory").GetComponent<EquipmentManager>();
         inventory = GameObject.FindGameObjectWithTag("Inventory").GetComponent<InventoryManager>();
@@ -35,7 +36,8 @@ public class PlayerStats : MonoBehaviour
 
             if (equipment.items[x].tItem == TypeItemInventory.Armor)
                 stats.defending = equipment.items[x].defending;
-        }        
+        }      
+        
     }
     void Update()
     {

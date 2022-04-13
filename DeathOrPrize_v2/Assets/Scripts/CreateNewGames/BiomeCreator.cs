@@ -8,10 +8,10 @@ public class BiomeCreator : MonoBehaviour
     public bool ForceCreation;
     void Start()
     {
-        CreateBiomes();
-        Debug.Log("Listo Biomas");
+        
+        
     }
-    void CreateBiomes()
+    public void CreateBiomes()
     {
         DataFileController fileController = new DataFileController();
         

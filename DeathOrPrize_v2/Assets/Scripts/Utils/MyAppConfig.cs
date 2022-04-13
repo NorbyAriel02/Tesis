@@ -21,7 +21,7 @@ public class MyAppConfig
     #endregion
 
     #region Files
-    
+    public static string QuestDataFile { get { return "ADM{0}.qti"; } }
     public static string WorldDataFile { get { return "ADR{0}.qti"; } }
     public static string EnemiesDataFile { get { return "ADE{0}.qti"; } }
     public static string NeighborDataFile { get { return "ADN.qti"; } }
@@ -33,8 +33,9 @@ public class MyAppConfig
     public static string CellSubTypesDataFile { get { return "subTypesOfCells.qti"; } }
     public static string PlayerPositionDataFile { get { return "playerPosition.qti"; } }
     public static string PlayerStatsDataFile { get { return "playerStats.qti"; } }
+    public static string PlayerDataFile { get { return "playerData.qti"; } }
 
-
+    public static string LogFile { get { return "data.log"; } }
     #endregion
 
     #region Value Config

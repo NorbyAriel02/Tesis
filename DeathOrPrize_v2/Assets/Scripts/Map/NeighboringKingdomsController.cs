@@ -40,7 +40,25 @@ public class NeighboringKingdomsController : MonoBehaviour
         loadMaps.LoadGrid(IdKingdom);
     }
 
-
+    public void LoadMap(int CellLimitId)
+    {
+        switch (CellLimitId)
+        {
+            case 0:
+                LoadMapEast();
+                break;
+            case 1:
+                LoadMapWest();
+                break;
+            case 2:
+                LoadMapNorth();
+                break;
+            case 3:
+                LoadMapSouth();
+                break;
+        }
+        PlayerDataHelper.UpdateIdKingdom(IdKingdom);
+    }
     void Test()
     {
         if (Input.GetKeyDown(KeyCode.A))

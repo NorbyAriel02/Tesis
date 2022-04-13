@@ -16,7 +16,7 @@ public class ConditionController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(playerStats.stats.health <= 0)
+        if(playerStats.stats.currentHealth <= 0)
         {
             panelGameOver.SetActive(true);
         }

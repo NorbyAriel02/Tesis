@@ -1,8 +1,10 @@
 using System;
+public enum Owner { player, seller }
 [Serializable]
 
 public class ItemProperties 
 {
+    public Owner owner;
     /*Esta clase es variable, dependiendo del proyecto tendra mas o menos propiedades
      en teoria creo que solo propiedades, ahora no veo razo para qie tenga algun metodo*/
     public TypeItemInventory tItem;

@@ -19,31 +19,12 @@ public class PathHelper {
     {
         string FilePath = string.Format(MyAppConfig.WorldDataFile, IdKingdom);
 
-        if (Application.platform == RuntimePlatform.Android)
-        {
-            FilePath = Path.Combine(Application.persistentDataPath, FilePath);
-        }
-        else
-        {
-            FilePath = Path.Combine(Application.streamingAssetsPath, FilePath);
-        }
-
-        return FilePath;        
+        return GetPlatformPath(FilePath);
     }
     public static string EnemiesDataFile(int IdKingdom)
     {
         string FilePath = string.Format(MyAppConfig.EnemiesDataFile, IdKingdom);
-
-        if (Application.platform == RuntimePlatform.Android)
-        {
-            FilePath = Path.Combine(Application.persistentDataPath, FilePath);
-        }
-        else
-        {
-            FilePath = Path.Combine(Application.streamingAssetsPath, FilePath);
-        }
-
-        return FilePath;
+        return GetPlatformPath(FilePath);
     }
     public static string BiomesDataFile
     {
@@ -99,6 +80,21 @@ public class PathHelper {
             return GetPlatformPath(FilePath);
         }
     }
+    public static string PlayerDataFile
+    {
+        get
+        {
+            string FilePath = MyAppConfig.PlayerDataFile;
+
+            return GetPlatformPath(FilePath);
+        }
+    }
+    public static string QuestDataFile(string idQuest)
+    {
+        string FilePath = string.Format(MyAppConfig.QuestDataFile, idQuest);
+
+        return GetPlatformPath(FilePath);
+    }
     public static string PlayerStatsDataFile
     {
         get
@@ -112,7 +108,7 @@ public class PathHelper {
     {
         get
         {
-            string FilePath = "Log.txt";
+            string FilePath = System.DateTime.Now.ToString("yyyyMMdd") + MyAppConfig.LogFile;
 
             return GetPlatformPath(FilePath);
         }

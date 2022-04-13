@@ -13,10 +13,9 @@ public class CellSubTypesCreator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        CreateCellTypes();
-        Debug.Log("Listo Sub tipos");
+        
     }
-    void CreateCellTypes()
+    public void CreateCellTypes()
     {
         CellSubTypes = new Dictionary<int, List<SubCellType>>();
         CellSubTypes.Add(cellCampo[0].idType, cellCampo);

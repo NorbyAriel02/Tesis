@@ -9,11 +9,11 @@ public class CellTypesCreator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        CreateCellTypes();
-        Debug.Log("Listo tipos");
+        
+        
     }
 
-    void CreateCellTypes()
+    public void CreateCellTypes()
     {
         DataFileController fileController = new DataFileController();
 
@@ -21,5 +21,6 @@ public class CellTypesCreator : MonoBehaviour
             return;
 
         fileController.Save<List<CellType>>(cellTypes, PathHelper.CellTypesDataFile);
+        Debug.Log("Listo tipos");
     }
 }

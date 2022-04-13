@@ -15,6 +15,7 @@ public class NeighboringKingdoms : MonoBehaviour
     void CreateNeighborFileData()
     {
         float ladoF = Mathf.Pow(WorldCreator.numberOfKingdom, 0.5f);
+        float abajo = Mathf.Floor(ladoF);
         int lado = System.Convert.ToInt32(ladoF);
         matrizIds = GenerarMatriz(lado);
         List<KingdomModel> listNeighborKingdom = new List<KingdomModel>();
@@ -40,7 +41,7 @@ public class NeighboringKingdoms : MonoBehaviour
     }
     int[,] GenerarMatriz(int lado)
     {
-        int id = 0;
+        int id = 1;
         int[,] matrizIds = new int[lado, lado];
         for (int x = 0; x < lado; x++)
         {

@@ -19,7 +19,7 @@ public class WorldCreator : MonoBehaviour
         LoadCellTypes();
         LoadCellSubTypes();
         CreateWorld();
-        SceneManager.LoadScene("Level");
+        SceneManager.LoadScene("Tutorial");
     }
     void LoadBiomes()
     {

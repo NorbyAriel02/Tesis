@@ -14,8 +14,10 @@ public class LoadMaps : MonoBehaviour
     PlayerPosition playerPosition;
     void Start()
     {
+        
         playerPosition = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerPosition>();
-        LoadGrid(playerPosition.kingdomID);
+        
+        LoadGrid(PlayerDataHelper.GetIdKingdom());
     }
 
     public void LoadGrid(int idKingdom)

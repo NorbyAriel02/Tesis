@@ -25,6 +25,7 @@ public class CityController : MonoBehaviour
     public GameObject[] SlotsEquipment;
     public List<ItemProperties> itemsInventory;
     public List<ItemProperties> itemsEquipment;
+    public HUDController hud;
     private List<Vector3> doors;
     private PlayerMove playerMov;
     List<CellModel> dataMap = new List<CellModel>();
@@ -137,6 +138,7 @@ public class CityController : MonoBehaviour
     }
     public void Enter(float x, float y, int subTypeId)
     {
+        hud.Heal();
         SetExits(x, y, subTypeId);
         LoadItems();
         panelCity.SetActive(true);

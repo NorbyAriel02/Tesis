@@ -7,6 +7,10 @@ public class UpdateCoins : MonoBehaviour
 {
     public Text textCoinHUB;
     public Text textCoinCity;
+    private void Start()
+    {
+        textCoinHUB.text = PlayerDataHelper.GetCoins();
+    }
     void Update()
     {
         textCoinCity.text = textCoinHUB.text;

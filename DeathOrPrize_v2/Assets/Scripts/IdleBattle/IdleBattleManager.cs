@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class IdleBattleManager : MonoBehaviour
 {
+    public Inventory HUB;
     public float TimerTest = 3;
     public Transform Content;
     public GameObject Enemies;
@@ -80,13 +81,17 @@ public class IdleBattleManager : MonoBehaviour
         {
             if(enemy.health > 0)
                 if (enemiesTimerAttack[index] <= 0)
+                {
                     EnemyAttack(index);
+                    HUB.UpdateBarHealth();
+                }
+                    
 
             enemiesTimerAttack[index] = enemiesTimerAttack[index] - Time.deltaTime;
             index++;
         }
         playerStats.attackSpeedTimer = playerStats.attackSpeedTimer - Time.deltaTime;
-        if (playerStats.stats.health > 0)
+        if (playerStats.stats.currentHealth > 0)
             if (playerStats.attackSpeedTimer <= 0)
             {
                 PlayerAttack();
@@ -104,27 +109,33 @@ public class IdleBattleManager : MonoBehaviour
             DesactivePanel();
         }            
 
-        if (playerStats.stats.health <= 0)
+        if (playerStats.stats.currentHealth <= 0)
             DesactivePanel();
     }
     void RewardDrop(int level)
     {
         GameObject go = Instantiate(prefabDropTemplate);
         Drop reward = go.GetComponent<Drop>();
-        reward.item = Utilitis.GetRandomItem(level);
+        reward.item = Utilitis.GetRandomItem(level, Owner.player);
         go.transform.position = new Vector3(playerPosition.transform.position.x + 1, playerPosition.transform.position.y, playerPosition.transform.position.z);
-    }
-    
+    }    
     void EnemyAttack(int index)
     {
         float d = playerStats.stats.defending;
         float a = enemiesXcell[currentGridIndex].enemies[index].damage;
-        float h = playerStats.stats.health;
+        float h = playerStats.stats.currentHealth;
 
         if (a > d)
-            playerStats.stats.health = h - (a - d);
+        {
+            PlayerDataHelper.RestHealth((a - d));
+            //playerStats.stats.currentHealth = h - (a - d);
+        }
         else
-            playerStats.stats.health = h - 1;
+        {
+            PlayerDataHelper.RestHealth(1);
+            //playerStats.stats.currentHealth = h - 1; 
+        }
+
 
         enemiesTimerAttack[index] = enemiesXcell[currentGridIndex].enemies[index].attackSpeed;
     }
@@ -146,7 +157,6 @@ public class IdleBattleManager : MonoBehaviour
         if (inBattle)
             Battle();
     }
-
     void Update()
     {
         if (TimerTest < 0)

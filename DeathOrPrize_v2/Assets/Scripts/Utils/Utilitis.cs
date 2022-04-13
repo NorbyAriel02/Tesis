@@ -4,25 +4,27 @@ using UnityEngine;
 
 public class Utilitis 
 {    
-    public static ItemProperties GetRandomItem(int level)
+    public static ItemProperties GetRandomItem(int level, Owner owner)
     {
-        ItemProperties item = new ItemProperties();
+        ItemProperties item = new ItemProperties();        
         int type = Random.Range(1, 3);
         if (type == 1)
         {
-            item = GetWeapon(level);
+            item = GetWeapon(level, owner);
         }            
         else
         {
-            item = GetArmor(level);
+            item = GetArmor(level, owner);
         }            
         
         return item;
     }
-    static ItemProperties GetWeapon(int level)
+    
+    static ItemProperties GetWeapon(int level, Owner owner)
     {
         float r = Random.Range(10, 15);
         ItemProperties item = new ItemProperties();
+        item.owner = owner;
         item.tItem = TypeItemInventory.Weapon;
         item.level = level;
         item.value = level;
@@ -34,10 +36,11 @@ public class Utilitis
 
         return item;
     }
-    static ItemProperties GetArmor(int level)
+    static ItemProperties GetArmor(int level, Owner owner)
     {
         float r = Random.Range(10, 15);
         ItemProperties item = new ItemProperties();
+        item.owner = owner;
         item.tItem = TypeItemInventory.Armor;
         item.level = level;
         item.value = level;

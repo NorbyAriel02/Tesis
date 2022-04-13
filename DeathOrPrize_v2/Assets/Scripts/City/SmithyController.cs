@@ -14,7 +14,7 @@ public class SmithyController : MonoBehaviour
     public GameObject[] Slots;
     void Start()
     {
-
+        panelSmithy.SetActive(false);
     }
     private void OnEnable()
     {

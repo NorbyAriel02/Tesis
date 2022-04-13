@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class Item : MonoBehaviour
-{
+{    
     public ItemProperties properties;
     public Image image;
     public Text txtValue;
     public Text txtPeso;
     private AudioSource audioSource;
     private SpriteList weaponList;
-    private SpriteList armorList;
-    private DataFileController fileController = new DataFileController();
+    private SpriteList armorList;    
     
     private void Awake()
     {

@@ -99,4 +99,11 @@ public class InventoryHelper
 
         return false;
     }
+    public static void StartInventoryAndEquipmentFile(string pathInventory, string pathEquipment)
+    {
+        DataFileController fileController = new DataFileController();
+        List<ItemProperties> items = new List<ItemProperties>();
+        fileController.Save<List<ItemProperties>>(items, pathInventory);
+        fileController.Save<List<ItemProperties>>(items, pathEquipment);
+    }
 }

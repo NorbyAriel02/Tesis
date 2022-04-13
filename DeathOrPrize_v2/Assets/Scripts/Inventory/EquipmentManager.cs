@@ -20,7 +20,7 @@ public class EquipmentManager : MonoBehaviour
         for (int x = 0; x < Slots.Length; x++)
         {
             Slots[x].GetComponent<Slot>().ID = x; //le asigno un ID manual
-            Slots[x].GetComponent<Slot>().empty = true;
+            //Slots[x].GetComponent<Slot>().empty = true;
         }
     }    
     public void Save()

@@ -44,7 +44,7 @@ public class MarketController : MonoBehaviour
         List<ItemProperties> items = new List<ItemProperties>();
         for(int x = 0; x < count; x++)
         {
-            ItemProperties item = Utilitis.GetRandomItem(1);
+            ItemProperties item = Utilitis.GetRandomItem(1, Owner.seller);
             items.Add(item);
         }
         InventoryHelper.Save(items, PathHelper.MarketDataFile);
@@ -63,14 +63,18 @@ public class MarketController : MonoBehaviour
     #region button actions
     void Exit()
     {
+        List<ItemProperties> items = InventoryHelper.GetListItemsFromPanel(SlotMarket);
+        InventoryHelper.Save(items, PathHelper.MarketDataFile);
         IsClose = true;
         panelMarket.SetActive(false);
         panelMenu.SetActive(true);
     }
     public void Sell(ItemProperties itemSell)
-    {        
+    {
+        itemSell.owner = Owner.seller;
         int current = System.Convert.ToInt32(textCoins.text.Trim());
         textCoins.text = (current + itemSell.value).ToString();
+        PlayerDataHelper.UpdateCoins((current + itemSell.value));
         List<ItemProperties> items = InventoryHelper.GetListItemsFromPanel(SlotMarket);
         InventoryHelper.Save(items, PathHelper.MarketDataFile);
     }
@@ -79,7 +83,9 @@ public class MarketController : MonoBehaviour
         int current = System.Convert.ToInt32(textCoins.text.Trim());
         if (current >= itemBuy.value)
         {
+            itemBuy.owner = Owner.player;
             textCoins.text = (current - itemBuy.value).ToString();
+            PlayerDataHelper.UpdateCoins((current - itemBuy.value));
             List<ItemProperties> items = InventoryHelper.GetListItemsFromPanel(SlotsInventoryPlayer);
             InventoryHelper.Save(items, PathHelper.InventoryDataFile);
         }

@@ -166,8 +166,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b434993a5a63f7429d0595ad1d9ecc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemies: []
+  enemiesXcell: []
   worldCreator: {fileID: 473089197}
+  sizeZone: 55
+  baseAttackSpeed: 5
+  balanceAttackSpeed: 0.5
+  baseDamage: 5
+  balanceDamage: 2
+  baseDefending: 5
+  balanceDefending: 2
+  baseHealth: 25
+  balanceHealth: 2
 --- !u!1 &473089196
 GameObject:
   m_ObjectHideFlags: 0

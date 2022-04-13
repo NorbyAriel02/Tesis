@@ -13,8 +13,7 @@ public class Cell : MonoBehaviour
     public BiomeType biome;
     private NeighboringKingdomsController neighboringKingdomsController;
     private GameObject border;
-    private PlayerMove playerMove;
-    private CamaraMove cam;
+    private PlayerMove playerMove;    
     private int _kingdomID;
     private IdleBattleManager battleManager;
     private CityController city;
@@ -23,8 +22,7 @@ public class Cell : MonoBehaviour
         neighboringKingdomsController = GetComponentInParent<NeighboringKingdomsController>();
         border = ChildrenController.GetChildWithTag(gameObject, "Border");
         playerMove = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMove>();
-        cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CamaraMove>();
-        battleManager = GameObject.FindGameObjectWithTag("Battle").GetComponent<IdleBattleManager>();
+        battleManager = GetScript.Type<IdleBattleManager>("Battle", this.name);// GameObject.FindGameObjectWithTag("Battle").GetComponent<IdleBattleManager>();
         city = GameObject.FindGameObjectWithTag("City").GetComponent<CityController>();
     }
     void ActionCell()
@@ -70,52 +68,12 @@ public class Cell : MonoBehaviour
     {
         if (playerMove.diceValue <= 0)
             return;
+        
+        neighboringKingdomsController.LoadMap(subtype.id);
 
-        switch (subtype.id)
-        {
-            case 0:
-                neighboringKingdomsController.LoadMapEast();
-                break;
-            case 1:
-                neighboringKingdomsController.LoadMapWest();
-                break;
-            case 2:
-                neighboringKingdomsController.LoadMapNorth();
-                break;
-            case 3:
-                neighboringKingdomsController.LoadMapSouth();
-                break;
-        }
-        SetPositionNewKingdom();
+        playerMove.SetPositionNewKingdom(x, y, sizeKingdom);
     }
-    void SetPositionNewKingdom()
-    {
-        cam.ActiveLoadKingdom();
-        float xn = -1;
-        float yn = -1;
-
-        if(x == 0)
-        {
-            xn = sizeKingdom - 2;
-            yn = y;
-        }
-        if(x == (sizeKingdom-1))
-        {
-            xn = 1;
-            yn = y;
-        }
-        if (y == (sizeKingdom - 1))
-        {
-            xn = x;
-            yn = 1;
-        }
-        if (y == 0)
-        {
-            xn = x;
-            yn = sizeKingdom - 2;
-        }
-        playerMove.SetPositionNewKingdom(xn, yn);        
-    }
+    
     void OnMouseOver()
     {
         if (Input.GetKeyDown(KeyCode.Mouse0) && IsIntoDistance && playerMove.diceValue > 0)

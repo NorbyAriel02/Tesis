@@ -15,6 +15,7 @@ public class Slot : MonoBehaviour, IDropHandler
     public Sprite icon;
     public bool empty;
     public bool cancelar;
+    private RenderTexture rt;
 
     private void OnEnable()
     {        
@@ -27,6 +28,7 @@ public class Slot : MonoBehaviour, IDropHandler
     
     private void Start()
     {
+        rt = GetComponent<RenderTexture>();
     }
     public void UpdateSlot()
     {

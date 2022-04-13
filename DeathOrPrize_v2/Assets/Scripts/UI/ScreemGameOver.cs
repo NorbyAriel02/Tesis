@@ -16,7 +16,7 @@ public class ScreemGameOver : MonoBehaviour
     void Menu()
     {
         //aca cargar escena de menu
-        SceneManager.LoadScene("Level");
+        SceneManager.LoadScene("Menu");
     }
     void Continue()
     {
