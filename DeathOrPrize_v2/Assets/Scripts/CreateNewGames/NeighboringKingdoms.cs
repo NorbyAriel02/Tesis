@@ -5,88 +5,145 @@ using UnityEngine;
 public class NeighboringKingdoms : MonoBehaviour
 {
     private WorldCreator WorldCreator;
+    private float kingdoms;
     DataFileController fileController = new DataFileController();
     void Start()
     {
         WorldCreator = GetComponent<WorldCreator>();
+        kingdoms = WorldCreator.numberOfKingdom;
         CreateNeighborFileData();
     }
     int[,] matrizIds = null;
     void CreateNeighborFileData()
     {
-        float ladoF = Mathf.Pow(WorldCreator.numberOfKingdom, 0.5f);
-        float abajo = Mathf.Floor(ladoF);
-        int lado = System.Convert.ToInt32(ladoF);
-        matrizIds = GenerarMatriz(lado);
+        int[] xy = GetDimensionsMatrix();
+
+        matrizIds = GenerarMatriz(xy[0], xy[1]);
+
+        List<KingdomModel> listNeighborKingdom = GetListNeighborKingdom(xy[0], xy[1]);        
+
+        fileController.SaveEncrypted<List<KingdomModel>>(listNeighborKingdom, PathHelper.NeighborKingdomDataFile);
+    }
+    List<KingdomModel> GetListNeighborKingdom(int a, int b)
+    {
         List<KingdomModel> listNeighborKingdom = new List<KingdomModel>();
-        
-        for(int x = 0; x < lado; x++)
+
+        for (int x = 0; x < a; x++)
         {
-            for (int y = 0; y < lado; y++)
+            for (int y = 0; y < b; y++)
             {
                 KingdomModel km = new KingdomModel();
-                km.IDkingdom = matrizIds[x,y];
+                km.IDkingdom = matrizIds[x, y];
+                if (km.IDkingdom == 0)
+                    break;
                 km.row = x;
                 km.col = y;
-                km.NorthernNeighbor = GetNeighborNorth(x, y, lado);
-                km.SouthNeighbor = GetNeighborSouth(x, y, lado);
-                km.EastNeighbor = GetNeighborEast(x, y, lado);
-                km.WestNeighbor = GetNeighborWest(x, y, lado);
+                km.NorthernNeighbor = GetNeighborNorth(x, y, a, b);
+                km.SouthNeighbor = GetNeighborSouth(x, y, a, b);
+                km.EastNeighbor = GetNeighborEast(x, y, a, b);
+                km.WestNeighbor = GetNeighborWest(x, y, a, b);
                 listNeighborKingdom.Add(km);
-        
             }
         }
-
-        fileController.Save<List<KingdomModel>>(listNeighborKingdom, PathHelper.NeighborKingdomDataFile);
+        return listNeighborKingdom;
     }
-    int[,] GenerarMatriz(int lado)
+    int[] GetDimensionsMatrix()
+    {
+        float ladoF = Mathf.Pow(kingdoms, 0.5f);
+        float row = Mathf.Floor(ladoF);
+        float col = Mathf.Ceil(ladoF);
+
+        if ((row * col) < kingdoms)
+            row = col;
+        
+        int a = System.Convert.ToInt32(row);
+        int b = System.Convert.ToInt32(col);
+
+        return new int[] { a, b };
+    }
+    int[,] GenerarMatriz(int a, int b)
     {
         int id = 1;
-        int[,] matrizIds = new int[lado, lado];
-        for (int x = 0; x < lado; x++)
+        int[,] m = new int[a, b];
+        for (int x = 0; x < a; x++)
         {
-            for (int y = 0; y < lado; y++)
+            for (int y = 0; y < b; y++)
             {
-                matrizIds[x, y] = id;
+                if (id > kingdoms)
+                    break;
+
+                m[x, y] = id;
                 id++;
             }
         }
-        return matrizIds;
-    }    
-    int GetNeighborNorth(int x, int y, int lado)
-    {
-        int xn = x - 1;
-        
-        if (x == 0)
-            xn = (lado - 1);
-
-        return matrizIds[xn, y];
+        return m;
     }
-    int GetNeighborSouth(int x, int y, int lado)
-    {
-        int xn = x + 1;
-
-        if (x == (lado - 1))
-            xn = 0;
-
-        return matrizIds[xn, y];
-    }
-    int GetNeighborWest(int x, int y, int lado)
+    int GetNeighborSouth(int x, int y, int a, int b)
     {
         int yn = y - 1;
 
         if (y == 0)
-            yn = (lado - 1);
+            yn = (b - 1);
 
-        return matrizIds[x, yn];
+        int id = matrizIds[x, yn];
+
+        while (id == 0)
+        {
+            yn--;
+            id = matrizIds[x, yn];
+        }
+
+        return id;
     }
-    int GetNeighborEast(int x, int y, int lado)
+    int GetNeighborNorth(int x, int y, int a, int b)
     {
         int yn = y + 1;
 
-        if (y == (lado - 1))
+        if (y == (b - 1))
             yn = 0;
 
-        return matrizIds[x, yn];
+        int id = matrizIds[x, yn];
+
+        if (id == 0)
+        {
+            yn = 0;
+            id = matrizIds[x, yn];
+        }
+
+        return id;
+    }
+    int GetNeighborWest(int x, int y, int a, int b)
+    {
+        int xn = x - 1;
+
+        if (x == 0)
+            xn = (a - 1);
+
+        int id = matrizIds[xn, y];
+
+        while (id == 0)
+        {
+            xn--;
+            id = matrizIds[xn, y];
+        }
+
+        return id;
+    }
+    int GetNeighborEast(int x, int y, int a, int b)
+    {
+        int xn = x + 1;
+
+        if (x == (a - 1))
+            xn = 0;
+
+        int id = matrizIds[xn, y];
+
+        if (id == 0)
+        {
+            xn = 0;
+            id = matrizIds[xn, y];
+        }
+
+        return id;
     }
 }

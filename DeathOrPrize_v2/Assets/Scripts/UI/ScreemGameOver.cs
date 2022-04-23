@@ -16,11 +16,13 @@ public class ScreemGameOver : MonoBehaviour
     void Menu()
     {
         //aca cargar escena de menu
+        PlayerDataHelper.Heal();
         SceneManager.LoadScene("Menu");
     }
     void Continue()
     {
         //reposicionar player a la ciudad inicial y cargar level
+        PlayerDataHelper.Heal();
         SceneManager.LoadScene("Level");
     }
 }

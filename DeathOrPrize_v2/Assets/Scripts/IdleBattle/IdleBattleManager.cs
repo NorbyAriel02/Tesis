@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class IdleBattleManager : MonoBehaviour
 {
-    public Inventory HUB;
-    public float TimerTest = 3;
+    public HUDController HUB;
     public Transform Content;
-    public GameObject Enemies;
-    public PlayerMove playerMove;
-    public PlayerPosition playerPosition;
+    public GameObject Enemies;    
     public PlayerStats playerStats;
-    public GameObject prefabDropTemplate;
-    //private bool flag = false;
+    public GameObject prefabDropTemplate;    
     private bool inBattle = false;
     private Transform CameraTranform;
     private GameObject[] goEnemies;
@@ -20,15 +16,17 @@ public class IdleBattleManager : MonoBehaviour
     private int currentEnemy;
     private List<EnemiesXcellModel> enemiesXcell;
     private List<float> enemiesTimerAttack;
+    private List<float> enemiesAttackSpeed;
+    private float timer;
     DataFileController fileController = new DataFileController();
+    private EnemiesBarHealth enemiesBarHealth;
     void Start()
-    {
-        playerPosition = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerPosition>();
-        SetParent();
-        playerMove = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMove>();
-        playerStats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>();
+    {   
+        SetParent();       
+        playerStats = GetScript.Type<PlayerStats>("Player");
         DesactivePanel();
         goEnemies = ChildrenController.GetChildren(Enemies);
+        enemiesBarHealth = GetComponent<EnemiesBarHealth>();
     }
     private void OnEnable()
     {
@@ -49,63 +47,69 @@ public class IdleBattleManager : MonoBehaviour
         Content.gameObject.SetActive(false);
         inBattle = false; 
     }
-    public void StartBattle(int indexCell, int kingdomID)
+    public void StartBattle(int indexCell)
     {
-        SetEnemies(indexCell, kingdomID);
-        playerStats.SetStats();
-        TimerTest = 6;       
+        SetEnemies(indexCell);
+        playerStats.SetStats();          
         ActivePanel();
         inBattle = true;
     }
-    void SetEnemies(int index, int kingdom)
+    void SetEnemies(int index)
     {
+        int kingdom = PlayerDataHelper.GetIdKingdom();
         currentGridIndex = index;
-        enemiesXcell = fileController.GetData<List<EnemiesXcellModel>>(PathHelper.EnemiesDataFile(kingdom));
+        enemiesXcell = fileController.GetEncryptedData<List<EnemiesXcellModel>>(PathHelper.EnemiesDataFile(kingdom));
+        enemiesAttackSpeed = new List<float>();
         enemiesTimerAttack = new List<float>();
         for (int x = 0; x < goEnemies.Length; x++)
         {
             goEnemies[x].SetActive(false);
         }
+        enemiesBarHealth.StartBars();
         for (int x = 0; x < enemiesXcell[index].enemies.Count; x++)
         {
             goEnemies[x].SetActive(true);
-            enemiesTimerAttack.Add(enemiesXcell[index].enemies[x].attackSpeed);           
+            enemiesBarHealth.AddMaxHealth(enemiesXcell[index].enemies[x].health);
+            enemiesAttackSpeed.Add(enemiesXcell[index].enemies[x].attackSpeed);
+            enemiesTimerAttack.Add(0f);
         }
         currentEnemy = 0;
     }
     void Battle()
     {
+        timer += Time.deltaTime;
         int i = currentGridIndex;
         int index = 0;
         foreach(EnemyModel enemy in enemiesXcell[i].enemies)
         {
-            if(enemy.health > 0)
-                if (enemiesTimerAttack[index] <= 0)
+            float eTimerAttack = enemiesTimerAttack[index];
+            if (enemy.health > 0)
+                if (CanAttack(ref eTimerAttack, enemiesAttackSpeed[index]))
                 {
                     EnemyAttack(index);
                     HUB.UpdateBarHealth();
                 }
-                    
 
-            enemiesTimerAttack[index] = enemiesTimerAttack[index] - Time.deltaTime;
+            enemiesTimerAttack[index] = eTimerAttack;
+            
             index++;
         }
-        playerStats.attackSpeedTimer = playerStats.attackSpeedTimer - Time.deltaTime;
+
         if (playerStats.stats.currentHealth > 0)
-            if (playerStats.attackSpeedTimer <= 0)
+            if (CanAttack(ref playerStats.attackSpeedTimer, playerStats.attackSpeed))
             {
                 PlayerAttack();
             }
          
         if(enemiesXcell[i].enemies[currentEnemy].health <= 0)
         {
-            currentEnemy++;
             goEnemies[currentEnemy].SetActive(false);
+            currentEnemy++;            
         }
 
         if (currentEnemy >= enemiesXcell[i].enemies.Count)
         {
-            RewardDrop(enemiesXcell[0].enemies[0].difficultyIndex);
+            RewardDrop(enemiesXcell[0].enemies[0].level);
             DesactivePanel();
         }            
 
@@ -117,54 +121,58 @@ public class IdleBattleManager : MonoBehaviour
         GameObject go = Instantiate(prefabDropTemplate);
         Drop reward = go.GetComponent<Drop>();
         reward.item = Utilitis.GetRandomItem(level, Owner.player);
-        go.transform.position = new Vector3(playerPosition.transform.position.x + 1, playerPosition.transform.position.y, playerPosition.transform.position.z);
+        Vector3 playerPos = PlayerDataHelper.GetVectorPosition();
+        go.transform.position = new Vector3(playerPos.x + 1, playerPos.y, playerPos.z);
     }    
     void EnemyAttack(int index)
     {
         float d = playerStats.stats.defending;
-        float a = enemiesXcell[currentGridIndex].enemies[index].damage;
-        float h = playerStats.stats.currentHealth;
+        float a = enemiesXcell[currentGridIndex].enemies[index].damage;        
 
-        if (a > d)
-        {
-            PlayerDataHelper.RestHealth((a - d));
-            //playerStats.stats.currentHealth = h - (a - d);
-        }
-        else
-        {
-            PlayerDataHelper.RestHealth(1);
-            //playerStats.stats.currentHealth = h - 1; 
-        }
+        float damage = IdleBattleHelper.GetRealDamage(d, a);
 
+        PlayerDataHelper.RestHealth(damage);
 
-        enemiesTimerAttack[index] = enemiesXcell[currentGridIndex].enemies[index].attackSpeed;
+        playerStats.stats.currentHealth = PlayerDataHelper.GetCurrentHealth();        
     }
     void PlayerAttack()
     {
         float d = enemiesXcell[currentGridIndex].enemies[currentEnemy].defending;
         float a = playerStats.stats.damage;
-        float h = enemiesXcell[currentGridIndex].enemies[currentEnemy].health;
         
-        if(a > d)
-            enemiesXcell[currentGridIndex].enemies[currentEnemy].health = h - (a - d);
-        else
-            enemiesXcell[currentGridIndex].enemies[currentEnemy].health = h - 1;
+        float damage = IdleBattleHelper.GetRealDamage(d, a);
 
-        playerStats.attackSpeedTimer = playerStats.stats.attackSpeed;
+        enemiesXcell[currentGridIndex].enemies[currentEnemy].health -= damage;
+        enemiesBarHealth.UpdateHealth(currentEnemy, enemiesXcell[currentGridIndex].enemies[currentEnemy].health);
     }
     private void FixedUpdate()
     {
         if (inBattle)
             Battle();
     }
-    void Update()
+    bool CanAttack(ref float attackSpeedTimer, float speed)
     {
-        if (TimerTest < 0)
-            DesactivePanel();
-        
-        //if (playerMove.diceValue > 0)
-        //    flag = true;
+        if (PassASeg())
+        {
+            attackSpeedTimer += speed;
+        }
 
-        //TimerTest -= Time.deltaTime;        
+        if (attackSpeedTimer >= 1)
+        {
+            attackSpeedTimer = 0;
+            return true;
+        }
+        return false;
+    }
+    bool PassASeg()
+    {
+        timer += Time.deltaTime;
+
+        if (timer >= 0.5f)
+        {
+            timer = 0;
+            return true;
+        }
+        return false;
     }
 }

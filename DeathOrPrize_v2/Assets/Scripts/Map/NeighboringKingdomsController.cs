@@ -12,7 +12,7 @@ public class NeighboringKingdomsController : MonoBehaviour
     private LoadMaps loadMaps;    
     void Start()
     {        
-        listKingdomNeighbor = fileController.GetData<List<KingdomModel>>(PathHelper.NeighborKingdomDataFile);
+        listKingdomNeighbor = fileController.GetEncryptedData<List<KingdomModel>>(PathHelper.NeighborKingdomDataFile);
         loadMaps = GetComponent<LoadMaps>();
     }
     public void LoadMapNorth()

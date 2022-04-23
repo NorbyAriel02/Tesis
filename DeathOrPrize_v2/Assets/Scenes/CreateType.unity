@@ -239,9 +239,12 @@ MonoBehaviour:
     type: limit
     descrip: 
   - id: 4
+    type: cave
+    descrip: quest
+  - id: 5
     type: notClick
     descrip: 
-  ForceCreation: 0
+  ForceCreation: 1
 --- !u!4 &1509365195
 Transform:
   m_ObjectHideFlags: 0
@@ -455,6 +458,43 @@ MonoBehaviour:
   - id: 3
     idType: 3
     subtype: Sur
+    descrip: 
+  cellCave:
+  - id: 0
+    idType: 4
+    subtype: 
+    descrip: 
+  - id: 1
+    idType: 4
+    subtype: Door
+    descrip: Door quest
+  - id: 2
+    idType: 4
+    subtype: 
+    descrip: 
+  - id: 3
+    idType: 4
+    subtype: 
+    descrip: 
+  - id: 4
+    idType: 4
+    subtype: 
+    descrip: 
+  - id: 5
+    idType: 4
+    subtype: 
+    descrip: 
+  - id: 6
+    idType: 4
+    subtype: 
+    descrip: 
+  - id: 7
+    idType: 4
+    subtype: 
+    descrip: 
+  - id: 8
+    idType: 4
+    subtype: 
     descrip: 
   ForceCreation: 1
 --- !u!1 &1871254720

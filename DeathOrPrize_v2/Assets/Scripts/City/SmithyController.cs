@@ -60,7 +60,7 @@ public class SmithyController : MonoBehaviour
             Debug.Log("Necesitas 2 items iguales para poder forjar uno superior");
             return false;
         }
-        if (items[0].damageBase != items[0].damageBase)
+        if (items[0].level != items[1].level)
         {
             Debug.Log("Necesitas 2 items iguales para poder forjar uno superior");
             return false;

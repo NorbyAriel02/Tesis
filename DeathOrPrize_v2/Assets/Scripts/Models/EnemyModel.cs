@@ -9,5 +9,5 @@ public class EnemyModel
     public float damage = 5;
     public float defending = 5;
     public float health = 25;
-    public int difficultyIndex = 1;
+    public int level = 1;
 }

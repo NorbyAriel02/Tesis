@@ -26,6 +26,14 @@ public class PathHelper {
         string FilePath = string.Format(MyAppConfig.EnemiesDataFile, IdKingdom);
         return GetPlatformPath(FilePath);
     }
+    public static string BossesDataFile
+    {
+        get
+        {
+            string FilePath = MyAppConfig.BossesDataFile;
+            return GetPlatformPath(FilePath);
+        }        
+    }
     public static string BiomesDataFile
     {
         get { 
@@ -58,6 +66,15 @@ public class PathHelper {
         get
         {
             string FilePath = MyAppConfig.MarketDataFile;
+
+            return GetPlatformPath(FilePath);
+        }
+    }
+    public static string CSVQuestDataFile
+    {
+        get
+        {
+            string FilePath = MyAppConfig.CsvQuestDataFile;
 
             return GetPlatformPath(FilePath);
         }

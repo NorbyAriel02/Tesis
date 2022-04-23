@@ -23,19 +23,19 @@ public class WorldCreator : MonoBehaviour
     }
     void LoadBiomes()
     {
-        biomes = fileController.GetData<List<BiomeType>>(PathHelper.BiomesDataFile);
+        biomes = fileController.GetEncryptedData<List<BiomeType>>(PathHelper.BiomesDataFile);
     }
     void LoadCellTypes()
     {
-        CellTypes = fileController.GetData<List<CellType>>(PathHelper.CellTypesDataFile);
+        CellTypes = fileController.GetEncryptedData<List<CellType>>(PathHelper.CellTypesDataFile);
     }
     void LoadCellSubTypes()
     {
-        CellSubTypes = fileController.GetData<Dictionary<int, List<SubCellType>>>(PathHelper.CellSubTypesDataFile);
+        CellSubTypes = fileController.GetEncryptedData<Dictionary<int, List<SubCellType>>>(PathHelper.CellSubTypesDataFile);
     }
     void CreateWorld()
     {
-        for(int x = 0; x < numberOfKingdom; x++)
+        for(int x = 1; x <= numberOfKingdom; x++)
         {
             CreateKingdom(x, GetBiome());
         }
@@ -45,7 +45,7 @@ public class WorldCreator : MonoBehaviour
         cells = GetDataKingdom(biome, idKingdom);
         string path = PathHelper.WolrdDataFile(idKingdom);
         
-        fileController.Save<List<CellModel>>(cells, path);
+        fileController.SaveEncrypted<List<CellModel>>(cells, path);
     }
     List<CellModel> GetDataKingdom(int biome, int idKingdom)
     {
@@ -54,6 +54,7 @@ public class WorldCreator : MonoBehaviour
         MarkLimitCells();
         MarkCityCells();
         MarkRoadCells();
+        MarkCave();
         return cells;
     }
     void CreateGrid(int biome, int idKingdom)
@@ -119,7 +120,7 @@ public class WorldCreator : MonoBehaviour
                 (x == (sizeKingdom - 1) && y == 0)
                )
             {
-                cells[i].type = CellTypes[4];
+                cells[i].type = CellTypes[5];
                 cells[i].subtype = new SubCellType();
             }            
         }
@@ -139,39 +140,26 @@ public class WorldCreator : MonoBehaviour
     {
         int mid = Mathf.RoundToInt(sizeKingdom / 2);
         
-        int[] vIndex = GetIndexCity(mid-2, mid+2, mid-2, mid+2);
+        int[] vIndex = GridIndexHelper.GetIndexes3x3(mid-2, mid+2, mid-2, mid+2, cells, sizeKingdom);
         for(int i = 0; i < vIndex.Length; i++)
         {
             cells[vIndex[i]].type = CellTypes[1];
             cells[vIndex[i]].subtype = CellSubTypes[CellTypes[1].id][i];
         }
+        /*Definitivamente esto tiene que estar mal*/
+        if (cells[vIndex[1]].IDkingdom == 1)
+            PlayerDataHelper.SaveStartPositionPlayerKingdom1(new Vector3(cells[vIndex[1]].x, cells[vIndex[1]].y, 0));
     }
-    int[] GetIndexCity(int xMin, int xMax, int yMin, int yMax)
+    void MarkCave()
     {
-        int index = -1;
-        int x = Random.Range(xMin, xMax);
-        int y = Random.Range(yMin, yMax);
-        foreach (CellModel cell in cells)
-            if (cell.x == x && cell.y == y)
-            {
-                index = cell.index;
-                break;
-            }
-                
+        int mid = Mathf.RoundToInt(sizeKingdom / 2);
 
-        int[] vIndex = new int[]
-        {   index, 
-            GridIndexHelper.IndexArriba(index),
-            GridIndexHelper.IndexDerArriba(index, sizeKingdom),
-            GridIndexHelper.IndexDerecha(index,sizeKingdom),
-            GridIndexHelper.IndexDerAbajo(index, sizeKingdom),
-            GridIndexHelper.IndexAbajo(index),
-            GridIndexHelper.IndexIzqAbajo(index, sizeKingdom),
-            GridIndexHelper.IndexIzquierda(index,sizeKingdom),
-            GridIndexHelper.IndexIzqArriba(index, sizeKingdom)
-        };
-        
-        return vIndex;
+        int[] vIndex = GridIndexHelper.GetIndexes3x3(8, 10, 8, 10, cells, sizeKingdom);
+        for (int i = 0; i < vIndex.Length; i++)
+        {
+            cells[vIndex[i]].type = CellTypes[4];
+            cells[vIndex[i]].subtype = CellSubTypes[CellTypes[4].id][i];
+        }        
     }
     void MarkCity2Door(int index)
     {
@@ -180,22 +168,22 @@ public class WorldCreator : MonoBehaviour
         int[] vIndex = null;
         if (index == 0)
         {
-            vIndex = GetIndexCity(5, tercio - 3, mid - 2, mid + 2);            
+            vIndex = GridIndexHelper.GetIndexes3x3(5, tercio - 3, mid - 2, mid + 2, cells, sizeKingdom);            
         }
 
         if (index == 1)
         {
-            vIndex = GetIndexCity(mid - 2, mid + 2, (sizeKingdom - tercio), sizeKingdom - 5);
+            vIndex = GridIndexHelper.GetIndexes3x3(mid - 2, mid + 2, (sizeKingdom - tercio), sizeKingdom - 5, cells, sizeKingdom);
         }
         
         if (index == 2)
         {
-            vIndex = GetIndexCity((sizeKingdom - tercio), sizeKingdom - 5, mid - 2, mid + 2);            
+            vIndex = GridIndexHelper.GetIndexes3x3((sizeKingdom - tercio), sizeKingdom - 5, mid - 2, mid + 2, cells, sizeKingdom);            
         }
 
         if (index == 3)
         {
-            vIndex = GetIndexCity(mid - 2, mid + 2, 5, tercio - 3);
+            vIndex = GridIndexHelper.GetIndexes3x3(mid - 2, mid + 2, 5, tercio - 3, cells, sizeKingdom);
         }
 
         for (int i = 0; i < vIndex.Length; i++)
@@ -230,7 +218,6 @@ public class WorldCreator : MonoBehaviour
             GenerateRoad(facingDoors.indexDoorCity, facingDoors.indexDoorCapital);
         }        
     }
-
     void GenerateRoad(int iCity, int iCap)
     {        
         bool vertical = false;

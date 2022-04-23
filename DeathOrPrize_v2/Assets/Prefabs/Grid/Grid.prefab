@@ -95,6 +95,16 @@ MonoBehaviour:
   - {fileID: 2189942501380320687, guid: 74b6db57458ba124cb8d45aa20cd12c9, type: 3}
   - {fileID: 5898571098892413184, guid: d93e700f4ab6d99418a1b43bb2bee085, type: 3}
   - {fileID: 1308414279433708837, guid: 1dcc21f612764a34ba2d35db37a3f236, type: 3}
+  prefabCave:
+  - {fileID: 1403110001964425395, guid: 30441217cef45604d82e7adfad26dad7, type: 3}
+  - {fileID: 4269925793839109598, guid: 083cf4d9b95d3bf488db29632e4e2156, type: 3}
+  - {fileID: 2475835426407495658, guid: 997384f422c5f9f459413d54c6fd7e05, type: 3}
+  - {fileID: 1409599392039855970, guid: 05d20daad5d0051488a9fa88b2b0150f, type: 3}
+  - {fileID: 4753671482499540023, guid: 429ac797f8a688046bd9f77b2aa352ec, type: 3}
+  - {fileID: 267452081091326335, guid: e3e798d2f8fa8e0439c7af242e0edec1, type: 3}
+  - {fileID: 3368307154859487674, guid: 6fcaddfb66885514eb955f65a21e6070, type: 3}
+  - {fileID: 7105591841725476828, guid: 538c5cf832e2c8142bf07caac3f21820, type: 3}
+  - {fileID: 1614701351382575475, guid: 4a086231fa76f1b4eb22de8f9902550b, type: 3}
 --- !u!114 &6323172387880161671
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -18,6 +18,6 @@ public class BiomeCreator : MonoBehaviour
         if (fileController.Exists(PathHelper.BiomesDataFile) && !ForceCreation)
             return;
 
-        fileController.Save<List<BiomeType>>(biomes, PathHelper.BiomesDataFile);
+        fileController.SaveEncrypted<List<BiomeType>>(biomes, PathHelper.BiomesDataFile);
     }
 }

@@ -33,14 +33,6 @@ public class Item : MonoBehaviour
         if (txtValue == null)
             return;
 
-        //if(type == TypeItem.ARMOR)
-        //{
-        //    txtValue.text = defending.ToString();
-        //}
-        //if (type == TypeItem.WEAPON)
-        //{
-        //    txtValue.text = damageBase.ToString();
-        //}
         txtPeso.text = properties.weight.ToString();
     }
     

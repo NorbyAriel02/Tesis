@@ -4,27 +4,17 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-    public float attackSpeedBase = 1;    
-    public float attackSpeedTimer = 1;
+    public float attackSpeed = 0.5f;    
+    public float attackSpeedTimer = 0f;
     public PlayerStatsModel stats;    
     EquipmentManager equipment;
-    InventoryManager inventory;
-    DataFileController fileController = new DataFileController();
+    InventoryManager inventory;//para obtener el peso que lleva el player  
     void Start()
     {
         stats = PlayerDataHelper.GetStats();
-        //stats = fileController.GetData<PlayerStatsModel>(PathHelper.PlayerStatsDataFile);
-        //if (stats == null)
-        //{
-        //    stats = new PlayerStatsModel();
-        //    stats.attackSpeed = attackSpeedBase;
-        //    stats.damage = 0;
-        //    stats.defending = 0;
-        //    stats.currentHealth = 10;
-        //}
-        attackSpeedTimer = stats.attackSpeed;
-        equipment = GameObject.FindGameObjectWithTag("Inventory").GetComponent<EquipmentManager>();
-        inventory = GameObject.FindGameObjectWithTag("Inventory").GetComponent<InventoryManager>();
+        attackSpeed = stats.attackSpeed;
+        equipment = GetScript.Type<EquipmentManager>("Inventory");
+        inventory = GetScript.Type<InventoryManager>("Inventory");
     }
 
     public void SetStats()
@@ -32,15 +22,16 @@ public class PlayerStats : MonoBehaviour
         for(int x = 0; x < equipment.items.Count; x++)
         {
             if (equipment.items[x].tItem == TypeItemInventory.Weapon)
+            {
                 stats.damage = equipment.items[x].damageBase;
+                stats.attackSpeed = equipment.items[x].attackSpeedEquipped;
+                attackSpeed = stats.attackSpeed;
+                attackSpeedTimer = 0f;
+            }
+                
 
             if (equipment.items[x].tItem == TypeItemInventory.Armor)
                 stats.defending = equipment.items[x].defending;
-        }      
-        
-    }
-    void Update()
-    {
-        
+        }        
     }
 }

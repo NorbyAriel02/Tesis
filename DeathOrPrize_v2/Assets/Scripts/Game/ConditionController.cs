@@ -8,8 +8,8 @@ public class ConditionController : MonoBehaviour
     private PlayerStats playerStats;
     // Start is called before the first frame update
     void Start()
-    {
-        playerStats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>();
+    {        
+        playerStats = GetScript.Type<PlayerStats>("Player");
         panelGameOver.SetActive(false);
     }
 

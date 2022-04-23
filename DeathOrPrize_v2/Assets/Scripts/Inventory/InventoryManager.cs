@@ -49,6 +49,6 @@ public class InventoryManager : MonoBehaviour
     }    
     public bool AddItem(ItemProperties newItem)
     {        
-        return InventoryHelper.AddItem(newItem, Slots, PathHelper.InventoryDataFile); 
+        return InventoryHelper.AddItem(newItem, Slots, PathHelper.InventoryDataFile);
     }
 }

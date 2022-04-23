@@ -30,7 +30,8 @@ public class PlayerMove : MonoBehaviour
     public void SetPosition(float x, float y)
     {
         _moveSpeed = moveSpeed;
-        playerMovePoint.position = new Vector3(x, y, playerMovePoint.position.z);        
+        playerMovePoint.position = new Vector3(x, y, playerMovePoint.position.z);
+        PlayerDataHelper.UpdatePosition(playerMovePoint.position);
     }
     public void SetPositionNewKingdom(float x, float y, int sizeKingdom)
     {

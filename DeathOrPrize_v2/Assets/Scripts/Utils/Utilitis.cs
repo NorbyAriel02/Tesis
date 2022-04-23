@@ -3,7 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Utilitis 
-{    
+{
+    public static int PrecioBase = 15;
+    public static int DamageBase = 10;
+    public static int IncrementoDamage = 5;
+    public static int DefendingBase = 50;
+    public static int IncrementoDefending = 10;
+    public static float probabilidadGolpeEnArea = 0.35f;
     public static ItemProperties GetRandomItem(int level, Owner owner)
     {
         ItemProperties item = new ItemProperties();        
@@ -22,56 +28,72 @@ public class Utilitis
     
     static ItemProperties GetWeapon(int level, Owner owner)
     {
-        float r = Random.Range(10, 15);
+        float r = Random.Range(DamageBase, DamageBase+IncrementoDamage);
         ItemProperties item = new ItemProperties();
         item.owner = owner;
         item.tItem = TypeItemInventory.Weapon;
         item.level = level;
-        item.value = level;
+        item.value = PrecioBase * level;
         item.damageBase = level + r;
-        item.attackSpeedBase = 5 - (5*((r+level)/100));
-        item.area = level > 5 ? true : false;
+        item.attackSpeedEquipped = AttackSpeed(level);
+        item.attackSpeedBase = AttackSpeed(level);
+        item.area = IsHitArea();
         item.weight = 2;
-        item.labelData = r.ToString();
+        item.labelData = item.damageBase.ToString();
 
         return item;
     }
+
+    static bool IsHitArea()
+    {
+        float r = Random.Range(0f, 1f);
+        return r > probabilidadGolpeEnArea ? false:true;
+    }
     static ItemProperties GetArmor(int level, Owner owner)
     {
-        float r = Random.Range(10, 15);
+        float r = Random.Range(DefendingBase, DefendingBase+IncrementoDefending);
         ItemProperties item = new ItemProperties();
         item.owner = owner;
         item.tItem = TypeItemInventory.Armor;
         item.level = level;
-        item.value = level;
-        item.defending = level + r;
+        item.value = PrecioBase + level;
+        item.defending = level * r;
         item.weight = 3;
-        item.labelData = r.ToString();
+        item.labelData = item.defending.ToString();
 
         return item;
     }
     public static ItemProperties GetBestItem(ItemProperties i)
     {
-        float r = Random.Range(10, 15);
+        int r = Random.Range(1, 3);
         ItemProperties item = new ItemProperties();
-        item.tItem = i.tItem;
-        item.level = i.level + 1;
-        item.value = i.level + 1;
+        
         if (i.tItem == TypeItemInventory.Armor)
         {
-            item.defending = i.level + r;
-            item.weight = 3;
-            item.labelData = item.defending.ToString();
+            item = GetArmor(i.level + r, Owner.player);
         }
         else
         {
-            item.damageBase = i.damageBase + r;
-            item.attackSpeedBase = 5 - (5 * ((r + i.level) / 100));
-            item.area = item.level > 5 ? true : false;
-            item.weight = 2;
-            item.labelData = item.damageBase.ToString();
+            item = GetWeapon(i.level + r, Owner.player);
         }
 
         return item;
+    }
+
+    public static float AttackSpeed(int level)
+    {
+        float b = 6;
+        float balance = 0.5f;
+        float attacks = (b - level * balance);
+
+        if (attacks < 0.5f)
+            attacks = 0.5f;
+
+        float deltaTime = 0.5f;
+        
+        float attackSpeed = deltaTime / attacks;
+
+
+        return attackSpeed;
     }
 }

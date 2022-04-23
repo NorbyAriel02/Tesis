@@ -20,7 +20,7 @@ public class CellTypesCreator : MonoBehaviour
         if (fileController.Exists(PathHelper.CellTypesDataFile) && !ForceCreation)
             return;
 
-        fileController.Save<List<CellType>>(cellTypes, PathHelper.CellTypesDataFile);
+        fileController.SaveEncrypted<List<CellType>>(cellTypes, PathHelper.CellTypesDataFile);
         Debug.Log("Listo tipos");
     }
 }

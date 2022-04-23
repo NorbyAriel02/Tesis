@@ -32,7 +32,7 @@ public class Menu : MonoBehaviour
     bool ValidarContinue()
     {
         DataFileController fileController = new DataFileController();
-        if (fileController.Exists(PathHelper.WolrdDataFile(0)))
+        if (fileController.Exists(PathHelper.WolrdDataFile(1)))
             return true;
 
         return false;

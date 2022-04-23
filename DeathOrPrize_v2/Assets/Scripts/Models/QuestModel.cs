@@ -1,18 +1,15 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
-using UnityEngine;
 
+public enum QuestStatus { esperando, activa, completa };
+
+[Serializable]
 public class QuestModel 
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public string tittle;
+    public List<string> initialMessage;
+    public List<string> middleMessage;
+    public List<string> finalMessage;
+    public QuestStatus status;    
+    public int idkingdom;
 }

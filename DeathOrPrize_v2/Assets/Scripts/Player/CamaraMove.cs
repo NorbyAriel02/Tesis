@@ -31,7 +31,8 @@ public class CamaraMove : MonoBehaviour
         Move();
         if (CameraIsInPlayerPosition())
         {
-            LoadKingdom.SetActive(false);
+            if(LoadKingdom != null)
+                LoadKingdom.SetActive(false);
             moveSpeed = 2;
         }
         

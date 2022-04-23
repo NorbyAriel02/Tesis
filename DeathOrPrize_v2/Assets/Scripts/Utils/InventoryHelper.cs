@@ -7,7 +7,7 @@ public class InventoryHelper
     public static List<ItemProperties> GetListItemsFromFile(string path)
     {
         DataFileController fileController = new DataFileController();
-        List<ItemProperties> items = fileController.GetData<List<ItemProperties>>(path);
+        List<ItemProperties> items = fileController.GetEncryptedData<List<ItemProperties>>(path);
 
         return items;
     }
@@ -78,7 +78,7 @@ public class InventoryHelper
     public static void Save(List<ItemProperties> items, string path)
     {
         DataFileController fileController = new DataFileController();
-        fileController.Save<List<ItemProperties>>(items, path);
+        fileController.SaveEncrypted<List<ItemProperties>>(items, path);
     }
     private static int GetIndexSlotEmpty(GameObject[] _Slots)
     {
@@ -103,7 +103,7 @@ public class InventoryHelper
     {
         DataFileController fileController = new DataFileController();
         List<ItemProperties> items = new List<ItemProperties>();
-        fileController.Save<List<ItemProperties>>(items, pathInventory);
-        fileController.Save<List<ItemProperties>>(items, pathEquipment);
+        fileController.SaveEncrypted<List<ItemProperties>>(items, pathInventory);
+        fileController.SaveEncrypted<List<ItemProperties>>(items, pathEquipment);
     }
 }

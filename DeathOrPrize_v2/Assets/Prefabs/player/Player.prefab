@@ -106,14 +106,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c2f3e501d2901147ba72a479baf5f08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackSpeedBase: 1
+  attackSpeed: 1
   attackSpeedTimer: 1
   stats:
     attackSpeed: 1
     attackSpeedTimer: 1
-    damage: 5
-    defending: 5
-    health: 25
+    damage: 1
+    defending: 1
+    currentHealth: 25
+    maxHealth: 25
 --- !u!1 &3571907579757138260
 GameObject:
   m_ObjectHideFlags: 0

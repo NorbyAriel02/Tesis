@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 2903772942878671812}
   - component: {fileID: 2903772942878671815}
   - component: {fileID: 2903772942878671811}
+  - component: {fileID: 99366366888047338}
+  - component: {fileID: 5991218272353922103}
   m_Layer: 5
   m_Name: Item
   m_TagString: Untagged
@@ -90,38 +92,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae872019a991ccd458bb6648b364db1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  properties:
+    owner: 0
+    tItem: 0
+    IndexSlot: -1
+    strength: 0
+    dexterity: 0
+    agility: 0
+    resistance: 0
+    constitution: 0
+    value: 1
+    SubType: 0
+    level: 0
+    area: 0
+    labelData: 
+    EnergyPerAttacksEquipped: 0
+    EnergyPerAttacksBase: 0
+    timeBetweenAttacksEquipped: 0
+    timeBetweenAttacksBase: 0
+    attackSpeedEquipped: 0
+    attackSpeedBase: 0
+    weight: 0
+    critical: 0
+    damageAreaEquipped: 0
+    damageAreaBase: 0
+    damageAreaMax: 0
+    damageEquipped: 0
+    damageBase: 0
+    damageMax: 0
+    defending: 0
+    plusEnergy: 0
+    plusHealth: 0
+    regenereHelth: 0
+    regenereEnergy: 0
   image: {fileID: 2903772942878671813}
-  tItem: 1
   txtValue: {fileID: 0}
   txtPeso: {fileID: 0}
-  strength: 0
-  dexterity: 0
-  agility: 0
-  resistance: 0
-  constitution: 0
-  SubType: 0
-  level: 0
-  area: 0
-  labelData: 
-  EnergyPerAttacksEquipped: 0
-  EnergyPerAttacksBase: 0
-  timeBetweenAttacksEquipped: 0
-  timeBetweenAttacksBase: 0
-  attackSpeedEquipped: 0
-  attackSpeedBase: 0
-  weight: 0
-  critical: 0
-  damageAreaEquipped: 0
-  damageAreaBase: 0
-  damageAreaMax: 0
-  damageEquipped: 0
-  damageBase: 0
-  damageMax: 0
-  defending: 0
-  plusEnergy: 0
-  plusHealth: 0
-  regenereHelth: 0
-  regenereEnergy: 0
 --- !u!114 &2903772942878671815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,8 +140,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e8c84b72d2f73648bdd75859a7275ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fatherMaster: {fileID: 0}
   canvasInventario: {fileID: 0}
   HaveParent: 0
+  PadreActual: {fileID: 0}
 --- !u!225 &2903772942878671811
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -148,3 +156,28 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &99366366888047338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2903772942878671865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a115fd529864ed9419db4a2456fde099, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &5991218272353922103
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2903772942878671865}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 200, y: 200, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}

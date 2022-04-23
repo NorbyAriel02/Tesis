@@ -13,6 +13,8 @@ TagManager:
   - Battle
   - City
   - Market
+  - Boss
+  - ToolTip
   layers:
   - Default
   - TransparentFX

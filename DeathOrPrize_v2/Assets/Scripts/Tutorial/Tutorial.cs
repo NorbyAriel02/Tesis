@@ -9,8 +9,8 @@ public class Tutorial : MonoBehaviour
     public Transform playerPos;
     private void Awake()
     {
-        PlayerDataHelper.UpdatePosition(new Vector3(0, 0, 0));
-        PlayerDataHelper.UpdateIdKingdom(0);
+        PlayerDataHelper.Heal();
+        PlayerDataHelper.SetTutorialPositionPlayer();
         InventoryHelper.StartInventoryAndEquipmentFile(PathHelper.InventoryDataFile, PathHelper.EquipmentDataFile);
     }
     void Start()
@@ -19,12 +19,7 @@ public class Tutorial : MonoBehaviour
     }
     void LoadLevel()
     {
-        playerPos.position = new Vector3(26, 17, 0);
+        playerPos.position = PlayerDataHelper.GetStartPosition();
         SceneManager.LoadScene("Level");
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

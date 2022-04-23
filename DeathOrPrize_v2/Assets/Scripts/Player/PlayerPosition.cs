@@ -8,8 +8,7 @@ public class PlayerPosition : MonoBehaviour
     public int kingdomID;
     
     private void Awake()
-    {
-        //PlayerDataHelper.SetStartDataPlayer(transform.position);
+    {        
         PlayerPositionModel pos = PlayerDataHelper.GetPosition();
         if (pos != null)
         {

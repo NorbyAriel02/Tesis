@@ -11,10 +11,12 @@ public class HUDController : MonoBehaviour
     public Button btnInventory;
     public Image barHealth;
     public Text TextHealth;
+    public Text TextKimgdom;
     private InventoryManager inventory;
     PlayerMove playerMove;
     void Start()
     {
+        TextKimgdom.text = "Reino " + PlayerDataHelper.GetIdKingdom();
         playerMove = GetScript.Type<PlayerMove>("Player");
         btnDado.onClick.AddListener(GetNewValueDeci);
         btnInventory.onClick.AddListener(Open);
@@ -27,7 +29,7 @@ public class HUDController : MonoBehaviour
         float health = PlayerDataHelper.GetCurrentHealth();
         float maxHealth = PlayerDataHelper.GetMaxHealth();
         barHealth.fillAmount = health / maxHealth;
-        TextHealth.text = health.ToString();
+        TextHealth.text = health.ToString("0");
     }
 
     public void Heal()

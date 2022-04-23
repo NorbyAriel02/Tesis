@@ -14,7 +14,6 @@ public class Cell : MonoBehaviour
     private NeighboringKingdomsController neighboringKingdomsController;
     private GameObject border;
     private PlayerMove playerMove;    
-    private int _kingdomID;
     private IdleBattleManager battleManager;
     private CityController city;
     void Start()
@@ -22,7 +21,7 @@ public class Cell : MonoBehaviour
         neighboringKingdomsController = GetComponentInParent<NeighboringKingdomsController>();
         border = ChildrenController.GetChildWithTag(gameObject, "Border");
         playerMove = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMove>();
-        battleManager = GetScript.Type<IdleBattleManager>("Battle", this.name);// GameObject.FindGameObjectWithTag("Battle").GetComponent<IdleBattleManager>();
+        battleManager = GetScript.Type<IdleBattleManager>("Battle", this.name);
         city = GameObject.FindGameObjectWithTag("City").GetComponent<CityController>();
     }
     void ActionCell()
@@ -61,7 +60,7 @@ public class Cell : MonoBehaviour
     {
         if (playerMove.diceValue == 0)
         {
-            battleManager.StartBattle(index, _kingdomID);
+            battleManager.StartBattle(index);
         }
     }
     void Limit()
@@ -72,8 +71,7 @@ public class Cell : MonoBehaviour
         neighboringKingdomsController.LoadMap(subtype.id);
 
         playerMove.SetPositionNewKingdom(x, y, sizeKingdom);
-    }
-    
+    }    
     void OnMouseOver()
     {
         if (Input.GetKeyDown(KeyCode.Mouse0) && IsIntoDistance && playerMove.diceValue > 0)
