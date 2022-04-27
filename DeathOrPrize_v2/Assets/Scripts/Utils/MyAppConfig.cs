@@ -22,7 +22,8 @@ public class MyAppConfig
 
     #region Files
     public static string CsvQuestDataFile { get { return "Quest.csv"; } }
-    public static string QuestDataFile { get { return "ADM{0}.qti"; } }
+    public static string QuestsDataFile { get { return "ADM{0}.qti"; } }
+    public static string RewardsDataFile { get { return "ADP{0}.qti"; } }
     public static string WorldDataFile { get { return "ADR{0}.qti"; } }
     public static string EnemiesDataFile { get { return "ADE{0}.qti"; } }
     public static string BossesDataFile { get { return "ADB.qti"; } }

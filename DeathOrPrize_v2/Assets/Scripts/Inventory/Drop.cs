@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Drop : MonoBehaviour
 {
-    public ItemProperties item;
+    public ItemProperties item;    
     private InventoryManager inventory;
     // Start is called before the first frame update
     void Start()

@@ -109,12 +109,20 @@ public class IdleBattleManager : MonoBehaviour
 
         if (currentEnemy >= enemiesXcell[i].enemies.Count)
         {
-            RewardDrop(enemiesXcell[0].enemies[0].level);
+            //RewardDrop(enemiesXcell[0].enemies[0].level);
+            DropRewards(enemiesXcell[0].enemies[0].level);
             DesactivePanel();
         }            
 
         if (playerStats.stats.currentHealth <= 0)
             DesactivePanel();
+    }
+    void DropRewards(int level)
+    {
+        for(int x = 0; x < 5; x++)
+        {
+            RewardDrop(level);
+        }
     }
     void RewardDrop(int level)
     {

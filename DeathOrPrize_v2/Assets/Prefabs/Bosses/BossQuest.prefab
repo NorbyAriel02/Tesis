@@ -151,6 +151,7 @@ MonoBehaviour:
   Bosses: {fileID: 1711315775006758050}
   playerStats: {fileID: 0}
   prefabDropTemplate: {fileID: 1434962396604645493, guid: 688b0ba4194a79c48ab9d71530c4da90, type: 3}
+  IdQuest: Version1
 --- !u!114 &6063388141141682738
 MonoBehaviour:
   m_ObjectHideFlags: 0

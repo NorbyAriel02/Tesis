@@ -9,6 +9,7 @@ public class BossQuest : MonoBehaviour
     public GameObject Bosses;    
     public PlayerStats playerStats;
     public GameObject prefabDropTemplate;
+    public string IdQuest = "Boss";    
     private bool inBattle = false;
     private Transform CameraTranform;
     private GameObject[] goEnemies;
@@ -88,6 +89,7 @@ public class BossQuest : MonoBehaviour
         {
             RewardDrop(bossesData[currentBoss].level);
             goEnemies[currentBoss].SetActive(false);
+            QuestHelper.CompletedBossQuests(IdQuest, currentBoss);
             DesactivePanel();
         }
 
@@ -97,8 +99,9 @@ public class BossQuest : MonoBehaviour
     void RewardDrop(int level)
     {
         GameObject go = Instantiate(prefabDropTemplate);
+        RewardModel rf = QuestHelper.GetRewardQuests(IdQuest, currentBoss);
         Drop reward = go.GetComponent<Drop>();
-        reward.item = Utilitis.GetRandomItem(level, Owner.player);
+        reward.item = rf.reward;
         Vector3 playerPos = PlayerDataHelper.GetVectorPosition();
         go.transform.position = new Vector3(playerPos.x + 1, playerPos.y, playerPos.z);
     }

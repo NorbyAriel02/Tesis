@@ -44,13 +44,30 @@ public class QuestHelper
     public static List<QuestModel> GetQuests(string idQuest)
     {
         DataFileController fileController = new DataFileController();
-        List<QuestModel> quests = fileController.GetEncryptedData<List<QuestModel>>(PathHelper.QuestDataFile(idQuest));
+        List<QuestModel> quests = fileController.GetEncryptedData<List<QuestModel>>(PathHelper.QuestsDataFile(idQuest));
         
         return quests;
+    }
+    public static RewardModel GetRewardQuests(string idRewards, int idKingdom)
+    {
+        DataFileController fileController = new DataFileController();
+        List<RewardModel> rewards = fileController.GetEncryptedData<List<RewardModel>>(PathHelper.RewardsDataFile(idRewards));
+
+        return rewards[idKingdom];
+    }
+    public static void CompletedBossQuests(string idQuest, int boss)
+    {
+        DataFileController fileController = new DataFileController();
+        List<QuestModel> quests = fileController.GetEncryptedData<List<QuestModel>>(PathHelper.QuestsDataFile(idQuest));
+        
+        if(quests != null && quests.Count > boss)
+            quests[boss].status = QuestStatus.completa;
+        
+        fileController.SaveEncrypted<List<QuestModel>>(quests, PathHelper.QuestsDataFile(idQuest));
     }
     public static void Save(List<QuestModel> quests, string idQuest)
     {
         DataFileController fileController = new DataFileController();
-        fileController.SaveEncrypted<List<QuestModel>>(quests, PathHelper.QuestDataFile(idQuest));
+        fileController.SaveEncrypted<List<QuestModel>>(quests, PathHelper.QuestsDataFile(idQuest));
     }
 }

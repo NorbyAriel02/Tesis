@@ -265,10 +265,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: BossQuest
       objectReference: {fileID: 0}
-    - target: {fileID: 403586103899930596, guid: a9c6eec66c77d5141a5033245ddb55fd, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 403586103899930599, guid: a9c6eec66c77d5141a5033245ddb55fd, type: 3}
       propertyPath: HUB
       value: 

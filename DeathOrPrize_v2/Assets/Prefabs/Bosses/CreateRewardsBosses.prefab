@@ -1,0 +1,335 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3274162508714749548
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3274162508714749550}
+  - component: {fileID: 3274162508714749551}
+  m_Layer: 0
+  m_Name: CreateRewardsBosses
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3274162508714749550
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3274162508714749548}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3274162508714749551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3274162508714749548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d039a787d4b451f479636651e1ab159a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items:
+  - owner: 0
+    tItem: 1
+    IndexSlot: 0
+    strength: 0
+    dexterity: 0
+    agility: 0
+    resistance: 0
+    constitution: 0
+    value: 0
+    SubType: 1
+    level: 1
+    area: 0
+    labelData: 
+    EnergyPerAttacksEquipped: 0
+    EnergyPerAttacksBase: 0
+    timeBetweenAttacksEquipped: 0
+    timeBetweenAttacksBase: 0
+    attackSpeedEquipped: 0.25
+    attackSpeedBase: 0
+    weight: 0
+    critical: 0
+    damageAreaEquipped: 0
+    damageAreaBase: 0
+    damageAreaMax: 0
+    damageEquipped: 0
+    damageBase: 65
+    damageMax: 0
+    defending: 0
+    plusEnergy: 0
+    plusHealth: 0
+    regenereHelth: 0
+    regenereEnergy: 0
+  - owner: 0
+    tItem: 1
+    IndexSlot: 0
+    strength: 0
+    dexterity: 0
+    agility: 0
+    resistance: 0
+    constitution: 0
+    value: 0
+    SubType: 2
+    level: 1
+    area: 0
+    labelData: 
+    EnergyPerAttacksEquipped: 0
+    EnergyPerAttacksBase: 0
+    timeBetweenAttacksEquipped: 0
+    timeBetweenAttacksBase: 0
+    attackSpeedEquipped: 0.25
+    attackSpeedBase: 0
+    weight: 0
+    critical: 0
+    damageAreaEquipped: 0
+    damageAreaBase: 0
+    damageAreaMax: 0
+    damageEquipped: 0
+    damageBase: 130
+    damageMax: 0
+    defending: 0
+    plusEnergy: 0
+    plusHealth: 0
+    regenereHelth: 0
+    regenereEnergy: 0
+  - owner: 0
+    tItem: 1
+    IndexSlot: 0
+    strength: 0
+    dexterity: 0
+    agility: 0
+    resistance: 0
+    constitution: 0
+    value: 0
+    SubType: 3
+    level: 1
+    area: 0
+    labelData: 
+    EnergyPerAttacksEquipped: 0
+    EnergyPerAttacksBase: 0
+    timeBetweenAttacksEquipped: 0
+    timeBetweenAttacksBase: 0
+    attackSpeedEquipped: 0.25
+    attackSpeedBase: 0
+    weight: 0
+    critical: 0
+    damageAreaEquipped: 0
+    damageAreaBase: 0
+    damageAreaMax: 0
+    damageEquipped: 0
+    damageBase: 200
+    damageMax: 0
+    defending: 0
+    plusEnergy: 0
+    plusHealth: 0
+    regenereHelth: 0
+    regenereEnergy: 0
+  - owner: 0
+    tItem: 1
+    IndexSlot: 0
+    strength: 0
+    dexterity: 0
+    agility: 0
+    resistance: 0
+    constitution: 0
+    value: 0
+    SubType: 3
+    level: 1
+    area: 0
+    labelData: 
+    EnergyPerAttacksEquipped: 0
+    EnergyPerAttacksBase: 0
+    timeBetweenAttacksEquipped: 0
+    timeBetweenAttacksBase: 0
+    attackSpeedEquipped: 0.25
+    attackSpeedBase: 0
+    weight: 0
+    critical: 0
+    damageAreaEquipped: 0
+    damageAreaBase: 0
+    damageAreaMax: 0
+    damageEquipped: 0
+    damageBase: 265
+    damageMax: 0
+    defending: 0
+    plusEnergy: 0
+    plusHealth: 0
+    regenereHelth: 0
+    regenereEnergy: 0
+  - owner: 0
+    tItem: 1
+    IndexSlot: 0
+    strength: 0
+    dexterity: 0
+    agility: 0
+    resistance: 0
+    constitution: 0
+    value: 0
+    SubType: 3
+    level: 1
+    area: 0
+    labelData: 
+    EnergyPerAttacksEquipped: 0
+    EnergyPerAttacksBase: 0
+    timeBetweenAttacksEquipped: 0
+    timeBetweenAttacksBase: 0
+    attackSpeedEquipped: 0.25
+    attackSpeedBase: 0
+    weight: 0
+    critical: 0
+    damageAreaEquipped: 0
+    damageAreaBase: 0
+    damageAreaMax: 0
+    damageEquipped: 0
+    damageBase: 300
+    damageMax: 0
+    defending: 0
+    plusEnergy: 0
+    plusHealth: 0
+    regenereHelth: 0
+    regenereEnergy: 0
+  - owner: 0
+    tItem: 1
+    IndexSlot: 0
+    strength: 0
+    dexterity: 0
+    agility: 0
+    resistance: 0
+    constitution: 0
+    value: 0
+    SubType: 3
+    level: 1
+    area: 0
+    labelData: 
+    EnergyPerAttacksEquipped: 0
+    EnergyPerAttacksBase: 0
+    timeBetweenAttacksEquipped: 0
+    timeBetweenAttacksBase: 0
+    attackSpeedEquipped: 0.25
+    attackSpeedBase: 0
+    weight: 0
+    critical: 0
+    damageAreaEquipped: 0
+    damageAreaBase: 0
+    damageAreaMax: 0
+    damageEquipped: 0
+    damageBase: 365
+    damageMax: 0
+    defending: 0
+    plusEnergy: 0
+    plusHealth: 0
+    regenereHelth: 0
+    regenereEnergy: 0
+  - owner: 0
+    tItem: 1
+    IndexSlot: 0
+    strength: 0
+    dexterity: 0
+    agility: 0
+    resistance: 0
+    constitution: 0
+    value: 0
+    SubType: 3
+    level: 1
+    area: 0
+    labelData: 
+    EnergyPerAttacksEquipped: 0
+    EnergyPerAttacksBase: 0
+    timeBetweenAttacksEquipped: 0
+    timeBetweenAttacksBase: 0
+    attackSpeedEquipped: 0.25
+    attackSpeedBase: 0
+    weight: 0
+    critical: 0
+    damageAreaEquipped: 0
+    damageAreaBase: 0
+    damageAreaMax: 0
+    damageEquipped: 0
+    damageBase: 400
+    damageMax: 0
+    defending: 0
+    plusEnergy: 0
+    plusHealth: 0
+    regenereHelth: 0
+    regenereEnergy: 0
+  - owner: 0
+    tItem: 1
+    IndexSlot: 0
+    strength: 0
+    dexterity: 0
+    agility: 0
+    resistance: 0
+    constitution: 0
+    value: 0
+    SubType: 3
+    level: 1
+    area: 0
+    labelData: 
+    EnergyPerAttacksEquipped: 0
+    EnergyPerAttacksBase: 0
+    timeBetweenAttacksEquipped: 0
+    timeBetweenAttacksBase: 0
+    attackSpeedEquipped: 0.25
+    attackSpeedBase: 0
+    weight: 0
+    critical: 0
+    damageAreaEquipped: 0
+    damageAreaBase: 0
+    damageAreaMax: 0
+    damageEquipped: 0
+    damageBase: 465
+    damageMax: 0
+    defending: 0
+    plusEnergy: 0
+    plusHealth: 0
+    regenereHelth: 0
+    regenereEnergy: 0
+  - owner: 0
+    tItem: 1
+    IndexSlot: 0
+    strength: 0
+    dexterity: 0
+    agility: 0
+    resistance: 0
+    constitution: 0
+    value: 0
+    SubType: 3
+    level: 1
+    area: 0
+    labelData: 
+    EnergyPerAttacksEquipped: 0
+    EnergyPerAttacksBase: 0
+    timeBetweenAttacksEquipped: 0
+    timeBetweenAttacksBase: 0
+    attackSpeedEquipped: 0.25
+    attackSpeedBase: 0
+    weight: 0
+    critical: 0
+    damageAreaEquipped: 0
+    damageAreaBase: 0
+    damageAreaMax: 0
+    damageEquipped: 0
+    damageBase: 600
+    damageMax: 0
+    defending: 0
+    plusEnergy: 0
+    plusHealth: 0
+    regenereHelth: 0
+    regenereEnergy: 0
+  idRewads: Version1

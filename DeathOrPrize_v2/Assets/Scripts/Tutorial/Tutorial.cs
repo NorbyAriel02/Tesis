@@ -7,6 +7,7 @@ public class Tutorial : MonoBehaviour
 {
     public Button btnFinTutorial;
     public Transform playerPos;
+    public GameObject[] msjs;
     private void Awake()
     {
         PlayerDataHelper.Heal();
@@ -22,4 +23,5 @@ public class Tutorial : MonoBehaviour
         playerPos.position = PlayerDataHelper.GetStartPosition();
         SceneManager.LoadScene("Level");
     }
+    
 }

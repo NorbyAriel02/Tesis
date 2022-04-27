@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InventoryManager : MonoBehaviour
 {
     public KeyCode keyInventory;
+    public Button btnClose;
     public GameObject inventory;
     public GameObject prefabItemTemplate;
     public GameObject inventoryPanel;
@@ -17,6 +19,7 @@ public class InventoryManager : MonoBehaviour
         GetSlots();
         items = InventoryHelper.GetListItemsFromFile(PathHelper.InventoryDataFile);
         inventory.SetActive(false);
+        btnClose.onClick.AddListener(CloseInventory);
     }
     void GetSlots()
     {

@@ -106,9 +106,15 @@ public class PathHelper {
             return GetPlatformPath(FilePath);
         }
     }
-    public static string QuestDataFile(string idQuest)
+    public static string QuestsDataFile(string idQuest)
     {
-        string FilePath = string.Format(MyAppConfig.QuestDataFile, idQuest);
+        string FilePath = string.Format(MyAppConfig.QuestsDataFile, idQuest);
+
+        return GetPlatformPath(FilePath);
+    }
+    public static string RewardsDataFile(string idRewards)
+    {
+        string FilePath = string.Format(MyAppConfig.RewardsDataFile, idRewards);
 
         return GetPlatformPath(FilePath);
     }
