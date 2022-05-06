@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1807125615787039003, guid: e47e86c8c6d10e6489979b40f1eb76ff, type: 3}
+  m_Sprite: {fileID: 2151618812975761504, guid: c09ad8aed89667f4ab8d4ee1462d5999, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -101,6 +101,20 @@ MonoBehaviour:
   x: 0
   y: 0
   index: 0
+  sizeKingdom: 0
+  type:
+    id: -1
+    type: none
+    descrip: none
+  subtype:
+    id: -1
+    idType: -1
+    subtype: none
+    descrip: none
+  biome:
+    id: 0
+    descrip: 
+    paleta: 
 --- !u!65 &6484211192045975722
 BoxCollider:
   m_ObjectHideFlags: 0

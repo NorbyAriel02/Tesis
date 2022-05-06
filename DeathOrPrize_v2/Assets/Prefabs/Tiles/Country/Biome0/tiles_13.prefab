@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4627926166759304942}
   - component: {fileID: 6909056804576793928}
   - component: {fileID: -2956463425118508958}
+  - component: {fileID: -7589878501029051241}
   m_Layer: 0
   m_Name: tiles_13
   m_TagString: Untagged
@@ -72,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -8305803365058092108, guid: e47e86c8c6d10e6489979b40f1eb76ff, type: 3}
+  m_Sprite: {fileID: 3005796055444502184, guid: c09ad8aed89667f4ab8d4ee1462d5999, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,3 +99,30 @@ MonoBehaviour:
   x: 0
   y: 0
   index: 0
+  sizeKingdom: 0
+  type:
+    id: -1
+    type: none
+    descrip: none
+  subtype:
+    id: -1
+    idType: -1
+    subtype: none
+    descrip: none
+  biome:
+    id: 0
+    descrip: 
+    paleta: 
+--- !u!65 &-7589878501029051241
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8989857765326038254}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
