@@ -54,8 +54,96 @@ public class WorldCreator : MonoBehaviour
         MarkLimitCells();
         MarkCityCells();
         MarkRoadCells();
+        //MarkSurroundingsRoad();
         MarkCave();
         return cells;
+    }
+    void MarkSurroundingsRoad()
+    {
+        for (int i = 0; i < cells.Count; i++)
+        {
+            if (cells[i].type.id != 0)
+                continue;
+
+            int derecha = GridIndexHelper.GetIndex(i, Direcciones.derecha, sizeKingdom);
+            int izq = GridIndexHelper.GetIndex(i, Direcciones.izquierda, sizeKingdom);
+            int arriba = GridIndexHelper.GetIndex(i, Direcciones.arriba, sizeKingdom);
+            int abajo = GridIndexHelper.GetIndex(i, Direcciones.abajo, sizeKingdom);
+            //int abajoDer = GridIndexHelper.GetIndex(i, Direcciones, sizeKingdom);
+            //int abajoIzq = GridIndexHelper.GetIndex(i, Direcciones.derecha, sizeKingdom);
+            //int arribaDer = GridIndexHelper.GetIndex(i, Direcciones.derecha, sizeKingdom);
+            //int arribaIzq = GridIndexHelper.GetIndex(i, Direcciones.derecha, sizeKingdom);
+            if (derecha < 0 || izq < 0)
+                continue;
+            
+            if (derecha >= cells.Count || izq >= cells.Count)
+                continue;
+
+            if(cells[derecha].type.id == 2)
+            {
+                if (cells[arriba].type.id == 2)
+                {
+                    cells[i].subtype = CellSubTypes[0][11];
+                    cells[abajo].subtype = CellSubTypes[0][0];
+                }
+                else if (cells[abajo].type.id == 2)
+                {
+                    cells[i].subtype = CellSubTypes[0][6];
+                    cells[izq].subtype = CellSubTypes[0][5];
+                }
+                else
+                {
+                    cells[i].subtype = CellSubTypes[0][10];
+                }
+            }
+            else if (cells[izq].type.id == 2)
+            {
+                if (cells[arriba].type.id == 2)
+                {
+                    cells[i].subtype = CellSubTypes[0][13];
+                    cells[derecha].subtype = CellSubTypes[0][9];
+                }
+                else if (cells[abajo].type.id == 2)
+                {
+                    cells[i].subtype = CellSubTypes[0][8];
+                    cells[arriba].subtype = CellSubTypes[0][3];
+                }
+                else
+                {
+                    cells[i].subtype = CellSubTypes[0][7];
+                }
+            }
+            else if (cells[abajo].type.id == 2)
+            {
+                //if (cells[arriba].type.id == 2)
+                //{
+                //    cells[i].subtype = CellSubTypes[0][13];
+                //}
+                //else if (cells[abajo].type.id == 2)
+                //{
+                //    cells[i].subtype = CellSubTypes[0][8];
+                //}
+                //else
+                {
+                    cells[i].subtype = CellSubTypes[0][2];
+                }
+            }
+            else if (cells[arriba].type.id == 2)
+            {
+                //if (cells[arriba].type.id == 2)
+                //{
+                //    cells[i].subtype = CellSubTypes[0][13];
+                //}
+                //else if (cells[abajo].type.id == 2)
+                //{
+                //    cells[i].subtype = CellSubTypes[0][8];
+                //}
+                //else
+                {
+                    cells[i].subtype = CellSubTypes[0][12];
+                }
+            }
+        }
     }
     void CreateGrid(int biome, int idKingdom)
     {
@@ -73,7 +161,7 @@ public class WorldCreator : MonoBehaviour
                 cell.biome = biomes[biome];
                 cell.type = CellTypes[0];
                 int i = Random.Range(0, CellSubTypes[0].Count);
-                cell.subtype = CellSubTypes[0][i];
+                cell.subtype = CellSubTypes[0][i];                
                 cell.sizeKingdom = sizeKingdom;
                 //str = str +  "[" + cell.index + "-" + cell.x + "-" + cell.y + "]|";
                 cells.Add(cell);

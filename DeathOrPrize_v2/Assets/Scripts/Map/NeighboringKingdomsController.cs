@@ -5,39 +5,41 @@ using UnityEngine.UI;
 
 public class NeighboringKingdomsController : MonoBehaviour
 {
-    public Text textReino;
-    private int IdKingdom = 0;
+    public Text textReino;    
     private DataFileController fileController = new DataFileController();
     private List<KingdomModel> listKingdomNeighbor;    
-    private LoadMaps loadMaps;    
+    private LoadMaps loadMaps;
+    private Kingdom kingdom;
     void Start()
-    {        
+    {
+        kingdom = GetComponent<Kingdom>();
         listKingdomNeighbor = fileController.GetEncryptedData<List<KingdomModel>>(PathHelper.NeighborKingdomDataFile);
         loadMaps = GetComponent<LoadMaps>();
+        kingdom.idKingdom = PlayerDataHelper.GetIdKingdom();         
     }
     public void LoadMapNorth()
     {
-        IdKingdom = listKingdomNeighbor[IdKingdom].NorthernNeighbor;
-        textReino.text = "Reino " + IdKingdom;
-        loadMaps.LoadGrid(IdKingdom);         
+        kingdom.idKingdom = listKingdomNeighbor[kingdom.idKingdom - 1].NorthernNeighbor;
+        textReino.text = "Reino " + kingdom.idKingdom;
+        loadMaps.LoadGrid(kingdom.idKingdom);         
     }
     public void LoadMapSouth()
     {
-        IdKingdom = listKingdomNeighbor[IdKingdom].SouthNeighbor;
-        textReino.text = "Reino " + IdKingdom;
-        loadMaps.LoadGrid(IdKingdom);
+        kingdom.idKingdom = listKingdomNeighbor[kingdom.idKingdom - 1].SouthNeighbor;
+        textReino.text = "Reino " + kingdom.idKingdom;
+        loadMaps.LoadGrid(kingdom.idKingdom);
     }
     public void LoadMapEast()
     {
-        IdKingdom = listKingdomNeighbor[IdKingdom].EastNeighbor;
-        textReino.text = "Reino " + IdKingdom;
-        loadMaps.LoadGrid(IdKingdom);
+        kingdom.idKingdom = listKingdomNeighbor[kingdom.idKingdom-1].EastNeighbor;
+        textReino.text = "Reino " + kingdom.idKingdom;
+        loadMaps.LoadGrid(kingdom.idKingdom);
     }
     public void LoadMapWest()
     {
-        IdKingdom = listKingdomNeighbor[IdKingdom].WestNeighbor;
-        textReino.text = "Reino " + IdKingdom;
-        loadMaps.LoadGrid(IdKingdom);
+        kingdom.idKingdom = listKingdomNeighbor[kingdom.idKingdom-1].WestNeighbor;
+        textReino.text = "Reino " + kingdom.idKingdom;
+        loadMaps.LoadGrid(kingdom.idKingdom);
     }
 
     public void LoadMap(int CellLimitId)
@@ -57,7 +59,7 @@ public class NeighboringKingdomsController : MonoBehaviour
                 LoadMapSouth();
                 break;
         }
-        PlayerDataHelper.UpdateIdKingdom(IdKingdom);
+        //PlayerDataHelper.UpdateIdKingdom(kingdom.idKingdom);
     }
     void Test()
     {
@@ -65,21 +67,21 @@ public class NeighboringKingdomsController : MonoBehaviour
         {
             LoadMapWest();
         }
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.D))
         {
             LoadMapEast();
         }
-        if (Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.S))
         {
             LoadMapSouth();
         }
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.W))
         {
             LoadMapNorth();
         }
     }
     void Update()
     {
-        //Test();
+        Test();
     }
 }

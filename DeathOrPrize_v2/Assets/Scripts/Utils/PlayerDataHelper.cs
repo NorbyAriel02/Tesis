@@ -39,6 +39,13 @@ public class PlayerDataHelper
         
         return new Vector3(data.startPosition.X, data.startPosition.Y, 0);
     }
+    public static PlayerPositionModel GetStartPositionRespawn()
+    {
+        DataFileController fileController = new DataFileController();
+        PlayerDataModel data = fileController.GetEncryptedData<PlayerDataModel>(PathHelper.PlayerDataFile);
+
+        return data.startPosition;
+    }
     public static int GetIdKingdom()
     {
         int id = -1;
@@ -70,6 +77,43 @@ public class PlayerDataHelper
         }           
 
         fileController.SaveEncrypted<PlayerDataModel>(data, PathHelper.PlayerDataFile);
+    }
+    public static void UpdatePosition(PlayerPositionModel pos)
+    {
+        DataFileController fileController = new DataFileController();
+        PlayerDataModel data = fileController.GetEncryptedData<PlayerDataModel>(PathHelper.PlayerDataFile);
+        if (data != null)
+            data.position = GetNewObjectPosition(pos);
+
+        fileController.SaveEncrypted<PlayerDataModel>(data, PathHelper.PlayerDataFile);
+    }
+    //public static void UpdateDeathPosition(Vector3 pos, int idKingdom)
+    //{
+    //    DataFileController fileController = new DataFileController();
+    //    PlayerDataModel data = fileController.GetEncryptedData<PlayerDataModel>(PathHelper.PlayerDataFile);
+    //    if (data != null)
+    //    {
+    //        PlayerPositionModel p = new PlayerPositionModel();
+    //        p.KingdomID = idKingdom;
+    //        p.X = pos.x;
+    //        p.Y = pos.y;
+    //        p.Z = pos.z;
+    //        data.startPosition = p;
+    //        data.position.KingdomID = idKingdom;
+    //    }
+
+    //    fileController.SaveEncrypted<PlayerDataModel>(data, PathHelper.PlayerDataFile);
+    //}
+
+    static PlayerPositionModel GetNewObjectPosition(PlayerPositionModel data)
+    {
+        PlayerPositionModel position = new PlayerPositionModel();
+        position.KingdomID = data.KingdomID;
+        position.X = data.X;
+        position.Y = data.Y;
+        position.Z = data.Z;
+        
+        return position;
     }
     #endregion
 

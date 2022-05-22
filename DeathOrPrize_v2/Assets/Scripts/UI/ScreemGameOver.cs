@@ -21,7 +21,6 @@ public class ScreemGameOver : MonoBehaviour
     }
     void Continue()
     {
-        //reposicionar player a la ciudad inicial y cargar level
         PlayerDataHelper.Heal();
         SceneManager.LoadScene("Level");
     }

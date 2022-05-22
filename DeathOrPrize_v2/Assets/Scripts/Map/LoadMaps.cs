@@ -5,6 +5,7 @@ using UnityEngine;
 public class LoadMaps : MonoBehaviour
 {
     public bool ActiveText;
+    public List<Sprite> spriteCountry;
     public GameObject[] prefabTiles;
     public GameObject[] prefabCity;
     public GameObject[] prefabRoad;
@@ -14,7 +15,8 @@ public class LoadMaps : MonoBehaviour
     DataFileController fileController = new DataFileController();
     
     void Start()
-    {        
+    {  
+        
         LoadGrid(PlayerDataHelper.GetIdKingdom());
     }
 
@@ -44,7 +46,7 @@ public class LoadMaps : MonoBehaviour
     {
         GameObject goCell = Instantiate(listGO[cellData.subtype.id], transform);
         SetData(goCell, cellData);
-        
+        SetBiome(goCell);   
         if (ActiveText)
             LogDev(goCell, cellData);
     }
@@ -58,6 +60,7 @@ public class LoadMaps : MonoBehaviour
     {
         goCell.transform.position = new Vector3(cellData.x, cellData.y, 0);
         Cell cellScript = goCell.GetComponent<Cell>();
+        cellScript.cellData = cellData;
         cellScript.x = cellData.x;
         cellScript.y = cellData.y;
         cellScript.index = cellData.index;
@@ -65,5 +68,42 @@ public class LoadMaps : MonoBehaviour
         cellScript.subtype = cellData.subtype;
         cellScript.biome = cellData.biome;
         cellScript.sizeKingdom = cellData.sizeKingdom;
+    }
+    void SetBiome(GameObject go)
+    {        
+        Cell cellScript = go.GetComponent<Cell>();
+        if (cellScript.type.id != 0)
+            return;
+
+        switch(cellScript.biome.id)
+        {
+            case 1:
+                go.GetComponent<SpriteRenderer>().sprite = spriteCountry[0];
+                break;
+            case 2:
+                go.GetComponent<SpriteRenderer>().sprite = spriteCountry[1];
+                break;
+            case 3:
+                go.GetComponent<SpriteRenderer>().sprite = spriteCountry[2];
+                break;
+            case 4:
+                go.GetComponent<SpriteRenderer>().sprite = spriteCountry[3];
+                break;
+            case 5:
+                go.GetComponent<SpriteRenderer>().sprite = spriteCountry[4];
+                break;
+            case 6:
+                go.GetComponent<SpriteRenderer>().sprite = spriteCountry[5];
+                break;
+            case 7:
+                go.GetComponent<SpriteRenderer>().sprite = spriteCountry[6];
+                break;
+            case 8:
+                go.GetComponent<SpriteRenderer>().sprite = spriteCountry[7];
+                break;
+            case 9:
+                go.GetComponent<SpriteRenderer>().sprite = spriteCountry[8];
+                break;
+        }
     }
 }

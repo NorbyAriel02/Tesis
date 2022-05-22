@@ -11,6 +11,7 @@ public class MenuPausa : MonoBehaviour
     public Button btnMenu;
     public Button btnQuit;
     public GameObject panelMenuPausa;
+    public Animator animator;
     void Start()
     {
         btnMenu.onClick.AddListener(Menu);
@@ -29,12 +30,22 @@ public class MenuPausa : MonoBehaviour
 
     void Resumen()
     {
-        panelMenuPausa.SetActive(false);
+        Close();
     }
-    // Update is called once per frame
+    void Open()
+    {        
+        panelMenuPausa.SetActive(true);
+        animator.SetBool("Close", false);
+    }
+    void Close()
+    {
+        animator.SetBool("Close", true);
+    }
     void Update()
     {
-        if (Input.GetKeyDown(key))
-            panelMenuPausa.SetActive(!panelMenuPausa.activeSelf);
+        if (Input.GetKeyDown(key) && !panelMenuPausa.activeSelf)
+            Open();
+        else if (Input.GetKeyDown(key) && panelMenuPausa.activeSelf)
+            Close();
     }
 }

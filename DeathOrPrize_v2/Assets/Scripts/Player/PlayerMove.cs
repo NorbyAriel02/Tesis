@@ -17,15 +17,14 @@ public class PlayerMove : MonoBehaviour
         _moveSpeed = moveSpeed;
         playerMovePoint.parent = null;
     }
-
-    // Update is called once per frame
-    void Update()
+     
+    void FixedUpdate()
     {
         Move();
     }
     void Move()
     {
-        transform.position = Vector3.MoveTowards(transform.position, playerMovePoint.position, _moveSpeed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, playerMovePoint.position, _moveSpeed * Time.fixedDeltaTime);
     }
     public void SetPosition(float x, float y)
     {

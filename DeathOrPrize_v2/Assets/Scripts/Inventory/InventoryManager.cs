@@ -8,6 +8,7 @@ public class InventoryManager : MonoBehaviour
     public KeyCode keyInventory;
     public Button btnClose;
     public GameObject inventory;
+    public Animator animator;
     public GameObject prefabItemTemplate;
     public GameObject inventoryPanel;
     public GameObject[] Slots;
@@ -42,11 +43,12 @@ public class InventoryManager : MonoBehaviour
         List<ItemProperties> items = InventoryHelper.GetListItemsFromPanel(Slots);
         InventoryHelper.Save(items, PathHelper.InventoryDataFile);        
         equipment.Save();
-        inventory.SetActive(false);
+        animator.SetBool("Close", true);
     }
     public void OpenInventory()
     {
         inventory.SetActive(true);
+        animator.SetBool("Close", false);
         InventoryHelper.ShowItems(Slots, prefabItemTemplate, PathHelper.InventoryDataFile);        
         equipment.ShowEquipment();
     }    
