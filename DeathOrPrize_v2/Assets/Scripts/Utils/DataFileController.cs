@@ -74,7 +74,28 @@ public class DataFileController
 		}
 		return deserializedObject;
 	}
+	public T LoadFile<T>(string path) where T : class, new()
+	{
+		if (!File.Exists(path))
+			return null;
 
+		T deserializedObject = null;
+		FileStream fs = new FileStream(path, FileMode.Open);
+		try
+		{
+			BinaryFormatter formatter = new BinaryFormatter();
+			deserializedObject = (T)formatter.Deserialize(fs);
+		}
+		catch (SerializationException e)
+		{
+			Debug.Log(e.Message + " " + e.StackTrace);
+		}
+		finally
+		{
+			fs.Close();
+		}
+		return deserializedObject;
+	}
 	public DataTable GetData(string path) 
 	{
 		if (!File.Exists(path))

@@ -8,7 +8,8 @@ public class IdleBattleManager : MonoBehaviour
     public Transform Content;
     public GameObject Enemies;    
     public PlayerStats playerStats;
-    public GameObject prefabDropTemplate;    
+    public GameObject prefabDropTemplate;
+    public Animator animator;
     private bool inBattle = false;
     private Transform CameraTranform;
     private GameObject[] goEnemies;
@@ -39,11 +40,12 @@ public class IdleBattleManager : MonoBehaviour
         transform.localPosition = new Vector3(0, 0, transform.localPosition.z);
     }
     void ActivePanel()
-    {
+    {        
         Content.gameObject.SetActive(true);
+        animator.SetBool("Close", false);
     }
     void DesactivePanel()
-    {
+    {        
         Content.gameObject.SetActive(false);
         inBattle = false; 
     }
@@ -111,11 +113,17 @@ public class IdleBattleManager : MonoBehaviour
         {
             //RewardDrop(enemiesXcell[0].enemies[0].level);
             DropRewards(enemiesXcell[0].enemies[0].level);
-            DesactivePanel();
-        }            
+            EndBattle();
+        }
 
         if (playerStats.stats.currentHealth <= 0)
-            DesactivePanel();
+            EndBattle();
+            
+    }
+    void EndBattle()
+    {
+        animator.SetBool("Close", true);
+        inBattle = false;
     }
     void DropRewards(int level)
     {

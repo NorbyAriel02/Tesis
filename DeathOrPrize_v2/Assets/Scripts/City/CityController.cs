@@ -141,6 +141,7 @@ public class CityController : MonoBehaviour
         hud.Heal();
         SetExits(x, y, subTypeId);
         LoadItems();
+        //PlayerDataHelper.UpdateIdKingdom();
         panelCity.SetActive(true);
     }
     private void SetExits(float x, float y, int subType)
