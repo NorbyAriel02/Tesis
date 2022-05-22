@@ -1,0 +1,35 @@
+Event	ID	Name			Wwise Object Path	Notes
+	213563888	Item_Forge			\Default Work Unit\Miscellaneous\Item_Forge	
+	502835106	UI_Exit			\Default Work Unit\UI\UI_Exit	
+	795457351	Item_Trash			\Default Work Unit\Miscellaneous\Item_Trash	
+	1006024461	Amb_Forest			\Default Work Unit\Ambience\Amb_Forest	
+	1331156295	Item_Sell			\Default Work Unit\Miscellaneous\Item_Sell	
+	1567541412	Field_Ok			\Default Work Unit\Player\Field_Ok	
+	1699323996	Item_Move			\Default Work Unit\Miscellaneous\Item_Move	
+	1781417190	Enemy_Attack			\Default Work Unit\Enemys\Enemy_Attack	
+	2027123568	UI_ButtonHover			\Default Work Unit\UI\UI_ButtonHover	
+	2146777153	Item_Equip			\Default Work Unit\Miscellaneous\Item_Equip	
+	2248092158	Player_Move			\Default Work Unit\Player\Player_Move	
+	2249769530	UI_Click			\Default Work Unit\UI\UI_Click	
+	2334012187	Throw_Dice			\Default Work Unit\Player\Throw_Dice	
+	2420340053	Enemy_GetDamage			\Default Work Unit\Enemys\Enemy_GetDamage	
+	2824512041	Player_Attack			\Default Work Unit\Player\Player_Attack	
+	3013647128	Player_GetDamage			\Default Work Unit\Player\Player_GetDamage	
+	3331084404	Field_Error			\Default Work Unit\Player\Field_Error	
+	4059359267	Amb_City			\Default Work Unit\Ambience\Amb_City	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	17779941	UI_Buttonhover	C:\Proyectos Sound Design\GitHub Repos\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\SFX\WAVES\UI_dragtool_mouseup_5B5BAD7C.wem		\Actor-Mixer Hierarchy\UI\UI_Buttonhover		44128
+	46192698	golpes humano	C:\Proyectos Sound Design\GitHub Repos\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\SFX\WAVES\golpes humano_B5A7E592.wem		\Actor-Mixer Hierarchy\Player\Attack\PlayerAtack\golpes humano		42216
+	124953481	Sword Whip 01	C:\Proyectos Sound Design\GitHub Repos\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\SFX\WAVES\Sword Whip 01_C69F214D.wem		\Actor-Mixer Hierarchy\Player\Attack\PlayerAtack\Swish\Sword Whip 01		41408
+	140147036	Sword Whip 02	C:\Proyectos Sound Design\GitHub Repos\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\SFX\WAVES\Sword Whip 02_BA12339A.wem		\Actor-Mixer Hierarchy\Player\Attack\PlayerAtack\Swish\Sword Whip 02		40056
+	207955913	UI_Button_Exit	C:\Proyectos Sound Design\GitHub Repos\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\SFX\WAVES\Button_Click_FX02_891B31B6.wem		\Actor-Mixer Hierarchy\UI\UI_Button_Exit		8376
+	323258582	UI_Button_Click	C:\Proyectos Sound Design\GitHub Repos\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\SFX\WAVES\Button_Click_FX01_10C4C929.wem		\Actor-Mixer Hierarchy\UI\UI_Button_Click		9996
+	416759349	Item_Equip	C:\Proyectos Sound Design\GitHub Repos\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\SFX\WAVES\UI_dragtool_mousedown_1BB9F8D7.wem		\Actor-Mixer Hierarchy\Miscellaneous\Item_Equip		41464
+	448948900	Item_Move	C:\Proyectos Sound Design\GitHub Repos\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\SFX\WAVES\UI_dragtool_place_0520335D.wem		\Actor-Mixer Hierarchy\Miscellaneous\Item_Move		43300
+	554564913	golpe grito	C:\Proyectos Sound Design\GitHub Repos\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\SFX\WAVES\golpe grito_A70C1C20.wem		\Actor-Mixer Hierarchy\Player\Get_Damage\golpe grito		65856
+	613176126	Sword hit	C:\Proyectos Sound Design\GitHub Repos\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\SFX\WAVES\Sword hit_368A38AB.wem		\Actor-Mixer Hierarchy\Player\Attack\PlayerAtack\Sword hit		108020
+	756658447	golpe grito_01	C:\Proyectos Sound Design\GitHub Repos\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\SFX\WAVES\golpe grito_E6E65B8A.wem		\Actor-Mixer Hierarchy\Player\Get_Damage\golpe grito_01		49984
+	842089692	FX_Dados	C:\Proyectos Sound Design\GitHub Repos\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\SFX\WAVES\FX_Dados_791D12AA.wem		\Actor-Mixer Hierarchy\Player\Locomotion\FX_Dados		130656
+	842489769	Error_Fallo_En_Celda	C:\Proyectos Sound Design\GitHub Repos\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\SFX\WAVES\Error_Fallo_En_Celda_EB922153.wem		\Actor-Mixer Hierarchy\Player\Locomotion\Error_Fallo_En_Celda		88304
+

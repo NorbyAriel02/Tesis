@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{7EA39128-7910-4FA8-AEB6-50738AFC6BA0}" SchemaVersion="103">
 	<SoundcasterSessions>
-		<WorkUnit Name="Default Work Unit" ID="{7EA39128-7910-4FA8-AEB6-50738AFC6BA0}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{7EA39128-7910-4FA8-AEB6-50738AFC6BA0}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="Mix" ID="{6C526A14-A2BA-45A5-A916-A4526A09164E}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Amb_Forest" ID="{BF65778B-4B4A-400B-8FF0-9533895187C0}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Throw_Dice" ID="{2F30D40F-315C-4791-A88B-1EC8426606AA}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Player_Move" ID="{C4F9748B-891C-44BE-8D89-05FE27BDAADF}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true"/>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundcasterSessions>
 </WwiseDocument>
