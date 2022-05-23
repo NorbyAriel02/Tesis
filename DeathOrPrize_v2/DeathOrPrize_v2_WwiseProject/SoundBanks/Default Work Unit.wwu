@@ -3,8 +3,27 @@
 	<SoundBanks>
 		<WorkUnit Name="Default Work Unit" ID="{49A85150-E558-48AB-A887-E3CE797407F9}" PersistMode="Standalone">
 			<ChildrenList>
-				<SoundBank Name="main" ID="{43DF6363-30AD-4EB1-B999-7101B760EEFC}">
-					<ObjectInclusionList/>
+				<SoundBank Name="Main" ID="{AC9FF129-1F8B-4A7E-BADC-F7929C50AD64}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Amb_Forest" ID="{BF65778B-4B4A-400B-8FF0-9533895187C0}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Item_Move" ID="{78ECF932-6875-401E-A9F3-1E791E13BD96}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Item_Sell" ID="{722E4DCF-CD5D-4236-8845-CB392906C0A6}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Item_Equip" ID="{807905AA-9FD7-42B5-8411-E6C84494DE10}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Field_Error" ID="{5D79E7CB-56F8-43EA-B68F-8864115E302E}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="UI_Exit" ID="{957819AB-4C6F-4495-889D-0E4846E65F7A}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Enemy_GetDamage" ID="{307E7AE1-EE03-44A7-B276-CB4FB2E61313}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Player_Move" ID="{C4F9748B-891C-44BE-8D89-05FE27BDAADF}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="UI_Click" ID="{9129C108-8BCC-4622-B996-7658F3458CD2}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="UI_ButtonHover" ID="{754F5B96-6FE6-46F4-B053-F112BC19B3DF}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Throw_Dice" ID="{2F30D40F-315C-4791-A88B-1EC8426606AA}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Item_Forge" ID="{30AC29BE-1EB5-4857-824A-4B8561DB1C2E}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Player_Attack" ID="{8C01F106-D472-4909-A640-F935485D3332}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Player_GetDamage" ID="{188AD642-EFFC-4A6E-8B62-7390C39C3FB2}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Field_Ok" ID="{B4E12758-13EE-4B53-A199-21D76D5126C7}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Item_Trash" ID="{2A20A742-6173-4B59-88DE-C5F37C29A482}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Enemy_Attack" ID="{7BDABDBC-2EDD-4C75-BD46-8ED31297BD41}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Amb_City" ID="{B28BF321-661A-4DD4-8D5F-E2823325AE08}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>

@@ -1,25 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>D:\Projects\Unity\2D\DeathOrPrize_v2\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>D:\Projects\Unity\2D\DeathOrPrize_v2\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>D:\Projects\Unity\2D\DeathOrPrize_v2\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>C:\Proyectos Sound Design\GitHub Repos\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Proyectos Sound Design\GitHub Repos\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Proyectos Sound Design\GitHub Repos\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>D:\Projects\Unity\2D\DeathOrPrize_v2\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Proyectos Sound Design\GitHub Repos\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="3690994985">
+		<SoundBank Id="1355168291" Language="SFX" Hash="2097067133">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="1077138683">
-			<ObjectPath>\SoundBanks\Default Work Unit\main</ObjectPath>
-			<ShortName>main</ShortName>
-			<Path>main.bnk</Path>
+		<SoundBank Id="3161908922" Language="SFX" Hash="2854157661">
+			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<IncludedEvents>
+				<Event Id="4059359267" Name="Amb_City" ObjectPath="\Events\Default Work Unit\Ambience\Amb_City" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="1006024461" Name="Amb_Forest" ObjectPath="\Events\Default Work Unit\Ambience\Amb_Forest" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="1781417190" Name="Enemy_Attack" ObjectPath="\Events\Default Work Unit\Enemys\Enemy_Attack" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="2420340053" Name="Enemy_GetDamage" ObjectPath="\Events\Default Work Unit\Enemys\Enemy_GetDamage" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="3331084404" Name="Field_Error" ObjectPath="\Events\Default Work Unit\Player\Field_Error" DurationType="OneShot" DurationMin="0.459595" DurationMax="0.459595">
+					<IncludedMemoryFiles>
+						<File Id="842489769" Language="SFX">
+							<ShortName>WAVES\Error_Fallo_En_Celda.wav</ShortName>
+							<Path>SFX\WAVES\Error_Fallo_En_Celda_EB922153.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1567541412" Name="Field_Ok" ObjectPath="\Events\Default Work Unit\Player\Field_Ok" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="2146777153" Name="Item_Equip" ObjectPath="\Events\Default Work Unit\Miscellaneous\Item_Equip" DurationType="OneShot" DurationMin="0.215635" DurationMax="0.215635">
+					<IncludedMemoryFiles>
+						<File Id="416759349" Language="SFX">
+							<ShortName>WAVES\UI_dragtool_mousedown.wav</ShortName>
+							<Path>SFX\WAVES\UI_dragtool_mousedown_1BB9F8D7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="213563888" Name="Item_Forge" ObjectPath="\Events\Default Work Unit\Miscellaneous\Item_Forge" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="1699323996" Name="Item_Move" ObjectPath="\Events\Default Work Unit\Miscellaneous\Item_Move" DurationType="OneShot" DurationMin="0.2252" DurationMax="0.2252">
+					<IncludedMemoryFiles>
+						<File Id="448948900" Language="SFX">
+							<ShortName>WAVES\UI_dragtool_place.wav</ShortName>
+							<Path>SFX\WAVES\UI_dragtool_place_0520335D.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1331156295" Name="Item_Sell" ObjectPath="\Events\Default Work Unit\Miscellaneous\Item_Sell" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="795457351" Name="Item_Trash" ObjectPath="\Events\Default Work Unit\Miscellaneous\Item_Trash" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="2824512041" Name="Player_Attack" ObjectPath="\Events\Default Work Unit\Player\Player_Attack" DurationType="OneShot" DurationMin="0.500924" DurationMax="0.631125">
+					<IncludedMemoryFiles>
+						<File Id="46192698" Language="SFX">
+							<ShortName>WAVES\golpes humano.wav</ShortName>
+							<Path>SFX\WAVES\golpes humano_B5A7E592.wem</Path>
+						</File>
+						<File Id="124953481" Language="SFX">
+							<ShortName>WAVES\Sword Whip 01.wav</ShortName>
+							<Path>SFX\WAVES\Sword Whip 01_C69F214D.wem</Path>
+						</File>
+						<File Id="140147036" Language="SFX">
+							<ShortName>WAVES\Sword Whip 02.wav</ShortName>
+							<Path>SFX\WAVES\Sword Whip 02_BA12339A.wem</Path>
+						</File>
+						<File Id="613176126" Language="SFX">
+							<ShortName>WAVES\Sword hit.wav</ShortName>
+							<Path>SFX\WAVES\Sword hit_368A38AB.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3013647128" Name="Player_GetDamage" ObjectPath="\Events\Default Work Unit\Player\Player_GetDamage" DurationType="OneShot" DurationMin="0.231643" DurationMax="0.384638">
+					<IncludedMemoryFiles>
+						<File Id="554564913" Language="SFX">
+							<ShortName>WAVES\golpe grito.wav</ShortName>
+							<Path>SFX\WAVES\golpe grito_A70C1C20.wem</Path>
+						</File>
+						<File Id="756658447" Language="SFX">
+							<ShortName>WAVES\golpe grito.wav</ShortName>
+							<Path>SFX\WAVES\golpe grito_E6E65B8A.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2248092158" Name="Player_Move" ObjectPath="\Events\Default Work Unit\Player\Player_Move" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="2334012187" Name="Throw_Dice" ObjectPath="\Events\Default Work Unit\Player\Throw_Dice" DurationType="OneShot" DurationMin="0.680174" DurationMax="0.680174">
+					<IncludedMemoryFiles>
+						<File Id="842089692" Language="SFX">
+							<ShortName>WAVES\FX_Dados.wav</ShortName>
+							<Path>SFX\WAVES\FX_Dados_791D12AA.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2027123568" Name="UI_ButtonHover" ObjectPath="\Events\Default Work Unit\UI\UI_ButtonHover" DurationType="OneShot" DurationMin="0.229518" DurationMax="0.229518">
+					<IncludedMemoryFiles>
+						<File Id="17779941" Language="SFX">
+							<ShortName>WAVES\UI_dragtool_mouseup.wav</ShortName>
+							<Path>SFX\WAVES\UI_dragtool_mouseup_5B5BAD7C.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2249769530" Name="UI_Click" ObjectPath="\Events\Default Work Unit\UI\UI_Click" DurationType="OneShot" DurationMin="0.05585" DurationMax="0.05585">
+					<IncludedMemoryFiles>
+						<File Id="323258582" Language="SFX">
+							<ShortName>WAVES\Button_Click_FX01.wav</ShortName>
+							<Path>SFX\WAVES\Button_Click_FX01_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="502835106" Name="UI_Exit" ObjectPath="\Events\Default Work Unit\UI\UI_Exit" DurationType="OneShot" DurationMin="0.04667" DurationMax="0.04667">
+					<IncludedMemoryFiles>
+						<File Id="207955913" Language="SFX">
+							<ShortName>WAVES\Button_Click_FX02.wav</ShortName>
+							<Path>SFX\WAVES\Button_Click_FX02_891B31B6.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>
