@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6323172387880161669}
   - component: {fileID: 6323172387880161670}
   - component: {fileID: 6323172387880161671}
+  - component: {fileID: 3644595675937630783}
   m_Layer: 0
   m_Name: Grid
   m_TagString: Untagged
@@ -118,3 +119,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textReino: {fileID: 0}
+--- !u!114 &3644595675937630783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6323172387880161668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e26d80119cf6ea479e15e553355987a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  idKingdom: 0
+  idBiome: 0

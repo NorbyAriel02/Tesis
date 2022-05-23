@@ -73,8 +73,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: e6b12d0261b6a274a8a8a08bb7def7bc, type: 3}
-  m_Color: {r: 0.8509804, g: 0.90588236, b: 0, a: 1}
+  m_Sprite: {fileID: -3568434940922774095, guid: f764fc8ead7404b41ac52b8f9b957b06, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -110,6 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item:
+    owner: 0
     tItem: 0
     IndexSlot: -1
     strength: 0
@@ -117,6 +118,7 @@ MonoBehaviour:
     agility: 0
     resistance: 0
     constitution: 0
+    value: 1
     SubType: 0
     level: 0
     area: 0
