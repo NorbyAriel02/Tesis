@@ -11,9 +11,13 @@
 					</ReferenceList>
 					<ChildrenList>
 						<Bus Name="Ambience" ID="{93C9F602-B37C-4A21-927C-9D13D3012A8B}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="10"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
 							<ObjectLists/>
 						</Bus>
-						<Bus Name="Player" ID="{C6F5388E-F1CA-4BFE-92F6-EE8D3D335195}">
+						<Bus Name="Main_Character" ID="{C6F5388E-F1CA-4BFE-92F6-EE8D3D335195}">
 							<PropertyList>
 								<Property Name="Color" Type="int16" Value="1"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
@@ -21,6 +25,31 @@
 							<ObjectLists/>
 						</Bus>
 						<Bus Name="Enemy" ID="{05496FD0-2418-41BC-B93C-D9622842C6C3}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="12"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ObjectLists/>
+						</Bus>
+						<Bus Name="Music" ID="{9104134E-BCBF-423C-B57F-51AAA4D46611}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="25"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ObjectLists/>
+						</Bus>
+						<Bus Name="Items" ID="{9B75C770-FC29-4766-B08D-8C2AB1EC05C6}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ObjectLists/>
+						</Bus>
+						<Bus Name="UI" ID="{11DE9F3B-3E81-4FEB-88E3-88496792BB98}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="19"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
 							<ObjectLists/>
 						</Bus>
 					</ChildrenList>

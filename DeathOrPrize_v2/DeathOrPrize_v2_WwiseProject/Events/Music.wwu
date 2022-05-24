@@ -6,6 +6,81 @@
 				<Property Name="Color" Type="int16" Value="26"/>
 				<Property Name="OverrideColor" Type="bool" Value="True"/>
 			</PropertyList>
+			<ChildrenList>
+				<Event Name="Play_Music" ID="{77993AE1-A670-4791-97A6-3E0C5E603B18}">
+					<ChildrenList>
+						<Action Name="" ID="{58E6A1D0-4B0E-47F4-B9CA-E89A560FBA0F}" ShortID="524863630">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Death Or price Music" ID="{CF5C73D8-0E2B-4F37-8726-7DDB029D99F8}" WorkUnitID="{1F7EC7EE-F9CF-49C4-93AC-DB599DCADDED}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{2FF46083-F88C-42B3-8A19-9A70400777E6}" ShortID="753948074">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Menu" ID="{10CA2C0A-F4B2-420F-A11D-882D390B5B65}" WorkUnitID="{49F95D5D-FD51-4604-BAC8-6C411B8E9111}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{96E2DD7C-E0A9-457E-9F4E-49746B762477}" ShortID="309888406">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Death Or price Music" ID="{CF5C73D8-0E2B-4F37-8726-7DDB029D99F8}" WorkUnitID="{1F7EC7EE-F9CF-49C4-93AC-DB599DCADDED}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Combat_Start" ID="{25A1824F-1B00-4DFA-A049-61DD6BE92166}">
+					<ChildrenList>
+						<Action Name="" ID="{8B1E5550-2AB3-4793-A96C-AF5A62483609}" ShortID="224558770">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Combat" ID="{109EB317-7F35-4F1C-A7EA-B35E30340A04}" WorkUnitID="{49F95D5D-FD51-4604-BAC8-6C411B8E9111}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Combat_End" ID="{8035F8FD-C1B3-4EDF-AAE2-F923A47F0BED}">
+					<ChildrenList>
+						<Action Name="" ID="{73ED3B13-BA00-4C46-A3D4-AAD15FA79DFA}" ShortID="906864363">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Gameplay" ID="{13CC7356-818C-4196-9659-68455C95CCD2}" WorkUnitID="{49F95D5D-FD51-4604-BAC8-6C411B8E9111}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Gameplay" ID="{BC839B8C-02AA-4E32-BFD6-0DBAA1CE2994}">
+					<ChildrenList>
+						<Action Name="" ID="{0306C350-D448-477B-8D68-2ED35605FB14}" ShortID="80532340">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Gameplay" ID="{13CC7356-818C-4196-9659-68455C95CCD2}" WorkUnitID="{49F95D5D-FD51-4604-BAC8-6C411B8E9111}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
 		</WorkUnit>
 	</Events>
 </WwiseDocument>

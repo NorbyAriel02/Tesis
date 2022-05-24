@@ -6,20 +6,50 @@
 				<SoundcasterSession Name="Mix" ID="{6C526A14-A2BA-45A5-A916-A4526A09164E}">
 					<ModuleList>
 						<Module>
-							<ObjectRef Name="Amb_Forest" ID="{BF65778B-4B4A-400B-8FF0-9533895187C0}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}"/>
+							<ObjectRef Name="Play_Music" ID="{77993AE1-A670-4791-97A6-3E0C5E603B18}" WorkUnitID="{2AFED437-10E1-465F-AB9A-2A5E27F72E99}"/>
 							<Position X="0" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Throw_Dice" ID="{2F30D40F-315C-4791-A88B-1EC8426606AA}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}"/>
+							<ObjectRef Name="Play_Gameplay" ID="{BC839B8C-02AA-4E32-BFD6-0DBAA1CE2994}" WorkUnitID="{2AFED437-10E1-465F-AB9A-2A5E27F72E99}"/>
 							<Position X="0" Y="1"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Player_Move" ID="{C4F9748B-891C-44BE-8D89-05FE27BDAADF}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}"/>
+							<ObjectRef Name="Combat_Start" ID="{25A1824F-1B00-4DFA-A049-61DD6BE92166}" WorkUnitID="{2AFED437-10E1-465F-AB9A-2A5E27F72E99}"/>
+							<Position X="0" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Combat_End" ID="{8035F8FD-C1B3-4EDF-AAE2-F923A47F0BED}" WorkUnitID="{2AFED437-10E1-465F-AB9A-2A5E27F72E99}"/>
+							<Position X="0" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="UI_Click" ID="{9129C108-8BCC-4622-B996-7658F3458CD2}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Throw_Dice" ID="{2F30D40F-315C-4791-A88B-1EC8426606AA}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}"/>
 							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Player_Move" ID="{C4F9748B-891C-44BE-8D89-05FE27BDAADF}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}"/>
+							<Position X="1" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Player_GetClawsDamage" ID="{188AD642-EFFC-4A6E-8B62-7390C39C3FB2}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Hit_Sword_Enemy" ID="{8C01F106-D472-4909-A640-F935485D3332}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}"/>
+							<Position X="2" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Pain_Wolf" ID="{2227881C-0FC4-45FA-9458-D96431B654A9}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}"/>
+							<Position X="3" Y="2"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true"/>
-					<CurrentStateList ShowAll="true"/>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="Gameplay" ID="{13CC7356-818C-4196-9659-68455C95CCD2}"/>
+					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>
 			</ChildrenList>

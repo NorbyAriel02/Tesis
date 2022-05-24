@@ -33,34 +33,6 @@
 								<ActiveSource Name="Ringing hit_DIE" ID="{49C586CE-7CFD-4221-BA7D-E8E67B580694}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="Error_seleecion" ID="{81EE17E1-1A4D-46F8-A3C2-8FE4337461D2}" ShortID="44783615">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCA1DF01-6F8C-472F-B87F-732CAB749F66}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F084C6E1-E0BE-4549-96E1-9AF9BA3B6675}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Error_seleecion" ID="{4E77686E-2F9A-4DE0-86EB-FEEDF6546B85}">
-									<PropertyList>
-										<Property Name="FadeOutDuration" Type="Real64" Value="0.0731887361312108"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimEnd" Type="Real64" Value="0.191288742161119"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>WAVES\Error_seleecion.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="1046693264"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ObjectLists/>
-							<ActiveSourceList>
-								<ActiveSource Name="Error_seleecion" ID="{4E77686E-2F9A-4DE0-86EB-FEEDF6546B85}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
 						<Sound Name="FX_Swish_Weapon" ID="{D31377F2-A15F-43B2-B0D8-6F7449F932A5}" ShortID="441999436">
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -110,6 +82,35 @@
 							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="golpes humanos 01" ID="{A8B1968F-F5D3-4F5E-9516-8BE7C453A624}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Error_Fallo_En_Celda" ID="{F488D3C4-B9E3-4016-8E8A-FE620730CEA4}" ShortID="196364222">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCA1DF01-6F8C-472F-B87F-732CAB749F66}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main_Character" ID="{C6F5388E-F1CA-4BFE-92F6-EE8D3D335195}" WorkUnitID="{F084C6E1-E0BE-4549-96E1-9AF9BA3B6675}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Error_Fallo_En_Celda" ID="{B582014F-C587-41C6-A38A-8370EA233A51}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0357462614568259"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.130218523878437"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.459594790159189"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>WAVES\Error_Fallo_En_Celda.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="842489769"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Error_Fallo_En_Celda" ID="{B582014F-C587-41C6-A38A-8370EA233A51}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
