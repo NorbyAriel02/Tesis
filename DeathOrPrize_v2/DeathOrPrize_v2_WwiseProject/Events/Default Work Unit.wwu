@@ -40,18 +40,18 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Player_Attack" ID="{8C01F106-D472-4909-A640-F935485D3332}">
+						<Event Name="Hit_Sword_Enemy" ID="{8C01F106-D472-4909-A640-F935485D3332}">
 							<ChildrenList>
 								<Action Name="" ID="{2FE4B066-5359-40A4-B3F3-5C9ACE2618F1}" ShortID="831496894">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="PlayerAtack" ID="{F50E0167-3D05-4F1C-9607-0C175AFD87F3}" WorkUnitID="{7F3C75E3-B15C-45EE-B5F1-E000DDC6DB97}"/>
+											<ObjectRef Name="Hit_Sword_enemy" ID="{F50E0167-3D05-4F1C-9607-0C175AFD87F3}" WorkUnitID="{7F3C75E3-B15C-45EE-B5F1-E000DDC6DB97}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Player_GetDamage" ID="{188AD642-EFFC-4A6E-8B62-7390C39C3FB2}">
+						<Event Name="Player_GetClawsDamage" ID="{188AD642-EFFC-4A6E-8B62-7390C39C3FB2}">
 							<ChildrenList>
 								<Action Name="" ID="{DB3812BB-D9E8-4343-81A7-FC98DF361E88}" ShortID="190578161">
 									<ReferenceList>
@@ -60,15 +60,22 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
+								<Action Name="" ID="{9195CF1A-5E4A-4CFD-88D7-80B81E7C4F47}" ShortID="85259330">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Monster_Attack" ID="{BE0F8E1F-B900-4AFE-86F5-A4776AA6C5E0}" WorkUnitID="{77CC5426-1514-41C3-A6C5-F81161621419}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Field_Ok" ID="{B4E12758-13EE-4B53-A199-21D76D5126C7}"/>
 						<Event Name="Field_Error" ID="{5D79E7CB-56F8-43EA-B68F-8864115E302E}">
 							<ChildrenList>
-								<Action Name="" ID="{241AEF9E-708F-4DBE-9071-5ADCC993195B}" ShortID="739703016">
+								<Action Name="" ID="{B8040F58-9531-41DB-88FB-37658DB97A27}" ShortID="280777731">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Error_Fallo_En_Celda" ID="{F488D3C4-B9E3-4016-8E8A-FE620730CEA4}" WorkUnitID="{7F3C75E3-B15C-45EE-B5F1-E000DDC6DB97}"/>
+											<ObjectRef Name="Error_seleecion" ID="{81EE17E1-1A4D-46F8-A3C2-8FE4337461D2}" WorkUnitID="{7F3C75E3-B15C-45EE-B5F1-E000DDC6DB97}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -94,8 +101,89 @@
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
 					<ChildrenList>
-						<Event Name="Enemy_Attack" ID="{7BDABDBC-2EDD-4C75-BD46-8ED31297BD41}"/>
-						<Event Name="Enemy_GetDamage" ID="{307E7AE1-EE03-44A7-B276-CB4FB2E61313}"/>
+						<Event Name="Defeated_Wolf" ID="{7BDABDBC-2EDD-4C75-BD46-8ED31297BD41}">
+							<ChildrenList>
+								<Action Name="" ID="{D1C722A2-B5F9-4A23-95AA-A3EB44818CA3}" ShortID="309396802">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Defeated_Wolf" ID="{61E804F5-C13C-4BAB-8CD9-C28223AAAD9D}" WorkUnitID="{77CC5426-1514-41C3-A6C5-F81161621419}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Defeated_Boss" ID="{307E7AE1-EE03-44A7-B276-CB4FB2E61313}"/>
+						<Event Name="Defeated_Bear" ID="{A33AF27B-074F-45BE-8D19-9160161F1EB9}">
+							<ChildrenList>
+								<Action Name="" ID="{17912244-20F9-4438-9C5D-423A509E7710}" ShortID="278097188">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Defeated_Bear" ID="{1AFCED68-B7F8-47C5-8C85-FCBD6133D93C}" WorkUnitID="{77CC5426-1514-41C3-A6C5-F81161621419}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Pain_Wolf" ID="{2227881C-0FC4-45FA-9458-D96431B654A9}">
+							<ChildrenList>
+								<Action Name="" ID="{1D937F05-F45C-4740-9E38-7F1E719DE2DE}" ShortID="505825666">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Pain_wolf" ID="{33EBD00B-9E64-4A04-8CF8-A4AF8337550B}" WorkUnitID="{77CC5426-1514-41C3-A6C5-F81161621419}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{D38C3DDC-1574-4FAB-8098-262CA3F56F94}" ShortID="661050394">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Hit_Sword_enemy" ID="{F50E0167-3D05-4F1C-9607-0C175AFD87F3}" WorkUnitID="{7F3C75E3-B15C-45EE-B5F1-E000DDC6DB97}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Pain_Bear" ID="{54FE987A-B3E5-4322-9D86-0BACF57F2C70}">
+							<ChildrenList>
+								<Action Name="" ID="{FEDC6853-7EB4-4ED1-B798-9D21F1F6172E}" ShortID="36727332">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Pain_Bear" ID="{95B5BF0D-A1C8-44AD-A565-E56DA4B571BD}" WorkUnitID="{77CC5426-1514-41C3-A6C5-F81161621419}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{92412C6B-0CCE-450C-A85F-6DD4461A39C1}" ShortID="142650550">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Hit_Sword_enemy" ID="{F50E0167-3D05-4F1C-9607-0C175AFD87F3}" WorkUnitID="{7F3C75E3-B15C-45EE-B5F1-E000DDC6DB97}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Pain_Boss" ID="{F1A1D095-88D7-426C-B887-9219CFA652C7}"/>
+						<Event Name="Grunt_Wolf" ID="{CF6BCFA6-2301-41B5-9BC0-D0FAAEF52838}">
+							<ChildrenList>
+								<Action Name="" ID="{33355E21-4049-48F1-AA53-F263CD4A0F06}" ShortID="602150865">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Monster_Grunt" ID="{7CDCC1C6-4B61-4154-995E-A068E55C44BC}" WorkUnitID="{77CC5426-1514-41C3-A6C5-F81161621419}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Grunt_Bear" ID="{50D3AFB0-D3F1-49AA-B17B-5E1B4B9F34E8}">
+							<ChildrenList>
+								<Action Name="" ID="{EE493961-B375-44E8-BBA9-85EECC077407}" ShortID="793915602">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Monster_Grunt" ID="{7CDCC1C6-4B61-4154-995E-A068E55C44BC}" WorkUnitID="{77CC5426-1514-41C3-A6C5-F81161621419}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Grunt_Boss" ID="{5EB3936C-D997-4DF2-AE2B-F18D43801415}"/>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="UI" ID="{92794AB5-C3B1-4DAB-A911-B51C2439C700}" ShortID="1062878688">

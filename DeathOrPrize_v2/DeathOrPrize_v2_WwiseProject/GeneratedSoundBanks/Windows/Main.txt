@@ -1,0 +1,91 @@
+Event	ID	Name			Wwise Object Path	Notes
+	21539389	Defeated_Boss			\Default Work Unit\Enemys\Defeated_Boss	
+	213563888	Item_Forge			\Default Work Unit\Miscellaneous\Item_Forge	
+	324522332	Defeated_Bear			\Default Work Unit\Enemys\Defeated_Bear	
+	502835106	UI_Exit			\Default Work Unit\UI\UI_Exit	
+	695575702	Grunt_Bear			\Default Work Unit\Enemys\Grunt_Bear	
+	717982404	Grunt_Wolf			\Default Work Unit\Enemys\Grunt_Wolf	
+	795457351	Item_Trash			\Default Work Unit\Miscellaneous\Item_Trash	
+	958305526	Pain_Bear			\Default Work Unit\Enemys\Pain_Bear	
+	980711972	Pain_Wolf			\Default Work Unit\Enemys\Pain_Wolf	
+	995998759	Grunt_Boss			\Default Work Unit\Enemys\Grunt_Boss	
+	1006024461	Amb_Forest			\Default Work Unit\Ambience\Amb_Forest	
+	1137411260	Combat_Start			\Music\Combat_Start	
+	1236431331	Hit_Sword_Enemy			\Default Work Unit\Player\Hit_Sword_Enemy	
+	1258625159	Pain_Boss			\Default Work Unit\Enemys\Pain_Boss	
+	1331156295	Item_Sell			\Default Work Unit\Miscellaneous\Item_Sell	
+	1567541412	Field_Ok			\Default Work Unit\Player\Field_Ok	
+	1699323996	Item_Move			\Default Work Unit\Miscellaneous\Item_Move	
+	2027123568	UI_ButtonHover			\Default Work Unit\UI\UI_ButtonHover	
+	2146777153	Item_Equip			\Default Work Unit\Miscellaneous\Item_Equip	
+	2226114503	Player_Dead			\Default Work Unit\Player\Player_Dead	
+	2248092158	Player_Move			\Default Work Unit\Player\Player_Move	
+	2249769530	UI_Click			\Default Work Unit\UI\UI_Click	
+	2334012187	Throw_Dice			\Default Work Unit\Player\Throw_Dice	
+	2887812511	Combat_End			\Music\Combat_End	
+	2932040671	Play_Music			\Music\Play_Music	
+	3331084404	Field_Error			\Default Work Unit\Player\Field_Error	
+	3737014274	Play_Gameplay			\Music\Play_Gameplay	
+	3941789246	Player_GetClawsDamage			\Default Work Unit\Player\Player_GetClawsDamage	
+	4059359267	Amb_City			\Default Work Unit\Ambience\Amb_City	
+	4105703822	Defeated_Wolf			\Default Work Unit\Enemys\Defeated_Wolf	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	1690668539	Music_States			\Music\Music_States	
+
+State	ID	Name	State Group			Notes
+	89505537	Gameplay	Music_States			
+	748895195	None	Music_States			
+	1560169506	Boss	Music_States			
+	2607556080	Menu	Music_States			
+	2764240573	Combat	Music_States			
+	3888786832	City	Music_States			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	4162732	Bear_Snarl_01	C:\Proyectos Sound Design\Wwise\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\SFX\SFX Render\Wolf_Snarl_2CBAEABE.wem		\Actor-Mixer Hierarchy\Monsters\Monsters\Monster_Grunt\Bear_Snarl_01		312948
+	9903972	Defeated_Bear	C:\Proyectos Sound Design\Wwise\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\SFX\BEAST 01 Attack 08_10C4C929.wem		\Actor-Mixer Hierarchy\Monsters\Monsters\Bear\Defeated_Bear		247548
+	15491015	Hit_Claws	C:\Proyectos Sound Design\Wwise\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\SFX\SFX Render\Hit_Claws_206EFDD1.wem		\Actor-Mixer Hierarchy\Monsters\Monsters\Monster_Attack\Hit_Claws		119940
+	17779941	UI_Buttonhover	C:\Proyectos Sound Design\Wwise\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\SFX\WAVES\UI_dragtool_mouseup_5B5BAD7C.wem		\Actor-Mixer Hierarchy\UI\UI+\UI_Buttonhover		44128
+	46192698	golpes humano	C:\Proyectos Sound Design\Wwise\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\SFX\WAVES\golpes humano_6B62A200.wem		\Actor-Mixer Hierarchy\Main Character\Main\Weapons\Sword\Hit_Sword_enemy\golpes humano		42216
+	124953481	Sword Whip 01	C:\Proyectos Sound Design\Wwise\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\SFX\WAVES\Sword Whip 01_D8E821CD.wem		\Actor-Mixer Hierarchy\Main Character\Main\Weapons\Sword\Hit_Sword_enemy\Swish\Sword Whip 01		41408
+	125981456	ItemForge	C:\Proyectos Sound Design\Wwise\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\SFX\DoP_ItemForge_F52BEFC5.wem		\Actor-Mixer Hierarchy\Miscellaneous\Items\ItemForge		264664
+	135649228	Seccion A	C:\Proyectos Sound Design\Wwise\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\SFX\Death Or price Music\Battle\Seccion A_D79FB2B7.wem		\Interactive Music Hierarchy\Music\Death Or price Music\Combat\Seccion A\Seccion A		2605356
+	140147036	Sword Whip 02	C:\Proyectos Sound Design\Wwise\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\SFX\WAVES\Sword Whip 02_E3AA9698.wem		\Actor-Mixer Hierarchy\Main Character\Main\Weapons\Sword\Hit_Sword_enemy\Swish\Sword Whip 02		40056
+	188609878	Wolf_Pain	C:\Proyectos Sound Design\Wwise\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\SFX\SFX Render\Wolf_Pain_10C4C929.wem		\Actor-Mixer Hierarchy\Monsters\Monsters\Wolf\Pain_wolf\Wolf_Pain		110316
+	207955913	UI_Button_Exit	C:\Proyectos Sound Design\Wwise\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\SFX\WAVES\Button_Click_FX02_891B31B6.wem		\Actor-Mixer Hierarchy\UI\UI+\UI_Button_Exit		8376
+	220870596	Seccion D	C:\Proyectos Sound Design\Wwise\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\SFX\Death Or price Music\Death Or Price Gameplay Music\Death Or Price Gameplay Menu\Seccion D_D79FB2B7.wem		\Interactive Music Hierarchy\Music\Death Or price Music\Menu\Seccion D\Seccion D		2822464
+	245711146	Loop4	C:\Proyectos Sound Design\Wwise\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\SFX\Death Or price Music\Death Or Price Gameplay Music\Gameplay\Loop4_D79FB2B7.wem		\Interactive Music Hierarchy\Music\Death Or price Music\Gameplay\Loop4\Loop4		3386944
+	274960203	Calm wind in pine tree forest_2_0	C:\Proyectos Sound Design\Wwise\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\SFX\Ambience_D79FB2B7.wem		\Actor-Mixer Hierarchy\Ambience\Forest\Calm wind in pine tree forest_2_0		10143064
+	323258582	UI_Button_Click	C:\Proyectos Sound Design\Wwise\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\SFX\WAVES\Button_Click_FX01_10C4C929.wem		\Actor-Mixer Hierarchy\UI\UI+\UI_Button_Click		9996
+	339738078	Seccion A	C:\Proyectos Sound Design\Wwise\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\SFX\Death Or price Music\Death Or Price Gameplay Music\Death Or Price Gameplay Menu\Seccion A_D79FB2B7.wem		\Interactive Music Hierarchy\Music\Death Or price Music\Menu\Seccion A\Seccion A		5644864
+	344405229	Loop3	C:\Proyectos Sound Design\Wwise\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\SFX\Death Or price Music\Death Or Price Gameplay Music\Gameplay\Loop3_D79FB2B7.wem		\Interactive Music Hierarchy\Music\Death Or price Music\Gameplay\Loop3\Loop3		10160704
+	349308188	Intro	C:\Proyectos Sound Design\Wwise\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\SFX\Death Or price Music\Battle\Intro_D79FB2B7.wem		\Interactive Music Hierarchy\Music\Death Or price Music\Combat\Intro\Intro		2605568
+	395106706	Bear_Snarl	C:\Proyectos Sound Design\Wwise\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\SFX\SFX Render\Wolf_Snarl_82F28B36.wem		\Actor-Mixer Hierarchy\Monsters\Monsters\Monster_Grunt\Bear_Snarl		316424
+	416759349	Item_Equip	C:\Proyectos Sound Design\Wwise\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\SFX\WAVES\UI_dragtool_mousedown_1BB9F8D7.wem		\Actor-Mixer Hierarchy\Miscellaneous\Items\Item_Equip		41464
+	425520142	Pain_Bear	C:\Proyectos Sound Design\Wwise\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\SFX\BEAST 01 Threaten Short 06_AAFD3010.wem		\Actor-Mixer Hierarchy\Monsters\Monsters\Bear\Pain_Bear\Pain_Bear		62144
+	432486154	Player_Move	C:\Proyectos Sound Design\Wwise\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\SFX\Player_Move_F208236E.wem		\Actor-Mixer Hierarchy\Main Character\Main\Locomotion\Move foward\Player_Move		8720
+	448948900	Item_Move	C:\Proyectos Sound Design\Wwise\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\SFX\WAVES\UI_dragtool_place_0520335D.wem		\Actor-Mixer Hierarchy\Miscellaneous\Items\Item_Move		43300
+	458050083	Pain_Bear_01	C:\Proyectos Sound Design\Wwise\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\SFX\BEAST 01 Threaten Short 06_1E43FCAF.wem		\Actor-Mixer Hierarchy\Monsters\Monsters\Bear\Pain_Bear\Pain_Bear_01		95108
+	479342574	Player_Move_01	C:\Proyectos Sound Design\Wwise\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\SFX\Player_Move_201E23E0.wem		\Actor-Mixer Hierarchy\Main Character\Main\Locomotion\Move foward\Player_Move_01		6864
+	511837392	Loop1	C:\Proyectos Sound Design\Wwise\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\SFX\Death Or price Music\Death Or Price Gameplay Music\Gameplay\Loop1_D79FB2B7.wem		\Interactive Music Hierarchy\Music\Death Or price Music\Gameplay\Loop1\Loop1		1693504
+	524129632	Amb_Forest_dayligth	C:\Proyectos Sound Design\Wwise\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\SFX\WAVES\Amb_Forest_dayligth_F8F6AFF3.wem		\Actor-Mixer Hierarchy\Ambience\Forest\Amb_Forest_dayligth		22789476
+	539087109	Seccion B	C:\Proyectos Sound Design\Wwise\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\SFX\Death Or price Music\Battle\Seccion B_D79FB2B7.wem		\Interactive Music Hierarchy\Music\Death Or price Music\Combat\Seccion B\Seccion B		2605356
+	554564913	golpe grito	C:\Proyectos Sound Design\Wwise\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\SFX\WAVES\golpe grito_331E1307.wem		\Actor-Mixer Hierarchy\Main Character\Main\Get_Damage\golpe grito		65856
+	562222609	Defeated_Wolf	C:\Proyectos Sound Design\Wwise\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\SFX\SFX Render\Wolf_Die_9C5B99C4.wem		\Actor-Mixer Hierarchy\Monsters\Monsters\Wolf\Defeated_Wolf		235596
+	567069083	DoP_ItemTrash	C:\Proyectos Sound Design\Wwise\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\SFX\DoP_ItemTrash_10C4C929.wem		\Actor-Mixer Hierarchy\Miscellaneous\Items\DoP_ItemTrash		187488
+	613176126	Sword hit	C:\Proyectos Sound Design\Wwise\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\SFX\WAVES\Sword hit_E24D71F8.wem		\Actor-Mixer Hierarchy\Main Character\Main\Weapons\Sword\Hit_Sword_enemy\Sword hit		108020
+	624205737	Wolf_Snarl	C:\Proyectos Sound Design\Wwise\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\SFX\SFX Render\Wolf_Snarl_0E885EC6.wem		\Actor-Mixer Hierarchy\Monsters\Monsters\Monster_Grunt\Wolf_Snarl		271232
+	692738358	DoP_ItemSell	C:\Proyectos Sound Design\Wwise\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\SFX\DoP_ItemSell_10C4C929.wem		\Actor-Mixer Hierarchy\Miscellaneous\Items\Item_Sales\DoP_ItemSell		231588
+	717322625	Hit_Claws_01	C:\Proyectos Sound Design\Wwise\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\SFX\SFX Render\Hit_Claws_17D639A8.wem		\Actor-Mixer Hierarchy\Monsters\Monsters\Monster_Attack\Hit_Claws_01		110768
+	736013773	Player_Move_02	C:\Proyectos Sound Design\Wwise\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\SFX\Player_Move_B091E274.wem		\Actor-Mixer Hierarchy\Main Character\Main\Locomotion\Move foward\Player_Move_02		4896
+	756658447	golpe grito_01	C:\Proyectos Sound Design\Wwise\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\SFX\WAVES\golpe grito_DB933146.wem		\Actor-Mixer Hierarchy\Main Character\Main\Get_Damage\golpe grito_01		49984
+	785554652	Reverse 01	C:\Proyectos Sound Design\Wwise\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\SFX\Reverse 01_D79FB2B7.wem		\Interactive Music Hierarchy\Music\Death Or price Music\Reverse 01\Reverse 01		2391112
+	811353901	Outro	C:\Proyectos Sound Design\Wwise\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\SFX\Death Or price Music\Death Or Price Gameplay Music\Death Or Price Gameplay Menu\Outro_D79FB2B7.wem		\Interactive Music Hierarchy\Music\Death Or price Music\Menu\Outro\Outro		1764064
+	826605613	Hit_Claws_02	C:\Proyectos Sound Design\Wwise\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\SFX\SFX Render\Hit_Claws_68D420AE.wem		\Actor-Mixer Hierarchy\Monsters\Monsters\Monster_Attack\Hit_Claws_02		110764
+	842089692	FX_Dados	C:\Proyectos Sound Design\Wwise\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\SFX\WAVES\FX_Dados_791D12AA.wem		\Actor-Mixer Hierarchy\Main Character\Main\Locomotion\FX_Dados		130656
+	894239645	Bridge	C:\Proyectos Sound Design\Wwise\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\SFX\Death Or price Music\Battle\Bridge_D79FB2B7.wem		\Interactive Music Hierarchy\Music\Death Or price Music\Combat\Bridge\Bridge		2605356
+	944771054	Loop2	C:\Proyectos Sound Design\Wwise\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\SFX\Death Or price Music\Death Or Price Gameplay Music\Gameplay\Loop2_D79FB2B7.wem		\Interactive Music Hierarchy\Music\Death Or price Music\Gameplay\Loop2\Loop2		7197184
+	961381286	Seccion C	C:\Proyectos Sound Design\Wwise\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\SFX\Death Or price Music\Death Or Price Gameplay Music\Death Or Price Gameplay Menu\Seccion C_D79FB2B7.wem		\Interactive Music Hierarchy\Music\Death Or price Music\Menu\Seccion C\Seccion C		2822464
+	983152262	Seccion B	C:\Proyectos Sound Design\Wwise\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\SFX\Death Or price Music\Death Or Price Gameplay Music\Death Or Price Gameplay Menu\Seccion B_D79FB2B7.wem		\Interactive Music Hierarchy\Music\Death Or price Music\Menu\Seccion B\Seccion B		5644864
+	1046693264	Error_seleecion	C:\Proyectos Sound Design\Wwise\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\SFX\WAVES\Error_seleecion_BC2A8BA9.wem		\Actor-Mixer Hierarchy\Main Character\Main\Locomotion\Error_seleecion		36792
+
