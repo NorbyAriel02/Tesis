@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 145259618}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.42, y: 0, z: 0}
+  m_LocalPosition: {x: -2.91, y: -3.21, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 5103261171345136542}
@@ -106,7 +106,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 566021443}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: 0, z: 0}
+  m_LocalPosition: {x: 1.75, y: -3.21, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1057869147}
@@ -143,8 +143,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 640365777}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 12, y: 6, z: 1}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 5103261171345136542}
   m_RootOrder: 1
@@ -189,8 +189,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: a939593e94a6103459530a158d9f5185, type: 3}
-  m_Color: {r: 0.3286035, g: 0.3490566, b: 0.3207369, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 6ec379065405236409727337b09391ac, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2108,6 +2108,7 @@ GameObject:
   - component: {fileID: 5103261171345136542}
   - component: {fileID: 7033709924542628266}
   - component: {fileID: 7814945797495079921}
+  - component: {fileID: 893221085}
   m_Layer: 0
   m_Name: Content
   m_TagString: Untagged
@@ -2163,6 +2164,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7de3e8dbdf633e244bf514e219ef6947, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &893221085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8554842188528694039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e918b77b910545d429ac65cbee24c408, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  idleBattleManager: {fileID: 1307736921158264322}
 --- !u!1 &8922807068841180912
 GameObject:
   m_ObjectHideFlags: 0

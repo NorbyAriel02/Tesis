@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4153247914695724860}
   - component: {fileID: 3345639846524181042}
-  - component: {fileID: 5103843067523837574}
   - component: {fileID: -4866538539450688699}
+  - component: {fileID: -2651661307533380498}
+  - component: {fileID: -9034567302106053146}
   m_Layer: 0
   m_Name: City_4
   m_TagString: Untagged
@@ -84,34 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5103843067523837574
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6496996619361150942}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 836faa96221883942835e78afc3f33e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  x: 0
-  y: 0
-  index: 0
-  type:
-    id: -1
-    type: none
-    descrip: none
-  subtype:
-    id: -1
-    idType: -1
-    subtype: none
-    descrip: none
-  biome:
-    id: 0
-    descrip: 
-    paleta: 
 --- !u!65 &-4866538539450688699
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -125,3 +98,45 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-2651661307533380498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6496996619361150942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18669e71474fd4d4dbf3cace6c63af07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 1.5
+--- !u!114 &-9034567302106053146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6496996619361150942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f5c1bf87f1d0b34780c867b9ad86bf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  x: 0
+  y: 0
+  index: 0
+  sizeKingdom: 0
+  type:
+    id: -1
+    type: none
+    descrip: none
+  subtype:
+    id: -1
+    idType: -1
+    subtype: none
+    descrip: none
+  biome:
+    id: 0
+    descrip: 
+    paleta: 

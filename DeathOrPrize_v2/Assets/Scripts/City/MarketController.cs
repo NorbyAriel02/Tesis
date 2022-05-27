@@ -71,6 +71,7 @@ public class MarketController : MonoBehaviour
     }
     public void Sell(ItemProperties itemSell)
     {
+        AkSoundEngine.PostEvent("Item_Sell", this.gameObject);
         itemSell.owner = Owner.seller;
         int current = System.Convert.ToInt32(textCoins.text.Trim());
         textCoins.text = (current + itemSell.value).ToString();
@@ -83,6 +84,7 @@ public class MarketController : MonoBehaviour
         int current = System.Convert.ToInt32(textCoins.text.Trim());
         if (current >= itemBuy.value)
         {
+            AkSoundEngine.PostEvent("Item_Sell", this.gameObject);            
             itemBuy.owner = Owner.player;
             textCoins.text = (current - itemBuy.value).ToString();
             PlayerDataHelper.UpdateCoins((current - itemBuy.value));
@@ -101,7 +103,7 @@ public class MarketController : MonoBehaviour
 
     void YouDontHaveEnough()
     {
-        //Agregar Feedback aca
+        AkSoundEngine.PostEvent("Field_Error", this.gameObject);
         Debug.Log("Note alcanza");
     }
     #endregion

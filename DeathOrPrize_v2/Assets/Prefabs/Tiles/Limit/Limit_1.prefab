@@ -92,8 +92,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1837357967034636774}
   - component: {fileID: 1799573578103513748}
-  - component: {fileID: -8515556656319139922}
   - component: {fileID: 1031647905145839182}
+  - component: {fileID: 2624677231479519177}
+  - component: {fileID: 4619342778873969902}
   m_Layer: 0
   m_Name: Limit_1
   m_TagString: Untagged
@@ -156,7 +157,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 210497224832832107, guid: 7e44b7a52d109fd4ca49140790579589, type: 3}
+  m_Sprite: {fileID: 6623269022732915899, guid: 839f43511129cfb438c433783884a8a4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -167,7 +168,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-8515556656319139922
+--- !u!65 &1031647905145839182
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5898571098892413184}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2624677231479519177
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -176,9 +190,42 @@ MonoBehaviour:
   m_GameObject: {fileID: 5898571098892413184}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 836faa96221883942835e78afc3f33e6, type: 3}
+  m_Script: {fileID: 11500000, guid: 18669e71474fd4d4dbf3cace6c63af07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  distance: 1.5
+--- !u!114 &4619342778873969902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5898571098892413184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b71262aebfc039943a7a20e920724a2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cellData:
+    IDkingdom: 0
+    sizeKingdom: 0
+    index: 0
+    type:
+      id: -1
+      type: none
+      descrip: none
+    subtype:
+      id: -1
+      idType: -1
+      subtype: none
+      descrip: none
+    biome:
+      id: 0
+      descrip: 
+      paleta: 
+    x: 0
+    y: 0
+    Fog: 0
   x: 0
   y: 0
   index: 0
@@ -196,16 +243,3 @@ MonoBehaviour:
     id: 0
     descrip: 
     paleta: 
---- !u!65 &1031647905145839182
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5898571098892413184}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}

@@ -28,6 +28,7 @@ public class PlayerMove : MonoBehaviour
     }
     public void SetPosition(float x, float y)
     {
+        AkSoundEngine.PostEvent("Player_Move", this.gameObject);
         _moveSpeed = moveSpeed;
         playerMovePoint.position = new Vector3(x, y, playerMovePoint.position.z);
         PlayerDataHelper.UpdatePosition(playerMovePoint.position);

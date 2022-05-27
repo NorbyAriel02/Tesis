@@ -40,6 +40,7 @@ public class InventoryManager : MonoBehaviour
     }
     public void CloseInventory()
     {
+        AkSoundEngine.PostEvent("UI_Exit", this.gameObject);
         List<ItemProperties> items = InventoryHelper.GetListItemsFromPanel(Slots);
         InventoryHelper.Save(items, PathHelper.InventoryDataFile);        
         equipment.Save();
@@ -47,6 +48,7 @@ public class InventoryManager : MonoBehaviour
     }
     public void OpenInventory()
     {
+        AkSoundEngine.PostEvent("UI_Click", this.gameObject);
         inventory.SetActive(true);
         animator.SetBool("Close", false);
         InventoryHelper.ShowItems(Slots, prefabItemTemplate, PathHelper.InventoryDataFile);        

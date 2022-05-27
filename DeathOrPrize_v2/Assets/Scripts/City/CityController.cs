@@ -141,6 +141,7 @@ public class CityController : MonoBehaviour
         hud.Heal();
         SetExits(x, y, subTypeId);
         LoadItems();
+        AkSoundEngine.PostEvent("Amb_City", this.gameObject);        
         //PlayerDataHelper.UpdateIdKingdom();
         panelCity.SetActive(true);
     }

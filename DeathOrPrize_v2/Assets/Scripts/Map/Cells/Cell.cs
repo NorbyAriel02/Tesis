@@ -30,7 +30,7 @@ public class Cell : MonoBehaviour
         if (!HasMovements)
             StartBattle();
     }
-    void MovePlayer()
+    public void MovePlayer()
     {
         playerMove.SetPosition(x, y);
         playerMove.diceValue--;
@@ -50,7 +50,7 @@ public class Cell : MonoBehaviour
     {
         playerMove.SetPositionNewKingdom(x, y, sizeKingdom);
     }
-    void StartBattle()
+    public void StartBattle()
     {
         battleManager.StartBattle(index);
     }

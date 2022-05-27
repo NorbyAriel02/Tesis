@@ -47,9 +47,10 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IDragHandler, IEn
     public void OnEndDrag(PointerEventData eventData)
     {
         canvasGroup.alpha = 1f;
-        canvasGroup.blocksRaycasts = true;
+        canvasGroup.blocksRaycasts = true;        
+        AkSoundEngine.PostEvent("Item_Move", this.gameObject);
         if (PadreActual == transform.parent || fatherMaster == transform.parent)
-        {
+        {   
             transform.SetParent(PadreActual);
             transform.position = PadreActual.position;
             //si vuelve al mismo padre porque se solto mal, se vuelve a marcar como no vacioS            

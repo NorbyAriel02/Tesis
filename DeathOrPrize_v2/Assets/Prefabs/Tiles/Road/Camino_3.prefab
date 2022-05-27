@@ -92,8 +92,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6467707657679574654}
   - component: {fileID: 943965666809320388}
-  - component: {fileID: 3610781017099001617}
   - component: {fileID: 1058965006386187178}
+  - component: {fileID: -5493116507945241656}
+  - component: {fileID: -9191983478612275755}
   m_Layer: 0
   m_Name: Camino_3
   m_TagString: Untagged
@@ -167,34 +168,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3610781017099001617
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5798193837052230168}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 836faa96221883942835e78afc3f33e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  x: 0
-  y: 0
-  index: 0
-  type:
-    id: -1
-    type: none
-    descrip: none
-  subtype:
-    id: -1
-    idType: -1
-    subtype: none
-    descrip: none
-  biome:
-    id: 0
-    descrip: 
-    paleta: 
 --- !u!65 &1058965006386187178
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -208,3 +181,45 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-5493116507945241656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5798193837052230168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18669e71474fd4d4dbf3cace6c63af07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 1.5
+--- !u!114 &-9191983478612275755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5798193837052230168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: babe382abfff63a4a9c11fcc46e30fe3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  x: 0
+  y: 0
+  index: 0
+  sizeKingdom: 0
+  type:
+    id: -1
+    type: none
+    descrip: none
+  subtype:
+    id: -1
+    idType: -1
+    subtype: none
+    descrip: none
+  biome:
+    id: 0
+    descrip: 
+    paleta: 

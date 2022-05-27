@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 1403110001964425405}
   - component: {fileID: 1403110001964425404}
   - component: {fileID: 5767955880963449364}
-  - component: {fileID: 1403110001964425392}
-  - component: {fileID: -3762004614797646920}
+  - component: {fileID: 5668372823005377485}
+  - component: {fileID: 9132907159586267635}
   m_Layer: 0
   m_Name: tiles_cave
   m_TagString: Untagged
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 6331881677866438491, guid: 6af319baf69baaa4bbf1b66dda04e07b, type: 3}
+  m_Sprite: {fileID: -5937791358481418648, guid: 6af319baf69baaa4bbf1b66dda04e07b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -99,7 +99,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1403110001964425392
+--- !u!114 &5668372823005377485
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -108,56 +108,40 @@ MonoBehaviour:
   m_GameObject: {fileID: 1403110001964425395}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30fe2d91b54864243b6bb44fe387b99d, type: 3}
+  m_Script: {fileID: 11500000, guid: 18669e71474fd4d4dbf3cace6c63af07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 1.5
+--- !u!114 &9132907159586267635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403110001964425395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 202e3e28e898480409f88029d4734be6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   x: 0
   y: 0
   index: 0
+  sizeKingdom: 0
+  type:
+    id: -1
+    type: none
+    descrip: none
+  subtype:
+    id: -1
+    idType: -1
+    subtype: none
+    descrip: none
+  biome:
+    id: 0
+    descrip: 
+    paleta: 
   IDboss: 0
-  sizeKingdom: 0
-  type:
-    id: -1
-    type: none
-    descrip: none
-  subtype:
-    id: -1
-    idType: -1
-    subtype: none
-    descrip: none
-  biome:
-    id: 0
-    descrip: 
-    paleta: 
---- !u!114 &-3762004614797646920
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1403110001964425395}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 836faa96221883942835e78afc3f33e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  x: 0
-  y: 0
-  index: 0
-  sizeKingdom: 0
-  type:
-    id: -1
-    type: none
-    descrip: none
-  subtype:
-    id: -1
-    idType: -1
-    subtype: none
-    descrip: none
-  biome:
-    id: 0
-    descrip: 
-    paleta: 
 --- !u!1 &3642391533462448681
 GameObject:
   m_ObjectHideFlags: 0
@@ -175,7 +159,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5515798881432255551
 Transform:
   m_ObjectHideFlags: 0

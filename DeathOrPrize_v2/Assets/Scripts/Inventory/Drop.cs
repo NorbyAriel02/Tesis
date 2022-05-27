@@ -28,7 +28,10 @@ public class Drop : MonoBehaviour
             if (hit.transform.name == gameObject.name)
             {
                 if (inventory.AddItem(item))
+                {
+                    AkSoundEngine.PostEvent("UI_Click", this.gameObject);
                     Destroy(gameObject);
+                }                    
                 else
                     CantGetUp();
             }            
@@ -36,6 +39,6 @@ public class Drop : MonoBehaviour
     }
     public void CantGetUp()
     {
-        Debug.Log("Inventario llego");
+        AkSoundEngine.PostEvent("Field_Error", this.gameObject);
     }
 }

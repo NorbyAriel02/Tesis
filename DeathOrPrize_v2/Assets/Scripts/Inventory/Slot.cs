@@ -59,10 +59,17 @@ public class Slot : MonoBehaviour, IDropHandler
             return false;
 
         if (tSlot == TypeSlot.SlotArmor && tItem == TypeItemInventory.Armor)
+        {
+            AkSoundEngine.PostEvent("Item_Equip", this.gameObject);
             return true;
+        }
+            
 
         if (tSlot == TypeSlot.SlotWeapon && tItem == TypeItemInventory.Weapon)
+        {
+            AkSoundEngine.PostEvent("Item_Equip", this.gameObject);
             return true;
+        }
 
         if (tSlot == TypeSlot.SlotInventory)
             return true;

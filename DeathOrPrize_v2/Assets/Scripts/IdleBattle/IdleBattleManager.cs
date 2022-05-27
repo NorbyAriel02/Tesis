@@ -53,8 +53,12 @@ public class IdleBattleManager : MonoBehaviour
     {
         SetEnemies(indexCell);
         playerStats.SetStats();          
-        ActivePanel();
+        ActivePanel();        
+    }
+    public void InBattle()
+    {
         inBattle = true;
+        AkSoundEngine.PostEvent("Combat_Start", this.gameObject);
     }
     void SetEnemies(int index)
     {
@@ -117,11 +121,16 @@ public class IdleBattleManager : MonoBehaviour
         }
 
         if (playerStats.stats.currentHealth <= 0)
+        {
+            //AkSoundEngine.PostEvent("Player_Dead", this.gameObject);            
             EndBattle();
+        }
+            
             
     }
     void EndBattle()
     {
+        AkSoundEngine.PostEvent("Combat_End", this.gameObject);
         animator.SetBool("Close", true);
         inBattle = false;
     }
@@ -141,7 +150,9 @@ public class IdleBattleManager : MonoBehaviour
         go.transform.position = new Vector3(playerPos.x + 1, playerPos.y, playerPos.z);
     }    
     void EnemyAttack(int index)
-    {
+    {        
+        AkSoundEngine.PostEvent("Player_GetClawsDamage", this.gameObject);
+        
         float d = playerStats.stats.defending;
         float a = enemiesXcell[currentGridIndex].enemies[index].damage;        
 
@@ -152,7 +163,9 @@ public class IdleBattleManager : MonoBehaviour
         playerStats.stats.currentHealth = PlayerDataHelper.GetCurrentHealth();        
     }
     void PlayerAttack()
-    {
+    {        
+        AkSoundEngine.PostEvent("Hit_Sword_Enemy", this.gameObject);
+        AkSoundEngine.PostEvent("Pain_Bear", this.gameObject);
         float d = enemiesXcell[currentGridIndex].enemies[currentEnemy].defending;
         float a = playerStats.stats.damage;
         

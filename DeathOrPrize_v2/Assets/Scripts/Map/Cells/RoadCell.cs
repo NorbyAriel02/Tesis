@@ -15,6 +15,7 @@ public class RoadCell : Cell
 
     public override void ActionCell()
     {
-        base.ActionCell();
+        //base.ActionCell();
+        MovePlayer();
     }
 }

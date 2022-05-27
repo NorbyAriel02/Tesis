@@ -39,9 +39,11 @@ public class SmithyController : MonoBehaviour
     }
     void Forjar()
     {
+        
         List<ItemProperties> items = GetItems();
         if(ValidarItems(items))
         {
+            AkSoundEngine.PostEvent("Item_Forge", this.gameObject);
             ItemProperties item = Utilitis.GetBestItem(items[0]);
             Slots[0].GetComponent<Slot>().empty = true;
             Slots[1].GetComponent<Slot>().empty = true;
@@ -52,6 +54,8 @@ public class SmithyController : MonoBehaviour
             Item scriptItem = gItem.GetComponent<Item>();
             scriptItem.SetItem(item);
         }
+        else
+            AkSoundEngine.PostEvent("Field_Error", this.gameObject);
     }
     bool ValidarItems(List<ItemProperties> items)
     {

@@ -1,7 +1,8 @@
-using System.Collections;
+using UnityEngine.EventSystems;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
 
 public class Menu : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class Menu : MonoBehaviour
     
     void Start()
     {
+        AkSoundEngine.PostEvent("Play_Music", this.gameObject);
         btnNew.onClick.AddListener(New);
         btnContinue.onClick.AddListener(Continue);
         btnExit.onClick.AddListener(Exit);
@@ -36,5 +38,19 @@ public class Menu : MonoBehaviour
             return true;
 
         return false;
+    }
+
+    bool IsMouseOverUI()
+    {
+        return EventSystem.current.IsPointerOverGameObject();
+    }
+
+    private void Update()
+    {
+        
+    }
+    public void MouseOver()
+    {
+        AkSoundEngine.PostEvent("UI_ButtonHover", this.gameObject);
     }
 }

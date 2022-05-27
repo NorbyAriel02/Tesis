@@ -38,7 +38,7 @@ public class HUDController : MonoBehaviour
         UpdateBarHealth();
     }
     void Open()
-    {
+    {        
         inventory.OpenInventory();
     }
     void SetInteractiveBtnDice()
@@ -54,7 +54,8 @@ public class HUDController : MonoBehaviour
         textDice.text = playerMove.diceValue.ToString();
     }
     void GetNewValueDeci()
-    {
+    {        
+        AkSoundEngine.PostEvent("Throw_Dice", this.gameObject);
         playerMove.diceValue = Random.Range(1, maxValueDice);
     }
     // Update is called once per frame
