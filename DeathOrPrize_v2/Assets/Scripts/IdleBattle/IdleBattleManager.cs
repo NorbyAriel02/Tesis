@@ -10,6 +10,7 @@ public class IdleBattleManager : MonoBehaviour
     public PlayerStats playerStats;
     public GameObject prefabDropTemplate;
     public Animator animator;
+    public int itenDropCount = 1;
     private bool inBattle = false;
     private Transform CameraTranform;
     private GameObject[] goEnemies;
@@ -62,7 +63,7 @@ public class IdleBattleManager : MonoBehaviour
     }
     void SetEnemies(int index)
     {
-        int kingdom = PlayerDataHelper.GetIdKingdom();
+        int kingdom = PlayerDataHelper.GetIdCurrentKingdom();
         currentGridIndex = index;
         enemiesXcell = fileController.GetEncryptedData<List<EnemiesXcellModel>>(PathHelper.EnemiesDataFile(kingdom));
         enemiesAttackSpeed = new List<float>();
@@ -136,7 +137,7 @@ public class IdleBattleManager : MonoBehaviour
     }
     void DropRewards(int level)
     {
-        for(int x = 0; x < 5; x++)
+        for(int x = 0; x < itenDropCount; x++)
         {
             RewardDrop(level);
         }

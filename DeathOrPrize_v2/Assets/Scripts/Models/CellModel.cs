@@ -13,5 +13,5 @@ public class CellModel
     public BiomeType biome;
     public float x;
     public float y;
-    public bool Fog;
+    public bool Fog = true;
 }

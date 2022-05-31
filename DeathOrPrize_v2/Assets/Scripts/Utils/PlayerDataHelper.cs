@@ -46,7 +46,7 @@ public class PlayerDataHelper
 
         return data.startPosition;
     }
-    public static int GetIdKingdom()
+    public static int GetIdCurrentKingdom()
     {
         int id = -1;
         DataFileController fileController = new DataFileController();
@@ -56,7 +56,7 @@ public class PlayerDataHelper
 
         return id;
     }
-    public static void UpdateIdKingdom(int id)
+    public static void UpdateIdCurrentKingdom(int id)
     {        
         DataFileController fileController = new DataFileController();
         PlayerDataModel data = fileController.GetEncryptedData<PlayerDataModel>(PathHelper.PlayerDataFile);

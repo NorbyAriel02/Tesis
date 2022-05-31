@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2292604269069102987}
   - component: {fileID: 2292604269069102996}
+  - component: {fileID: 3027580976929038820}
   m_Layer: 0
   m_Name: Game
-  m_TagString: Untagged
+  m_TagString: Game
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24,7 +25,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2292604269069102997}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -44,3 +45,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panelGameOver: {fileID: 0}
+--- !u!114 &3027580976929038820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2292604269069102997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc0bef69baf01b741ac2b2532ad17a1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paths:
+  - UI/DiaNoche
+  RollNumberForDay: 3
+  RollNumberForNight: 2
+  diceRollNumber: 0
+  IsDay: 1
+  panelNihgt: {fileID: 0}

@@ -70,7 +70,7 @@ public class QuestController : MonoBehaviour
             if (quest.status == QuestStatus.completa)
                 continue;
 
-            if (quest.idkingdom != PlayerDataHelper.GetIdKingdom())
+            if (quest.idkingdom != PlayerDataHelper.GetIdCurrentKingdom())
                 continue;            
 
             GameObject item = Instantiate(itemQuestTemplate, panelQuest.transform);

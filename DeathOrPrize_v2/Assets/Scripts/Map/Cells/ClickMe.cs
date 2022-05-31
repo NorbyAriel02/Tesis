@@ -19,10 +19,7 @@ public class ClickMe : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             if (IsMouseOverUI())
-            {
-                Debug.Log("Mouse sobre UI");
                 return;
-            }
 
             if (IsIntoDistance && playerMove.diceValue > 0)
                 cell.ActionCell();

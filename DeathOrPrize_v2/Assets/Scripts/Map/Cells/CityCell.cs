@@ -17,7 +17,7 @@ public class CityCell : Cell
     void EnterCity()
     {
         DiceReset();
-        PlayerDataHelper.UpdateIdKingdom(cellData.IDkingdom);
+        PlayerDataHelper.UpdateIdCurrentKingdom(cellData.IDkingdom);
         city.Enter(x, y, subtype.id);
     }
 }

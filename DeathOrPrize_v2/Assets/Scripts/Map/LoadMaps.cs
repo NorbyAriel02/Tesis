@@ -20,7 +20,7 @@ public class LoadMaps : MonoBehaviour
         LoadSpriteSheets();
         AkSoundEngine.PostEvent("Play_Gameplay", this.gameObject);        
         AkSoundEngine.PostEvent("Amb_Forest", this.gameObject);
-        LoadGrid(PlayerDataHelper.GetIdKingdom());
+        LoadGrid(PlayerDataHelper.GetIdCurrentKingdom());
     }
 
     void LoadSpriteSheets()
@@ -59,9 +59,26 @@ public class LoadMaps : MonoBehaviour
     {
         GameObject goCell = Instantiate(listGO[cellData.subtype.id], transform);
         SetData(goCell, cellData);
-        SetBiome(goCell);   
+        SetBiome(goCell);
+        SetFog(goCell, cellData);
         if (ActiveText)
             LogDev(goCell, cellData);
+    }
+    void SetFog(GameObject goCell, CellModel cellData)
+    {
+        if(!cellData.Fog)
+        {
+            GameObject[] children = ChildrenController.GetChildren(goCell);
+            foreach(GameObject go in children)
+            {
+                ExploredMap exploredMap = go.GetComponent<ExploredMap>();
+                if(exploredMap != null)
+                {
+                    go.SetActive(false);
+                    return;
+                }
+            }
+        }
     }
     void LogDev(GameObject goCell, CellModel cellData)
     {
@@ -89,5 +106,24 @@ public class LoadMaps : MonoBehaviour
             return;
 
         go.GetComponent<SpriteRenderer>().sprite = sheets[cellScript.cellData.biome.id][cellScript.cellData.subtype.id];
+    }
+    List<CellModel> GetDataCells()
+    {
+        List<CellModel> data = new List<CellModel>();
+        GameObject[] children = ChildrenController.GetChildren(gameObject);
+        foreach(GameObject child in children)
+        {
+            Cell cell = child.GetComponent<Cell>();
+            if(cell != null)
+            {
+                data.Add(cell.cellData);
+            }
+        }
+        return data;
+    }
+    private void OnDestroy()
+    {
+        List<CellModel> data = GetDataCells();
+        fileController.SaveEncrypted<List<CellModel>>(data, PathHelper.WolrdDataFile(PlayerDataHelper.GetIdCurrentKingdom()));
     }
 }

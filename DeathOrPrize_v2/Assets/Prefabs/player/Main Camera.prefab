@@ -113,6 +113,7 @@ MonoBehaviour:
   moveSpeed: 8
   playerPosition: {fileID: 0}
   LoadKingdom: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!114 &474421242065436231
 MonoBehaviour:
   m_ObjectHideFlags: 0

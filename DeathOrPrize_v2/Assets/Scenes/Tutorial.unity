@@ -749,7 +749,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1434962396604645451, guid: 688b0ba4194a79c48ab9d71530c4da90, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1434962396604645451, guid: 688b0ba4194a79c48ab9d71530c4da90, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4903,6 +4903,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95dde308876f36b42bb639f357b94758, type: 3}
+--- !u!1 &1224165212 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6027705517634156401, guid: 95dde308876f36b42bb639f357b94758, type: 3}
+  m_PrefabInstance: {fileID: 1224165211}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1244063503
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5086,6 +5091,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game
       objectReference: {fileID: 0}
+    - target: {fileID: 3027580976929038820, guid: e24e3501bfcfc2a41a22a9776b811fcc, type: 3}
+      propertyPath: panelNihgt
+      value: 
+      objectReference: {fileID: 1224165212}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e24e3501bfcfc2a41a22a9776b811fcc, type: 3}
 --- !u!1 &1364237490

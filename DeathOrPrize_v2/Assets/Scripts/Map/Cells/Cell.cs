@@ -24,8 +24,7 @@ public class Cell : MonoBehaviour
         battleManager = GetScript.Type<IdleBattleManager>("Battle", this.name);        
     }
     public virtual void ActionCell()
-    {
-        Debug.Log("action " + gameObject.name);
+    {        
         MovePlayer();
         if (!HasMovements)
             StartBattle();

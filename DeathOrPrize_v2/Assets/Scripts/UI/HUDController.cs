@@ -12,15 +12,18 @@ public class HUDController : MonoBehaviour
     public Image barHealth;
     public Text TextHealth;
     public Text TextKimgdom;
+    public Texture2D[] cursos;
     private InventoryManager inventory;
     PlayerMove playerMove;
+    UIDayNight uIDayNight;
     void Start()
     {
-        TextKimgdom.text = "Reino " + PlayerDataHelper.GetIdKingdom();
+        TextKimgdom.text = "Reino " + PlayerDataHelper.GetIdCurrentKingdom();
         playerMove = GetScript.Type<PlayerMove>("Player");
-        btnDado.onClick.AddListener(GetNewValueDeci);
+        btnDado.onClick.AddListener(RollDice);
         btnInventory.onClick.AddListener(Open);
         inventory = GetScript.Type<InventoryManager>("Inventory");
+        uIDayNight = GetComponent<UIDayNight>();
         UpdateBarHealth();
     }
 
@@ -37,6 +40,11 @@ public class HUDController : MonoBehaviour
         PlayerDataHelper.Heal();
         UpdateBarHealth();
     }
+    public void EnterCity()
+    {
+        Heal();
+        uIDayNight.ResetDay();
+    }
     void Open()
     {        
         inventory.OpenInventory();
@@ -44,21 +52,32 @@ public class HUDController : MonoBehaviour
     void SetInteractiveBtnDice()
     {
         if (playerMove.diceValue > 0)
+        {
             btnDado.interactable = false;
+            Cursor.SetCursor(cursos[0], new Vector2(5, 5), CursorMode.Auto);
+        }            
         else
+        {
             btnDado.interactable = true;
+            Cursor.SetCursor(cursos[1], new Vector2(5, 5), CursorMode.Auto);
+        }
+            
     }
 
     void UpdateTextValue()
     {
         textDice.text = playerMove.diceValue.ToString();
     }
+    void RollDice()
+    {
+        uIDayNight.AddRoll();
+        GetNewValueDeci();
+    }
     void GetNewValueDeci()
     {        
         AkSoundEngine.PostEvent("Throw_Dice", this.gameObject);
         playerMove.diceValue = Random.Range(1, maxValueDice);
-    }
-    // Update is called once per frame
+    }    
     void Update()
     {
         SetInteractiveBtnDice();

@@ -138,7 +138,7 @@ public class CityController : MonoBehaviour
     }
     public void Enter(float x, float y, int subTypeId)
     {
-        hud.Heal();
+        hud.EnterCity();
         SetExits(x, y, subTypeId);
         LoadItems();
         AkSoundEngine.PostEvent("Amb_City", this.gameObject);        
