@@ -10,16 +10,20 @@
 							<Position X="0" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Play_Gameplay" ID="{BC839B8C-02AA-4E32-BFD6-0DBAA1CE2994}" WorkUnitID="{2AFED437-10E1-465F-AB9A-2A5E27F72E99}"/>
+							<ObjectRef Name="Play_Menu" ID="{F4AEF97F-3F6C-4023-9A90-DEE82F2AEBFB}" WorkUnitID="{2AFED437-10E1-465F-AB9A-2A5E27F72E99}"/>
 							<Position X="0" Y="1"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Combat_Start" ID="{25A1824F-1B00-4DFA-A049-61DD6BE92166}" WorkUnitID="{2AFED437-10E1-465F-AB9A-2A5E27F72E99}"/>
+							<ObjectRef Name="Play_Gameplay" ID="{BC839B8C-02AA-4E32-BFD6-0DBAA1CE2994}" WorkUnitID="{2AFED437-10E1-465F-AB9A-2A5E27F72E99}"/>
 							<Position X="0" Y="2"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Combat_End" ID="{8035F8FD-C1B3-4EDF-AAE2-F923A47F0BED}" WorkUnitID="{2AFED437-10E1-465F-AB9A-2A5E27F72E99}"/>
+							<ObjectRef Name="Combat_Start" ID="{25A1824F-1B00-4DFA-A049-61DD6BE92166}" WorkUnitID="{2AFED437-10E1-465F-AB9A-2A5E27F72E99}"/>
 							<Position X="0" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_City" ID="{DC584D2C-7E31-4B16-973D-47D41B59461B}" WorkUnitID="{2AFED437-10E1-465F-AB9A-2A5E27F72E99}"/>
+							<Position X="0" Y="4"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="UI_Click" ID="{9129C108-8BCC-4622-B996-7658F3458CD2}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}"/>
@@ -42,13 +46,42 @@
 							<Position X="2" Y="2"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="Game_Start" ID="{984B5CFB-2799-4BED-8448-513B9FF43183}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Pain_Wolf" ID="{2227881C-0FC4-45FA-9458-D96431B654A9}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}"/>
 							<Position X="3" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Pausa_On" ID="{E5E9A2EF-30B1-4B73-8D92-398297165A7F}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}"/>
+							<Position X="4" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Pausa_Off" ID="{812ECF9A-033C-446A-9845-AF59FA0D8D6F}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}"/>
+							<Position X="4" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Item_Sell" ID="{722E4DCF-CD5D-4236-8845-CB392906C0A6}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}"/>
+							<Position X="4" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Item_Forge" ID="{30AC29BE-1EB5-4857-824A-4B8561DB1C2E}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}"/>
+							<Position X="4" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Item_Trash" ID="{2A20A742-6173-4B59-88DE-C5F37C29A482}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}"/>
+							<Position X="4" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Item_Equip" ID="{807905AA-9FD7-42B5-8411-E6C84494DE10}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}"/>
+							<Position X="4" Y="5"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true"/>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Gameplay" ID="{13CC7356-818C-4196-9659-68455C95CCD2}"/>
+						<CurrentStateRef Name="None" ID="{8FDA0FE8-C977-4510-BE3A-B377BC3DB025}"/>
+						<CurrentStateRef Name="Off" ID="{E4415D89-828A-41EF-B041-44A21C89FF16}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>

@@ -9,7 +9,17 @@
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
 					<ChildrenList>
-						<Event Name="Amb_City" ID="{B28BF321-661A-4DD4-8D5F-E2823325AE08}"/>
+						<Event Name="Amb_City" ID="{B28BF321-661A-4DD4-8D5F-E2823325AE08}">
+							<ChildrenList>
+								<Action Name="" ID="{3C6FA0F4-93B7-47BC-A22D-B92744F0AC62}" ShortID="594932793">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="medieval-city-sample" ID="{0ED64093-2245-40AB-9180-F8D682FCB781}" WorkUnitID="{B3658681-0240-4FA9-881B-B69F39B68550}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="Amb_Forest" ID="{BF65778B-4B4A-400B-8FF0-9533895187C0}">
 							<ChildrenList>
 								<Action Name="" ID="{61A39E31-784F-4E08-940C-9720B0C8AE48}" ShortID="213373693">
@@ -63,7 +73,7 @@
 								<Action Name="" ID="{9195CF1A-5E4A-4CFD-88D7-80B81E7C4F47}" ShortID="85259330">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Monster_Attack" ID="{BE0F8E1F-B900-4AFE-86F5-A4776AA6C5E0}" WorkUnitID="{77CC5426-1514-41C3-A6C5-F81161621419}"/>
+											<ObjectRef Name="Monster_Attack" ID="{BE0F8E1F-B900-4AFE-86F5-A4776AA6C5E0}" WorkUnitID="{F1DB5054-C665-4254-8891-376B2C7010A6}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -106,7 +116,7 @@
 								<Action Name="" ID="{D1C722A2-B5F9-4A23-95AA-A3EB44818CA3}" ShortID="309396802">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Defeated_Wolf" ID="{61E804F5-C13C-4BAB-8CD9-C28223AAAD9D}" WorkUnitID="{77CC5426-1514-41C3-A6C5-F81161621419}"/>
+											<ObjectRef Name="Defeated_Wolf" ID="{61E804F5-C13C-4BAB-8CD9-C28223AAAD9D}" WorkUnitID="{F1DB5054-C665-4254-8891-376B2C7010A6}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -118,7 +128,7 @@
 								<Action Name="" ID="{17912244-20F9-4438-9C5D-423A509E7710}" ShortID="278097188">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Defeated_Bear" ID="{1AFCED68-B7F8-47C5-8C85-FCBD6133D93C}" WorkUnitID="{77CC5426-1514-41C3-A6C5-F81161621419}"/>
+											<ObjectRef Name="Defeated_Bear" ID="{1AFCED68-B7F8-47C5-8C85-FCBD6133D93C}" WorkUnitID="{F1DB5054-C665-4254-8891-376B2C7010A6}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -129,7 +139,7 @@
 								<Action Name="" ID="{1D937F05-F45C-4740-9E38-7F1E719DE2DE}" ShortID="505825666">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Pain_wolf" ID="{33EBD00B-9E64-4A04-8CF8-A4AF8337550B}" WorkUnitID="{77CC5426-1514-41C3-A6C5-F81161621419}"/>
+											<ObjectRef Name="Pain_wolf" ID="{33EBD00B-9E64-4A04-8CF8-A4AF8337550B}" WorkUnitID="{F1DB5054-C665-4254-8891-376B2C7010A6}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -147,7 +157,7 @@
 								<Action Name="" ID="{FEDC6853-7EB4-4ED1-B798-9D21F1F6172E}" ShortID="36727332">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Pain_Bear" ID="{95B5BF0D-A1C8-44AD-A565-E56DA4B571BD}" WorkUnitID="{77CC5426-1514-41C3-A6C5-F81161621419}"/>
+											<ObjectRef Name="Pain_Bear" ID="{95B5BF0D-A1C8-44AD-A565-E56DA4B571BD}" WorkUnitID="{F1DB5054-C665-4254-8891-376B2C7010A6}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -166,7 +176,7 @@
 								<Action Name="" ID="{33355E21-4049-48F1-AA53-F263CD4A0F06}" ShortID="602150865">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Monster_Grunt" ID="{7CDCC1C6-4B61-4154-995E-A068E55C44BC}" WorkUnitID="{77CC5426-1514-41C3-A6C5-F81161621419}"/>
+											<ObjectRef Name="Monster_Grunt" ID="{7CDCC1C6-4B61-4154-995E-A068E55C44BC}" WorkUnitID="{F1DB5054-C665-4254-8891-376B2C7010A6}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -177,7 +187,7 @@
 								<Action Name="" ID="{EE493961-B375-44E8-BBA9-85EECC077407}" ShortID="793915602">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Monster_Grunt" ID="{7CDCC1C6-4B61-4154-995E-A068E55C44BC}" WorkUnitID="{77CC5426-1514-41C3-A6C5-F81161621419}"/>
+											<ObjectRef Name="Monster_Grunt" ID="{7CDCC1C6-4B61-4154-995E-A068E55C44BC}" WorkUnitID="{F1DB5054-C665-4254-8891-376B2C7010A6}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -288,6 +298,64 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Game Engine" ID="{840602DE-6490-4C97-8872-1AE5A97963A9}" ShortID="484324298">
+					<ChildrenList>
+						<Event Name="Game_Start" ID="{984B5CFB-2799-4BED-8448-513B9FF43183}">
+							<Comment>Evento al comienzo de todo el codigo
+</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{069CF0C9-6703-415E-947F-A2479B22D1DC}" ShortID="999505839">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="3"/>
+									</PropertyList>
+									<ReferenceList/>
+								</Action>
+								<Action Name="" ID="{38BC3B74-DF99-4EB7-AC67-7B30A0CE1779}" ShortID="830158269">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="None" ID="{8FDA0FE8-C977-4510-BE3A-B377BC3DB025}" WorkUnitID="{49F95D5D-FD51-4604-BAC8-6C411B8E9111}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Folder Name="Pause" ID="{39302722-DCC0-4C79-9BC9-9C0F1AC49ECF}" ShortID="846899447">
+							<ChildrenList>
+								<Event Name="Pausa_Off" ID="{812ECF9A-033C-446A-9845-AF59FA0D8D6F}">
+									<ChildrenList>
+										<Action Name="" ID="{92703597-8977-4E31-99BA-E152C06B84FC}" ShortID="457271829">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="22"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Off" ID="{E4415D89-828A-41EF-B041-44A21C89FF16}" WorkUnitID="{20275C91-C030-470E-8B87-2C280EA5DB06}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Pausa_On" ID="{E5E9A2EF-30B1-4B73-8D92-398297165A7F}">
+									<ChildrenList>
+										<Action Name="" ID="{1E0331A1-B796-487D-B477-5E54243C2942}" ShortID="716802557">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="22"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="On" ID="{C0141CB5-6EC8-4D78-9C8B-EC6724AE3029}" WorkUnitID="{20275C91-C030-470E-8B87-2C280EA5DB06}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

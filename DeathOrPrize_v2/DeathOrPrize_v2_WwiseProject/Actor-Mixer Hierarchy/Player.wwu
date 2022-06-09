@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{7F3C75E3-B15C-45EE-B5F1-E000DDC6DB97}" SchemaVersion="103">
+<WwiseDocument Type="WorkUnit" ID="{DDFF6D8C-2EB6-44F3-BC41-8B61AA3EB3F4}" SchemaVersion="103">
 	<AudioObjects>
-		<WorkUnit Name="Player" ID="{7F3C75E3-B15C-45EE-B5F1-E000DDC6DB97}" PersistMode="Standalone">
+		<WorkUnit Name="Player" ID="{DDFF6D8C-2EB6-44F3-BC41-8B61AA3EB3F4}" PersistMode="Standalone">
 			<PropertyList>
 				<Property Name="Color" Type="int16" Value="1"/>
 				<Property Name="OverrideColor" Type="bool" Value="True"/>
 			</PropertyList>
 			<ChildrenList>
-				<ActorMixer Name="Locomotion" ID="{2013B464-EB82-43CC-BA4A-E0C61791BB44}" ShortID="71091231">
+				<ActorMixer Name="Locomotion" ID="{56DA217F-55B0-49CC-8FD5-B379325DB79F}" ShortID="71091232">
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCA1DF01-6F8C-472F-B87F-732CAB749F66}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Player" ID="{C6F5388E-F1CA-4BFE-92F6-EE8D3D335195}" WorkUnitID="{F084C6E1-E0BE-4549-96E1-9AF9BA3B6675}"/>
+							<ObjectRef Name="Main_Character" ID="{C6F5388E-F1CA-4BFE-92F6-EE8D3D335195}" WorkUnitID="{F084C6E1-E0BE-4549-96E1-9AF9BA3B6675}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Sound Name="Error_Fallo_En_Celda" ID="{F488D3C4-B9E3-4016-8E8A-FE620730CEA4}" ShortID="196364222">
+						<Sound Name="Error_Fallo_En_Celda" ID="{4436F83D-6888-42A6-BA61-40AE2515C813}" ShortID="196364223">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCA1DF01-6F8C-472F-B87F-732CAB749F66}"/>
@@ -27,7 +27,7 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="Error_Fallo_En_Celda" ID="{B582014F-C587-41C6-A38A-8370EA233A51}">
+								<AudioFileSource Name="Error_Fallo_En_Celda" ID="{A6086D87-8FE8-44A0-A1CD-E1F442BD0758}">
 									<PropertyList>
 										<Property Name="FadeInDuration" Type="Real64" Value="0.0357462614568259"/>
 										<Property Name="FadeOutDuration" Type="Real64" Value="0.130218523878437"/>
@@ -43,10 +43,10 @@
 							</ChildrenList>
 							<ObjectLists/>
 							<ActiveSourceList>
-								<ActiveSource Name="Error_Fallo_En_Celda" ID="{B582014F-C587-41C6-A38A-8370EA233A51}" Platform="Linked"/>
+								<ActiveSource Name="Error_Fallo_En_Celda" ID="{A6086D87-8FE8-44A0-A1CD-E1F442BD0758}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="FX_Dados" ID="{7DF10589-E3F0-4CE3-953B-7E598C271FD8}" ShortID="636891793">
+						<Sound Name="FX_Dados" ID="{1C7DC074-339F-47AC-9A5C-E767A6D5D4F7}" ShortID="636891794">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCA1DF01-6F8C-472F-B87F-732CAB749F66}"/>
@@ -56,7 +56,7 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="FX_Dados" ID="{BEB0AD40-075D-4B97-B4A1-4C50B4EAE979}">
+								<AudioFileSource Name="FX_Dados" ID="{C4EF9774-11F1-4D42-A600-1779F4062A2D}">
 									<PropertyList>
 										<Property Name="FadeOutDuration" Type="Real64" Value="0.364688856729378"/>
 										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
@@ -71,10 +71,10 @@
 							</ChildrenList>
 							<ObjectLists/>
 							<ActiveSourceList>
-								<ActiveSource Name="FX_Dados" ID="{BEB0AD40-075D-4B97-B4A1-4C50B4EAE979}" Platform="Linked"/>
+								<ActiveSource Name="FX_Dados" ID="{C4EF9774-11F1-4D42-A600-1779F4062A2D}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<RandomSequenceContainer Name="Move foward" ID="{81CDAEE3-A944-4777-9182-83FD32A8544D}" ShortID="783660584">
+						<RandomSequenceContainer Name="Move foward" ID="{51B76C78-8F07-4584-B7D4-2BB48BF431C6}" ShortID="783660585">
 							<PropertyList>
 								<Property Name="MaxSoundPerInstance" Type="int16">
 									<ValueList>
@@ -84,7 +84,7 @@
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
 										<ModifierInfo>
-											<Modifier Name="" ID="{7011DC5A-08C7-424B-996A-00C60F40168F}">
+											<Modifier Name="" ID="{7BF7EDBE-A0BE-4299-9D20-000FE900BDB2}">
 												<PropertyList>
 													<Property Name="Enabled" Type="bool" Value="True"/>
 													<Property Name="Max" Type="Real64" Value="500"/>
@@ -109,17 +109,17 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="Player_Move" ID="{943AE0BB-25CC-4FF3-8A0B-FF8A5D384027}" ShortID="173849416">
+								<Sound Name="Player_Move" ID="{27F94F42-1B37-421B-B0BF-FF734DE3C6B5}" ShortID="173849417">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCA1DF01-6F8C-472F-B87F-732CAB749F66}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Player" ID="{C6F5388E-F1CA-4BFE-92F6-EE8D3D335195}" WorkUnitID="{F084C6E1-E0BE-4549-96E1-9AF9BA3B6675}"/>
+											<ObjectRef Name="Main_Character" ID="{C6F5388E-F1CA-4BFE-92F6-EE8D3D335195}" WorkUnitID="{F084C6E1-E0BE-4549-96E1-9AF9BA3B6675}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Player_Move" ID="{0D1B85E1-0C3F-4DD4-9358-DF701F49181F}">
+										<AudioFileSource Name="Player_Move" ID="{ACEEFA07-3F7E-4ECC-B5F4-1E4B2D081273}">
 											<PropertyList>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 												<Property Name="TrimBegin" Type="Real64" Value="0.00358934450109098"/>
@@ -134,20 +134,20 @@
 									</ChildrenList>
 									<ObjectLists/>
 									<ActiveSourceList>
-										<ActiveSource Name="Player_Move" ID="{0D1B85E1-0C3F-4DD4-9358-DF701F49181F}" Platform="Linked"/>
+										<ActiveSource Name="Player_Move" ID="{ACEEFA07-3F7E-4ECC-B5F4-1E4B2D081273}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Player_Move_01" ID="{B381CAB8-23FB-4315-8F9A-0133CBA8491E}" ShortID="6742810">
+								<Sound Name="Player_Move_01" ID="{EC980454-77AB-4F20-9BBD-EADAEA8271BE}" ShortID="6742811">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCA1DF01-6F8C-472F-B87F-732CAB749F66}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Player" ID="{C6F5388E-F1CA-4BFE-92F6-EE8D3D335195}" WorkUnitID="{F084C6E1-E0BE-4549-96E1-9AF9BA3B6675}"/>
+											<ObjectRef Name="Main_Character" ID="{C6F5388E-F1CA-4BFE-92F6-EE8D3D335195}" WorkUnitID="{F084C6E1-E0BE-4549-96E1-9AF9BA3B6675}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Player_Move" ID="{7B3155F0-9A3B-453C-B6A8-2A7258E6B1E1}">
+										<AudioFileSource Name="Player_Move" ID="{2EB36F86-340F-48B4-A5C2-8AB167EF8176}">
 											<PropertyList>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 												<Property Name="TrimBegin" Type="Real64" Value="0.438169024532046"/>
@@ -162,20 +162,20 @@
 									</ChildrenList>
 									<ObjectLists/>
 									<ActiveSourceList>
-										<ActiveSource Name="Player_Move" ID="{7B3155F0-9A3B-453C-B6A8-2A7258E6B1E1}" Platform="Linked"/>
+										<ActiveSource Name="Player_Move" ID="{2EB36F86-340F-48B4-A5C2-8AB167EF8176}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Player_Move_02" ID="{FC31ADC5-506B-4685-B46A-D047B0FC9B24}" ShortID="21723202">
+								<Sound Name="Player_Move_02" ID="{66E81096-CD8D-4DAB-809C-2DD60EC8D1F3}" ShortID="21723203">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCA1DF01-6F8C-472F-B87F-732CAB749F66}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Player" ID="{C6F5388E-F1CA-4BFE-92F6-EE8D3D335195}" WorkUnitID="{F084C6E1-E0BE-4549-96E1-9AF9BA3B6675}"/>
+											<ObjectRef Name="Main_Character" ID="{C6F5388E-F1CA-4BFE-92F6-EE8D3D335195}" WorkUnitID="{F084C6E1-E0BE-4549-96E1-9AF9BA3B6675}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Player_Move" ID="{ECB58F0A-9924-4D02-9255-9D7A15918445}">
+										<AudioFileSource Name="Player_Move" ID="{B277F875-DEED-41F8-933E-B283E1EF8DDF}">
 											<PropertyList>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 												<Property Name="TrimBegin" Type="Real64" Value="0.876258630169532"/>
@@ -190,7 +190,7 @@
 									</ChildrenList>
 									<ObjectLists/>
 									<ActiveSourceList>
-										<ActiveSource Name="Player_Move" ID="{ECB58F0A-9924-4D02-9255-9D7A15918445}" Platform="Linked"/>
+										<ActiveSource Name="Player_Move" ID="{B277F875-DEED-41F8-933E-B283E1EF8DDF}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
@@ -199,17 +199,17 @@
 					</ChildrenList>
 					<ObjectLists/>
 				</ActorMixer>
-				<ActorMixer Name="Attack" ID="{969ED4CB-AA05-431D-9209-368B8215F5A3}" ShortID="350007409">
+				<ActorMixer Name="Attack" ID="{54BD7770-446B-4B18-94D5-5BA9871C5DD8}" ShortID="350007410">
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCA1DF01-6F8C-472F-B87F-732CAB749F66}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Player" ID="{C6F5388E-F1CA-4BFE-92F6-EE8D3D335195}" WorkUnitID="{F084C6E1-E0BE-4549-96E1-9AF9BA3B6675}"/>
+							<ObjectRef Name="Main_Character" ID="{C6F5388E-F1CA-4BFE-92F6-EE8D3D335195}" WorkUnitID="{F084C6E1-E0BE-4549-96E1-9AF9BA3B6675}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<BlendContainer Name="PlayerAtack" ID="{F50E0167-3D05-4F1C-9607-0C175AFD87F3}" ShortID="847962225">
+						<BlendContainer Name="PlayerAtack" ID="{DE69D6A5-6B85-49BD-ADC6-C554FFF59C9E}" ShortID="847962226">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCA1DF01-6F8C-472F-B87F-732CAB749F66}"/>
@@ -219,12 +219,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<RandomSequenceContainer Name="Swish" ID="{B89BC4F2-F2F0-43AF-BF0C-40C80658EA26}" ShortID="1044055324">
+								<RandomSequenceContainer Name="Swish" ID="{20F6AA99-1143-44F7-9037-66026090F743}" ShortID="1044055325">
 									<PropertyList>
 										<Property Name="Pitch" Type="int32">
 											<ModifierList>
 												<ModifierInfo>
-													<Modifier Name="" ID="{16346152-7A4E-4157-9AF4-8A5E2A48B6F8}">
+													<Modifier Name="" ID="{6A509549-CA04-4006-910A-484630E891FF}">
 														<PropertyList>
 															<Property Name="Enabled" Type="bool" Value="True"/>
 															<Property Name="Max" Type="Real64" Value="500"/>
@@ -244,7 +244,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Sword Whip 01" ID="{3A012633-D8EA-4458-B0E9-F8A34D8CD6DF}" ShortID="614252172">
+										<Sound Name="Sword Whip 01" ID="{06E51550-E8C8-47C6-8750-A5D6F3DC80DF}" ShortID="614252173">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCA1DF01-6F8C-472F-B87F-732CAB749F66}"/>
@@ -254,7 +254,7 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="Sword Whip 01" ID="{1CE576BE-32A4-4AAF-9FFE-D4BC68BD1AE8}">
+												<AudioFileSource Name="Sword Whip 01" ID="{E499AF29-1664-466D-B263-F620AE82E2EB}">
 													<PropertyList>
 														<Property Name="FadeInDuration" Type="Real64" Value="0.0200461417513304"/>
 														<Property Name="FadeOutDuration" Type="Real64" Value="0.0543185776487663"/>
@@ -270,10 +270,10 @@
 											</ChildrenList>
 											<ObjectLists/>
 											<ActiveSourceList>
-												<ActiveSource Name="Sword Whip 01" ID="{1CE576BE-32A4-4AAF-9FFE-D4BC68BD1AE8}" Platform="Linked"/>
+												<ActiveSource Name="Sword Whip 01" ID="{E499AF29-1664-466D-B263-F620AE82E2EB}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Sword Whip 02" ID="{D0814838-1DBD-417C-BD84-5F5C05AADCB8}" ShortID="603253314">
+										<Sound Name="Sword Whip 02" ID="{B48A98F7-0D48-45DD-BE85-C2DDDD5CB2F0}" ShortID="603253315">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCA1DF01-6F8C-472F-B87F-732CAB749F66}"/>
@@ -283,7 +283,7 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="Sword Whip 02" ID="{1D25387C-65E1-4157-90A7-5D7860EBA470}">
+												<AudioFileSource Name="Sword Whip 02" ID="{5A51321C-249C-41DC-A774-8BE4F8455B59}">
 													<PropertyList>
 														<Property Name="FadeInDuration" Type="Real64" Value="0.0406919448476052"/>
 														<Property Name="FadeOutDuration" Type="Real64" Value="0.0576469218674407"/>
@@ -300,13 +300,13 @@
 											</ChildrenList>
 											<ObjectLists/>
 											<ActiveSourceList>
-												<ActiveSource Name="Sword Whip 02" ID="{1D25387C-65E1-4157-90A7-5D7860EBA470}" Platform="Linked"/>
+												<ActiveSource Name="Sword Whip 02" ID="{5A51321C-249C-41DC-A774-8BE4F8455B59}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
 									<ObjectLists/>
 								</RandomSequenceContainer>
-								<Sound Name="golpes humano" ID="{8F525271-EA49-42FB-8F9F-D5BA34F8C3E1}" ShortID="318379591">
+								<Sound Name="golpes humano" ID="{E62818CA-08F5-4511-8FBD-AD12343F1C7F}" ShortID="318379592">
 									<PropertyList>
 										<Property Name="Highpass" Type="int16">
 											<ValueList>
@@ -333,7 +333,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="golpes humano" ID="{AA9F740D-259F-461F-A957-D2F60C4B9641}">
+										<AudioFileSource Name="golpes humano" ID="{921F57F6-4B5D-46A2-BF88-610C5BAE7085}">
 											<PropertyList>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 												<Property Name="TrimBegin" Type="Real64" Value="2.96334408378984"/>
@@ -348,15 +348,15 @@
 									</ChildrenList>
 									<ObjectLists/>
 									<ActiveSourceList>
-										<ActiveSource Name="golpes humano" ID="{AA9F740D-259F-461F-A957-D2F60C4B9641}" Platform="Linked"/>
+										<ActiveSource Name="golpes humano" ID="{921F57F6-4B5D-46A2-BF88-610C5BAE7085}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Sword hit" ID="{1FE563F1-AC7D-4317-A5F6-CF09E5C5A2BD}" ShortID="1024353244">
+								<Sound Name="Sword hit" ID="{6F63A687-D689-4E0E-9CEF-2E7E398B9A08}" ShortID="1024353245">
 									<PropertyList>
 										<Property Name="Pitch" Type="int32">
 											<ModifierList>
 												<ModifierInfo>
-													<Modifier Name="" ID="{F563D8D4-2D77-42E6-8B0E-2CC7CDCE0E52}">
+													<Modifier Name="" ID="{76A63FAD-557D-4FF8-9A32-E7164495D96A}">
 														<PropertyList>
 															<Property Name="Enabled" Type="bool" Value="True"/>
 															<Property Name="Max" Type="Real64" Value="200"/>
@@ -381,7 +381,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Sword hit" ID="{2251FD84-F995-4E88-AAF3-AC5866377B6D}">
+										<AudioFileSource Name="Sword hit" ID="{F09AF767-A652-429D-99FB-B41C7B1F010B}">
 											<PropertyList>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.164176644895984"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
@@ -396,7 +396,7 @@
 									</ChildrenList>
 									<ObjectLists/>
 									<ActiveSourceList>
-										<ActiveSource Name="Sword hit" ID="{2251FD84-F995-4E88-AAF3-AC5866377B6D}" Platform="Linked"/>
+										<ActiveSource Name="Sword hit" ID="{F09AF767-A652-429D-99FB-B41C7B1F010B}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
@@ -405,7 +405,7 @@
 					</ChildrenList>
 					<ObjectLists/>
 				</ActorMixer>
-				<RandomSequenceContainer Name="Get_Damage" ID="{CD4C1287-7A7A-4A9A-89E0-087D758E1F0A}" ShortID="816972734">
+				<RandomSequenceContainer Name="Get_Damage" ID="{DA04D624-8152-4AC5-AC84-B4EE3218C5CA}" ShortID="816972735">
 					<PropertyList>
 						<Property Name="MaxSoundPerInstance" Type="int16">
 							<ValueList>
@@ -415,7 +415,7 @@
 						<Property Name="Pitch" Type="int32">
 							<ModifierList>
 								<ModifierInfo>
-									<Modifier Name="" ID="{CEDF5B71-A1BB-4A4E-B45F-63FCEC1D0223}">
+									<Modifier Name="" ID="{73C22616-7BEE-4FA0-8508-449B4A4C83B4}">
 										<PropertyList>
 											<Property Name="Enabled" Type="bool" Value="True"/>
 											<Property Name="Max" Type="Real64" Value="200"/>
@@ -440,7 +440,7 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Sound Name="golpe grito" ID="{BC0591D3-915E-4CC2-A7DA-9E1A3F57D422}" ShortID="370416376">
+						<Sound Name="golpe grito" ID="{20D155EF-3A4E-403A-A3AE-F324CFFCC867}" ShortID="370416377">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCA1DF01-6F8C-472F-B87F-732CAB749F66}"/>
@@ -450,7 +450,7 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="golpe grito" ID="{5805B292-CF3C-4DB5-807F-7EA3F0E2F0A4}">
+								<AudioFileSource Name="golpe grito" ID="{464DFDCF-EB88-49A7-93D3-44C4C863CB87}">
 									<PropertyList>
 										<Property Name="FadeInDuration" Type="Real64" Value="0.0331175530357001"/>
 										<Property Name="FadeOutDuration" Type="Real64" Value="0.0993526591071003"/>
@@ -467,10 +467,10 @@
 							</ChildrenList>
 							<ObjectLists/>
 							<ActiveSourceList>
-								<ActiveSource Name="golpe grito" ID="{5805B292-CF3C-4DB5-807F-7EA3F0E2F0A4}" Platform="Linked"/>
+								<ActiveSource Name="golpe grito" ID="{464DFDCF-EB88-49A7-93D3-44C4C863CB87}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="golpe grito_01" ID="{BE9EFF57-02AF-4DF9-B1D7-8350A96F4F23}" ShortID="593565296">
+						<Sound Name="golpe grito_01" ID="{10AD8E70-23A8-4F65-B76C-B91C961B360F}" ShortID="593565297">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCA1DF01-6F8C-472F-B87F-732CAB749F66}"/>
@@ -480,7 +480,7 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="golpe grito" ID="{78D98E90-61A4-40BF-9445-978672BCCF01}">
+								<AudioFileSource Name="golpe grito" ID="{896EB2B0-C01E-49D2-BAF8-101917F62364}">
 									<PropertyList>
 										<Property Name="FadeInDuration" Type="Real64" Value="0.0331175530357001"/>
 										<Property Name="FadeOutDuration" Type="Real64" Value="0.0993526591071003"/>
@@ -497,7 +497,7 @@
 							</ChildrenList>
 							<ObjectLists/>
 							<ActiveSourceList>
-								<ActiveSource Name="golpe grito" ID="{78D98E90-61A4-40BF-9445-978672BCCF01}" Platform="Linked"/>
+								<ActiveSource Name="golpe grito" ID="{896EB2B0-C01E-49D2-BAF8-101917F62364}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>

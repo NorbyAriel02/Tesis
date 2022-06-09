@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>C:\Proyectos Sound Design\Wwise\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>C:\Proyectos Sound Design\Wwise\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Proyectos Sound Design\Wwise\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>C:\Proyectos Sound Design\Wwise\COPIA PARA TRABAJAR Death or price\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Proyectos Sound Design\Wwise\COPIA PARA TRABAJAR Death or price\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Proyectos Sound Design\Wwise\COPIA PARA TRABAJAR Death or price\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Proyectos Sound Design\Wwise\Tesis\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Proyectos Sound Design\Wwise\COPIA PARA TRABAJAR Death or price\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="965285462">
+		<SoundBank Id="1355168291" Language="SFX" Hash="1982496740">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="617090691">
+		<SoundBank Id="3161908922" Language="SFX" Hash="2387615177">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
@@ -123,7 +123,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2146777153" Name="Item_Equip" ObjectPath="\Events\Default Work Unit\Miscellaneous\Item_Equip" DurationType="OneShot" DurationMin="0.215635" DurationMax="0.215635">
+				<Event Id="2146777153" Name="Item_Equip" ObjectPath="\Events\Default Work Unit\Miscellaneous\Item_Equip" DurationType="OneShot" DurationMin="0.203532" DurationMax="0.228457">
 					<IncludedMemoryFiles>
 						<File Id="416759349" Language="SFX">
 							<ShortName>WAVES\UI_dragtool_mousedown.wav</ShortName>
@@ -131,7 +131,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="213563888" Name="Item_Forge" ObjectPath="\Events\Default Work Unit\Miscellaneous\Item_Forge" DurationType="OneShot" DurationMin="1.5" DurationMax="1.5">
+				<Event Id="213563888" Name="Item_Forge" ObjectPath="\Events\Default Work Unit\Miscellaneous\Item_Forge" DurationType="OneShot" DurationMin="1.415811" DurationMax="1.589195">
 					<IncludedMemoryFiles>
 						<File Id="125981456" Language="SFX">
 							<ShortName>DoP_ItemForge.wav</ShortName>
@@ -139,7 +139,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1699323996" Name="Item_Move" ObjectPath="\Events\Default Work Unit\Miscellaneous\Item_Move" DurationType="OneShot" DurationMin="0.2252" DurationMax="0.2252">
+				<Event Id="1699323996" Name="Item_Move" ObjectPath="\Events\Default Work Unit\Miscellaneous\Item_Move" DurationType="OneShot" DurationMin="0.21256" DurationMax="0.238591">
 					<IncludedMemoryFiles>
 						<File Id="448948900" Language="SFX">
 							<ShortName>WAVES\UI_dragtool_place.wav</ShortName>
@@ -147,7 +147,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1331156295" Name="Item_Sell" ObjectPath="\Events\Default Work Unit\Miscellaneous\Item_Sell" DurationType="OneShot" DurationMin="1.203563" DurationMax="1.431285">
+				<Event Id="1331156295" Name="Item_Sell" ObjectPath="\Events\Default Work Unit\Miscellaneous\Item_Sell" DurationType="OneShot" DurationMin="1.136012" DurationMax="1.516394">
 					<IncludedMemoryFiles>
 						<File Id="692738358" Language="SFX">
 							<ShortName>DoP_ItemSell.wav</ShortName>
@@ -155,7 +155,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="795457351" Name="Item_Trash" ObjectPath="\Events\Default Work Unit\Miscellaneous\Item_Trash" DurationType="OneShot" DurationMin="1.062494" DurationMax="1.062494">
+				<Event Id="795457351" Name="Item_Trash" ObjectPath="\Events\Default Work Unit\Miscellaneous\Item_Trash" DurationType="OneShot" DurationMin="1.002861" DurationMax="1.125674">
 					<IncludedMemoryFiles>
 						<File Id="567069083" Language="SFX">
 							<ShortName>DoP_ItemTrash.wav</ShortName>

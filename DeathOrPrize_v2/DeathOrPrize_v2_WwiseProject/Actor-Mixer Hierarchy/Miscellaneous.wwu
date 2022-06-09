@@ -14,6 +14,18 @@
 								<Value>25</Value>
 							</ValueList>
 						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{130AEB6F-0BE7-4821-A21A-FF5FE42A2FB5}">
+										<PropertyList>
+											<Property Name="Max" Type="Real64" Value="100"/>
+											<Property Name="Min" Type="Real64" Value="-100"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
 						<Property Name="UseMaxSoundPerInstance" Type="bool">
 							<ValueList>
 								<Value>True</Value>
@@ -36,7 +48,6 @@
 										<ModifierInfo>
 											<Modifier Name="" ID="{BFEA775C-B0A3-41B7-83E6-F624706C1637}">
 												<PropertyList>
-													<Property Name="Enabled" Type="bool" Value="True"/>
 													<Property Name="Max" Type="Real64" Value="150"/>
 													<Property Name="Min" Type="Real64" Value="-150"/>
 												</PropertyList>
@@ -91,7 +102,7 @@
 							<PropertyList>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-3</Value>
+										<Value>-6</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -118,6 +129,13 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Item_Equip" ID="{1F829751-A8AF-4F6C-ADE2-A2F0281F118B}" ShortID="23128526">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCA1DF01-6F8C-472F-B87F-732CAB749F66}"/>
@@ -148,6 +166,21 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Item_Move" ID="{957A4304-A962-4F01-A144-4420692CCF93}" ShortID="202079870">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{09024ED7-7BB5-4B57-8CF8-FD2A7C79DCED}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="100"/>
+													<Property Name="Min" Type="Real64" Value="-150"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCA1DF01-6F8C-472F-B87F-732CAB749F66}"/>
@@ -181,7 +214,7 @@
 							<PropertyList>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-5</Value>
+										<Value>-10</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
