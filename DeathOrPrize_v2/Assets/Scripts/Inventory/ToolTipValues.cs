@@ -33,7 +33,7 @@ public class ToolTipValues : MonoBehaviour
             damage.gameObject.SetActive(false);            
             speedAttack.gameObject.SetActive(false);            
             defending.gameObject.SetActive(true);
-            defending.text = "Defending " + item.defending.ToString();
+            defending.text = "Defending " + item.armor.ToString();
         }
         value.text = "Value " + item.value.ToString();
         level.text = "Level " + item.level.ToString();

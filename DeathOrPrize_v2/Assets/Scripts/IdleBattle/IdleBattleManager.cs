@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class IdleBattleManager : MonoBehaviour
 {
-    public HUDController HUB;
+    public delegate void DamageThePlayer(float damage);
+    public static DamageThePlayer OnDamageThePlayer;
+        
     public Transform Content;
     public GameObject Enemies;    
     public PlayerStats playerStats;
     public GameObject prefabDropTemplate;
     public Animator animator;
     public int itenDropCount = 1;
+    public int ExpForEnemy = 10;
     private bool inBattle = false;
     private Transform CameraTranform;
     private GameObject[] goEnemies;
@@ -20,19 +23,29 @@ public class IdleBattleManager : MonoBehaviour
     private List<float> enemiesTimerAttack;
     private List<float> enemiesAttackSpeed;
     private float timer;
+    private LevelSystem levelSystem;
     DataFileController fileController = new DataFileController();
     private EnemiesBarHealth enemiesBarHealth;
     void Start()
-    {   
+    {
         SetParent();       
         playerStats = GetScript.Type<PlayerStats>("Player");
         DesactivePanel();
         goEnemies = ChildrenController.GetChildren(Enemies);
         enemiesBarHealth = GetComponent<EnemiesBarHealth>();
+        int kingdom = PlayerDataHelper.GetIdCurrentKingdom();
+        enemiesXcell = fileController.GetEncryptedData<List<EnemiesXcellModel>>(PathHelper.EnemiesDataFile(kingdom));
     }
     private void OnEnable()
     {
+        LevelController.StartLevelSystem += SetLevelSystem;
+        Cell.OnAction += StartBattle;
         
+    }
+    private void OnDisable()
+    {
+        LevelController.StartLevelSystem -= SetLevelSystem;
+        Cell.OnAction -= StartBattle;
     }
     void SetParent()
     {
@@ -52,9 +65,8 @@ public class IdleBattleManager : MonoBehaviour
     }
     public void StartBattle(int indexCell)
     {
+        ActivePanel();
         SetEnemies(indexCell);
-        playerStats.SetStats();          
-        ActivePanel();        
     }
     public void InBattle()
     {
@@ -63,9 +75,7 @@ public class IdleBattleManager : MonoBehaviour
     }
     void SetEnemies(int index)
     {
-        int kingdom = PlayerDataHelper.GetIdCurrentKingdom();
         currentGridIndex = index;
-        enemiesXcell = fileController.GetEncryptedData<List<EnemiesXcellModel>>(PathHelper.EnemiesDataFile(kingdom));
         enemiesAttackSpeed = new List<float>();
         enemiesTimerAttack = new List<float>();
         for (int x = 0; x < goEnemies.Length; x++)
@@ -87,18 +97,18 @@ public class IdleBattleManager : MonoBehaviour
         timer += Time.deltaTime;
         int i = currentGridIndex;
         int index = 0;
-        foreach(EnemyModel enemy in enemiesXcell[i].enemies)
+        foreach (EnemyModel enemy in enemiesXcell[i].enemies)
         {
             float eTimerAttack = enemiesTimerAttack[index];
             if (enemy.health > 0)
                 if (CanAttack(ref eTimerAttack, enemiesAttackSpeed[index]))
                 {
                     EnemyAttack(index);
-                    HUB.UpdateBarHealth();
+
                 }
 
             enemiesTimerAttack[index] = eTimerAttack;
-            
+
             index++;
         }
 
@@ -107,16 +117,16 @@ public class IdleBattleManager : MonoBehaviour
             {
                 PlayerAttack();
             }
-         
-        if(enemiesXcell[i].enemies[currentEnemy].health <= 0)
+
+        if (enemiesXcell[i].enemies[currentEnemy].health <= 0)
         {
+            levelSystem.AddExperience(ExpForEnemy * enemiesXcell[currentGridIndex].enemies[currentEnemy].level);
             goEnemies[currentEnemy].SetActive(false);
-            currentEnemy++;            
+            currentEnemy++;
         }
 
         if (currentEnemy >= enemiesXcell[i].enemies.Count)
         {
-            //RewardDrop(enemiesXcell[0].enemies[0].level);
             DropRewards(enemiesXcell[0].enemies[0].level);
             EndBattle();
         }
@@ -126,8 +136,6 @@ public class IdleBattleManager : MonoBehaviour
             //AkSoundEngine.PostEvent("Player_Dead", this.gameObject);            
             EndBattle();
         }
-            
-            
     }
     void EndBattle()
     {
@@ -154,14 +162,16 @@ public class IdleBattleManager : MonoBehaviour
     {        
         AkSoundEngine.PostEvent("Player_GetClawsDamage", this.gameObject);
         
-        float d = playerStats.stats.defending;
+        float d = playerStats.stats.armor;
         float a = enemiesXcell[currentGridIndex].enemies[index].damage;        
 
         float damage = IdleBattleHelper.GetRealDamage(d, a);
 
         PlayerDataHelper.RestHealth(damage);
 
-        playerStats.stats.currentHealth = PlayerDataHelper.GetCurrentHealth();        
+        playerStats.stats.currentHealth = PlayerDataHelper.GetCurrentHealth();
+        
+        OnDamageThePlayer?.Invoke(damage);
     }
     void PlayerAttack()
     {        
@@ -205,4 +215,10 @@ public class IdleBattleManager : MonoBehaviour
         }
         return false;
     }
+
+    public void SetLevelSystem(LevelSystem levelSystem)
+    {
+        this.levelSystem = levelSystem;        
+    }
+
 }

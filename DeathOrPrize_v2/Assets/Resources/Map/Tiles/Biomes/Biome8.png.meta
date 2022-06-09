@@ -77,6 +77,81 @@ TextureImporter:
   - first:
       213: 6914871604055117963
     second: 2TilesBosque_24
+  - first:
+      213: -39183238860541879
+    second: Biome8_0
+  - first:
+      213: 7216765712271422954
+    second: Biome8_1
+  - first:
+      213: -9140011610608223975
+    second: Biome8_2
+  - first:
+      213: 7161479654217763615
+    second: Biome8_3
+  - first:
+      213: 3894135535490336722
+    second: Biome8_4
+  - first:
+      213: 1822036266161826058
+    second: Biome8_5
+  - first:
+      213: -4775980696383540693
+    second: Biome8_6
+  - first:
+      213: -8523808415872035220
+    second: Biome8_7
+  - first:
+      213: 574903379233511458
+    second: Biome8_8
+  - first:
+      213: -4209699021534347761
+    second: Biome8_9
+  - first:
+      213: 3679946088336121649
+    second: Biome8_10
+  - first:
+      213: -5816276565004941672
+    second: Biome8_11
+  - first:
+      213: 2426467834347158324
+    second: Biome8_12
+  - first:
+      213: 5711301337565828143
+    second: Biome8_13
+  - first:
+      213: 4863892782783157426
+    second: Biome8_14
+  - first:
+      213: -5351142466567793930
+    second: Biome8_15
+  - first:
+      213: -3668524549023531366
+    second: Biome8_16
+  - first:
+      213: -6174257247217761628
+    second: Biome8_17
+  - first:
+      213: -8636471092247966403
+    second: Biome8_18
+  - first:
+      213: -2021139767441802230
+    second: Biome8_19
+  - first:
+      213: -8499517310962995912
+    second: Biome8_20
+  - first:
+      213: -4214742876798781748
+    second: Biome8_21
+  - first:
+      213: -5659579841191127797
+    second: Biome8_22
+  - first:
+      213: -6812084873249099875
+    second: Biome8_23
+  - first:
+      213: 383968838639145810
+    second: Biome8_24
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -121,7 +196,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -190,13 +265,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 2TilesBosque_0
+      name: Biome8_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 400
-        width: 100
-        height: 100
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -204,20 +279,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fa7bcdaac62b6a5e0800000000000000
-      internalID: -1898634013097281617
+      spriteID: 94071964d0bc47ff0800000000000000
+      internalID: -39183238860541879
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 2TilesBosque_1
+      name: Biome8_1
       rect:
         serializedVersion: 2
-        x: 100
-        y: 400
-        width: 100
-        height: 100
+        x: 32
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -225,20 +300,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd783c49ac135a960800000000000000
-      internalID: 7612545491288688607
+      spriteID: ae53823ed2a172460800000000000000
+      internalID: 7216765712271422954
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 2TilesBosque_2
+      name: Biome8_2
       rect:
         serializedVersion: 2
-        x: 200
-        y: 400
-        width: 100
-        height: 100
+        x: 64
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -246,20 +321,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f460ecc202c0fd800800000000000000
-      internalID: 639243004440086095
+      spriteID: 91930c2bdd7282180800000000000000
+      internalID: -9140011610608223975
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 2TilesBosque_3
+      name: Biome8_3
       rect:
         serializedVersion: 2
-        x: 300
-        y: 400
-        width: 100
-        height: 100
+        x: 96
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -267,20 +342,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bf9c2a25f1ea270a0800000000000000
-      internalID: -6885249430742447621
+      spriteID: f1b46d76dcfa26360800000000000000
+      internalID: 7161479654217763615
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 2TilesBosque_4
+      name: Biome8_4
       rect:
         serializedVersion: 2
-        x: 400
-        y: 400
-        width: 100
-        height: 100
+        x: 128
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -288,125 +363,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 17a4bc8aaded94520800000000000000
-      internalID: 2686923683419343473
+      spriteID: 2d7802433afba0630800000000000000
+      internalID: 3894135535490336722
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 2TilesBosque_5
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 300
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: aaed61fd2d9d9b910800000000000000
-      internalID: 1853752221348847274
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 2TilesBosque_6
-      rect:
-        serializedVersion: 2
-        x: 100
-        y: 300
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 353d3f37911b34ef0800000000000000
-      internalID: -125061641758583981
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 2TilesBosque_7
-      rect:
-        serializedVersion: 2
-        x: 200
-        y: 300
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e2e96c31c0a5f5320800000000000000
-      internalID: 2548854922032881198
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 2TilesBosque_8
-      rect:
-        serializedVersion: 2
-        x: 300
-        y: 300
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2fb6cf5447febd200800000000000000
-      internalID: 206021490644904946
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 2TilesBosque_9
-      rect:
-        serializedVersion: 2
-        x: 400
-        y: 300
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 71ccadf9489c01ef0800000000000000
-      internalID: -139390016993702889
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 2TilesBosque_10
+      name: Biome8_5
       rect:
         serializedVersion: 2
         x: 0
-        y: 200
-        width: 100
-        height: 100
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -414,20 +384,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b20d247264075800800000000000000
-      internalID: 600953896179663545
+      spriteID: a09647c945c294910800000000000000
+      internalID: 1822036266161826058
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 2TilesBosque_11
+      name: Biome8_6
       rect:
         serializedVersion: 2
-        x: 100
-        y: 200
-        width: 100
-        height: 100
+        x: 32
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -435,20 +405,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a263b29d8e3149200800000000000000
-      internalID: 185795375425861162
+      spriteID: b22bfe16cde48bdb0800000000000000
+      internalID: -4775980696383540693
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 2TilesBosque_12
+      name: Biome8_7
       rect:
         serializedVersion: 2
-        x: 200
-        y: 200
-        width: 100
-        height: 100
+        x: 64
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -456,20 +426,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 17ff79ccea0812cd0800000000000000
-      internalID: -2584643222888775823
+      spriteID: c665676286955b980800000000000000
+      internalID: -8523808415872035220
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 2TilesBosque_13
+      name: Biome8_8
       rect:
         serializedVersion: 2
-        x: 300
-        y: 200
-        width: 100
-        height: 100
+        x: 96
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -477,20 +447,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 53f06adf1a3ae7340800000000000000
-      internalID: 4863504563747295029
+      spriteID: 2289263d3977af700800000000000000
+      internalID: 574903379233511458
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 2TilesBosque_14
+      name: Biome8_9
       rect:
         serializedVersion: 2
-        x: 400
-        y: 200
-        width: 100
-        height: 100
+        x: 128
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -498,20 +468,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5eeed076f51c14370800000000000000
-      internalID: 8305131803342925541
+      spriteID: f0eb22a3b052495c0800000000000000
+      internalID: -4209699021534347761
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 2TilesBosque_15
+      name: Biome8_10
       rect:
         serializedVersion: 2
         x: 0
-        y: 100
-        width: 100
-        height: 100
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -519,20 +489,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9096d07c76af709e0800000000000000
-      internalID: -1655079014407247607
+      spriteID: 13fdcdb587bc11330800000000000000
+      internalID: 3679946088336121649
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 2TilesBosque_16
+      name: Biome8_11
       rect:
         serializedVersion: 2
-        x: 100
-        y: 100
-        width: 100
-        height: 100
+        x: 32
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -540,20 +510,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea170ef531683e1a0800000000000000
-      internalID: -6781429196118789714
+      spriteID: 8968373b74f684fa0800000000000000
+      internalID: -5816276565004941672
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 2TilesBosque_17
+      name: Biome8_12
       rect:
         serializedVersion: 2
-        x: 200
-        y: 100
-        width: 100
-        height: 100
+        x: 64
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -561,20 +531,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dca8eef06570724f0800000000000000
-      internalID: -853705538147546419
+      spriteID: 43b7c2da3ab8ca120800000000000000
+      internalID: 2426467834347158324
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 2TilesBosque_18
+      name: Biome8_13
       rect:
         serializedVersion: 2
-        x: 300
-        y: 100
-        width: 100
-        height: 100
+        x: 96
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -582,20 +552,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4133ef322ddde95e0800000000000000
-      internalID: -1900838098087038188
+      spriteID: f2413d68e4e924f40800000000000000
+      internalID: 5711301337565828143
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 2TilesBosque_19
+      name: Biome8_14
       rect:
         serializedVersion: 2
-        x: 400
-        y: 100
-        width: 100
-        height: 100
+        x: 128
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -603,20 +573,125 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 64199bd67fba87c30800000000000000
-      internalID: 4357421718667104582
+      spriteID: 2b4506747b4008340800000000000000
+      internalID: 4863892782783157426
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 2TilesBosque_20
+      name: Biome8_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f218b9374cecb5b0800000000000000
+      internalID: -5351142466567793930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biome8_16
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9ef6adfb58c61dc0800000000000000
+      internalID: -3668524549023531366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biome8_17
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a244bb0fb1a05aa0800000000000000
+      internalID: -6174257247217761628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biome8_18
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3d41a1bc47152880800000000000000
+      internalID: -8636471092247966403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biome8_19
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0c3738071873f3e0800000000000000
+      internalID: -2021139767441802230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biome8_20
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 100
-        height: 100
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -624,20 +699,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a499136b1c2cf0070800000000000000
-      internalID: 8074886794139769162
+      spriteID: 83d64cdb906ab0a80800000000000000
+      internalID: -8499517310962995912
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 2TilesBosque_21
+      name: Biome8_21
       rect:
         serializedVersion: 2
-        x: 100
+        x: 32
         y: 0
-        width: 100
-        height: 100
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -645,20 +720,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7c9a4737e0519b70800000000000000
-      internalID: 8903986892283485310
+      spriteID: cc6fcc82fa93285c0800000000000000
+      internalID: -4214742876798781748
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 2TilesBosque_22
+      name: Biome8_22
       rect:
         serializedVersion: 2
-        x: 200
+        x: 64
         y: 0
-        width: 100
-        height: 100
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -666,20 +741,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: afcef82e6ab45b390800000000000000
-      internalID: -7803247599211778822
+      spriteID: b0557d3ce122571b0800000000000000
+      internalID: -5659579841191127797
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 2TilesBosque_23
+      name: Biome8_23
       rect:
         serializedVersion: 2
-        x: 300
+        x: 96
         y: 0
-        width: 100
-        height: 100
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -687,20 +762,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fbc6b32ec1aa80ef0800000000000000
-      internalID: -141676347230819137
+      spriteID: d9fec2656ec9671a0800000000000000
+      internalID: -6812084873249099875
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 2TilesBosque_24
+      name: Biome8_24
       rect:
         serializedVersion: 2
-        x: 400
+        x: 128
         y: 0
-        width: 100
-        height: 100
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -708,8 +783,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b80142b561f86ff50800000000000000
-      internalID: 6914871604055117963
+      spriteID: 253d7e7df91245500800000000000000
+      internalID: 383968838639145810
       vertices: []
       indices: 
       edges: []

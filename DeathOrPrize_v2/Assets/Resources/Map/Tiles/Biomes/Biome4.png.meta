@@ -77,6 +77,81 @@ TextureImporter:
   - first:
       213: 6385913381239797446
     second: 6TilesSabana_24
+  - first:
+      213: -7780079661303159031
+    second: Biome4_0
+  - first:
+      213: -9215147145553237643
+    second: Biome4_1
+  - first:
+      213: -2029827331439470295
+    second: Biome4_2
+  - first:
+      213: -4596758257007650966
+    second: Biome4_3
+  - first:
+      213: 8258291271883947474
+    second: Biome4_4
+  - first:
+      213: 6949426396907196889
+    second: Biome4_5
+  - first:
+      213: -4832175745199921802
+    second: Biome4_6
+  - first:
+      213: -1595186170499812533
+    second: Biome4_7
+  - first:
+      213: 4679089313608779930
+    second: Biome4_8
+  - first:
+      213: -7708296774458557530
+    second: Biome4_9
+  - first:
+      213: -1498951267108111388
+    second: Biome4_10
+  - first:
+      213: 956747701378604005
+    second: Biome4_11
+  - first:
+      213: 6283102801980428027
+    second: Biome4_12
+  - first:
+      213: 6561642295718038227
+    second: Biome4_13
+  - first:
+      213: -6468257714044631375
+    second: Biome4_14
+  - first:
+      213: -1075768936663789507
+    second: Biome4_15
+  - first:
+      213: 3144022170268491270
+    second: Biome4_16
+  - first:
+      213: -4697831434229575672
+    second: Biome4_17
+  - first:
+      213: -5398898434153814345
+    second: Biome4_18
+  - first:
+      213: 4546976126372487931
+    second: Biome4_19
+  - first:
+      213: -969503895904274806
+    second: Biome4_20
+  - first:
+      213: -7495462443097542821
+    second: Biome4_21
+  - first:
+      213: 8653828093442538532
+    second: Biome4_22
+  - first:
+      213: 634422350504985149
+    second: Biome4_23
+  - first:
+      213: -1572485600332186503
+    second: Biome4_24
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -121,7 +196,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -190,13 +265,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 6TilesSabana_0
+      name: Biome4_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 400
-        width: 100
-        height: 100
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -204,20 +279,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 847dcfc5c938d04a0800000000000000
-      internalID: -6625494769193920696
+      spriteID: 907a8c7c4ca970490800000000000000
+      internalID: -7780079661303159031
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 6TilesSabana_1
+      name: Biome4_1
       rect:
         serializedVersion: 2
-        x: 100
-        y: 400
-        width: 100
-        height: 100
+        x: 32
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -225,20 +300,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c28a13b81845b4800800000000000000
-      internalID: 597664290919524396
+      spriteID: 579285cbe783d1080800000000000000
+      internalID: -9215147145553237643
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 6TilesSabana_2
+      name: Biome4_2
       rect:
         serializedVersion: 2
-        x: 200
-        y: 400
-        width: 100
-        height: 100
+        x: 64
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -246,20 +321,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 608c95d67fa4072e0800000000000000
-      internalID: -2130120197194266618
+      spriteID: 929db2aebca94d3e0800000000000000
+      internalID: -2029827331439470295
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 6TilesSabana_3
+      name: Biome4_3
       rect:
         serializedVersion: 2
-        x: 300
-        y: 400
-        width: 100
-        height: 100
+        x: 96
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -267,20 +342,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fde00dbf4e088f620800000000000000
-      internalID: 2808136088631119583
+      spriteID: a6717bc48b80530c0800000000000000
+      internalID: -4596758257007650966
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 6TilesSabana_4
+      name: Biome4_4
       rect:
         serializedVersion: 2
-        x: 400
-        y: 400
-        width: 100
-        height: 100
+        x: 128
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -288,125 +363,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae30d6c1d0af3b9b0800000000000000
-      internalID: -5065430221643250710
+      spriteID: 2ddf95058285b9270800000000000000
+      internalID: 8258291271883947474
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 6TilesSabana_5
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 300
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 97e2e96742f43bf40800000000000000
-      internalID: 5743020967855009401
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 6TilesSabana_6
-      rect:
-        serializedVersion: 2
-        x: 100
-        y: 300
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 65b8d81b819fa8170800000000000000
-      internalID: 8181625557525302102
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 6TilesSabana_7
-      rect:
-        serializedVersion: 2
-        x: 200
-        y: 300
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9159da163192ad4c0800000000000000
-      internalID: -4262048934132869863
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 6TilesSabana_8
-      rect:
-        serializedVersion: 2
-        x: 300
-        y: 300
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b8847f3bf44c85bf0800000000000000
-      internalID: -335302325638313845
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 6TilesSabana_9
-      rect:
-        serializedVersion: 2
-        x: 400
-        y: 300
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 25bacdd387a3230b0800000000000000
-      internalID: -5750469486090343598
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 6TilesSabana_10
+      name: Biome4_5
       rect:
         serializedVersion: 2
         x: 0
-        y: 200
-        width: 100
-        height: 100
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -414,20 +384,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97db084e9b803f140800000000000000
-      internalID: 4752151626301619577
+      spriteID: 9d150640d72517060800000000000000
+      internalID: 6949426396907196889
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 6TilesSabana_11
+      name: Biome4_6
       rect:
         serializedVersion: 2
-        x: 100
-        y: 200
-        width: 100
-        height: 100
+        x: 32
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -435,20 +405,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3d1a66166140ba80800000000000000
-      internalID: -8453184593855898308
+      spriteID: 675a91ff2c9a0fcb0800000000000000
+      internalID: -4832175745199921802
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 6TilesSabana_12
+      name: Biome4_7
       rect:
         serializedVersion: 2
-        x: 200
-        y: 200
-        width: 100
-        height: 100
+        x: 64
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -456,20 +426,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e92c4ae20cd9f0470800000000000000
-      internalID: 8363076481792131742
+      spriteID: b433ebc21a2ccd9e0800000000000000
+      internalID: -1595186170499812533
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 6TilesSabana_13
+      name: Biome4_8
       rect:
         serializedVersion: 2
-        x: 300
-        y: 200
-        width: 100
-        height: 100
+        x: 96
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -477,20 +447,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9167c224627c12d60800000000000000
-      internalID: 7863785391498491417
+      spriteID: a984af990f67fe040800000000000000
+      internalID: 4679089313608779930
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 6TilesSabana_14
+      name: Biome4_9
       rect:
         serializedVersion: 2
-        x: 400
-        y: 200
-        width: 100
-        height: 100
+        x: 128
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -498,20 +468,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb3ad5e2c4430c0d0800000000000000
-      internalID: -3404663816492047426
+      spriteID: 6abbb178ce0a60590800000000000000
+      internalID: -7708296774458557530
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 6TilesSabana_15
+      name: Biome4_10
       rect:
         serializedVersion: 2
         x: 0
-        y: 100
-        width: 100
-        height: 100
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -519,20 +489,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c7439685d2a323d0800000000000000
-      internalID: -3232561069552351295
+      spriteID: 4eb366ca3c7a23be0800000000000000
+      internalID: -1498951267108111388
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 6TilesSabana_16
+      name: Biome4_11
       rect:
         serializedVersion: 2
-        x: 100
-        y: 100
-        width: 100
-        height: 100
+        x: 32
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -540,20 +510,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: caa7228912922dd40800000000000000
-      internalID: 5607589710292744876
+      spriteID: 5ebd75027fc074d00800000000000000
+      internalID: 956747701378604005
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 6TilesSabana_17
+      name: Biome4_12
       rect:
         serializedVersion: 2
-        x: 200
-        y: 100
-        width: 100
-        height: 100
+        x: 64
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -561,20 +531,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd8a603969f61f9b0800000000000000
-      internalID: -5048131014803150629
+      spriteID: bfe0e4785b0123750800000000000000
+      internalID: 6283102801980428027
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 6TilesSabana_18
+      name: Biome4_13
       rect:
         serializedVersion: 2
-        x: 300
-        y: 100
-        width: 100
-        height: 100
+        x: 96
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -582,20 +552,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f4f2d41ce91fc2980800000000000000
-      internalID: -8562203127387967665
+      spriteID: 3dac37327e2af0b50800000000000000
+      internalID: 6561642295718038227
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 6TilesSabana_19
+      name: Biome4_14
       rect:
         serializedVersion: 2
-        x: 400
-        y: 100
-        width: 100
-        height: 100
+        x: 128
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -603,20 +573,125 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4865733cc0df8adc0800000000000000
-      internalID: -3627371268590315900
+      spriteID: 1b680be11e12c36a0800000000000000
+      internalID: -6468257714044631375
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 6TilesSabana_20
+      name: Biome4_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3051cd0ad91211f0800000000000000
+      internalID: -1075768936663789507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biome4_16
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60e5ec0918fc1ab20800000000000000
+      internalID: 3144022170268491270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biome4_17
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80015146333fdceb0800000000000000
+      internalID: -4697831434229575672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biome4_18
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b669dd8a724315b0800000000000000
+      internalID: -5398898434153814345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biome4_19
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf22d9e22ba1a1f30800000000000000
+      internalID: 4546976126372487931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biome4_20
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 100
-        height: 100
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -624,20 +699,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 885962574ded509b0800000000000000
-      internalID: -5114436797729434232
+      spriteID: a86b444e751ab82f0800000000000000
+      internalID: -969503895904274806
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 6TilesSabana_21
+      name: Biome4_21
       rect:
         serializedVersion: 2
-        x: 100
+        x: 32
         y: 0
-        width: 100
-        height: 100
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -645,20 +720,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 524231d14feca6a20800000000000000
-      internalID: 3056482844979438629
+      spriteID: b5fa3e3ee94caf790800000000000000
+      internalID: -7495462443097542821
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 6TilesSabana_22
+      name: Biome4_22
       rect:
         serializedVersion: 2
-        x: 200
+        x: 64
         y: 0
-        width: 100
-        height: 100
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -666,20 +741,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd69bdc43ca5ba8f0800000000000000
-      internalID: -528228736431319331
+      spriteID: 42c30f01dc2981870800000000000000
+      internalID: 8653828093442538532
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 6TilesSabana_23
+      name: Biome4_23
       rect:
         serializedVersion: 2
-        x: 300
+        x: 96
         y: 0
-        width: 100
-        height: 100
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -687,20 +762,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e670d9f00a43bb80800000000000000
-      internalID: -8380273113554716954
+      spriteID: d320b6734cbedc800800000000000000
+      internalID: 634422350504985149
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 6TilesSabana_24
+      name: Biome4_24
       rect:
         serializedVersion: 2
-        x: 400
+        x: 128
         y: 0
-        width: 100
-        height: 100
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -708,8 +783,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c6363fd2625f9850800000000000000
-      internalID: 6385913381239797446
+      spriteID: 97c78c98da86d2ae0800000000000000
+      internalID: -1572485600332186503
       vertices: []
       indices: 
       edges: []

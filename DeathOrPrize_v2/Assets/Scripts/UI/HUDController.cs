@@ -5,29 +5,34 @@ using UnityEngine.UI;
 
 public class HUDController : MonoBehaviour
 {
-    public int maxValueDice = 6;
-    public Button btnDado;
-    public Text textDice;
     public Button btnInventory;
     public Image barHealth;
     public Text TextHealth;
-    public Text TextKimgdom;
-    public Texture2D[] cursos;
+    public Text TextKimgdom;    
     private InventoryManager inventory;
     PlayerMove playerMove;
     UIDayNight uIDayNight;
+    private void OnEnable()
+    {
+        IdleBattleManager.OnDamageThePlayer += UpdateBarHealth;
+        BossQuest.OnDamageThePlayer += UpdateBarHealth;
+    }
+    private void OnDisable()
+    {
+        IdleBattleManager.OnDamageThePlayer -= UpdateBarHealth;
+        BossQuest.OnDamageThePlayer -= UpdateBarHealth;
+    }
     void Start()
     {
         TextKimgdom.text = "Reino " + PlayerDataHelper.GetIdCurrentKingdom();
         playerMove = GetScript.Type<PlayerMove>("Player");
-        btnDado.onClick.AddListener(RollDice);
         btnInventory.onClick.AddListener(Open);
         inventory = GetScript.Type<InventoryManager>("Inventory");
         uIDayNight = GetComponent<UIDayNight>();
-        UpdateBarHealth();
+        UpdateBarHealth(0);
     }
 
-    public void UpdateBarHealth()
+    public void UpdateBarHealth(float damege)
     {
         float health = PlayerDataHelper.GetCurrentHealth();
         float maxHealth = PlayerDataHelper.GetMaxHealth();
@@ -38,50 +43,22 @@ public class HUDController : MonoBehaviour
     public void Heal()
     {
         PlayerDataHelper.Heal();
-        UpdateBarHealth();
+        UpdateBarHealth(0);
     }
     public void EnterCity()
     {
         Heal();
-        uIDayNight.ResetDay();
     }
     void Open()
     {        
         inventory.OpenInventory();
     }
-    void SetInteractiveBtnDice()
-    {
-        if (playerMove.diceValue > 0)
-        {
-            btnDado.interactable = false;
-            Cursor.SetCursor(cursos[0], new Vector2(5, 5), CursorMode.Auto);
-        }            
-        else
-        {
-            btnDado.interactable = true;
-            Cursor.SetCursor(cursos[1], new Vector2(5, 5), CursorMode.Auto);
-        }
-            
-    }
-
-    void UpdateTextValue()
-    {
-        textDice.text = playerMove.diceValue.ToString();
-    }
     void RollDice()
     {
-        uIDayNight.AddRoll();
-        GetNewValueDeci();
+        uIDayNight.AddRoll(1);
+
     }
-    void GetNewValueDeci()
-    {        
-        AkSoundEngine.PostEvent("Throw_Dice", this.gameObject);
-        playerMove.diceValue = Random.Range(1, maxValueDice);
-    }    
     void Update()
     {
-        SetInteractiveBtnDice();
-
-        UpdateTextValue();
     }
 }

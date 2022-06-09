@@ -14,6 +14,21 @@ TextureImporter:
   - first:
       213: 6623269022732915899
     second: ArrowTile_3
+  - first:
+      213: -8236626598603687696
+    second: ArrowTile_4
+  - first:
+      213: -6681076719274813748
+    second: ArrowTile_5
+  - first:
+      213: 8671338207780049938
+    second: ArrowTile_6
+  - first:
+      213: -857850343887165504
+    second: ArrowTile_7
+  - first:
+      213: -1603627619760434705
+    second: ArrowTile_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -58,7 +73,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 160
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -131,9 +146,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 100
-        width: 100
-        height: 100
+        y: 160
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,10 +166,10 @@ TextureImporter:
       name: ArrowTile_1
       rect:
         serializedVersion: 2
-        x: 100
-        y: 100
-        width: 100
-        height: 100
+        x: 160
+        y: 160
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,8 +189,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 100
-        height: 100
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,10 +208,10 @@ TextureImporter:
       name: ArrowTile_3
       rect:
         serializedVersion: 2
-        x: 100
+        x: 160
         y: 0
-        width: 100
-        height: 100
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

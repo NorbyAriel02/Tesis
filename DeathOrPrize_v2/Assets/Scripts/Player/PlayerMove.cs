@@ -4,38 +4,103 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
+    public delegate void Move(int value);
+    public static Move OnPlayerMove;
+
     public int diceValue = 0;
     public float moveSpeed = 5f;
-    public Transform playerMovePoint;
-    
-    private CamaraMove cam;
+    public Transform playerMovePoint;    
     private float _moveSpeed = 5f;
+    private LineRenderer line;
+    private Rigidbody rb;
     
-    void Start()
+    private void OnEnable()
     {
-        cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CamaraMove>();
+        DiceController.OnRollDice += SetDiceValue;
+        CityController.OnEnterCity += ResetDiceValue;
+        CityController.OnExitCity += ExitCity;
+        ClickInCell.OnClickMe += SetPosition;
+        ClickInCell.OnCursorOver += UpdateCellPosition;
+        Cell.IsPlayerInCell += HasMovements;
+    }
+    private void OnDisable()
+    {
+        DiceController.OnRollDice -= SetDiceValue;
+        CityController.OnEnterCity -= ResetDiceValue;
+        CityController.OnExitCity -= ExitCity;
+        ClickInCell.OnClickMe -= SetPosition;
+        ClickInCell.OnCursorOver -= UpdateCellPosition;
+    }
+
+    void SetDiceValue(int value)
+    {
+        diceValue = value;
+    }
+    void ResetDiceValue()
+    {
+        diceValue = 0;
+    }
+    void Start()
+    {        
+        line = GetComponent<LineRenderer>();
         _moveSpeed = moveSpeed;
         playerMovePoint.parent = null;
+        rb = GetComponent<Rigidbody>();
     }
-     
+    bool HasMovements()
+    {
+        return diceValue > 0 ? true : false;
+    }
     void FixedUpdate()
     {
-        Move();
+        Going();
     }
-    void Move()
+    void Going()
     {
-        transform.position = Vector3.MoveTowards(transform.position, playerMovePoint.position, _moveSpeed * Time.fixedDeltaTime);
+        
+        //transform.position = Vector3.MoveTowards(transform.position, playerMovePoint.position, _moveSpeed * Time.fixedDeltaTime);
+        rb.MovePosition(Vector3.MoveTowards(rb.position, playerMovePoint.position, _moveSpeed * Time.fixedDeltaTime));
     }
-    public void SetPosition(float x, float y)
+
+    void UpdateCellPosition(CellModel cell)
     {
-        AkSoundEngine.PostEvent("Player_Move", this.gameObject);
+        Vector3 CellPosition = new Vector3(cell.x, cell.y, transform.position.z);
+        
+        if (Vector3.Distance(transform.position, CellPosition) < (diceValue + 0.5f))
+        {
+            line.SetPosition(1, CellPosition);
+        }
+        else
+        {
+            line.SetPosition(1, transform.position);
+        }
+
+        line.SetPosition(0, transform.position);
+    }
+    
+    void SetPosition(CellModel cell)
+    {
+        Vector3 cellPos = new Vector3(cell.x, cell.y, playerMovePoint.position.z);
+        if (Vector3.Distance(transform.position, cellPos) < (diceValue + 0.5f))
+        {
+            int desplazamiento = Mathf.RoundToInt(Vector3.Distance(transform.position, cellPos));
+            diceValue -= desplazamiento;
+            AkSoundEngine.PostEvent("Player_Move", this.gameObject);
+            _moveSpeed = moveSpeed;
+            playerMovePoint.position = cellPos;
+            PlayerDataHelper.UpdatePosition(playerMovePoint.position);
+            OnPlayerMove?.Invoke(desplazamiento);
+        }            
+    }
+    private void ExitCity(float x, float y)
+    {
         _moveSpeed = moveSpeed;
         playerMovePoint.position = new Vector3(x, y, playerMovePoint.position.z);
         PlayerDataHelper.UpdatePosition(playerMovePoint.position);
     }
     public void SetPositionNewKingdom(float x, float y, int sizeKingdom)
     {
-        cam.ActiveLoadKingdom();
+        //cam.ActiveLoadKingdom();
         float[] xy = CalculeNewPos(x, y, sizeKingdom);
         playerMovePoint.position = new Vector3(xy[0], xy[1], playerMovePoint.position.z);
         _moveSpeed = moveSpeed * 100;
@@ -67,9 +132,5 @@ public class PlayerMove : MonoBehaviour
         }
 
         return new float[] { xn, yn };
-    }
-    public Vector3 GetCurrentPosition()
-    {
-        return transform.position;
-    }
+    }    
 }

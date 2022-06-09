@@ -14,7 +14,14 @@ public class InventoryManager : MonoBehaviour
     public GameObject[] Slots;
     public EquipmentManager equipment;
     public List<ItemProperties> items;
-
+    private void OnEnable()
+    {
+        Drop.OnPickupItem += PickUp;
+    }
+    private void OnDisable()
+    {
+        Drop.OnPickupItem -= PickUp;
+    }
     void Start()
     {        
         GetSlots();
@@ -54,8 +61,23 @@ public class InventoryManager : MonoBehaviour
         InventoryHelper.ShowItems(Slots, prefabItemTemplate, PathHelper.InventoryDataFile);        
         equipment.ShowEquipment();
     }    
+    private void PickUp(GameObject goItem)
+    {
+        ItemProperties item = GetScript.Type<Drop>(goItem).item;
+        if (AddItem(item))
+        {
+            AkSoundEngine.PostEvent("UI_Click", this.gameObject);
+            Destroy(goItem);
+        }
+        else
+            CantPickUp();
+    }
     public bool AddItem(ItemProperties newItem)
     {        
         return InventoryHelper.AddItem(newItem, Slots, PathHelper.InventoryDataFile);
+    }
+    public void CantPickUp()
+    {
+        AkSoundEngine.PostEvent("Field_Error", this.gameObject);
     }
 }

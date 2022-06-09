@@ -1,6 +1,8 @@
+using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Data;
 
 
 public class Dialogue : MonoBehaviour
@@ -12,11 +14,14 @@ public class Dialogue : MonoBehaviour
     public bool disableDialogue = false;
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private Text dialogueText;
-    [SerializeField, TextArea(4, 6)] private string[] dialogueLines;
-        
+    private List<string> dialogueLines;
+    private Dictionary<string, List<string>> dialogues;
+    private DataFileController df;
     private int lineIndex;
     void Start()
     {
+        
+        GetDialogue();
         btnDesactivar.onClick.AddListener(Desactivar);
         btnNext.onClick.AddListener(Next);
         DesactivePanel();
@@ -25,6 +30,25 @@ public class Dialogue : MonoBehaviour
     {
         disableDialogue = true;
         animator.SetBool("Close", true);
+    }
+    void GetDialogue()
+    {
+        df = new DataFileController();
+        dialogues = new Dictionary<string, List<string>>();
+        DataTable dt = df.GetData(PathHelper.DialogueDataFile);
+        foreach(DataRow row in dt.Rows)
+        {
+            if(dialogues.ContainsKey(row[0].ToString()))
+            {
+                dialogues[row[0].ToString()].Add(row[2].ToString());
+            }
+            else
+            {
+                List<string> dialogueLines = new List<string>();
+                dialogueLines.Add(row[2].ToString());
+                dialogues.Add(row[0].ToString(), dialogueLines);
+            }                
+        }
     }
     void DesactivePanel()
     {
@@ -43,21 +67,29 @@ public class Dialogue : MonoBehaviour
         }        
     }
 
-    public void StartDialogue()
+    public void StartDialogue(int rollDice)
     {
         if (disableDialogue)
             return;
 
         dialoguePanel.SetActive(true);
         animator.SetBool("Close", false);
-        lineIndex = 0;        
+        lineIndex = 0;
+        AlgoQueSeteaElDialogoActual(rollDice);
         StartCoroutine(ShowLine());
     }
-
+    void AlgoQueSeteaElDialogoActual(int rollDice)
+    {
+        dialogueLines = new List<string>();
+        foreach (string line in dialogues[rollDice.ToString()])
+        {
+            dialogueLines.Add(line);
+        }
+    }
     private void NextDialogueLine()
     {
         lineIndex++;
-        if(lineIndex < dialogueLines.Length)
+        if(lineIndex < dialogueLines.Count)
         {
             StartCoroutine(ShowLine());
         }

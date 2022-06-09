@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2292604269069102987}
   - component: {fileID: 2292604269069102996}
   - component: {fileID: 3027580976929038820}
+  - component: {fileID: 3767988790563348157}
   m_Layer: 0
   m_Name: Game
   m_TagString: Game
@@ -64,3 +65,16 @@ MonoBehaviour:
   diceRollNumber: 0
   IsDay: 1
   panelNihgt: {fileID: 0}
+--- !u!114 &3767988790563348157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2292604269069102997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68eed3cfde5b1454f9242a2cf5c7e562, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ExpForLevel: 64000000f4010000dc050000b80b000070170000e02e0000c05d000080bb000000770100f0c60200

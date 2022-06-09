@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Drop : MonoBehaviour
 {
+    public delegate void Pickup(GameObject item);
+    public static Pickup OnPickupItem;
     public ItemProperties item;    
     private InventoryManager inventory;
     // Start is called before the first frame update
@@ -12,33 +14,28 @@ public class Drop : MonoBehaviour
         inventory = GameObject.FindGameObjectWithTag("Inventory").GetComponent<InventoryManager>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void CantGetUp()
     {
-        AddInventory();
+        AkSoundEngine.PostEvent("Field_Error", this.gameObject);
     }
 
-    public void AddInventory()
-    {
+    void OnMouseOver()
+    {        
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
-
         if (Input.GetKeyDown(KeyCode.Mouse0) && Physics.Raycast(ray, out hit))
         {
             if (hit.transform.name == gameObject.name)
             {
-                if (inventory.AddItem(item))
-                {
-                    AkSoundEngine.PostEvent("UI_Click", this.gameObject);
-                    Destroy(gameObject);
-                }                    
-                else
-                    CantGetUp();
-            }            
+                OnPickupItem?.Invoke(gameObject);
+                //if (inventory.AddItem(item))
+                //{
+                //    AkSoundEngine.PostEvent("UI_Click", this.gameObject);
+                //    Destroy(gameObject);
+                //}
+                //else
+                //    CantGetUp();
+            }
         }
-    }
-    public void CantGetUp()
-    {
-        AkSoundEngine.PostEvent("Field_Error", this.gameObject);
     }
 }

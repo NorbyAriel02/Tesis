@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class Cell : MonoBehaviour
 {
+    public delegate bool PlayerInCell();
+    public static PlayerInCell IsPlayerInCell;
+    public delegate void InCell();
+    public static InCell OnPlayerInCell;
+    public delegate void Action(int i);
+    public static Action OnAction;
+
     public CellModel cellData;
     public float x;
     public float y;
@@ -11,47 +18,39 @@ public class Cell : MonoBehaviour
     public int sizeKingdom;
     public CellType type;
     public SubCellType subtype;
-    public BiomeType biome;    
-    private PlayerMove playerMove;
-    private IdleBattleManager battleManager;    
+    public BiomeType biome;        
+    private IdleBattleManager battleManager;
+    public bool ClickMe = false;
     void Start()
     {
         StartVar();
     }
     public virtual void StartVar()
-    {        
-        playerMove = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMove>();
+    {   
         battleManager = GetScript.Type<IdleBattleManager>("Battle", this.name);        
     }
     public virtual void ActionCell()
-    {        
-        MovePlayer();
+    {
         if (!HasMovements)
-            StartBattle();
+            battleManager.StartBattle(index);
     }
-    public void MovePlayer()
-    {
-        playerMove.SetPosition(x, y);
-        playerMove.diceValue--;
-    }
-    public void DiceReset()
-    {
-        playerMove.diceValue = 0;
-    }    
+
+
     public bool HasMovements
     {
-        get 
+        get
         {
-            return playerMove.diceValue <= 0 ? false : true;
-        }        
+            return IsPlayerInCell();
+        }
     }
     public void SetPositionNextKingdom()
     {
-        playerMove.SetPositionNewKingdom(x, y, sizeKingdom);
+        //playerMove.SetPositionNewKingdom(x, y, sizeKingdom);
     }
-    public void StartBattle()
+    
+    private void OnTriggerEnter(Collider other)
     {
-        battleManager.StartBattle(index);
+        if (other.tag.Equals("FacePlayer") && ClickMe)
+            ActionCell();
     }
-          
 }

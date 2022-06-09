@@ -8,6 +8,13 @@ using UnityEngine.EventSystems;
 public enum TypeSlot { SlotInventory, SlotWeapon, SlotArmor, NoDropSlot }
 public class Slot : MonoBehaviour, IDropHandler
 {
+    public delegate void EquipedArmor(ItemProperties item);
+    public static EquipedArmor OnEquipedArmor;
+    public delegate void EquipedWeapon(ItemProperties item);
+    public static EquipedWeapon OnEquipedWeapon;
+    public delegate void MoveItem(ItemProperties item);
+    public static MoveItem OnMoveItem;
+    
     public GameObject Item;
     public TypeSlot tSlot;
     public int ID;
@@ -34,16 +41,12 @@ public class Slot : MonoBehaviour, IDropHandler
     {
         //SlotIconGameObject.GetComponent<Image>().sprite = icon;
     }
-    void Update()
-    {
-        
-    }
     public void OnDrop(PointerEventData eventData)
     {
         if (eventData.pointerDrag != null)
         {
             Item i = eventData.pointerDrag.GetComponent<Item>();
-            if (ValidateTypeSlot(i.properties.tItem) && this.empty && !cancelar)
+            if (this.empty && !cancelar && ValidateTypeSlot(i.properties))
             {
                 i.properties.IndexSlot = this.ID;
                 eventData.pointerDrag.gameObject.transform.SetParent(transform);
@@ -53,26 +56,28 @@ public class Slot : MonoBehaviour, IDropHandler
         }
     }
 
-    bool ValidateTypeSlot(TypeItemInventory tItem)
+    bool ValidateTypeSlot(ItemProperties item)
     {
         if (tSlot == TypeSlot.NoDropSlot)
             return false;
 
-        if (tSlot == TypeSlot.SlotArmor && tItem == TypeItemInventory.Armor)
+        if (tSlot == TypeSlot.SlotArmor && item.tItem == TypeItemInventory.Armor)
         {
-            AkSoundEngine.PostEvent("Item_Equip", this.gameObject);
+            OnEquipedArmor?.Invoke(item);
             return true;
-        }
-            
+        }            
 
-        if (tSlot == TypeSlot.SlotWeapon && tItem == TypeItemInventory.Weapon)
+        if (tSlot == TypeSlot.SlotWeapon && item.tItem == TypeItemInventory.Weapon)
         {
-            AkSoundEngine.PostEvent("Item_Equip", this.gameObject);
+            OnEquipedWeapon?.Invoke(item);
             return true;
         }
 
         if (tSlot == TypeSlot.SlotInventory)
+        {
+            OnMoveItem?.Invoke(item);
             return true;
+        }
 
         return false;
     }

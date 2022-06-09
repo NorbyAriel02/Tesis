@@ -37,7 +37,7 @@ public class ItemProperties
     public float damageEquipped;
     public float damageBase;
     public float damageMax;
-    public float defending;
+    public float armor;
 
     /*Plus values*/
     public float plusEnergy;

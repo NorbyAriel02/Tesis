@@ -77,6 +77,81 @@ TextureImporter:
   - first:
       213: -3467737018027740311
     second: 3TilesDesierto_24
+  - first:
+      213: 2815001314982034943
+    second: Biome7_0
+  - first:
+      213: 7037362818524721234
+    second: Biome7_1
+  - first:
+      213: 2281511951946725878
+    second: Biome7_2
+  - first:
+      213: 5464009432041274863
+    second: Biome7_3
+  - first:
+      213: 3476112427529883648
+    second: Biome7_4
+  - first:
+      213: -1057857823629543371
+    second: Biome7_5
+  - first:
+      213: 853397801053015534
+    second: Biome7_6
+  - first:
+      213: -2404836703629778067
+    second: Biome7_7
+  - first:
+      213: 1221175503525175562
+    second: Biome7_8
+  - first:
+      213: 5794450611349683195
+    second: Biome7_9
+  - first:
+      213: -97160506839452212
+    second: Biome7_10
+  - first:
+      213: 924584867999549949
+    second: Biome7_11
+  - first:
+      213: 3587019651514169052
+    second: Biome7_12
+  - first:
+      213: 3057879286029209969
+    second: Biome7_13
+  - first:
+      213: 8592534751271213969
+    second: Biome7_14
+  - first:
+      213: 3393216744190688551
+    second: Biome7_15
+  - first:
+      213: -44209686980934584
+    second: Biome7_16
+  - first:
+      213: 6173759508123766642
+    second: Biome7_17
+  - first:
+      213: 4537397913104903800
+    second: Biome7_18
+  - first:
+      213: 6178691338510820821
+    second: Biome7_19
+  - first:
+      213: 5112188493053239661
+    second: Biome7_20
+  - first:
+      213: 3622453249468048594
+    second: Biome7_21
+  - first:
+      213: -9149578886782991106
+    second: Biome7_22
+  - first:
+      213: -7585579439979656408
+    second: Biome7_23
+  - first:
+      213: -114489064765239299
+    second: Biome7_24
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -121,7 +196,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -190,13 +265,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 3TilesDesierto_0
+      name: Biome7_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 400
-        width: 100
-        height: 100
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -204,20 +279,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7ed9dc7d6d1419c10800000000000000
-      internalID: 2058498895684410855
+      spriteID: ffdf2cd08c4e01720800000000000000
+      internalID: 2815001314982034943
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 3TilesDesierto_1
+      name: Biome7_1
       rect:
         serializedVersion: 2
-        x: 100
-        y: 400
-        width: 100
-        height: 100
+        x: 32
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -225,20 +300,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c565915c2a39c6550800000000000000
-      internalID: 6155457118009382492
+      spriteID: 25035b9a23cb9a160800000000000000
+      internalID: 7037362818524721234
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 3TilesDesierto_2
+      name: Biome7_2
       rect:
         serializedVersion: 2
-        x: 200
-        y: 400
-        width: 100
-        height: 100
+        x: 64
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -246,20 +321,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 599df2308724ca110800000000000000
-      internalID: 1273465877855984021
+      spriteID: 6f9b796480f89af10800000000000000
+      internalID: 2281511951946725878
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 3TilesDesierto_3
+      name: Biome7_3
       rect:
         serializedVersion: 2
-        x: 300
-        y: 400
-        width: 100
-        height: 100
+        x: 96
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -267,20 +342,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8bb4d1f6ba8e930f0800000000000000
-      internalID: -1136621607933097032
+      spriteID: fed343ef0af04db40800000000000000
+      internalID: 5464009432041274863
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 3TilesDesierto_4
+      name: Biome7_4
       rect:
         serializedVersion: 2
-        x: 400
-        y: 400
-        width: 100
-        height: 100
+        x: 128
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -288,125 +363,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 05d8e014751c8b070800000000000000
-      internalID: 8122454508460477776
+      spriteID: 0005d3ae5d1ad3030800000000000000
+      internalID: 3476112427529883648
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 3TilesDesierto_5
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 300
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 43d7949e81d55ba00800000000000000
-      internalID: 771625272738413876
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 3TilesDesierto_6
-      rect:
-        serializedVersion: 2
-        x: 100
-        y: 300
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 699d3b9bc7a90ec90800000000000000
-      internalID: -7142539148527412842
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 3TilesDesierto_7
-      rect:
-        serializedVersion: 2
-        x: 200
-        y: 300
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3796e73b298a555a0800000000000000
-      internalID: -6533130336400938637
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 3TilesDesierto_8
-      rect:
-        serializedVersion: 2
-        x: 300
-        y: 300
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f7b3fb50e934dffb0800000000000000
-      internalID: -4612456097377207425
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 3TilesDesierto_9
-      rect:
-        serializedVersion: 2
-        x: 400
-        y: 300
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 11a9852bf3bb27cb0800000000000000
-      internalID: -4867622364984600047
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 3TilesDesierto_10
+      name: Biome7_5
       rect:
         serializedVersion: 2
         x: 0
-        y: 200
-        width: 100
-        height: 100
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -414,20 +384,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52b8ba8ca850d4100800000000000000
-      internalID: 93737260874959653
+      spriteID: 53871b70aebb151f0800000000000000
+      internalID: -1057857823629543371
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 3TilesDesierto_11
+      name: Biome7_6
       rect:
         serializedVersion: 2
-        x: 100
-        y: 200
-        width: 100
-        height: 100
+        x: 32
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -435,20 +405,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c65b11163e96693b0800000000000000
-      internalID: -5506097069106809492
+      spriteID: eed4ddf47c0e7db00800000000000000
+      internalID: 853397801053015534
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 3TilesDesierto_12
+      name: Biome7_7
       rect:
         serializedVersion: 2
-        x: 200
-        y: 200
-        width: 100
-        height: 100
+        x: 64
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -456,20 +426,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 192ab2fa735dbed10800000000000000
-      internalID: 2156051281765704337
+      spriteID: d63635962cd40aed0800000000000000
+      internalID: -2404836703629778067
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 3TilesDesierto_13
+      name: Biome7_8
       rect:
         serializedVersion: 2
-        x: 300
-        y: 200
-        width: 100
-        height: 100
+        x: 96
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -477,20 +447,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a23725e0de98edf80800000000000000
-      internalID: -8079869030215552214
+      spriteID: a01e60086ac72f010800000000000000
+      internalID: 1221175503525175562
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 3TilesDesierto_14
+      name: Biome7_9
       rect:
         serializedVersion: 2
-        x: 400
-        y: 200
-        width: 100
-        height: 100
+        x: 128
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -498,20 +468,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de21899ede3a59710800000000000000
-      internalID: 1699444676623864557
+      spriteID: bfbfa0671260a6050800000000000000
+      internalID: 5794450611349683195
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 3TilesDesierto_15
+      name: Biome7_10
       rect:
         serializedVersion: 2
         x: 0
-        y: 100
-        width: 100
-        height: 100
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -519,20 +489,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b3495977d68083220800000000000000
-      internalID: 2465730062236095547
+      spriteID: cc533a7a801d6aef0800000000000000
+      internalID: -97160506839452212
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 3TilesDesierto_16
+      name: Biome7_11
       rect:
         serializedVersion: 2
-        x: 100
-        y: 100
-        width: 100
-        height: 100
+        x: 32
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -540,20 +510,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ad559645dbb30070800000000000000
-      internalID: 8071501481864682921
+      spriteID: df980dde909c4dc00800000000000000
+      internalID: 924584867999549949
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 3TilesDesierto_17
+      name: Biome7_12
       rect:
         serializedVersion: 2
-        x: 200
-        y: 100
-        width: 100
-        height: 100
+        x: 64
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -561,20 +531,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: edf29f57404edd5c0800000000000000
-      internalID: -4188941370574426146
+      spriteID: cd6f8d24e57a7c130800000000000000
+      internalID: 3587019651514169052
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 3TilesDesierto_18
+      name: Biome7_13
       rect:
         serializedVersion: 2
-        x: 300
-        y: 100
-        width: 100
-        height: 100
+        x: 96
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -582,20 +552,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04bf39fc2fce35870800000000000000
-      internalID: 8670534235227159360
+      spriteID: 171dbc16205cf6a20800000000000000
+      internalID: 3057879286029209969
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 3TilesDesierto_19
+      name: Biome7_14
       rect:
         serializedVersion: 2
-        x: 400
-        y: 100
-        width: 100
-        height: 100
+        x: 128
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -603,20 +573,125 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49e87fed2b0bd3bd0800000000000000
-      internalID: -2648766723532550508
+      spriteID: 19b58b1c4d0de3770800000000000000
+      internalID: 8592534751271213969
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 3TilesDesierto_20
+      name: Biome7_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72db46b96a0271f20800000000000000
+      internalID: 3393216744190688551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biome7_16
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 844cedf168fe26ff0800000000000000
+      internalID: -44209686980934584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biome7_17
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27f486a00999da550800000000000000
+      internalID: 6173759508123766642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biome7_18
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87e673f9c5318fe30800000000000000
+      internalID: 4537397913104903800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biome7_19
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d568b8490f1fb550800000000000000
+      internalID: 6178691338510820821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biome7_20
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 100
-        height: 100
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -624,20 +699,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 426f3e034ce056980800000000000000
-      internalID: -8546408482069023196
+      spriteID: d612741595422f640800000000000000
+      internalID: 5112188493053239661
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 3TilesDesierto_21
+      name: Biome7_21
       rect:
         serializedVersion: 2
-        x: 100
+        x: 32
         y: 0
-        width: 100
-        height: 100
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -645,20 +720,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de4ebe866c87410e0800000000000000
-      internalID: -2300080716120333075
+      spriteID: 2d4a00ea90a854230800000000000000
+      internalID: 3622453249468048594
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 3TilesDesierto_22
+      name: Biome7_22
       rect:
         serializedVersion: 2
-        x: 200
+        x: 64
         y: 0
-        width: 100
-        height: 100
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -666,20 +741,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d2b4c258a185b9d0800000000000000
-      internalID: -2759156636751449391
+      spriteID: ef4c2e0aa7a260180800000000000000
+      internalID: -9149578886782991106
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 3TilesDesierto_23
+      name: Biome7_23
       rect:
         serializedVersion: 2
-        x: 300
+        x: 96
         y: 0
-        width: 100
-        height: 100
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -687,20 +762,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 013af9205eae377a0800000000000000
-      internalID: -6380497977741434096
+      spriteID: 82b818080bb9ab690800000000000000
+      internalID: -7585579439979656408
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 3TilesDesierto_24
+      name: Biome7_24
       rect:
         serializedVersion: 2
-        x: 400
+        x: 128
         y: 0
-        width: 100
-        height: 100
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -708,8 +783,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 963fbf11e8f10efc0800000000000000
-      internalID: -3467737018027740311
+      spriteID: dff400c5dc0496ef0800000000000000
+      internalID: -114489064765239299
       vertices: []
       indices: 
       edges: []

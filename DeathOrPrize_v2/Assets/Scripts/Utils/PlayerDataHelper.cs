@@ -171,6 +171,18 @@ public class PlayerDataHelper
         return null;
     }
 
+    public static void SaveStats(PlayerStatsModel stats)
+    {
+        DataFileController fileController = new DataFileController();
+        PlayerDataModel data = fileController.GetEncryptedData<PlayerDataModel>(PathHelper.PlayerDataFile);
+        if (data != null)
+        {
+            data.stats = stats;
+        }
+
+        fileController.SaveEncrypted<PlayerDataModel>(data, PathHelper.PlayerDataFile);
+    }
+
     #region Salud
     public static void RestHealth(float value)
     {

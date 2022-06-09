@@ -143,9 +143,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 219
-        width: 300
-        height: 81
+        y: 540
+        width: 1920
+        height: 180
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,10 +163,10 @@ TextureImporter:
       name: UI_1
       rect:
         serializedVersion: 2
-        x: 14
-        y: 143
-        width: 91
-        height: 61
+        x: 20
+        y: 395
+        width: 480
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,10 +184,10 @@ TextureImporter:
       name: UI_2
       rect:
         serializedVersion: 2
-        x: 165
-        y: 139
-        width: 68
-        height: 69
+        x: 510
+        y: 355
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,10 +205,10 @@ TextureImporter:
       name: UI_3
       rect:
         serializedVersion: 2
-        x: 248
-        y: 150
-        width: 39
-        height: 39
+        x: 680
+        y: 75
+        width: 365
+        height: 440
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -226,10 +226,10 @@ TextureImporter:
       name: UI_4
       rect:
         serializedVersion: 2
-        x: 20
-        y: 48
-        width: 40
-        height: 44
+        x: 1055
+        y: 190
+        width: 480
+        height: 320
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -247,10 +247,10 @@ TextureImporter:
       name: UI_5
       rect:
         serializedVersion: 2
-        x: 89
-        y: 41
-        width: 76
-        height: 93
+        x: 1550
+        y: 70
+        width: 360
+        height: 440
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -268,10 +268,10 @@ TextureImporter:
       name: UI_6
       rect:
         serializedVersion: 2
-        x: 182
-        y: 43
-        width: 73
-        height: 90
+        x: 25
+        y: 25
+        width: 340
+        height: 345
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -289,10 +289,10 @@ TextureImporter:
       name: UI_7
       rect:
         serializedVersion: 2
-        x: 9
-        y: 2
-        width: 281
-        height: 30
+        x: 460
+        y: 115
+        width: 160
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

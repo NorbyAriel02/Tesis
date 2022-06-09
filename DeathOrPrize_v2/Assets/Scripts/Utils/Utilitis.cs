@@ -57,9 +57,9 @@ public class Utilitis
         item.tItem = TypeItemInventory.Armor;
         item.level = level;
         item.value = PrecioBase + level;
-        item.defending = level * r;
+        item.armor = level * r;
         item.weight = 3;
-        item.labelData = item.defending.ToString();
+        item.labelData = item.armor.ToString();
 
         return item;
     }

@@ -28,7 +28,7 @@ public class ChildrenController {
         //Now destroy them
         foreach (GameObject _child in allChildren)
         {
-            Object.DestroyImmediate(_child.gameObject);
+            Object.Destroy(_child.gameObject);
         }
     }
 

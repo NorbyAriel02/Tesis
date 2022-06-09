@@ -18,14 +18,12 @@ public class RoadCell : Cell
     }
 
     public override void ActionCell()
-    {
-        //base.ActionCell();
-        MovePlayer();
-        if (!HasMovements)
-            if (cicle.IsDay)
-                dialogs.StartDialogue();
-            else
-                StartBattle();
+    {   
+        //if (!HasMovements)
+        //    if (cicle.IsDay)
+        //        dialogs.StartDialogue(cicle.diceRollNumber);
+        //    else
+        //        StartBattle();
 
     }
 }
