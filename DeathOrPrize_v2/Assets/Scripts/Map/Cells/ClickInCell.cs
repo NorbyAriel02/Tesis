@@ -1,51 +1,52 @@
-using System.Collections;
-using System.Collections.Generic;
+using UnityEngine.EventSystems;
 using UnityEngine;
 
 public class ClickInCell : MonoBehaviour
 {
-    public float distance = 1.5f;
+    public delegate void Click(CellModel cell);
+    public static Click OnClickMe;
+    public delegate void CursorOver(CellModel cell);
+    public static CursorOver OnCursorOver;
+
     private Cell cell;
-    private GameObject border;
-    private PlayerMove playerMove;
+    private GameObject border;        
+
+    private void OnEnable()
+    {
+        
+    }
+    private void OnDisable()
+    {
+        
+    }
     void Start()
     {
         cell = GetComponent<Cell>();
-        border = ChildrenController.GetChildWithTag(gameObject, "Border");
-        playerMove = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMove>();
+        border = ChildrenController.GetChildWithTag(gameObject, "Border");        
     }
     void OnMouseOver()
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            if (IsIntoDistance && playerMove.diceValue > 0)
-                cell.ActionCell();
-            else
-                ErrorMessage();
+            if (IsMouseOverUI())
+                return;
+
+            cell.ClickMe = true;
+            OnClickMe?.Invoke(cell.cellData);
         }
 
-        if (border != null && IsIntoDistance)
+        if (border != null)
             border.SetActive(true);
+
+        OnCursorOver?.Invoke(cell.cellData);
     }
     void OnMouseExit()
     {
         if (border != null)
             border.SetActive(false);
     }
-
-    bool IsIntoDistance
+    bool IsMouseOverUI()
     {
-        get
-        {
-            if (Vector3.Distance(playerMove.GetCurrentPosition(), transform.position) < distance)
-                return true;
-
-            return false;
-        }
-    }
-
-    void ErrorMessage()
-    {
-        Debug.Log("No es posible");
+        return EventSystem.current.IsPointerOverGameObject();
     }
 }

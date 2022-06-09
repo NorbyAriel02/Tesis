@@ -18,4 +18,14 @@ public class GetScript {
 
         return null;
     }
+
+    public static T Type<T>(GameObject go, string callFrom = "no especifica") where T : class, new()
+    {
+        if (go != null)
+            return go.GetComponent<T>();
+        else
+            Logger.WriteLog("El GameObject " + go.name + " No posee el script " + callFrom);
+
+        return null;
+    }
 }

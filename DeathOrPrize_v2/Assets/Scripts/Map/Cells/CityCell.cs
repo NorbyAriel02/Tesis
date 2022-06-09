@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class CityCell : Cell
 {
-    private CityController city;
+    public delegate void EnterCity(float x, float y, int subTypeId);    
+    public static EnterCity OnEnterCity;    
+    
     void Start()
     {
-        base.StartVar();
-        city = GameObject.FindGameObjectWithTag("City").GetComponent<CityController>();
+        base.StartVar();    
     }
     public override void ActionCell()
     {
-        EnterCity();
+        Enter();
     }
-    void EnterCity()
-    {
-        DiceReset();
-        PlayerDataHelper.UpdateIdKingdom(cellData.IDkingdom);
-        city.Enter(x, y, subtype.id);
+    void Enter()
+    {        
+        PlayerDataHelper.UpdateIdCurrentKingdom(cellData.IDkingdom);
+        OnEnterCity?.Invoke(x, y, subtype.id);        
     }
 }

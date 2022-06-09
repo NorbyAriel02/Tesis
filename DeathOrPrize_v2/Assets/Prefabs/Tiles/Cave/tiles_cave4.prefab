@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4753671481690438205
 Transform:
   m_ObjectHideFlags: 0
@@ -106,8 +106,8 @@ GameObject:
   - component: {fileID: 4753671482499540027}
   - component: {fileID: 4753671482499540020}
   - component: {fileID: 4753671482499540021}
-  - component: {fileID: 4753671482499540022}
-  - component: {fileID: 3411231170377365528}
+  - component: {fileID: -8992265207466668223}
+  - component: {fileID: 1734231417185177461}
   m_Layer: 0
   m_Name: tiles_cave4
   m_TagString: Untagged
@@ -123,10 +123,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4753671482499540023}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4753671481690438205}
+  - {fileID: 4886663082069976116}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -170,7 +171,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5937791358481418648, guid: 6af319baf69baaa4bbf1b66dda04e07b, type: 3}
+  m_Sprite: {fileID: -4361638148360769042, guid: 6af319baf69baaa4bbf1b66dda04e07b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -192,9 +193,9 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 0.2}
+  m_Size: {x: 1, y: 1, z: 1.5}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4753671482499540022
+--- !u!114 &-8992265207466668223
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -203,53 +204,119 @@ MonoBehaviour:
   m_GameObject: {fileID: 4753671482499540023}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30fe2d91b54864243b6bb44fe387b99d, type: 3}
+  m_Script: {fileID: 11500000, guid: 18669e71474fd4d4dbf3cace6c63af07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  distance: 1.5
+--- !u!114 &1734231417185177461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4753671482499540023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 202e3e28e898480409f88029d4734be6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cellData:
+    IDkingdom: 0
+    sizeKingdom: 0
+    index: 0
+    type:
+      id: -1
+      type: none
+      descrip: none
+    subtype:
+      id: -1
+      idType: -1
+      subtype: none
+      descrip: none
+    biome:
+      id: 0
+      descrip: 
+      paleta: 
+    x: 0
+    y: 0
+    Fog: 1
   x: 0
   y: 0
   index: 0
+  sizeKingdom: 0
+  type:
+    id: -1
+    type: none
+    descrip: none
+  subtype:
+    id: -1
+    idType: -1
+    subtype: none
+    descrip: none
+  biome:
+    id: 0
+    descrip: 
+    paleta: 
   IDboss: 0
-  sizeKingdom: 0
-  type:
-    id: -1
-    type: none
-    descrip: none
-  subtype:
-    id: -1
-    idType: -1
-    subtype: none
-    descrip: none
-  biome:
-    id: 0
-    descrip: 
-    paleta: 
---- !u!114 &3411231170377365528
-MonoBehaviour:
+--- !u!1001 &215954193207579607
+PrefabInstance:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4753671482499540027}
+    m_Modifications:
+    - target: {fileID: 2975126418093228449, guid: b8bd9d805187dbe458671ce99e33e7c3, type: 3}
+      propertyPath: m_Name
+      value: Fog
+      objectReference: {fileID: 0}
+    - target: {fileID: 4697205068518078435, guid: b8bd9d805187dbe458671ce99e33e7c3, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4697205068518078435, guid: b8bd9d805187dbe458671ce99e33e7c3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4697205068518078435, guid: b8bd9d805187dbe458671ce99e33e7c3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4697205068518078435, guid: b8bd9d805187dbe458671ce99e33e7c3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4697205068518078435, guid: b8bd9d805187dbe458671ce99e33e7c3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4697205068518078435, guid: b8bd9d805187dbe458671ce99e33e7c3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4697205068518078435, guid: b8bd9d805187dbe458671ce99e33e7c3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4697205068518078435, guid: b8bd9d805187dbe458671ce99e33e7c3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4697205068518078435, guid: b8bd9d805187dbe458671ce99e33e7c3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4697205068518078435, guid: b8bd9d805187dbe458671ce99e33e7c3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4697205068518078435, guid: b8bd9d805187dbe458671ce99e33e7c3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b8bd9d805187dbe458671ce99e33e7c3, type: 3}
+--- !u!4 &4886663082069976116 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4697205068518078435, guid: b8bd9d805187dbe458671ce99e33e7c3, type: 3}
+  m_PrefabInstance: {fileID: 215954193207579607}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4753671482499540023}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 836faa96221883942835e78afc3f33e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  x: 0
-  y: 0
-  index: 0
-  sizeKingdom: 0
-  type:
-    id: -1
-    type: none
-    descrip: none
-  subtype:
-    id: -1
-    idType: -1
-    subtype: none
-    descrip: none
-  biome:
-    id: 0
-    descrip: 
-    paleta: 

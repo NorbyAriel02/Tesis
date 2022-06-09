@@ -16,6 +16,9 @@ public class InventoryHelper
         List<ItemProperties> items = new List<ItemProperties>();
         foreach (GameObject slot in _Slots)
         {
+            if (slot.GetComponent<Slot>() == null)
+                continue;
+
             if (!slot.GetComponent<Slot>().empty)
             {
                 GameObject item = ChildrenController.GetChild(slot);
@@ -71,6 +74,9 @@ public class InventoryHelper
     {
         foreach (GameObject slot in _Slots)
         {
+            if (slot.GetComponent<Slot>() == null)
+                continue;
+
             slot.GetComponent<Slot>().empty = true;
             ChildrenController.RemoveAllChildren(slot);
         }

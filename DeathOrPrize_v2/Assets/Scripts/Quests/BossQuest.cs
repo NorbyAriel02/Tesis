@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class BossQuest : MonoBehaviour
 {
-    public HUDController HUB;
+    public delegate void DamageThePlayer(float damage);
+    public static DamageThePlayer OnDamageThePlayer;
+
+    
     public Transform Content;
     public GameObject Bosses;    
     public PlayerStats playerStats;
@@ -51,7 +54,7 @@ public class BossQuest : MonoBehaviour
     public void StartBattle(int idBoss)
     {
         SetBossQuest(idBoss);
-        playerStats.SetStats();
+        //playerStats.SetStats();
         ActivePanel();
         inBattle = true;
     }
@@ -76,7 +79,6 @@ public class BossQuest : MonoBehaviour
             if (CanAttack(ref bossTimerAttack, bossAttackSpeed))
             {
                 BossAttack();
-                HUB.UpdateBarHealth();
             }
 
         if (playerStats.stats.currentHealth > 0)
@@ -107,7 +109,7 @@ public class BossQuest : MonoBehaviour
     }
     void BossAttack()
     {
-        float d = playerStats.stats.defending;
+        float d = playerStats.stats.armor;
         float a = bossesData[currentBoss].damage;
 
         float damage = IdleBattleHelper.GetRealDamage(d, a);

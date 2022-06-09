@@ -46,7 +46,7 @@ public class PlayerDataHelper
 
         return data.startPosition;
     }
-    public static int GetIdKingdom()
+    public static int GetIdCurrentKingdom()
     {
         int id = -1;
         DataFileController fileController = new DataFileController();
@@ -56,7 +56,7 @@ public class PlayerDataHelper
 
         return id;
     }
-    public static void UpdateIdKingdom(int id)
+    public static void UpdateIdCurrentKingdom(int id)
     {        
         DataFileController fileController = new DataFileController();
         PlayerDataModel data = fileController.GetEncryptedData<PlayerDataModel>(PathHelper.PlayerDataFile);
@@ -169,6 +169,18 @@ public class PlayerDataHelper
         }
 
         return null;
+    }
+
+    public static void SaveStats(PlayerStatsModel stats)
+    {
+        DataFileController fileController = new DataFileController();
+        PlayerDataModel data = fileController.GetEncryptedData<PlayerDataModel>(PathHelper.PlayerDataFile);
+        if (data != null)
+        {
+            data.stats = stats;
+        }
+
+        fileController.SaveEncrypted<PlayerDataModel>(data, PathHelper.PlayerDataFile);
     }
 
     #region Salud

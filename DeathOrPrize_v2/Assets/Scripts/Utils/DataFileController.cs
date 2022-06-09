@@ -130,5 +130,24 @@ public class DataFileController
 		}
 		return dt;
 	}
+	public Sprite LoadSprite(string imageName, string spriteName)
+	{
+		Sprite[] all = Resources.LoadAll<Sprite>(imageName);
 
+		foreach (var s in all)
+		{
+			if (s.name == spriteName)
+			{
+				return s;
+			}
+		}
+		return null;
+	}
+
+	public Sprite[] LoadSpriteSheet(string imageName)
+	{
+		Sprite[] Sheet = Resources.LoadAll<Sprite>(imageName);
+				
+		return Sheet;
+	}
 }

@@ -1,4 +1,4 @@
-using System.Collections;
+using UnityEngine.EventSystems;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,9 +15,12 @@ public class ClickMe : MonoBehaviour
         playerMove = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMove>();
     }
     void OnMouseOver()
-    {
+    {        
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
+            if (IsMouseOverUI())
+                return;
+
             if (IsIntoDistance && playerMove.diceValue > 0)
                 cell.ActionCell();
             else
@@ -26,6 +29,10 @@ public class ClickMe : MonoBehaviour
 
         if (border != null && IsIntoDistance)
             border.SetActive(true);
+    }
+    bool IsMouseOverUI()
+    {
+        return EventSystem.current.IsPointerOverGameObject();
     }
     void OnMouseExit()
     {

@@ -15,7 +15,7 @@ public class NeighboringKingdomsController : MonoBehaviour
         kingdom = GetComponent<Kingdom>();
         listKingdomNeighbor = fileController.GetEncryptedData<List<KingdomModel>>(PathHelper.NeighborKingdomDataFile);
         loadMaps = GetComponent<LoadMaps>();
-        kingdom.idKingdom = PlayerDataHelper.GetIdKingdom();         
+        kingdom.idKingdom = PlayerDataHelper.GetIdCurrentKingdom();         
     }
     public void LoadMapNorth()
     {

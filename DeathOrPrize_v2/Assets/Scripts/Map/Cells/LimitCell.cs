@@ -19,8 +19,8 @@ public class LimitCell : Cell
 
     void Limit()
     {
-        if (!HasMovements)
-            return;
+        //if (!HasMovements)
+        //    return;
 
         neighboringKingdomsController.LoadMap(subtype.id);
 

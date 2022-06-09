@@ -5,26 +5,34 @@ using UnityEngine.UI;
 
 public class HUDController : MonoBehaviour
 {
-    public int maxValueDice = 6;
-    public Button btnDado;
-    public Text textDice;
     public Button btnInventory;
     public Image barHealth;
     public Text TextHealth;
-    public Text TextKimgdom;
+    public Text TextKimgdom;    
     private InventoryManager inventory;
     PlayerMove playerMove;
+    UIDayNight uIDayNight;
+    private void OnEnable()
+    {
+        IdleBattleManager.OnDamageThePlayer += UpdateBarHealth;
+        BossQuest.OnDamageThePlayer += UpdateBarHealth;
+    }
+    private void OnDisable()
+    {
+        IdleBattleManager.OnDamageThePlayer -= UpdateBarHealth;
+        BossQuest.OnDamageThePlayer -= UpdateBarHealth;
+    }
     void Start()
     {
-        TextKimgdom.text = "Reino " + PlayerDataHelper.GetIdKingdom();
+        TextKimgdom.text = "Reino " + PlayerDataHelper.GetIdCurrentKingdom();
         playerMove = GetScript.Type<PlayerMove>("Player");
-        btnDado.onClick.AddListener(GetNewValueDeci);
         btnInventory.onClick.AddListener(Open);
         inventory = GetScript.Type<InventoryManager>("Inventory");
-        UpdateBarHealth();
+        uIDayNight = GetComponent<UIDayNight>();
+        UpdateBarHealth(0);
     }
 
-    public void UpdateBarHealth()
+    public void UpdateBarHealth(float damege)
     {
         float health = PlayerDataHelper.GetCurrentHealth();
         float maxHealth = PlayerDataHelper.GetMaxHealth();
@@ -35,33 +43,22 @@ public class HUDController : MonoBehaviour
     public void Heal()
     {
         PlayerDataHelper.Heal();
-        UpdateBarHealth();
+        UpdateBarHealth(0);
+    }
+    public void EnterCity()
+    {
+        Heal();
     }
     void Open()
-    {
+    {        
         inventory.OpenInventory();
     }
-    void SetInteractiveBtnDice()
+    void RollDice()
     {
-        if (playerMove.diceValue > 0)
-            btnDado.interactable = false;
-        else
-            btnDado.interactable = true;
-    }
+        uIDayNight.AddRoll(1);
 
-    void UpdateTextValue()
-    {
-        textDice.text = playerMove.diceValue.ToString();
     }
-    void GetNewValueDeci()
-    {
-        playerMove.diceValue = Random.Range(1, maxValueDice);
-    }
-    // Update is called once per frame
     void Update()
     {
-        SetInteractiveBtnDice();
-
-        UpdateTextValue();
     }
 }

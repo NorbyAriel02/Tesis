@@ -33,15 +33,20 @@ public class SmithyController : MonoBehaviour
         Slots = ChildrenController.GetChildren(panelItems);
         for (int x = 0; x < Slots.Length; x++)
         {
+            if (Slots[x].GetComponent<Slot>() == null)
+                continue;
+
             Slots[x].GetComponent<Slot>().ID = x;
             Slots[x].GetComponent<Slot>().empty = true;
         }
     }
     void Forjar()
     {
+        
         List<ItemProperties> items = GetItems();
         if(ValidarItems(items))
         {
+            AkSoundEngine.PostEvent("Item_Forge", this.gameObject);
             ItemProperties item = Utilitis.GetBestItem(items[0]);
             Slots[0].GetComponent<Slot>().empty = true;
             Slots[1].GetComponent<Slot>().empty = true;
@@ -52,6 +57,8 @@ public class SmithyController : MonoBehaviour
             Item scriptItem = gItem.GetComponent<Item>();
             scriptItem.SetItem(item);
         }
+        else
+            AkSoundEngine.PostEvent("Field_Error", this.gameObject);
     }
     bool ValidarItems(List<ItemProperties> items)
     {
@@ -72,6 +79,9 @@ public class SmithyController : MonoBehaviour
         List<ItemProperties> items = new List<ItemProperties>();
         foreach (GameObject slot in Slots)
         {
+            if (slot.GetComponent<Slot>() == null)
+                continue;
+
             if (!slot.GetComponent<Slot>().empty)
             {
                 GameObject item = ChildrenController.GetChild(slot);

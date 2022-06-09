@@ -16,8 +16,7 @@ public class DugeonCell : Cell
         EnterCave();
     }
     void EnterCave()
-    {
-        DiceReset();
+    {        
         bossQuest.StartBattle(IDboss);
     }
 }

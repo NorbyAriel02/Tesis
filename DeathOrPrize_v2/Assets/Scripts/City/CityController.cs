@@ -5,6 +5,11 @@ using UnityEngine.UI;
 
 public class CityController : MonoBehaviour
 {
+    public delegate void EnterCity();
+    public static EnterCity OnEnterCity;
+    public delegate void ExitCity(float x, float y);
+    public static ExitCity OnExitCity;
+
     public Button btnDoorEast;
     public Button btnDoorWest;
     public Button btnDoorNorth;
@@ -27,13 +32,19 @@ public class CityController : MonoBehaviour
     public List<ItemProperties> itemsEquipment;
     public HUDController hud;
     private List<Vector3> doors;
-    private PlayerMove playerMov;
+    
     List<CellModel> dataMap = new List<CellModel>();
     DataFileController fileController = new DataFileController();
-    // Start is called before the first frame update
-    void Start()
+    private void OnEnable()
     {
-        playerMov = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMove>();
+        CityCell.OnEnterCity += Enter;
+    }
+    private void OnDisable()
+    {
+        CityCell.OnEnterCity -= Enter;
+    }
+    void Start()
+    {        
         AsignEventButtons();
         LoadItems();
         panelCity.SetActive(false);
@@ -61,6 +72,9 @@ public class CityController : MonoBehaviour
         SlotsEquipment = ChildrenController.GetChildren(EquipmentPanel);
         for (int x = 0; x < SlotsEquipment.Length; x++)
         {
+            if (SlotsEquipment[x].GetComponent<Slot>() == null)
+                continue;
+
             SlotsEquipment[x].GetComponent<Slot>().ID = x;
             SlotsEquipment[x].GetComponent<Slot>().empty = true;
         }
@@ -75,10 +89,14 @@ public class CityController : MonoBehaviour
     }    
     void AsignEventButtons()
     {
-        btnDoorEast.onClick.AddListener(ExitEast);
-        btnDoorWest.onClick.AddListener(ExitWest);
-        btnDoorNorth.onClick.AddListener(ExitNorth);
-        btnDoorSouth.onClick.AddListener(ExitSouth);
+        //ExitNorth door 0
+        //ExitEast door 1
+        //ExitSouth door 2
+        //ExitWest door 3
+        btnDoorNorth.onClick.AddListener(delegate { Exit(0); });
+        btnDoorEast.onClick.AddListener(delegate { Exit(1); });
+        btnDoorSouth.onClick.AddListener(delegate { Exit(2); });
+        btnDoorWest.onClick.AddListener(delegate { Exit(3); });
         btnSmithy.onClick.AddListener(OpenSmithy);
         btnMarked.onClick.AddListener(OpenMarked);
         btnQuests.onClick.AddListener(OpenQuestPanel);
@@ -101,34 +119,13 @@ public class CityController : MonoBehaviour
         panelMarked.SetActive(false);
         panelQuest.SetActive(true);
     }
-    void ExitSouth()
+    void Exit(int door)
     {
-        UpdateData();
-        playerMov.SetPosition(doors[2].x, doors[2].y);
+        UpdateData();        
         panelCity.SetActive(false);
         LoadKingdom.SetActive(true);
-    }
-    void ExitWest()
-    {
-        UpdateData();
-        playerMov.SetPosition(doors[3].x, doors[3].y);
-        panelCity.SetActive(false);
-        LoadKingdom.SetActive(true);
-    }
-    void ExitEast()
-    {
-        UpdateData();
-        playerMov.SetPosition(doors[1].x, doors[1].y);
-        panelCity.SetActive(false);
-        LoadKingdom.SetActive(true);
-    }
-    void ExitNorth()
-    {
-        UpdateData();
-        playerMov.SetPosition(doors[0].x, doors[0].y);
-        panelCity.SetActive(false);
-        LoadKingdom.SetActive(true);
-    }    
+        OnExitCity?.Invoke(doors[door].x, doors[door].y);
+    }        
     void UpdateData()
     {
         itemsInventory = InventoryHelper.GetListItemsFromPanel(SlotsInventory);
@@ -138,11 +135,13 @@ public class CityController : MonoBehaviour
     }
     public void Enter(float x, float y, int subTypeId)
     {
-        hud.Heal();
+        hud.EnterCity();
         SetExits(x, y, subTypeId);
         LoadItems();
+        AkSoundEngine.PostEvent("Amb_City", this.gameObject);        
         //PlayerDataHelper.UpdateIdKingdom();
         panelCity.SetActive(true);
+        OnEnterCity?.Invoke();
     }
     private void SetExits(float x, float y, int subType)
     {

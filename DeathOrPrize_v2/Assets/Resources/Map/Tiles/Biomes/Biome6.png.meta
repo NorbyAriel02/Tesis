@@ -1,0 +1,1407 @@
+fileFormatVersion: 2
+guid: 43d0270482009c94595b2e792be6ffe9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6864998570942189102
+    second: 4TilesLlanuraHelada_0
+  - first:
+      213: 5234237393335486063
+    second: 4TilesLlanuraHelada_1
+  - first:
+      213: 9097061169244160022
+    second: 4TilesLlanuraHelada_2
+  - first:
+      213: 3115408073057965679
+    second: 4TilesLlanuraHelada_3
+  - first:
+      213: 1953523089855759585
+    second: 4TilesLlanuraHelada_4
+  - first:
+      213: 1267206423396323194
+    second: 4TilesLlanuraHelada_5
+  - first:
+      213: -3898047137268497733
+    second: 4TilesLlanuraHelada_6
+  - first:
+      213: -4738924081178697296
+    second: 4TilesLlanuraHelada_7
+  - first:
+      213: 1554009603344915521
+    second: 4TilesLlanuraHelada_8
+  - first:
+      213: -6868720677823737495
+    second: 4TilesLlanuraHelada_9
+  - first:
+      213: -2922276578148639383
+    second: 4TilesLlanuraHelada_10
+  - first:
+      213: 8278463011875930224
+    second: 4TilesLlanuraHelada_11
+  - first:
+      213: 7274586250878932540
+    second: 4TilesLlanuraHelada_12
+  - first:
+      213: 8041617726782976957
+    second: 4TilesLlanuraHelada_13
+  - first:
+      213: 8503261366539757367
+    second: 4TilesLlanuraHelada_14
+  - first:
+      213: -3763956311873660352
+    second: 4TilesLlanuraHelada_15
+  - first:
+      213: 5164559995177538979
+    second: 4TilesLlanuraHelada_16
+  - first:
+      213: -7457736515233427855
+    second: 4TilesLlanuraHelada_17
+  - first:
+      213: 1970270714269495135
+    second: 4TilesLlanuraHelada_18
+  - first:
+      213: -276609662637195146
+    second: 4TilesLlanuraHelada_19
+  - first:
+      213: 4959713313120425027
+    second: 4TilesLlanuraHelada_20
+  - first:
+      213: -8051987391365231967
+    second: 4TilesLlanuraHelada_21
+  - first:
+      213: -3929231042303115187
+    second: 4TilesLlanuraHelada_22
+  - first:
+      213: -243413606287311253
+    second: 4TilesLlanuraHelada_23
+  - first:
+      213: -7703184754887275472
+    second: 4TilesLlanuraHelada_24
+  - first:
+      213: -7454780442213871409
+    second: Biome6_0
+  - first:
+      213: 800479603062128882
+    second: Biome6_1
+  - first:
+      213: -5070781989077808359
+    second: Biome6_2
+  - first:
+      213: 3174846971824548368
+    second: Biome6_3
+  - first:
+      213: 1093611942325495874
+    second: Biome6_4
+  - first:
+      213: -5232023670128102199
+    second: Biome6_5
+  - first:
+      213: -7749150248968011731
+    second: Biome6_6
+  - first:
+      213: 6426368237303482620
+    second: Biome6_7
+  - first:
+      213: -3990363101852761047
+    second: Biome6_8
+  - first:
+      213: -3564427758418071062
+    second: Biome6_9
+  - first:
+      213: -7047993753309582883
+    second: Biome6_10
+  - first:
+      213: -5152101895698954211
+    second: Biome6_11
+  - first:
+      213: -1161878731952297236
+    second: Biome6_12
+  - first:
+      213: 1337888931627017789
+    second: Biome6_13
+  - first:
+      213: 7274655826690716380
+    second: Biome6_14
+  - first:
+      213: -6695180607298461393
+    second: Biome6_15
+  - first:
+      213: 1134771834956052211
+    second: Biome6_16
+  - first:
+      213: -1102115333234209829
+    second: Biome6_17
+  - first:
+      213: -2266798216890939827
+    second: Biome6_18
+  - first:
+      213: 4537967500149228869
+    second: Biome6_19
+  - first:
+      213: 6267156783232597473
+    second: Biome6_20
+  - first:
+      213: 3578402185040940904
+    second: Biome6_21
+  - first:
+      213: 5519733193697681891
+    second: Biome6_22
+  - first:
+      213: -4350151056739610392
+    second: Biome6_23
+  - first:
+      213: -9203825404862644105
+    second: Biome6_24
+  - first:
+      213: -3481761563466324986
+    second: Biome6_25
+  - first:
+      213: -1229223068874105742
+    second: Biome6_26
+  - first:
+      213: -407692041741162242
+    second: Biome6_27
+  - first:
+      213: 5265085833105190668
+    second: Biome6_28
+  - first:
+      213: 2705698618563914642
+    second: Biome6_29
+  - first:
+      213: -6214984291300166807
+    second: Biome6_30
+  - first:
+      213: -7376613952835439181
+    second: Biome6_31
+  - first:
+      213: 5774848228266771074
+    second: Biome6_32
+  - first:
+      213: -8036581906895498563
+    second: Biome6_33
+  - first:
+      213: -5232488564439532415
+    second: Biome6_34
+  - first:
+      213: -6225018953203176388
+    second: Biome6_35
+  - first:
+      213: 2329787092176823244
+    second: Biome6_36
+  - first:
+      213: -3278111274083177769
+    second: Biome6_37
+  - first:
+      213: 1416491286886814557
+    second: Biome6_38
+  - first:
+      213: -4944399559695167610
+    second: Biome6_39
+  - first:
+      213: 5815525329750761846
+    second: Biome6_40
+  - first:
+      213: 8717650694453115129
+    second: Biome6_41
+  - first:
+      213: -3492470010532876474
+    second: Biome6_42
+  - first:
+      213: 3283506774501776768
+    second: Biome6_43
+  - first:
+      213: 9076854133006831245
+    second: Biome6_44
+  - first:
+      213: 6979998296327061972
+    second: Biome6_45
+  - first:
+      213: -1956269677094675029
+    second: Biome6_46
+  - first:
+      213: 7705905244055217899
+    second: Biome6_47
+  - first:
+      213: -1244360003445985125
+    second: Biome6_48
+  - first:
+      213: -7488949609030994581
+    second: Biome6_49
+  - first:
+      213: -1490851809073255790
+    second: Biome6_50
+  - first:
+      213: -8000832735474071953
+    second: Biome6_51
+  - first:
+      213: 5225204849557999809
+    second: Biome6_52
+  - first:
+      213: -1343275151135892970
+    second: Biome6_53
+  - first:
+      213: 2589893975086024888
+    second: Biome6_54
+  - first:
+      213: -5097612118561454178
+    second: Biome6_55
+  - first:
+      213: 4174378843719565955
+    second: Biome6_56
+  - first:
+      213: 3765261616997921165
+    second: Biome6_57
+  - first:
+      213: -8649224349929853198
+    second: Biome6_58
+  - first:
+      213: -126815992842830090
+    second: Biome6_59
+  - first:
+      213: 3905980347045386983
+    second: Biome6_60
+  - first:
+      213: -3316420839017379956
+    second: Biome6_61
+  - first:
+      213: 283027032457079496
+    second: Biome6_62
+  - first:
+      213: 5399624070652817340
+    second: Biome6_63
+  - first:
+      213: 2005009310219983137
+    second: Biome6_64
+  - first:
+      213: -2541380099289450273
+    second: Biome6_65
+  - first:
+      213: 5107814448806783124
+    second: Biome6_66
+  - first:
+      213: -939063535046935655
+    second: Biome6_67
+  - first:
+      213: 7265371692952157664
+    second: Biome6_68
+  - first:
+      213: -8665313571126513160
+    second: Biome6_69
+  - first:
+      213: 6009538115665998740
+    second: Biome6_70
+  - first:
+      213: -2883167245445677788
+    second: Biome6_71
+  - first:
+      213: -4509809797721144611
+    second: Biome6_72
+  - first:
+      213: 1804561877286883730
+    second: Biome6_73
+  - first:
+      213: -1424053541803670284
+    second: Biome6_74
+  - first:
+      213: -3756464298593872106
+    second: Biome6_75
+  - first:
+      213: -6414257336635776285
+    second: Biome6_76
+  - first:
+      213: -8230226009885868180
+    second: Biome6_77
+  - first:
+      213: -3986212296171851630
+    second: Biome6_78
+  - first:
+      213: -2957833980735536259
+    second: Biome6_79
+  - first:
+      213: -1893600900861188187
+    second: Biome6_80
+  - first:
+      213: -1839688190646288343
+    second: Biome6_81
+  - first:
+      213: 3058575078481791521
+    second: Biome6_82
+  - first:
+      213: -6888794979844813039
+    second: Biome6_83
+  - first:
+      213: 8282055489229572342
+    second: Biome6_84
+  - first:
+      213: 6669095288814043862
+    second: Biome6_85
+  - first:
+      213: 4751979765940694634
+    second: Biome6_86
+  - first:
+      213: -309018898431093463
+    second: Biome6_87
+  - first:
+      213: -2187882216773828212
+    second: Biome6_88
+  - first:
+      213: -6781119668652378156
+    second: Biome6_89
+  - first:
+      213: 2171599258103497151
+    second: Biome6_90
+  - first:
+      213: 8637159457615545571
+    second: Biome6_91
+  - first:
+      213: -875333840386813783
+    second: Biome6_92
+  - first:
+      213: -4756055194509131371
+    second: Biome6_93
+  - first:
+      213: 1548964407473611256
+    second: Biome6_94
+  - first:
+      213: 6965194162660513602
+    second: Biome6_95
+  - first:
+      213: 7361907432189627375
+    second: Biome6_96
+  - first:
+      213: 2316397154984792361
+    second: Biome6_97
+  - first:
+      213: 8426960212745376432
+    second: Biome6_98
+  - first:
+      213: 3035558829473575850
+    second: Biome6_99
+  - first:
+      213: -8456574913873592323
+    second: Biome6_100
+  - first:
+      213: 5034688880444954594
+    second: Biome6_101
+  - first:
+      213: 9035597288264786320
+    second: Biome6_102
+  - first:
+      213: 7082920264150927588
+    second: Biome6_103
+  - first:
+      213: -6325811942112580543
+    second: Biome6_104
+  - first:
+      213: -8475331521440238993
+    second: Biome6_105
+  - first:
+      213: 1735505110259611265
+    second: Biome6_106
+  - first:
+      213: -5802628034714722801
+    second: Biome6_107
+  - first:
+      213: -5688383541333645544
+    second: Biome6_108
+  - first:
+      213: -9104932986732673393
+    second: Biome6_109
+  - first:
+      213: -6871896341981036653
+    second: Biome6_110
+  - first:
+      213: 3578088734576803966
+    second: Biome6_111
+  - first:
+      213: -7727579034307767942
+    second: Biome6_112
+  - first:
+      213: -8706796222226464531
+    second: Biome6_113
+  - first:
+      213: -3370988554929542865
+    second: Biome6_114
+  - first:
+      213: -3624090584937687301
+    second: Biome6_115
+  - first:
+      213: 4391438214655404289
+    second: Biome6_116
+  - first:
+      213: 8679694346546043277
+    second: Biome6_117
+  - first:
+      213: -6426065629396962752
+    second: Biome6_118
+  - first:
+      213: -6990184683127083343
+    second: Biome6_119
+  - first:
+      213: 8143730392472981182
+    second: Biome6_120
+  - first:
+      213: 5541136409462527997
+    second: Biome6_121
+  - first:
+      213: 5920503375324494191
+    second: Biome6_122
+  - first:
+      213: -6487690972851786377
+    second: Biome6_123
+  - first:
+      213: 1803399071562290313
+    second: Biome6_124
+  - first:
+      213: -2427348263822653387
+    second: Biome6_125
+  - first:
+      213: 6495046908860813287
+    second: Biome6_126
+  - first:
+      213: 7365500627674352458
+    second: Biome6_127
+  - first:
+      213: 2845924401955050363
+    second: Biome6_128
+  - first:
+      213: 1265058735573611433
+    second: Biome6_129
+  - first:
+      213: -5666701713744181609
+    second: Biome6_130
+  - first:
+      213: -2791061985144487252
+    second: Biome6_131
+  - first:
+      213: -8059833555497669033
+    second: Biome6_132
+  - first:
+      213: 1467266863416812992
+    second: Biome6_133
+  - first:
+      213: 1938579376886278129
+    second: Biome6_134
+  - first:
+      213: 5392047508962465833
+    second: Biome6_135
+  - first:
+      213: 4048528304282197681
+    second: Biome6_136
+  - first:
+      213: -7085008369455253386
+    second: Biome6_137
+  - first:
+      213: 1740006227524840863
+    second: Biome6_138
+  - first:
+      213: 520636125771368522
+    second: Biome6_139
+  - first:
+      213: -7073964888476740605
+    second: Biome6_140
+  - first:
+      213: -6472948928613400717
+    second: Biome6_141
+  - first:
+      213: -1681711962294621224
+    second: Biome6_142
+  - first:
+      213: 5253301958537602077
+    second: Biome6_143
+  - first:
+      213: 6665371002837145430
+    second: Biome6_144
+  - first:
+      213: 882201206545360663
+    second: Biome6_145
+  - first:
+      213: 8040653790216035070
+    second: Biome6_146
+  - first:
+      213: 5961317856857419034
+    second: Biome6_147
+  - first:
+      213: -7040269313574218741
+    second: Biome6_148
+  - first:
+      213: -6630731077217753822
+    second: Biome6_149
+  - first:
+      213: -3036749005700310198
+    second: Biome6_150
+  - first:
+      213: 8231495900718854566
+    second: Biome6_151
+  - first:
+      213: -1888819542513169991
+    second: Biome6_152
+  - first:
+      213: 5709303370268368836
+    second: Biome6_153
+  - first:
+      213: -7499612847492205906
+    second: Biome6_154
+  - first:
+      213: 7783705290775757657
+    second: Biome6_155
+  - first:
+      213: 872184417493332624
+    second: Biome6_156
+  - first:
+      213: 6335689882336166705
+    second: Biome6_157
+  - first:
+      213: -652517284392713917
+    second: Biome6_158
+  - first:
+      213: -6957057581994408849
+    second: Biome6_159
+  - first:
+      213: 6687058125700177364
+    second: Biome6_160
+  - first:
+      213: -3878847374299146956
+    second: Biome6_161
+  - first:
+      213: 2999428352624240366
+    second: Biome6_162
+  - first:
+      213: -3868705097913526755
+    second: Biome6_163
+  - first:
+      213: 6630381497915864220
+    second: Biome6_164
+  - first:
+      213: -3385955442929247481
+    second: Biome6_165
+  - first:
+      213: 1246157670818482204
+    second: Biome6_166
+  - first:
+      213: -9017784817059385980
+    second: Biome6_167
+  - first:
+      213: 3102861456114765328
+    second: Biome6_168
+  - first:
+      213: -1965294587466218178
+    second: Biome6_169
+  - first:
+      213: 6589709184815272053
+    second: Biome6_170
+  - first:
+      213: 3907895557108210257
+    second: Biome6_171
+  - first:
+      213: -651057299931809382
+    second: Biome6_172
+  - first:
+      213: 1034504139624359743
+    second: Biome6_173
+  - first:
+      213: -1661966343716328749
+    second: Biome6_174
+  - first:
+      213: -6586300656413567727
+    second: Biome6_175
+  - first:
+      213: 7066287268572371840
+    second: Biome6_176
+  - first:
+      213: -764407839729460601
+    second: Biome6_177
+  - first:
+      213: 2223573790360472162
+    second: Biome6_178
+  - first:
+      213: 6681997131044717809
+    second: Biome6_179
+  - first:
+      213: -4267837020806065972
+    second: Biome6_180
+  - first:
+      213: -3689602384973590040
+    second: Biome6_181
+  - first:
+      213: 2142995119247413654
+    second: Biome6_182
+  - first:
+      213: 5370451943020022175
+    second: Biome6_183
+  - first:
+      213: -4318465300732139444
+    second: Biome6_184
+  - first:
+      213: -8955753427643648612
+    second: Biome6_185
+  - first:
+      213: 26469397537356882
+    second: Biome6_186
+  - first:
+      213: 4035737212406203727
+    second: Biome6_187
+  - first:
+      213: 6142572223238110582
+    second: Biome6_188
+  - first:
+      213: 5161888498371617620
+    second: Biome6_189
+  - first:
+      213: -7233387526649319801
+    second: Biome6_190
+  - first:
+      213: -2806137460121347364
+    second: Biome6_191
+  - first:
+      213: -4111995554112419619
+    second: Biome6_192
+  - first:
+      213: 1402565862306552470
+    second: Biome6_193
+  - first:
+      213: -4616996121614308900
+    second: Biome6_194
+  - first:
+      213: 8445786164969948367
+    second: Biome6_195
+  - first:
+      213: -78303666754009482
+    second: Biome6_196
+  - first:
+      213: -5628535918210120501
+    second: Biome6_197
+  - first:
+      213: -1207260179034730715
+    second: Biome6_198
+  - first:
+      213: -5311542263071965225
+    second: Biome6_199
+  - first:
+      213: 8799483199975429163
+    second: Biome6_200
+  - first:
+      213: 8275856929627262592
+    second: Biome6_201
+  - first:
+      213: 148267938520417224
+    second: Biome6_202
+  - first:
+      213: -5731846880047275225
+    second: Biome6_203
+  - first:
+      213: -7924036548894969715
+    second: Biome6_204
+  - first:
+      213: 3890875799067152827
+    second: Biome6_205
+  - first:
+      213: -7549640827954772592
+    second: Biome6_206
+  - first:
+      213: 7346923390911267885
+    second: Biome6_207
+  - first:
+      213: -4129091584447899883
+    second: Biome6_208
+  - first:
+      213: 6624491732939548620
+    second: Biome6_209
+  - first:
+      213: -8345433167718372248
+    second: Biome6_210
+  - first:
+      213: -757941958275214512
+    second: Biome6_211
+  - first:
+      213: -49700900873749261
+    second: Biome6_212
+  - first:
+      213: 2645031589172596879
+    second: Biome6_213
+  - first:
+      213: -881902050003218668
+    second: Biome6_214
+  - first:
+      213: -1162175927431581737
+    second: Biome6_215
+  - first:
+      213: -5873404317842303021
+    second: Biome6_216
+  - first:
+      213: 5159128212624505118
+    second: Biome6_217
+  - first:
+      213: 8002788968413187495
+    second: Biome6_218
+  - first:
+      213: 4456018361975892755
+    second: Biome6_219
+  - first:
+      213: 2951046361907040223
+    second: Biome6_220
+  - first:
+      213: -4379800131590247793
+    second: Biome6_221
+  - first:
+      213: -2172957380476990146
+    second: Biome6_222
+  - first:
+      213: -6698348723229777735
+    second: Biome6_223
+  - first:
+      213: 5113854351900506048
+    second: Biome6_224
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Biome6_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc010575fac4b8890800000000000000
+      internalID: -7454780442213871409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biome6_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f0c67635ffdb1b00800000000000000
+      internalID: 800479603062128882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biome6_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91b8197a5a6f0a9b0800000000000000
+      internalID: -5070781989077808359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biome6_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01aa3d3ff725f0c20800000000000000
+      internalID: 3174846971824548368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biome6_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 248af60744a4d2f00800000000000000
+      internalID: 1093611942325495874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biome6_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c43495413e1467b0800000000000000
+      internalID: -5232023670128102199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biome6_6
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d20c123c7ec757490800000000000000
+      internalID: -7749150248968011731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biome6_7
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf8c35c0ddb0f2950800000000000000
+      internalID: 6426368237303482620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biome6_8
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9248d3596e16f98c0800000000000000
+      internalID: -3990363101852761047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biome6_9
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae1f2ffb6db988ec0800000000000000
+      internalID: -3564427758418071062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biome6_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd96fc2f50f703e90800000000000000
+      internalID: -7047993753309582883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biome6_11
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d184f347f9e0088b0800000000000000
+      internalID: -5152101895698954211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biome6_12
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ceae6edf27d20efe0800000000000000
+      internalID: -1161878731952297236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biome6_13
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d362e8615e2219210800000000000000
+      internalID: 1337888931627017789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biome6_14
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd2302d7ee4c4f460800000000000000
+      internalID: 7274655826690716380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biome6_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2124e2d5b0f513a0800000000000000
+      internalID: -6695180607298461393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biome6_16
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f67cabb8f48fbf00800000000000000
+      internalID: 1134771834956052211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biome6_17
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdb401591ff74b0f0800000000000000
+      internalID: -1102115333234209829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biome6_18
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d460ab02807ba80e0800000000000000
+      internalID: -2266798216890939827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biome6_19
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54589a0f5691afe30800000000000000
+      internalID: 4537967500149228869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biome6_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ed3248b3e969f650800000000000000
+      internalID: 6267156783232597473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biome6_21
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86fc8def3d909a130800000000000000
+      internalID: 3578402185040940904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biome6_22
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e1684948180a9c40800000000000000
+      internalID: 5519733193697681891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biome6_23
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e0deb779a821a3c0800000000000000
+      internalID: -4350151056739610392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biome6_24
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7704278ee81754080800000000000000
+      internalID: -9203825404862644105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6636800201880276709}
   - component: {fileID: 2267380231825792072}
-  - component: {fileID: -1292631273325545291}
   - component: {fileID: 8786591029946673417}
+  - component: {fileID: 6053619345332343494}
+  - component: {fileID: 303531793370056438}
   m_Layer: 0
   m_Name: Limit_3
   m_TagString: Untagged
@@ -74,18 +75,31 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3047167828323198958, guid: 7e44b7a52d109fd4ca49140790579589, type: 3}
+  m_Sprite: {fileID: 7164762359707482535, guid: 839f43511129cfb438c433783884a8a4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.64, y: 0.64}
+  m_Size: {x: 0.32, y: 0.32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-1292631273325545291
+--- !u!65 &8786591029946673417
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1308414279433708837}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1.5}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6053619345332343494
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,9 +108,42 @@ MonoBehaviour:
   m_GameObject: {fileID: 1308414279433708837}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 836faa96221883942835e78afc3f33e6, type: 3}
+  m_Script: {fileID: 11500000, guid: 18669e71474fd4d4dbf3cace6c63af07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  distance: 1.5
+--- !u!114 &303531793370056438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1308414279433708837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b71262aebfc039943a7a20e920724a2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cellData:
+    IDkingdom: 0
+    sizeKingdom: 0
+    index: 0
+    type:
+      id: -1
+      type: none
+      descrip: none
+    subtype:
+      id: -1
+      idType: -1
+      subtype: none
+      descrip: none
+    biome:
+      id: 0
+      descrip: 
+      paleta: 
+    x: 0
+    y: 0
+    Fog: 0
   x: 0
   y: 0
   index: 0
@@ -114,19 +161,6 @@ MonoBehaviour:
     id: 0
     descrip: 
     paleta: 
---- !u!65 &8786591029946673417
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1308414279433708837}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6151544361223653269
 GameObject:
   m_ObjectHideFlags: 0

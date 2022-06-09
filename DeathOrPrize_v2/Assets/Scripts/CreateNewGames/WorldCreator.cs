@@ -37,7 +37,8 @@ public class WorldCreator : MonoBehaviour
     {
         for(int x = 1; x <= numberOfKingdom; x++)
         {
-            CreateKingdom(x, GetBiome());
+            //CreateKingdom(x, GetBiome());
+            CreateKingdom(x, x-1);
         }
     }
     void CreateKingdom(int idKingdom, int biome)

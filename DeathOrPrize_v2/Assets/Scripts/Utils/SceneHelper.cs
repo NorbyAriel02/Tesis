@@ -9,4 +9,9 @@ public class SceneHelper
     {
         SceneManager.LoadScene(scene);
     }
+
+    public static string GetNameSceneActive()
+    {
+        return SceneManager.GetActiveScene().name;
+    }
 }
