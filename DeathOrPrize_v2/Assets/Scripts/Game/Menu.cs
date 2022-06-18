@@ -12,7 +12,7 @@ public class Menu : MonoBehaviour
     
     void Start()
     {
-        AkSoundEngine.PostEvent("Play_Music", this.gameObject);
+        
         btnNew.onClick.AddListener(New);
         btnContinue.onClick.AddListener(Continue);
         btnExit.onClick.AddListener(Exit);

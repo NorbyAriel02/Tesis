@@ -175,6 +175,7 @@ GameObject:
   - component: {fileID: 1307736921158264323}
   - component: {fileID: 1307736921158264322}
   - component: {fileID: 4871394800464622547}
+  - component: {fileID: 6227691039263665660}
   m_Layer: 4
   m_Name: IdleBattle
   m_TagString: Battle
@@ -237,6 +238,18 @@ MonoBehaviour:
   - {fileID: 7136307561885082622}
   - {fileID: 6393404158595613368}
   maxHealth: []
+--- !u!114 &6227691039263665660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1307736921158264325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76ad3cec3dac3d541902e6188598e33f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8181771002875621979
 GameObject:
   m_ObjectHideFlags: 0

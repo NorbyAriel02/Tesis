@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class RoadCell : Cell
 {
+    public delegate void RoadDialogue();
+    public static RoadDialogue OnRoadDialogue;
+    public delegate void RoadBattle();
+    public static RoadBattle OnRoadBattle;
+    
     public Dialogue dialogs;
     public DayNightCicle cicle;
     void Start()
@@ -18,12 +23,13 @@ public class RoadCell : Cell
     }
 
     public override void ActionCell()
-    {   
-        //if (!HasMovements)
-        //    if (cicle.IsDay)
-        //        dialogs.StartDialogue(cicle.diceRollNumber);
-        //    else
-        //        StartBattle();
+    {
+        if (HasMovements)
+            return;
 
+        if (cicle.IsDay)
+            dialogs.StartDialogue(cicle.diceRollNumber);
+        else
+            base.ActionCell();
     }
 }

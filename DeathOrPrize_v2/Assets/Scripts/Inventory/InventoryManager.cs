@@ -45,6 +45,13 @@ public class InventoryManager : MonoBehaviour
         else if (Input.GetKeyDown(keyInventory) && inventory.activeSelf)
             CloseInventory();
     }
+    public void OpenOrClose()
+    {
+        if (inventory.activeSelf)
+            CloseInventory();
+        else
+            OpenInventory();
+    }
     public void CloseInventory()
     {
         AkSoundEngine.PostEvent("UI_Exit", this.gameObject);

@@ -6,6 +6,9 @@ public class PlayerMove : MonoBehaviour
 {
     public delegate void Move(int value);
     public static Move OnPlayerMove;
+    public delegate void Arrive();
+    public static Arrive OnPlayerArrive;
+
 
     public int diceValue = 0;
     public float moveSpeed = 5f;
@@ -21,7 +24,7 @@ public class PlayerMove : MonoBehaviour
         CityController.OnExitCity += ExitCity;
         ClickInCell.OnClickMe += SetPosition;
         ClickInCell.OnCursorOver += UpdateCellPosition;
-        Cell.IsPlayerInCell += HasMovements;
+        Cell.IsCellAction += HasMovements;
     }
     private void OnDisable()
     {
@@ -61,7 +64,14 @@ public class PlayerMove : MonoBehaviour
         //transform.position = Vector3.MoveTowards(transform.position, playerMovePoint.position, _moveSpeed * Time.fixedDeltaTime);
         rb.MovePosition(Vector3.MoveTowards(rb.position, playerMovePoint.position, _moveSpeed * Time.fixedDeltaTime));
     }
-
+    IEnumerator OnArrive()
+    {
+        while(transform.position != playerMovePoint.position)
+        {            
+            yield return null;
+        }
+        OnPlayerArrive?.Invoke();
+    }
     void UpdateCellPosition(CellModel cell)
     {
         Vector3 CellPosition = new Vector3(cell.x, cell.y, transform.position.z);
@@ -85,11 +95,12 @@ public class PlayerMove : MonoBehaviour
         {
             int desplazamiento = Mathf.RoundToInt(Vector3.Distance(transform.position, cellPos));
             diceValue -= desplazamiento;
-            AkSoundEngine.PostEvent("Player_Move", this.gameObject);
+            
             _moveSpeed = moveSpeed;
             playerMovePoint.position = cellPos;
             PlayerDataHelper.UpdatePosition(playerMovePoint.position);
             OnPlayerMove?.Invoke(desplazamiento);
+            StartCoroutine(OnArrive());
         }            
     }
     private void ExitCity(float x, float y)
@@ -97,10 +108,10 @@ public class PlayerMove : MonoBehaviour
         _moveSpeed = moveSpeed;
         playerMovePoint.position = new Vector3(x, y, playerMovePoint.position.z);
         PlayerDataHelper.UpdatePosition(playerMovePoint.position);
+        StartCoroutine(OnArrive());
     }
     public void SetPositionNewKingdom(float x, float y, int sizeKingdom)
-    {
-        //cam.ActiveLoadKingdom();
+    {        
         float[] xy = CalculeNewPos(x, y, sizeKingdom);
         playerMovePoint.position = new Vector3(xy[0], xy[1], playerMovePoint.position.z);
         _moveSpeed = moveSpeed * 100;

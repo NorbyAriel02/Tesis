@@ -6,7 +6,15 @@ public class IdleBattleManager : MonoBehaviour
 {
     public delegate void DamageThePlayer(float damage);
     public static DamageThePlayer OnDamageThePlayer;
-        
+    public delegate void PjAttack(float damage);
+    public static PjAttack OnPjAttack;
+    public delegate void EAttack(float damage);
+    public static EAttack OnEAttack;
+    public delegate void BattleStart();
+    public static BattleStart OnBattleStart;
+    public delegate void End();
+    public static End OnBattleEnd;
+
     public Transform Content;
     public GameObject Enemies;    
     public PlayerStats playerStats;
@@ -67,11 +75,12 @@ public class IdleBattleManager : MonoBehaviour
     {
         ActivePanel();
         SetEnemies(indexCell);
+        OnBattleStart?.Invoke();
     }
     public void InBattle()
     {
         inBattle = true;
-        AkSoundEngine.PostEvent("Combat_Start", this.gameObject);
+        
     }
     void SetEnemies(int index)
     {
@@ -133,13 +142,13 @@ public class IdleBattleManager : MonoBehaviour
 
         if (playerStats.stats.currentHealth <= 0)
         {
-            //AkSoundEngine.PostEvent("Player_Dead", this.gameObject);            
+            AkSoundEngine.PostEvent("Player_Dead", this.gameObject);            
             EndBattle();
         }
     }
     void EndBattle()
     {
-        AkSoundEngine.PostEvent("Combat_End", this.gameObject);
+        OnBattleEnd?.Invoke();
         animator.SetBool("Close", true);
         inBattle = false;
     }

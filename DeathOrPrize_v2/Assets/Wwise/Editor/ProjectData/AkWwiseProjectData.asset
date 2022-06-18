@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: e1c684f0bee0494596e19af9ba3b6675
     GuidInternal: 
-    m_lastTime: -8585481215344081063
+    m_lastTime: -8585467875059128254
     List:
     - name: Ambience
       guid: 02f6c9937cb3214a927c9d13d3012a8b
@@ -53,10 +53,13 @@ MonoBehaviour:
       - ElementName: Master Audio Bus
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Enviromental
+        ObjectType: 2
+        guid: f77790b3b983e24fa9eb8672fefdd78f
       - ElementName: Ambience
         ObjectType: 2
         guid: 02f6c9937cb3214a927c9d13d3012a8b
-      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Ambience
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Enviromental\Ambience
     - name: Enemy
       guid: d06f49051824bc41b93cd9622842c6c3
       id: 2299321487
@@ -70,10 +73,30 @@ MonoBehaviour:
       - ElementName: Master Audio Bus
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Enviromental
+        ObjectType: 2
+        guid: f77790b3b983e24fa9eb8672fefdd78f
       - ElementName: Enemy
         ObjectType: 2
         guid: d06f49051824bc41b93cd9622842c6c3
-      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Enemy
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Enviromental\Enemy
+    - name: Enviromental
+      guid: f77790b3b983e24fa9eb8672fefdd78f
+      id: 3922907557
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e1c684f0bee0494596e19af9ba3b6675
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Enviromental
+        ObjectType: 2
+        guid: f77790b3b983e24fa9eb8672fefdd78f
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Enviromental
     - name: Items
       guid: 70c7759b29fc6647b08d8c2ab1ec05c6
       id: 2151963051
@@ -87,10 +110,13 @@ MonoBehaviour:
       - ElementName: Master Audio Bus
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Enviromental
+        ObjectType: 2
+        guid: f77790b3b983e24fa9eb8672fefdd78f
       - ElementName: Items
         ObjectType: 2
         guid: 70c7759b29fc6647b08d8c2ab1ec05c6
-      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Items
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Enviromental\Items
     - name: Main_Character
       guid: 8e38f5c6caf1fe4b92f6ee8d3d335195
       id: 3094055254
@@ -104,10 +130,13 @@ MonoBehaviour:
       - ElementName: Master Audio Bus
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Enviromental
+        ObjectType: 2
+        guid: f77790b3b983e24fa9eb8672fefdd78f
       - ElementName: Main_Character
         ObjectType: 2
         guid: 8e38f5c6caf1fe4b92f6ee8d3d335195
-      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Main_Character
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Enviromental\Main_Character
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
       id: 3803692087
@@ -152,10 +181,13 @@ MonoBehaviour:
       - ElementName: Master Audio Bus
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Enviromental
+        ObjectType: 2
+        guid: f77790b3b983e24fa9eb8672fefdd78f
       - ElementName: UI
         ObjectType: 2
         guid: 3b9fde11813eeb4f88e388496792bb98
-      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\UI
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Enviromental\UI
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     PathAndIcons:
@@ -168,7 +200,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 5051a84958e5ab48a887e3ce797407f9
     GuidInternal: 
-    m_lastTime: -8585481215337640013
+    m_lastTime: -8585467875027216310
     List:
     - name: Main
       guid: 29f19fac8b1f7e4abadcf7929c50ad64
@@ -196,7 +228,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: cc05bc9df8583942a1cb27584f9220ec
     GuidInternal: 
-    m_lastTime: -8585481215357530879
+    m_lastTime: -8585467875072947115
     List:
     - name: Amb_City
       guid: 21f38bb21a66d44d8d5fe2823325ae08
@@ -372,6 +404,43 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Game Engine
+      guid: de0206849064974c88721ae5a97963a9
+      id: 3029910219
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc05bc9df8583942a1cb27584f9220ec
+      - ElementName: Game Engine
+        ObjectType: 4
+        guid: de0206849064974c88721ae5a97963a9
+      Path: Events\Default Work Unit\Game Engine
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Game_Start
+      guid: fb5c4b989927ed4b8448513b9ff43183
+      id: 733168346
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc05bc9df8583942a1cb27584f9220ec
+      - ElementName: Game Engine
+        ObjectType: 4
+        guid: de0206849064974c88721ae5a97963a9
+      - ElementName: Game_Start
+        ObjectType: 3
+        guid: fb5c4b989927ed4b8448513b9ff43183
+      Path: Events\Default Work Unit\Game Engine\Game_Start
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Grunt_Bear
       guid: b0afd350f1d3aa49b17b5e1b4b9f34e8
       id: 695575702
@@ -510,8 +579,8 @@ MonoBehaviour:
         guid: 32f9ec7875681e40a9f31e791e13bd96
       Path: Events\Default Work Unit\Miscellaneous\Item_Move
       maxAttenuation: 0
-      maxDuration: 0.2252
-      minDuration: 0.2252
+      maxDuration: 0.245582
+      minDuration: 0.21256
     - name: Item_Sell
       guid: cf4d2e725dcd36428845cb392906c0a6
       id: 1331156295
@@ -530,8 +599,8 @@ MonoBehaviour:
         guid: cf4d2e725dcd36428845cb392906c0a6
       Path: Events\Default Work Unit\Miscellaneous\Item_Sell
       maxAttenuation: 0
-      maxDuration: 1.431285
-      minDuration: 1.203563
+      maxDuration: 1.312494
+      minDuration: 1.312494
     - name: Item_Trash
       guid: 42a7202a7361594b88dec5f37c29a482
       id: 795457351
@@ -629,6 +698,72 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.722109
       minDuration: 0.54097
+    - name: Pausa_Off
+      guid: 9acf2e813c036a449845af59fa0d8d6f
+      id: 2659475283
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc05bc9df8583942a1cb27584f9220ec
+      - ElementName: Game Engine
+        ObjectType: 4
+        guid: de0206849064974c88721ae5a97963a9
+      - ElementName: Pause
+        ObjectType: 4
+        guid: 22273039c0dc794c9bc99c0f1ac49ecf
+      - ElementName: Pausa_Off
+        ObjectType: 3
+        guid: 9acf2e813c036a449845af59fa0d8d6f
+      Path: Events\Default Work Unit\Game Engine\Pause\Pausa_Off
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Pausa_On
+      guid: efa2e9e5b130734b8d92398297165a7f
+      id: 549173535
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc05bc9df8583942a1cb27584f9220ec
+      - ElementName: Game Engine
+        ObjectType: 4
+        guid: de0206849064974c88721ae5a97963a9
+      - ElementName: Pause
+        ObjectType: 4
+        guid: 22273039c0dc794c9bc99c0f1ac49ecf
+      - ElementName: Pausa_On
+        ObjectType: 3
+        guid: efa2e9e5b130734b8d92398297165a7f
+      Path: Events\Default Work Unit\Game Engine\Pause\Pausa_On
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Pause
+      guid: 22273039c0dc794c9bc99c0f1ac49ecf
+      id: 3092587493
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc05bc9df8583942a1cb27584f9220ec
+      - ElementName: Game Engine
+        ObjectType: 4
+        guid: de0206849064974c88721ae5a97963a9
+      - ElementName: Pause
+        ObjectType: 4
+        guid: 22273039c0dc794c9bc99c0f1ac49ecf
+      Path: Events\Default Work Unit\Game Engine\Pause
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Player
       guid: e82fdcc23a9218419ca1cd5525b48faf
       id: 1069431850
@@ -814,25 +949,8 @@ MonoBehaviour:
     ParentPath: Events\Music
     guid: 37d4fe2ae1105f46ab9a2a5e27f72e99
     GuidInternal: 
-    m_lastTime: -8585481215357526257
+    m_lastTime: -8585467875072947115
     List:
-    - name: Combat_End
-      guid: fdf83580b3c1df4eaae2f923a47f0bed
-      id: 2887812511
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Music
-        ObjectType: 12
-        guid: 37d4fe2ae1105f46ab9a2a5e27f72e99
-      - ElementName: Combat_End
-        ObjectType: 3
-        guid: fdf83580b3c1df4eaae2f923a47f0bed
-      Path: Events\Music\Combat_End
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
     - name: Combat_Start
       guid: 4f82a125001bfa4da04961dd6be92166
       id: 1137411260
@@ -850,6 +968,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Play_City
+      guid: 2c4d58dc317e164b973d47d41b59461b
+      id: 3366829419
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Music
+        ObjectType: 12
+        guid: 37d4fe2ae1105f46ab9a2a5e27f72e99
+      - ElementName: Play_City
+        ObjectType: 3
+        guid: 2c4d58dc317e164b973d47d41b59461b
+      Path: Events\Music\Play_City
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Play_Gameplay
       guid: 8c9b83bcaa02324ebfd60dbaa1ce2994
       id: 3737014274
@@ -864,6 +999,23 @@ MonoBehaviour:
         ObjectType: 3
         guid: 8c9b83bcaa02324ebfd60dbaa1ce2994
       Path: Events\Music\Play_Gameplay
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Menu
+      guid: 7ff9aef46c3f23409a90dee82f2aebfb
+      id: 1278378707
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Music
+        ObjectType: 12
+        guid: 37d4fe2ae1105f46ab9a2a5e27f72e99
+      - ElementName: Play_Menu
+        ObjectType: 3
+        guid: 7ff9aef46c3f23409a90dee82f2aebfb
+      Path: Events\Music\Play_Menu
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -910,8 +1062,74 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 915c272030c00e478b872c280ea5db06
     GuidInternal: 
-    m_lastTime: -8585497410513736694
-    List: []
+    m_lastTime: -8585467875027206300
+    List:
+    - name: Pause
+      guid: 43531bd1d391f04ea32afe959b655b22
+      id: 3092587493
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 915c272030c00e478b872c280ea5db06
+      - ElementName: Pause
+        ObjectType: 9
+        guid: 43531bd1d391f04ea32afe959b655b22
+      Path: States\Default Work Unit\Pause
+      values:
+      - name: None
+        guid: 57d3e672fd799b46af0ff70ad344a3b8
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 915c272030c00e478b872c280ea5db06
+        - ElementName: Pause
+          ObjectType: 9
+          guid: 43531bd1d391f04ea32afe959b655b22
+        - ElementName: None
+          ObjectType: 8
+          guid: 57d3e672fd799b46af0ff70ad344a3b8
+      - name: Off
+        guid: 895d41e48a82ef41b04144a21c89ff16
+        id: 930712164
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 915c272030c00e478b872c280ea5db06
+        - ElementName: Pause
+          ObjectType: 9
+          guid: 43531bd1d391f04ea32afe959b655b22
+        - ElementName: Off
+          ObjectType: 8
+          guid: 895d41e48a82ef41b04144a21c89ff16
+      - name: On
+        guid: b51c14c0c86e784d9c8bec6724ae3029
+        id: 1651971902
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 915c272030c00e478b872c280ea5db06
+        - ElementName: Pause
+          ObjectType: 9
+          guid: 43531bd1d391f04ea32afe959b655b22
+        - ElementName: On
+          ObjectType: 8
+          guid: b51c14c0c86e784d9c8bec6724ae3029
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   - PhysicalPath: States\Music.wwu
     PathAndIcons:
     - ElementName: States
@@ -923,7 +1141,7 @@ MonoBehaviour:
     ParentPath: States\Music
     guid: 5d5df94951fd0446bac86c411b8e9111
     GuidInternal: 
-    m_lastTime: -8585481215337629378
+    m_lastTime: -8585467875027206300
     List:
     - name: Music_States
       guid: c400e05a4faecb4e9fb6cead6aea8972
@@ -1067,9 +1285,9 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8585497410513826769
     List: []
-  ExpandedFileSystemItemIds: 
+  ExpandedFileSystemItemIds: 0200000028000000
   ExpandedWaapiItemIds: 
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
-  currentDataSource: 0
+  currentDataSource: 1
   CurrentPluginConfig: 

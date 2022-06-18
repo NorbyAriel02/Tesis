@@ -37,11 +37,11 @@ public class CityController : MonoBehaviour
     DataFileController fileController = new DataFileController();
     private void OnEnable()
     {
-        CityCell.OnEnterCity += Enter;
+        CityCell.ClicOnDoorCity += Enter;
     }
     private void OnDisable()
     {
-        CityCell.OnEnterCity -= Enter;
+        CityCell.ClicOnDoorCity -= Enter;
     }
     void Start()
     {        
@@ -123,7 +123,6 @@ public class CityController : MonoBehaviour
     {
         UpdateData();        
         panelCity.SetActive(false);
-        LoadKingdom.SetActive(true);
         OnExitCity?.Invoke(doors[door].x, doors[door].y);
     }        
     void UpdateData()
@@ -137,8 +136,7 @@ public class CityController : MonoBehaviour
     {
         hud.EnterCity();
         SetExits(x, y, subTypeId);
-        LoadItems();
-        AkSoundEngine.PostEvent("Amb_City", this.gameObject);        
+        LoadItems();             
         //PlayerDataHelper.UpdateIdKingdom();
         panelCity.SetActive(true);
         OnEnterCity?.Invoke();

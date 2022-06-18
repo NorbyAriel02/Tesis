@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 3571907579613733594}
   - component: {fileID: 2877109622112691694}
   - component: {fileID: 1088157238}
+  - component: {fileID: 2837434097934651700}
   - component: {fileID: 1228779467}
   - component: {fileID: 6389433160008002163}
   m_Layer: 0
@@ -119,8 +120,8 @@ LineRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0.008460999
-        value: 0.1530604
+        time: 0.013706207
+        value: 0.03610179
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -219,6 +220,18 @@ MonoBehaviour:
     armor: 1
     currentHealth: 25
     maxHealth: 25
+--- !u!114 &2837434097934651700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3571907579613733596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc84c0acf6ab5f44997aefa9e0d7739a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!54 &1228779467
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -342,7 +355,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.1, y: 0.1, z: 0.2}
+  m_Size: {x: 0.5, y: 0.5, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3662782573722211624
 GameObject:

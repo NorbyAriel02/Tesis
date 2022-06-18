@@ -51,12 +51,11 @@ public class HUDController : MonoBehaviour
     }
     void Open()
     {        
-        inventory.OpenInventory();
+        inventory.OpenOrClose();
     }
     void RollDice()
     {
         uIDayNight.AddRoll(1);
-
     }
     void Update()
     {

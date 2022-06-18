@@ -15,11 +15,8 @@ public class LoadMaps : MonoBehaviour
     DataFileController fileController = new DataFileController();
     private List<Sprite[]> sheets;
     void Start()
-    {
-        //sheet = fileController.LoadSpriteSheet(@"Map\Tiles\Biomes\Biome1\Biome0");        
-        LoadSpriteSheets();
-        AkSoundEngine.PostEvent("Play_Gameplay", this.gameObject);        
-        AkSoundEngine.PostEvent("Amb_Forest", this.gameObject);
+    {        
+        LoadSpriteSheets();        
         LoadGrid(PlayerDataHelper.GetIdCurrentKingdom());
     }
 

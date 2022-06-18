@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class CityCell : Cell
 {
-    public delegate void EnterCity(float x, float y, int subTypeId);    
-    public static EnterCity OnEnterCity;    
+    public delegate void DoorCity(float x, float y, int subTypeId);    
+    public static DoorCity ClicOnDoorCity;    
     
     void Start()
     {
@@ -18,6 +18,6 @@ public class CityCell : Cell
     void Enter()
     {        
         PlayerDataHelper.UpdateIdCurrentKingdom(cellData.IDkingdom);
-        OnEnterCity?.Invoke(x, y, subtype.id);        
+        ClicOnDoorCity?.Invoke(x, y, subtype.id);        
     }
 }
