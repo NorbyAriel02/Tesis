@@ -51,6 +51,15 @@ public class PathHelper {
             return GetPlatformPath(FilePath);
         }
     }
+    public static string DialogueTutorialDataFile
+    {
+        get
+        {
+            string FilePath = MyAppConfig.DialogueTutorialDataFile;
+
+            return GetPlatformPath(FilePath);
+        }
+    }
     public static string InventoryDataFile
     {
         get

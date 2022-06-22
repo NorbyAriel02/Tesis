@@ -3,39 +3,51 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Data;
+using System;
 
+using UnityEngine.Events;
+using UnityEngine.EventSystems;
+using UnityEngine.Serialization;
 
 public class Dialogue : MonoBehaviour
 {
-    public Button btnNext;
-    public Button btnDesactivar;
-    public float typingTime = 0.05f;
-    public Animator animator;
-    public bool disableDialogue = false;
-    [SerializeField] private GameObject dialoguePanel;
+    public delegate void EndDialogue();
+    public static EndDialogue OnEndDialogue;
+    public FilePathEnum filePath;
+    public float typingTime = 0.05f;    
+    public bool disableDialogue = false;    
     [SerializeField] private Text dialogueText;
     private List<string> dialogueLines;
     private Dictionary<string, List<string>> dialogues;
     private DataFileController df;
     private int lineIndex;
-    void Start()
+    private void OnEnable()
     {
+        Tutorial.OnNextAction += Next;
+        Tutorial.OnStartDialogue += StartDialogue;
+    }
+    private void OnDisable()
+    {
+        Tutorial.OnNextAction -= Next;
+        Tutorial.OnStartDialogue -= StartDialogue;
+    }
+    private void Awake()
+    {
+        LoadDialogue();
+    }
+    void Start()
+    {        
         
-        GetDialogue();
-        btnDesactivar.onClick.AddListener(Desactivar);
-        btnNext.onClick.AddListener(Next);
-        DesactivePanel();
     }
     void Desactivar()
     {
-        disableDialogue = true;
-        animator.SetBool("Close", true);
+        disableDialogue = true;        
     }
-    void GetDialogue()
+    void LoadDialogue()
     {
         df = new DataFileController();
         dialogues = new Dictionary<string, List<string>>();
-        DataTable dt = df.GetData(PathHelper.DialogueDataFile);
+        DataTable dt = df.GetData(FilePath.Get(filePath));
         foreach(DataRow row in dt.Rows)
         {
             if(dialogues.ContainsKey(row[0].ToString()))
@@ -50,12 +62,12 @@ public class Dialogue : MonoBehaviour
             }                
         }
     }
-    void DesactivePanel()
-    {
-        dialoguePanel.gameObject.SetActive(false);        
-    }
+    
     void Next()
     {
+        if (lineIndex >= dialogueLines.Count)
+            return;
+
         if (dialogueText.text == dialogueLines[lineIndex])
         {
             NextDialogueLine();
@@ -67,21 +79,19 @@ public class Dialogue : MonoBehaviour
         }        
     }
 
-    public void StartDialogue(int rollDice)
+    public void StartDialogue(int indexDialogue)
     {
         if (disableDialogue)
             return;
 
-        dialoguePanel.SetActive(true);
-        animator.SetBool("Close", false);
         lineIndex = 0;
-        AlgoQueSeteaElDialogoActual(rollDice);
+        SetCurrentDialogue(indexDialogue);
         StartCoroutine(ShowLine());
     }
-    void AlgoQueSeteaElDialogoActual(int rollDice)
+    void SetCurrentDialogue(int indexDialogue)
     {
         dialogueLines = new List<string>();
-        foreach (string line in dialogues[rollDice.ToString()])
+        foreach (string line in dialogues[indexDialogue.ToString()])
         {
             dialogueLines.Add(line);
         }
@@ -89,14 +99,12 @@ public class Dialogue : MonoBehaviour
     private void NextDialogueLine()
     {
         lineIndex++;
-        if(lineIndex < dialogueLines.Count)
+        if (lineIndex < dialogueLines.Count)
         {
             StartCoroutine(ShowLine());
         }
         else
-        {
-            animator.SetBool("Close", true);
-        }
+            OnEndDialogue?.Invoke();
     }
 
     private IEnumerator ShowLine()
