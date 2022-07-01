@@ -272,7 +272,7 @@ GameObject:
   - component: {fileID: 3571907579757138259}
   - component: {fileID: 3571907579757138258}
   - component: {fileID: 1754335498}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FacePlayer
   m_TagString: FacePlayer
   m_Icon: {fileID: 0}

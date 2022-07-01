@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CellTutorial : Cell
-{    
+{
+    public delegate void ActionCellTutorial();
+    public static ActionCellTutorial OnActionCell;
     void Start()
     {
         base.StartVar();        
@@ -14,6 +16,7 @@ public class CellTutorial : Cell
     }
     void Tutorial()
     {
-        Debug.Log("Turorial");
+        //Debug.Log("Turorial");
+        OnActionCell?.Invoke();
     }
 }

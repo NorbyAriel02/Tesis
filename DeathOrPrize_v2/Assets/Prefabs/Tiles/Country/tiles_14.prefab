@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1453484696014672496}
   - component: {fileID: 6506363710486359979}
   - component: {fileID: -3525757175729011144}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tiles_14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -149,6 +149,7 @@ MonoBehaviour:
     id: 0
     descrip: 
     paleta: 
+  ClickMe: 0
 --- !u!114 &-3525757175729011144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,7 +162,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18669e71474fd4d4dbf3cace6c63af07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 1.5
 --- !u!1 &5021241146063416839
 GameObject:
   m_ObjectHideFlags: 0

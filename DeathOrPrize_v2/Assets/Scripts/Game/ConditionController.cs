@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class ConditionController : MonoBehaviour
 {
+    public bool tutorial;
     public GameObject panelGameOver;
     private PlayerPosition playerPosition;
     private PlayerStats playerStats;
@@ -17,10 +19,15 @@ public class ConditionController : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {        
         if(playerStats.stats.currentHealth <= 0 && !panelGameOver.activeSelf)
         {
-            playerPosition.TrasladePlayerStartPosition();
+            if(tutorial)
+            {
+                PlayerDataHelper.StartNewGame();
+            }
+            else
+                playerPosition.TrasladePlayerStartPosition();
             panelGameOver.SetActive(true);
         }
     }

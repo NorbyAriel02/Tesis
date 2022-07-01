@@ -129,7 +129,13 @@ public class PlayerDataHelper
 
         fileController.SaveEncrypted<PlayerDataModel>(data, PathHelper.PlayerDataFile);
     }
-
+    public static void StartNewGame()
+    {
+        SetTutorialPositionPlayer();
+        Heal();
+        SaveStats(new PlayerStatsModel());
+        InventoryHelper.StartInventoryAndEquipmentFile(PathHelper.InventoryDataFile, PathHelper.EquipmentDataFile);
+    }
     public static string GetCoins()
     {
         DataFileController fileController = new DataFileController();
@@ -143,7 +149,7 @@ public class PlayerDataHelper
 
     public static void SetTutorialPositionPlayer()
     {
-        Vector3 pos = new Vector3(0,0,0);
+        Vector3 pos = new Vector3(-18,0,0);
         DataFileController fileController = new DataFileController();
         PlayerDataModel data = fileController.GetEncryptedData<PlayerDataModel>(PathHelper.PlayerDataFile);
         

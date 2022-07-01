@@ -8,11 +8,19 @@ public class ScalaPingPong : MonoBehaviour
     public float duration = 1.5f;
     public bool repeatable;
     public Vector3 maxScale;
-    Vector3 minScale;
-    
-    IEnumerator Start()
+    public Vector3 minScale;
+
+    private void OnEnable()
     {
-        minScale = transform.localScale;
+        StartCoroutine(AnimarScala());
+    }
+
+    private void OnDisable()
+    {
+        StopCoroutine(AnimarScala());
+    }
+    IEnumerator AnimarScala()
+    {        
         while(repeatable)
         {
             yield return RepeatLeap(minScale, maxScale, duration);

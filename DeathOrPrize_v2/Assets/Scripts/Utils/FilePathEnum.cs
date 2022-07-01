@@ -15,6 +15,9 @@ public class FilePath
         if (file == FilePathEnum.DialoguesTutorial)
             return PathHelper.DialogueTutorialDataFile;
 
+        if (file == FilePathEnum.DialoguesGameplay)
+            return PathHelper.DialogueDataFile;
+
         return string.Empty;
     }
 }

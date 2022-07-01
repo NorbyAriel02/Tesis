@@ -13,6 +13,8 @@ public class Dialogue : MonoBehaviour
 {
     public delegate void EndDialogue();
     public static EndDialogue OnEndDialogue;
+    public delegate void EventStartDialogue();
+    public static EventStartDialogue OnStartDialogue;
     public FilePathEnum filePath;
     public float typingTime = 0.05f;    
     public bool disableDialogue = false;    
@@ -25,11 +27,13 @@ public class Dialogue : MonoBehaviour
     {
         Tutorial.OnNextAction += Next;
         Tutorial.OnStartDialogue += StartDialogue;
+        DialogueManager.OnNextAction += Next;
     }
     private void OnDisable()
     {
         Tutorial.OnNextAction -= Next;
         Tutorial.OnStartDialogue -= StartDialogue;
+        DialogueManager.OnNextAction -= Next;
     }
     private void Awake()
     {
@@ -87,6 +91,7 @@ public class Dialogue : MonoBehaviour
         lineIndex = 0;
         SetCurrentDialogue(indexDialogue);
         StartCoroutine(ShowLine());
+        OnStartDialogue?.Invoke();
     }
     void SetCurrentDialogue(int indexDialogue)
     {

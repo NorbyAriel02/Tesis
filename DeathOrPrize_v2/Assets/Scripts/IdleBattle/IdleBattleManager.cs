@@ -47,13 +47,13 @@ public class IdleBattleManager : MonoBehaviour
     private void OnEnable()
     {
         LevelController.StartLevelSystem += SetLevelSystem;
-        Cell.OnAction += StartBattle;
+        //Cell.OnAction += StartBattle;
         
     }
     private void OnDisable()
     {
         LevelController.StartLevelSystem -= SetLevelSystem;
-        Cell.OnAction -= StartBattle;
+        //Cell.OnAction -= StartBattle;
     }
     void SetParent()
     {
@@ -113,7 +113,6 @@ public class IdleBattleManager : MonoBehaviour
                 if (CanAttack(ref eTimerAttack, enemiesAttackSpeed[index]))
                 {
                     EnemyAttack(index);
-
                 }
 
             enemiesTimerAttack[index] = eTimerAttack;

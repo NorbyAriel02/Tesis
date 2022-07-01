@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3027580976929038820}
   - component: {fileID: 3767988790563348157}
   - component: {fileID: 5113479415909040421}
+  - component: {fileID: 4921288222923195962}
   m_Layer: 0
   m_Name: Game
   m_TagString: Game
@@ -46,6 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa0a20f6945d24440ba8f1c816f8f2e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tutorial: 0
   panelGameOver: {fileID: 0}
 --- !u!114 &3027580976929038820
 MonoBehaviour:
@@ -90,3 +92,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26e690310a79dca419e9bafff4b084fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4921288222923195962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2292604269069102997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4894c02eac58654cb0eecda19673032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: dfdd3e53b7a42584fa0d12d5b4ce2634, type: 2}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 

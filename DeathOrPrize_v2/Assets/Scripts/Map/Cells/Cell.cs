@@ -33,12 +33,8 @@ public class Cell : MonoBehaviour
     public virtual void ActionCell()
     {
         if (!HasMovements)
-            battleManager.StartBattle(index);
-
-        
+            battleManager.StartBattle(index);        
     }
-
-
     public bool HasMovements
     {
         get
@@ -55,7 +51,7 @@ public class Cell : MonoBehaviour
     {
         if (other.tag.Equals("FacePlayer") && ClickMe)
             ActionCell();
-
+                
         ClickMe = false;
     }
 

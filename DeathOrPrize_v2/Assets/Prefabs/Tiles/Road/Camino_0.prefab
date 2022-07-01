@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 3141071577498205066}
   - component: {fileID: 6531906213638126846}
   - component: {fileID: 3347385864306665873}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Camino_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -194,7 +194,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18669e71474fd4d4dbf3cace6c63af07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 1.5
 --- !u!114 &3347385864306665873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,6 +243,7 @@ MonoBehaviour:
     id: 0
     descrip: 
     paleta: 
+  ClickMe: 0
   dialogs: {fileID: 0}
   cicle: {fileID: 0}
 --- !u!1001 &1052948395960182722

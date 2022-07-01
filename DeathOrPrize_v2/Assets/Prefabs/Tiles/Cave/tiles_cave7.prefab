@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7105591841725476830}
   - component: {fileID: 3200100947506865653}
   - component: {fileID: 1306565639248916639}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tiles_cave7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,7 +112,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18669e71474fd4d4dbf3cace6c63af07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 1.5
 --- !u!114 &1306565639248916639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,6 +161,7 @@ MonoBehaviour:
     id: 0
     descrip: 
     paleta: 
+  ClickMe: 0
   IDboss: 0
 --- !u!1 &7105591843550723887
 GameObject:

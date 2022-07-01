@@ -22,6 +22,6 @@ public class ScreemGameOver : MonoBehaviour
     void Continue()
     {
         PlayerDataHelper.Heal();
-        SceneManager.LoadScene("Level");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

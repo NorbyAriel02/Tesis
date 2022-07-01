@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class HUDController : MonoBehaviour
 {
+    public delegate void Inventory();
+    public static Inventory OnInventoryOpenOrClose;
     public Button btnInventory;
     public Image barHealth;
     public Text TextHealth;
@@ -52,12 +54,10 @@ public class HUDController : MonoBehaviour
     void Open()
     {        
         inventory.OpenOrClose();
+        OnInventoryOpenOrClose?.Invoke();
     }
     void RollDice()
     {
         uIDayNight.AddRoll(1);
-    }
-    void Update()
-    {
     }
 }

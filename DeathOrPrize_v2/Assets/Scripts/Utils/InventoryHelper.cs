@@ -8,6 +8,8 @@ public class InventoryHelper
     {
         DataFileController fileController = new DataFileController();
         List<ItemProperties> items = fileController.GetEncryptedData<List<ItemProperties>>(path);
+        if (items == null)
+            items = new List<ItemProperties>();
 
         return items;
     }

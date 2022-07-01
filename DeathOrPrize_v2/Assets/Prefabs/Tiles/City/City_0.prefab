@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3791576295910031041}
   - component: {fileID: -8740608250520895766}
   - component: {fileID: 4700116809530725245}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: City_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -111,7 +111,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18669e71474fd4d4dbf3cace6c63af07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 1.5
 --- !u!114 &4700116809530725245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,6 +160,7 @@ MonoBehaviour:
     id: 0
     descrip: 
     paleta: 
+  ClickMe: 0
 --- !u!1001 &6438155113001909290
 PrefabInstance:
   m_ObjectHideFlags: 0
