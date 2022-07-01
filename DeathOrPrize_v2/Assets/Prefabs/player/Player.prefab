@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 2837434097934651700}
   - component: {fileID: 1228779467}
   - component: {fileID: 6389433160008002163}
+  - component: {fileID: 2251237725400482640}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -261,6 +262,30 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 6, y: 6, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2251237725400482640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3571907579613733596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4894c02eac58654cb0eecda19673032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: dfdd3e53b7a42584fa0d12d5b4ce2634, type: 2}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
 --- !u!1 &3571907579757138260
 GameObject:
   m_ObjectHideFlags: 0

@@ -133,6 +133,7 @@ public class PlayerDataHelper
     {
         SetTutorialPositionPlayer();
         Heal();
+        RestCoints();
         SaveStats(new PlayerStatsModel());
         InventoryHelper.StartInventoryAndEquipmentFile(PathHelper.InventoryDataFile, PathHelper.EquipmentDataFile);
     }
@@ -144,6 +145,15 @@ public class PlayerDataHelper
             return data.coins.ToString();
 
         return "0";
+    }
+    public static int GetCountCoins()
+    {
+        DataFileController fileController = new DataFileController();
+        PlayerDataModel data = fileController.GetEncryptedData<PlayerDataModel>(PathHelper.PlayerDataFile);
+        if (data != null)
+            return data.coins;
+
+        return 0;
     }
     #endregion
 
@@ -197,6 +207,17 @@ public class PlayerDataHelper
         if (data != null)
         {
             data.stats.currentHealth -= value;
+        }
+
+        fileController.SaveEncrypted<PlayerDataModel>(data, PathHelper.PlayerDataFile);
+    }
+    public static void RestCoints()
+    {
+        DataFileController fileController = new DataFileController();
+        PlayerDataModel data = fileController.GetEncryptedData<PlayerDataModel>(PathHelper.PlayerDataFile);
+        if (data != null)
+        {
+            data.coins = 0;
         }
 
         fileController.SaveEncrypted<PlayerDataModel>(data, PathHelper.PlayerDataFile);

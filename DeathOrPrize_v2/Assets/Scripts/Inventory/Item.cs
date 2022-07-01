@@ -10,7 +10,6 @@ public class Item : MonoBehaviour
     public Image image;
     public Text txtValue;
     public Text txtPeso;
-    private AudioSource audioSource;
     private SpriteList weaponList;
     private SpriteList armorList;    
     
@@ -23,8 +22,7 @@ public class Item : MonoBehaviour
         
     }
     void ReferenceComponents()
-    {
-        audioSource = GetComponent<AudioSource>();
+    {        
         weaponList = GameObject.FindGameObjectWithTag("Weapons").GetComponent<SpriteList>();
         armorList = GameObject.FindGameObjectWithTag("Armors").GetComponent<SpriteList>();
     }

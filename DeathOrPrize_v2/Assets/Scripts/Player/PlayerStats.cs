@@ -23,6 +23,7 @@ public class PlayerStats : MonoBehaviour
         LevelController.StartLevelSystem += SetLevelSystem;
         Slot.OnEquipedArmor += SetArmor;
         Slot.OnEquipedWeapon += SetWeapon;
+        CityCell.ClicOnDoorCity += Heal;
     }
     private void OnDisable()
     {
@@ -47,20 +48,27 @@ public class PlayerStats : MonoBehaviour
     private void LevelSystem_OnLevelChanged(object sender, System.EventArgs e)
     {
         stats.level = levelSystem.LevelNumber;
+        stats.maxHealth = stats.maxHealth + (levelSystem.LevelNumber * 5);
         PlayerDataHelper.SaveStats(stats);
     }
-    void SetArmor(ItemProperties item)
+    public void SetArmor(ItemProperties item)
     {
         stats.armor = item.armor;
+        PlayerDataHelper.SaveStats(stats);
     }
-    void SetWeapon(ItemProperties item)
+    public void SetWeapon(ItemProperties item)
     {
         stats.damage = item.damageBase;
         stats.attackSpeed = item.attackSpeedEquipped;
         attackSpeed = stats.attackSpeed;
         attackSpeedTimer = 0f;
+        PlayerDataHelper.SaveStats(stats);
     }
-
+    public void Heal(float x, float y, int subTypeId)
+    {
+        stats.currentHealth = stats.maxHealth;        
+        PlayerDataHelper.SaveStats(stats);
+    }
     //public void SetStats()
     //{    
     //    for(int x = 0; x < equipment.items.Count; x++)
@@ -72,7 +80,7 @@ public class PlayerStats : MonoBehaviour
     //            attackSpeed = stats.attackSpeed;
     //            attackSpeedTimer = 0f;
     //        }
-                
+
 
     //        if (equipment.items[x].tItem == TypeItemInventory.Armor)
     //            stats.armor = equipment.items[x].armor;

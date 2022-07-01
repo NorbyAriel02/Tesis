@@ -3,61 +3,59 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+//la finalidad de este scipt es que si el content esta actigo actualice
+//la info del player con los objetos equipaso
 
-public class UpdateStatPlayer : MonoBehaviour, IDropHandler
+public class UpdateStatPlayer : MonoBehaviour
 {
-    public UIStatsPlayer ui;
-    public PlayerStats stats;
-    private Slot slot;
+    public delegate void ChangeStats(ItemProperties _armor, ItemProperties _weapon);
+    public static ChangeStats OnChangeStats;
+
+    public GameObject[] slots;
+    public ItemProperties weapon;
+    public ItemProperties armor;
+    public PlayerStats stats;    
     void Awake()
     {
-        slot = GetComponent<Slot>();
+        slots = ChildrenController.GetChildren(gameObject);
+        
         stats = GetScript.Type<PlayerStats>("Player");
     }
     private void OnEnable()
     {
-        //UpdateUI();
-        //stats.SetStats(); 
+        slots = ChildrenController.GetChildren(gameObject);
+        DragAndDrop.OnChangeStats += UpdateStats;
+        UpdateStats();
     }
-    void OnDisable()
+    private void OnDisable()
     {
-        //UpdateUI();
-        //stats.SetStats();
+        DragAndDrop.OnChangeStats -= UpdateStats;
     }
-    public void OnDrop(PointerEventData eventData)
+    void UpdateStats()
     {
-        //UpdateUI();
-        //stats.SetStats();
+        LoadItem();
+        stats.SetArmor(armor);
+        stats.SetWeapon(weapon);
+        OnChangeStats?.Invoke(armor, weapon);
     }
 
-    void UpdateUI()
+    void LoadItem()
     {
-        //GameObject child = ChildrenController.GetChild(gameObject);
-        //if (child == null)
-        //{
-        //    UpdateEmtyUI();
-        //    return;
-        //}
-            
-        //Item i = child.GetComponent<Item>();
-        //if (i.properties.tItem == TypeItemInventory.Weapon)
-        //{
-        //    ui.SetTextWeapon(i.properties.damageBase.ToString(), i.properties.attackSpeedEquipped.ToString());
-        //}
-        //if (i.properties.tItem == TypeItemInventory.Armor)
-        //{
-        //    ui.SetTextArmor(i.properties.armor.ToString());
-        //}
-    }
-    void UpdateEmtyUI()
-    {
-        //if (slot == null)
-        //    return;
+        weapon = new ItemProperties();
+        armor = new ItemProperties();
+        foreach (GameObject slot in slots)
+        {
+            GameObject goItem = ChildrenController.GetChild(slot);
+            if (goItem != null)
+            {
+                Item pItem = goItem.GetComponent<Item>();
+                if (pItem.properties.tItem == TypeItemInventory.Armor)
+                    armor = pItem.properties;
 
-        //if (slot.tSlot == TypeSlot.SlotWeapon)
-        //    ui.SetTextWeapon("0", "0");
+                if (pItem.properties.tItem == TypeItemInventory.Weapon)
+                    weapon = pItem.properties;
 
-        //if (slot.tSlot == TypeSlot.SlotArmor)
-        //    ui.SetTextArmor("0");
+            }
+        }
     }
 }

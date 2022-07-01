@@ -5,13 +5,19 @@ using UnityEngine.UI;
 
 public class SmithyController : MonoBehaviour
 {
+    public delegate void EventForja();
+    public static EventForja OnForja;
+    public int cost = 10;
     public Button btnExit;
     public Button btnForjar;
+    public GameObject dialogue;
     public GameObject panelSmithy;
     public GameObject panelMenu;
     public GameObject panelItems;
     public GameObject prefabItemTemplate;
     public GameObject[] Slots;
+    private float delay = 3;
+    private float timer = 3;
     void Start()
     {
         panelSmithy.SetActive(false);
@@ -44,9 +50,14 @@ public class SmithyController : MonoBehaviour
     {
         
         List<ItemProperties> items = GetItems();
+        
+
         if(ValidarItems(items))
-        {
+        {            
             AkSoundEngine.PostEvent("Item_Forge", this.gameObject);
+            int coints = PlayerDataHelper.GetCountCoins();
+            int totalCost = (items[0].level * cost);
+            PlayerDataHelper.UpdateCoins(coints-totalCost);
             ItemProperties item = Utilitis.GetBestItem(items[0]);
             Slots[0].GetComponent<Slot>().empty = true;
             Slots[1].GetComponent<Slot>().empty = true;
@@ -56,6 +67,7 @@ public class SmithyController : MonoBehaviour
             Slots[2].GetComponent<Slot>().empty = false;            
             Item scriptItem = gItem.GetComponent<Item>();
             scriptItem.SetItem(item);
+            OnForja?.Invoke();
         }
         else
             AkSoundEngine.PostEvent("Field_Error", this.gameObject);
@@ -70,6 +82,14 @@ public class SmithyController : MonoBehaviour
         if (items[0].level != items[1].level)
         {
             Debug.Log("Necesitas 2 items iguales para poder forjar uno superior");
+            return false;
+        }
+        int coints = PlayerDataHelper.GetCountCoins();
+        int _cost = (items[0].level * cost);
+        if (_cost > coints)
+        {            
+            timer = delay;
+            dialogue.SetActive(true);
             return false;
         }
         return true;
@@ -91,5 +111,12 @@ public class SmithyController : MonoBehaviour
         }
 
         return items;
+    }
+    private void Update()
+    {
+        if (timer < 0)
+            dialogue.SetActive(false);
+
+        timer -= Time.deltaTime;
     }
 }

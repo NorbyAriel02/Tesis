@@ -54,8 +54,9 @@ public class Slot : MonoBehaviour, IDropHandler
                 this.empty = false;
             }
         }
+        
     }
-
+    
     bool ValidateTypeSlot(ItemProperties item)
     {
         if (tSlot == TypeSlot.NoDropSlot)

@@ -29,8 +29,8 @@ public class MyAppConfig
     public static string BossesDataFile { get { return "ADB.qti"; } }
     public static string NeighborDataFile { get { return "ADN.qti"; } }
     public static string BiomesDataFile { get { return "typesOfBiomes.qti"; } }
-    public static string DialogueDataFile { get { return "dialogue.csv"; } }
-    public static string DialogueTutorialDataFile { get { return "dialogueTutorial.csv"; } }
+    public static string DialogueDataFile { get { return "Dialogue.csv"; } }
+    public static string DialogueTutorialDataFile { get { return "DialogueTutorial.csv"; } }
     public static string InventoryDataFile { get { return "Inventory.qti"; } }
     public static string EquipmentDataFile { get { return "Equipment.qti"; } }
     public static string MarketDataFile { get { return "Market.qti"; } }

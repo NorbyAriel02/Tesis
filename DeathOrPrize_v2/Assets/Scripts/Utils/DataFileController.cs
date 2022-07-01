@@ -3,7 +3,6 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Runtime.Serialization;
 using System.Data;
 using UnityEngine;
-using ExcelDataReader;
 
 public class DataFileController 
 {
@@ -104,32 +103,36 @@ public class DataFileController
 		DataTable dt = new DataTable();		
 		try
 		{
-            using (var stream = File.Open(path, FileMode.Open, FileAccess.Read))
-            {
-                using (var reader = ExcelReaderFactory.CreateCsvReader(stream))
-                {
-					var result = reader.AsDataSet();
-                    // Ejemplos de acceso a datos
-                    dt = result.Tables[0];
-                }
-			}
+			using (var reader = new StreamReader(path))
+			{				
+				while (!reader.EndOfStream)
+				{
+					var line = reader.ReadLine();
+					var values = line.Split('|');
+					if (dt.Columns.Count == 0)
+						dt = CreateCol(dt, values);
 
-            //using (var stream = File.Open(path, FileMode.Open, FileAccess.Read))
-            //{
-            //	using (var reader = ExcelReaderFactory.CreateReader(stream))
-            //	{
-            //		var result = reader.AsDataSet();
-            //		// Ejemplos de acceso a datos
-            //		dt = result.Tables[0];					
-            //	}
-            //}
-        }
+					DataRow row = dt.NewRow();
+					for (int col = 0; col < dt.Columns.Count; col++)
+						row[col] = values[col];
+
+					dt.Rows.Add(row);
+				}
+			}
+		}
 		catch (System.Exception e)
-		{
-			Debug.Log(e.Message + " " + e.StackTrace);
+		{			
+			Logger.WriteLog(e.Message + " " + e.StackTrace);
 		}
 		return dt;
 	}
+	DataTable CreateCol(DataTable dt, string[] cols)
+    {
+		for (int x = 0; x < cols.Length; x++)
+			dt.Columns.Add("col" + x);
+
+		return dt;
+    }
 	public Sprite LoadSprite(string imageName, string spriteName)
 	{
 		Sprite[] all = Resources.LoadAll<Sprite>(imageName);

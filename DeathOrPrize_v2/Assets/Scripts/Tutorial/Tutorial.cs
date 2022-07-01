@@ -10,12 +10,12 @@ public class Tutorial : MonoBehaviour
     public delegate void Next();
     public static Next OnNextAction;
 
-    public PlayerMove pm;
     public Button btnSiguiente;
     public Button btnFinTutorial;
     public Text textMsj;
     public int StepTutorial = 0;
     public Transform playerTarget;
+    public Transform playerT;
     public GameObject itemDrop;
     public GameObject panel;    
     public GameObject[] signs;
@@ -63,10 +63,10 @@ public class Tutorial : MonoBehaviour
         //print("Invoca con el id " + index);
         panel.SetActive(true);
         if(index == 2)
-        {
-            pm.moveSpeed = 200000;
+        {            
             StepTutorial = 5;
-            playerTarget.position = PlayerDataHelper.GetStartPosition();            
+            playerTarget.position = PlayerDataHelper.GetStartPosition();
+            playerT.position = playerTarget.position;
         }        
         OnStartDialogue?.Invoke(index);
     }

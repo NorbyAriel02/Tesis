@@ -5,6 +5,11 @@ using UnityEngine.UI;
 
 public class MarketController : MonoBehaviour
 {
+    public delegate void EventSell();
+    public static EventSell OnSell;
+    public delegate void EventBuy();
+    public static EventBuy OnBuy;
+
     public bool GenereItemRamdom;
     public bool IsClose;
     public GameObject prefabItemTemplate;
@@ -29,6 +34,7 @@ public class MarketController : MonoBehaviour
     private void OnEnable()
     {
         IsClose = false;
+        GenerarItemsMarket();
         LoadInventoryMarket();
     }
     void LoadInventoryMarket()
@@ -40,11 +46,12 @@ public class MarketController : MonoBehaviour
     }
     void GenerarItemsMarket()
     {
+        int level = PlayerDataHelper.GetIdCurrentKingdom();
         int count = SlotMarket.Length / 2;
         List<ItemProperties> items = new List<ItemProperties>();
         for(int x = 0; x < count; x++)
         {
-            ItemProperties item = Utilitis.GetRandomItem(1, Owner.seller);
+            ItemProperties item = Utilitis.GetRandomItem(level, Owner.seller);
             items.Add(item);
         }
         InventoryHelper.Save(items, PathHelper.MarketDataFile);
@@ -78,6 +85,7 @@ public class MarketController : MonoBehaviour
         PlayerDataHelper.UpdateCoins((current + itemSell.value));
         List<ItemProperties> items = InventoryHelper.GetListItemsFromPanel(SlotMarket);
         InventoryHelper.Save(items, PathHelper.MarketDataFile);
+        OnSell?.Invoke();
     }
     public bool Buy(ItemProperties itemBuy)
     {        
@@ -96,11 +104,9 @@ public class MarketController : MonoBehaviour
             YouDontHaveEnough();
             return false;
         }
-
+        OnBuy?.Invoke();
         return true;
-
     }
-
     void YouDontHaveEnough()
     {
         AkSoundEngine.PostEvent("Field_Error", this.gameObject);

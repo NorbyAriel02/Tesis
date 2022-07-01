@@ -320,12 +320,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69665ffa12c205445941c806a36d0e2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pm: {fileID: 571794869}
   btnSiguiente: {fileID: 1538835405}
   btnFinTutorial: {fileID: 112983159}
   textMsj: {fileID: 163920971}
   StepTutorial: 0
   playerTarget: {fileID: 2069455840}
+  playerT: {fileID: 571794869}
   itemDrop: {fileID: 896591600}
   panel: {fileID: 1377308063}
   signs:
@@ -1351,17 +1351,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81f2cdc22e48e5541a9c5fee906bc4ad, type: 3}
---- !u!114 &571794869 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3571907579613733594, guid: 81f2cdc22e48e5541a9c5fee906bc4ad, type: 3}
+--- !u!4 &571794869 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3571907579613733595, guid: 81f2cdc22e48e5541a9c5fee906bc4ad, type: 3}
   m_PrefabInstance: {fileID: 571794868}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bdb38130e348b104d89710044a562b20, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &608376652
 GameObject:
   m_ObjectHideFlags: 0
@@ -1700,7 +1694,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -7145,7 +7139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:

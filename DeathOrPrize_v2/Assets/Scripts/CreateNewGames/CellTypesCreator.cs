@@ -21,6 +21,6 @@ public class CellTypesCreator : MonoBehaviour
             return;
 
         fileController.SaveEncrypted<List<CellType>>(cellTypes, PathHelper.CellTypesDataFile);
-        Debug.Log("Listo tipos");
+        //Debug.Log("Listo tipos");
     }
 }

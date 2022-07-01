@@ -10,7 +10,7 @@ public class PlayerSound : MonoBehaviour
     }
     private void OnDisable()
     {
-        PlayerMove.OnPlayerMove += Move;
+        PlayerMove.OnPlayerMove -= Move;
     }
     void Start()
     {

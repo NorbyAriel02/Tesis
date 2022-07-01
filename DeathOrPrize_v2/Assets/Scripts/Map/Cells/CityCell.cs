@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CityCell : Cell
-{
+{    
     public delegate void DoorCity(float x, float y, int subTypeId);    
     public static DoorCity ClicOnDoorCity;    
     

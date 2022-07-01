@@ -30,7 +30,7 @@ public class QuestHelper
     static List<string> GetListMessage(string value)
     {
         List<string> lMessage = new List<string>();
-        string[] vMessage = value.Split('|');
+        string[] vMessage = value.Split('#');
         for(int index = 0; index < vMessage.Length; index++)
         {
             lMessage.Add(vMessage[index]);

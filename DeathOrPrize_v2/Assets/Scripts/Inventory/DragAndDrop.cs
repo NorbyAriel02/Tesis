@@ -5,6 +5,9 @@ using UnityEngine.EventSystems;
 
 public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IDragHandler, IEndDragHandler, IBeginDragHandler
 {
+    public delegate void ChangeStats();
+    public static ChangeStats OnChangeStats;
+
     public Transform fatherMaster;
     public Canvas canvasInventario;
     private RectTransform rectTransform;
@@ -16,8 +19,10 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IDragHandler, IEn
     {
         fatherMaster = GetFatherMaster();
         rectTransform = GetComponent<RectTransform>();
-        canvasInventario = FindObjectOfType<Canvas>();
+        canvasInventario = GameObject.FindGameObjectWithTag("Canvas").GetComponent<Canvas>();
         canvasGroup = GetComponentInParent<CanvasGroup>();
+        if (canvasInventario != null)
+            Logger.WriteLog(canvasInventario.name + "  Es el canvas es de la escena " + SceneHelper.GetNameSceneActive());
     }
     Transform GetFatherMaster()
     {
@@ -28,12 +33,10 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IDragHandler, IEn
         }
         return father;
     }
-
     private void Update()
     {
         
     }
-
     public void OnBeginDrag(PointerEventData eventData)
     {
         canvasGroup.alpha = .6f;
@@ -57,7 +60,8 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IDragHandler, IEn
             if (transform.parent.gameObject.GetComponent<Slot>() != null)
                 transform.parent.gameObject.GetComponent<Slot>().empty = false;            
         }
-            
+        
+        OnChangeStats?.Invoke();
     }
     public void OnDrag(PointerEventData eventData)
     {        

@@ -49,21 +49,29 @@ public class Dialogue : MonoBehaviour
     }
     void LoadDialogue()
     {
-        df = new DataFileController();
-        dialogues = new Dictionary<string, List<string>>();
-        DataTable dt = df.GetData(FilePath.Get(filePath));
-        foreach(DataRow row in dt.Rows)
+        try
         {
-            if(dialogues.ContainsKey(row[0].ToString()))
+            
+            df = new DataFileController();
+            dialogues = new Dictionary<string, List<string>>();
+            DataTable dt = df.GetData(FilePath.Get(filePath));
+            foreach (DataRow row in dt.Rows)
             {
-                dialogues[row[0].ToString()].Add(row[2].ToString());
-            }
-            else
-            {
-                List<string> dialogueLines = new List<string>();
-                dialogueLines.Add(row[2].ToString());
-                dialogues.Add(row[0].ToString(), dialogueLines);
-            }                
+                if (dialogues.ContainsKey(row[0].ToString()))
+                {
+                    dialogues[row[0].ToString()].Add(row[2].ToString());            
+                }
+                else
+                {
+                    List<string> dialogueLines = new List<string>();
+                    dialogueLines.Add(row[2].ToString());
+                    dialogues.Add(row[0].ToString(), dialogueLines);            
+                }
+            }            
+        }
+        catch(Exception ex)
+        {
+            Logger.WriteLog(ex.Message);
         }
     }
     
