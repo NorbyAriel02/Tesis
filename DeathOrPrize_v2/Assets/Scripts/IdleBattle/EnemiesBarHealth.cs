@@ -25,4 +25,10 @@ public class EnemiesBarHealth : MonoBehaviour
     {
         health[index].fillAmount = currentHealth / maxHealth[index];
     }
+
+    public void UpdateHealthBoss(int index, float currentHealth)
+    {
+        //un work at run
+        health[index].fillAmount = currentHealth / maxHealth[0];
+    }
 }

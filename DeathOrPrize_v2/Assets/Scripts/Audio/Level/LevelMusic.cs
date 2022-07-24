@@ -7,7 +7,9 @@ public class LevelMusic : MonoBehaviour
     private void OnEnable()
     {
         IdleBattleManager.OnBattleStart += Battle;
+        BossQuest.OnBattleStart += Battle;
         IdleBattleManager.OnBattleEnd += GamePlay;
+        BossQuest.OnBattleEnd += GamePlay;
         CityController.OnEnterCity += City;
         CityController.OnExitCity += GamePlay;
         MenuPausa.OnMenuOpen += MenuOn;
@@ -33,7 +35,8 @@ public class LevelMusic : MonoBehaviour
     }
     void Battle()
     {
-        AkSoundEngine.PostEvent("Combat_Start", this.gameObject);
+        if(this.gameObject != null)
+            AkSoundEngine.PostEvent("Combat_Start", this.gameObject);
     }
     void GamePlay(float x = 0f, float y = 0f)
     {

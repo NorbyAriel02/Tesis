@@ -6,10 +6,6 @@ public class IdleBattleManager : MonoBehaviour
 {
     public delegate void DamageThePlayer(float damage);
     public static DamageThePlayer OnDamageThePlayer;
-    public delegate void PjAttack(float damage);
-    public static PjAttack OnPjAttack;
-    public delegate void EAttack(float damage);
-    public static EAttack OnEAttack;
     public delegate void BattleStart();
     public static BattleStart OnBattleStart;
     public delegate void End();
@@ -22,6 +18,8 @@ public class IdleBattleManager : MonoBehaviour
     public Animator animator;
     public int itenDropCount = 1;
     public int ExpForEnemy = 10;
+    public string DataFile = "inventory";
+
     private bool inBattle = false;
     private Transform CameraTranform;
     private GameObject[] goEnemies;
@@ -34,26 +32,31 @@ public class IdleBattleManager : MonoBehaviour
     private LevelSystem levelSystem;
     DataFileController fileController = new DataFileController();
     private EnemiesBarHealth enemiesBarHealth;
+    private SpriteEnemiesController spriteEC;
     void Start()
     {
+        spriteEC = GetComponent<SpriteEnemiesController>();
         SetParent();       
         playerStats = GetScript.Type<PlayerStats>("Player");
         DesactivePanel();
         goEnemies = ChildrenController.GetChildren(Enemies);
         enemiesBarHealth = GetComponent<EnemiesBarHealth>();
-        int kingdom = PlayerDataHelper.GetIdCurrentKingdom();
+        UpdateKingdom();
+    }
+    public void UpdateKingdom()
+    {
+        int kingdom = DataHelper.GetIdCurrentKingdom();
         enemiesXcell = fileController.GetEncryptedData<List<EnemiesXcellModel>>(PathHelper.EnemiesDataFile(kingdom));
     }
     private void OnEnable()
     {
         LevelController.StartLevelSystem += SetLevelSystem;
-        //Cell.OnAction += StartBattle;
-        
+        LoadMaps.OnLoadMap += UpdateKingdom;
     }
     private void OnDisable()
     {
         LevelController.StartLevelSystem -= SetLevelSystem;
-        //Cell.OnAction -= StartBattle;
+        LoadMaps.OnLoadMap += UpdateKingdom;
     }
     void SetParent()
     {
@@ -75,12 +78,12 @@ public class IdleBattleManager : MonoBehaviour
     {
         ActivePanel();
         SetEnemies(indexCell);
+        spriteEC.SetSprites(enemiesXcell[indexCell].enemies, goEnemies);
         OnBattleStart?.Invoke();
     }
     public void InBattle()
     {
-        inBattle = true;
-        
+        inBattle = true;        
     }
     void SetEnemies(int index)
     {
@@ -121,7 +124,7 @@ public class IdleBattleManager : MonoBehaviour
         }
 
         if (playerStats.stats.currentHealth > 0)
-            if (CanAttack(ref playerStats.attackSpeedTimer, playerStats.attackSpeed))
+            if (CanAttack(ref playerStats.stats.equipment.attackSpeedTimer, playerStats.stats.equipment.attackSpeed))
             {
                 PlayerAttack();
             }
@@ -162,7 +165,7 @@ public class IdleBattleManager : MonoBehaviour
     {
         GameObject go = Instantiate(prefabDropTemplate);
         Drop reward = go.GetComponent<Drop>();
-        reward.item = Utilitis.GetRandomItem(level, Owner.player);
+        reward.item = Utilitis.GetRandomItem(level, Owner.player, DataFile);
         Vector3 playerPos = PlayerDataHelper.GetVectorPosition();
         go.transform.position = new Vector3(playerPos.x + 1, playerPos.y, playerPos.z);
     }    
@@ -170,7 +173,7 @@ public class IdleBattleManager : MonoBehaviour
     {        
         AkSoundEngine.PostEvent("Player_GetClawsDamage", this.gameObject);
         
-        float d = playerStats.stats.armor;
+        float d = playerStats.stats.equipment.armor;
         float a = enemiesXcell[currentGridIndex].enemies[index].damage;        
 
         float damage = IdleBattleHelper.GetRealDamage(d, a);
@@ -186,7 +189,7 @@ public class IdleBattleManager : MonoBehaviour
         AkSoundEngine.PostEvent("Hit_Sword_Enemy", this.gameObject);
         AkSoundEngine.PostEvent("Pain_Bear", this.gameObject);
         float d = enemiesXcell[currentGridIndex].enemies[currentEnemy].defending;
-        float a = playerStats.stats.damage;
+        float a = playerStats.stats.equipment.damage;
         
         float damage = IdleBattleHelper.GetRealDamage(d, a);
 

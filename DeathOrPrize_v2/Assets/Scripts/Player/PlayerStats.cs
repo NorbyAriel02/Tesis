@@ -4,86 +4,64 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-    public float attackSpeed = 0.5f;    
+    public float attackSpeed = 0.5f;
     public float attackSpeedTimer = 0f;
-    public PlayerStatsModel stats;    
-    //EquipmentManager equipment;
-    InventoryManager inventory;//para obtener el peso que lleva el player
-    LevelSystem levelSystem;
-    void Awake()
-    {
-        stats = PlayerDataHelper.GetStats();
-        attackSpeed = stats.attackSpeed;
-        //equipment = GetScript.Type<EquipmentManager>("Inventory");
-        inventory = GetScript.Type<InventoryManager>("Inventory");
-                
-    }
+    public PlayerStatsModel stats;
     private void OnEnable()
     {
-        LevelController.StartLevelSystem += SetLevelSystem;
-        Slot.OnEquipedArmor += SetArmor;
-        Slot.OnEquipedWeapon += SetWeapon;
-        CityCell.ClicOnDoorCity += Heal;
+        DragAndDrop.OnMoveItem += UpdateEquip;
+        LevelController.OnLevelChange += LevelChange;
     }
     private void OnDisable()
     {
-        LevelController.StartLevelSystem -= SetLevelSystem;
-        Slot.OnEquipedArmor -= SetArmor;
-        Slot.OnEquipedWeapon -= SetWeapon;
+        DragAndDrop.OnMoveItem -= UpdateEquip;
+        LevelController.OnLevelChange -= LevelChange;
     }
-    public void SetLevelSystem(LevelSystem levelSystem)
+    private void Start()
     {
-        this.levelSystem = levelSystem;
-
-        this.levelSystem.OnLevelChanged += LevelSystem_OnLevelChanged;
-        this.levelSystem.OnExperienceChanged += LevelSystem_OnExperienceChanged;
+        UpdateEquip();
     }
-
-    private void LevelSystem_OnExperienceChanged(object sender, System.EventArgs e)
+    public void LevelChange()
     {
-        stats.experience = levelSystem.Experience;
-        PlayerDataHelper.SaveStats(stats);
+        PlayerStatsModel _stats = DataHelper.GetStats();
+        this.stats.currentHealth = _stats.maxHealth;
+        this.stats.maxHealth = _stats.maxHealth;
+        this.stats.experience = _stats.experience;
+        this.stats.level = _stats.level;
     }
-
-    private void LevelSystem_OnLevelChanged(object sender, System.EventArgs e)
+    public void EquipArmor(ItemProperties item)
     {
-        stats.level = levelSystem.LevelNumber;
-        stats.maxHealth = stats.maxHealth + (levelSystem.LevelNumber * 5);
-        PlayerDataHelper.SaveStats(stats);
+        stats.equipment.armor = item.armor;
+        DataHelper.UpdateEquipment(stats.equipment);
     }
-    public void SetArmor(ItemProperties item)
+    public void EquipWeapon(ItemProperties item)
     {
-        stats.armor = item.armor;
-        PlayerDataHelper.SaveStats(stats);
-    }
-    public void SetWeapon(ItemProperties item)
-    {
-        stats.damage = item.damageBase;
-        stats.attackSpeed = item.attackSpeedEquipped;
-        attackSpeed = stats.attackSpeed;
+        stats.equipment.damage = item.damageBase;
+        stats.equipment.attackSpeed = item.attackSpeedEquipped;
+        attackSpeed = stats.equipment.attackSpeed;
         attackSpeedTimer = 0f;
-        PlayerDataHelper.SaveStats(stats);
+        DataHelper.UpdateEquipment(stats.equipment);
     }
-    public void Heal(float x, float y, int subTypeId)
+    public void UpdateEquip()
     {
-        stats.currentHealth = stats.maxHealth;        
-        PlayerDataHelper.SaveStats(stats);
+        ResetEquip();
+        DataHelper.UpdateEquipment(stats.equipment);
+        List<ItemProperties> equip = DataHelper.GetListEquip();
+        foreach (ItemProperties i in equip)
+        {
+            if (i.tItem == TypeItemInventory.Armor)
+                EquipArmor(i);
+
+            if (i.tItem == TypeItemInventory.Weapon)
+                EquipWeapon(i);
+        }
     }
-    //public void SetStats()
-    //{    
-    //    for(int x = 0; x < equipment.items.Count; x++)
-    //    {
-    //        if (equipment.items[x].tItem == TypeItemInventory.Weapon)
-    //        {
-    //            stats.damage = equipment.items[x].damageBase;
-    //            stats.attackSpeed = equipment.items[x].attackSpeedEquipped;
-    //            attackSpeed = stats.attackSpeed;
-    //            attackSpeedTimer = 0f;
-    //        }
-
-
-    //        if (equipment.items[x].tItem == TypeItemInventory.Armor)
-    //            stats.armor = equipment.items[x].armor;
-    //    }        
-    //}
+    void ResetEquip()
+    {
+        stats.equipment.armor = 0;
+        stats.equipment.damage = 1;
+        stats.equipment.attackSpeed = 0.01f;
+        attackSpeed = 0.01f;
+        attackSpeedTimer = 0f;
+    }
 }

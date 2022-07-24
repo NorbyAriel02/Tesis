@@ -1,4 +1,5 @@
 using System;
+public enum TypeItemInventory { Item, Weapon, Armor }
 public enum Owner { player, seller }
 [Serializable]
 
@@ -8,8 +9,10 @@ public class ItemProperties
     /*Esta clase es variable, dependiendo del proyecto tendra mas o menos propiedades
      en teoria creo que solo propiedades, ahora no veo razo para qie tenga algun metodo*/
     public TypeItemInventory tItem;
-
+    public TypeSlot typeSlot;
+    public string name = "none";
     public int IndexSlot = -1;
+    public string DataFile = "default";
     /*Requisitos del player para poder utilizar el item*/
     public float strength;
     public float dexterity;
@@ -45,7 +48,7 @@ public class ItemProperties
     public float regenereHelth;
     public float regenereEnergy;
 }
-public enum TypeItemInventory { Item, Weapon, Armor }
+
 
 //void AssignData()
 //{

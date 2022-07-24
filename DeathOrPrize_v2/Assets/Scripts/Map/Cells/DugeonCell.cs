@@ -9,6 +9,7 @@ public class DugeonCell : Cell
     void Start()
     {
         base.StartVar();
+        IDboss = DataHelper.GetIdCurrentKingdom();
         bossQuest = GetScript.Type<BossQuest>("Boss", this.name);
     }
     public override void ActionCell()

@@ -8,11 +8,11 @@ public class Inventory : MonoBehaviour
     public Button btnInventory;
     public Image barHealth;
     public Text TextHealth;
-    private InventoryManager inventory;
+    private InventoryUI inventory;
     void Start()
     {
         btnInventory.onClick.AddListener(Open);        
-        inventory = GetScript.Type<InventoryManager>("Inventory");
+        inventory = GetScript.Type<InventoryUI>("Inventory");
         UpdateBarHealth();
     }
     public void UpdateBarHealth()
@@ -25,7 +25,7 @@ public class Inventory : MonoBehaviour
 
     public void Heal()
     {
-        PlayerDataHelper.Heal();
+        DataHelper.Heal();
         UpdateBarHealth();
     }
     void Open()

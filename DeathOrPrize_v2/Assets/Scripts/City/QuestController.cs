@@ -21,7 +21,11 @@ public class QuestController : MonoBehaviour
     private int currentIndexQuest;
     private List<QuestModel> quests;
     private List<GameObject> buttonsQuest;
-
+    private void OnEnable()
+    {
+        if(buttonsQuest != null)
+            LoadQuest();
+    }
     void Start()
     {
         btnExit.onClick.AddListener(Exit);
@@ -31,8 +35,7 @@ public class QuestController : MonoBehaviour
         btnCancelar.onClick.AddListener(Cancelar);
         DesactiveButtons();
         contentQuest.SetActive(false);
-        buttonsQuest = new List<GameObject>();
-        LoadQuest();        
+        buttonsQuest = new List<GameObject>();              
     }
     void DesactiveButtons()
     {

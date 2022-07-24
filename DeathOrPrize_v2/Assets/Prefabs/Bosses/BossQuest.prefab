@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1638869570330759517}
   - component: {fileID: 1374399774306437220}
   - component: {fileID: 5717180164876029208}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58,7 +58,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 5
   m_TargetDisplay: 0
 --- !u!114 &1374399774306437220
 MonoBehaviour:
@@ -111,7 +111,7 @@ GameObject:
   - component: {fileID: 403586103899930594}
   - component: {fileID: 403586103899930599}
   - component: {fileID: 6063388141141682738}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: BossQuest
   m_TagString: Boss
   m_Icon: {fileID: 0}
@@ -146,11 +146,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 355b5273c43d42a4e852543346cba564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HUB: {fileID: 0}
   Content: {fileID: 5867553001452995199}
   Bosses: {fileID: 1711315775006758050}
   playerStats: {fileID: 0}
   prefabDropTemplate: {fileID: 1434962396604645493, guid: 688b0ba4194a79c48ab9d71530c4da90, type: 3}
+  animator: {fileID: 1961338718}
+  itenDropCount: 1
+  ExpForEnemy: 500
+  DataFile: inventory
   IdQuest: Version1
 --- !u!114 &6063388141141682738
 MonoBehaviour:
@@ -182,7 +185,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2123675048429814564}
   - component: {fileID: 8895638838063848031}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Enemiy00 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -243,7 +246,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: a2d8bca81ba6ce3408af18b13a1f979f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -267,7 +270,7 @@ GameObject:
   - component: {fileID: 7798004416555792929}
   - component: {fileID: 5279939133578090332}
   - component: {fileID: 8939090559125238357}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -313,7 +316,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 5
   m_TargetDisplay: 0
 --- !u!114 &5279939133578090332
 MonoBehaviour:
@@ -365,7 +368,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4795978581750822074}
   - component: {fileID: 8326817726472741560}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Enemiy00 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -426,7 +429,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: a2d8bca81ba6ce3408af18b13a1f979f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -450,7 +453,7 @@ GameObject:
   - component: {fileID: 2294757136121039183}
   - component: {fileID: 386734806146601506}
   - component: {fileID: 3589911794969508866}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -496,7 +499,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 5
   m_TargetDisplay: 0
 --- !u!114 &386734806146601506
 MonoBehaviour:
@@ -549,7 +552,7 @@ GameObject:
   - component: {fileID: 1687708161026767774}
   - component: {fileID: 580763444552974178}
   - component: {fileID: 8011499315179583705}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: bg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -626,7 +629,7 @@ GameObject:
   - component: {fileID: 2630186701049246523}
   - component: {fileID: 7258955805014768269}
   - component: {fileID: 5545700655644260436}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -672,7 +675,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 5
   m_TargetDisplay: 0
 --- !u!114 &7258955805014768269
 MonoBehaviour:
@@ -724,7 +727,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1711315774588085634}
   - component: {fileID: 1711315774588085637}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -739,7 +742,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1711315774588085635}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3, y: -3, z: 0}
+  m_LocalPosition: {x: -3.24, y: -1.82, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 5867553001452995199}
@@ -784,7 +787,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 5
   m_Sprite: {fileID: -8897490669999312025, guid: a62f3ef160632ac4d9761983cfff1aac, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -805,7 +808,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1711315775006758053}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Bosses
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -820,7 +823,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1711315775006758050}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.75, y: -3, z: 0}
+  m_LocalPosition: {x: 1.58, y: -1.16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1711315775437788346}
@@ -842,7 +845,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1711315775016086835}
   - component: {fileID: 1711315775016086834}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: BG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -902,7 +905,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 64a372e1d74b19b4594b05f48e00f396, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -924,7 +927,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1711315775437788346}
   - component: {fileID: 1711315775437788349}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Enemiy00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -985,7 +988,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: a2d8bca81ba6ce3408af18b13a1f979f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1007,7 +1010,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3370301716856533049}
   - component: {fileID: 638385842894123219}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Enemiy00 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1068,7 +1071,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: a2d8bca81ba6ce3408af18b13a1f979f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1091,7 +1094,7 @@ GameObject:
   - component: {fileID: 6469049874291714183}
   - component: {fileID: 3286082582350127316}
   - component: {fileID: 8021325286812579235}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: bg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1167,7 +1170,7 @@ GameObject:
   - component: {fileID: 7808725367934833655}
   - component: {fileID: 6662316283967675615}
   - component: {fileID: 4484532951463035497}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: bg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1243,7 +1246,7 @@ GameObject:
   - component: {fileID: 6255612939621014400}
   - component: {fileID: 7894272432166304428}
   - component: {fileID: 7368258545670102159}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: health
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1317,7 +1320,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3137140841390200817}
   - component: {fileID: 3581991208236886635}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Enemiy00 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1378,7 +1381,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: a2d8bca81ba6ce3408af18b13a1f979f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1401,7 +1404,7 @@ GameObject:
   - component: {fileID: 6446443659025292796}
   - component: {fileID: 73824366903103100}
   - component: {fileID: 789322354498473959}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: bg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1478,7 +1481,7 @@ GameObject:
   - component: {fileID: 3573805958101124872}
   - component: {fileID: 602565890826768348}
   - component: {fileID: 8981026120135679216}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1524,7 +1527,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 5
   m_TargetDisplay: 0
 --- !u!114 &602565890826768348
 MonoBehaviour:
@@ -1577,7 +1580,7 @@ GameObject:
   - component: {fileID: 3689768061701235569}
   - component: {fileID: 7640065586155751766}
   - component: {fileID: 5853049357491970651}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: health
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1652,7 +1655,7 @@ GameObject:
   - component: {fileID: 4401606295186236252}
   - component: {fileID: 8122205767697046564}
   - component: {fileID: 7242749973742204978}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: health
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1728,7 +1731,7 @@ GameObject:
   - component: {fileID: 321943408238284281}
   - component: {fileID: 601203982745954878}
   - component: {fileID: 4890994328883173418}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1774,7 +1777,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 5
   m_TargetDisplay: 0
 --- !u!114 &601203982745954878
 MonoBehaviour:
@@ -1825,7 +1828,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5867553001452995199}
-  m_Layer: 0
+  - component: {fileID: 1961338718}
+  - component: {fileID: 4435172830853258617}
+  - component: {fileID: 8286871213623859235}
+  m_Layer: 4
   m_Name: Content
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1849,6 +1855,50 @@ Transform:
   m_Father: {fileID: 403586103899930594}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1961338718
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6991617438424443638}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cb4b76c1d8a7e574faa3caf2c9b8e951, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4435172830853258617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6991617438424443638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e918b77b910545d429ac65cbee24c408, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  idleBattleManager: {fileID: 0}
+--- !u!114 &8286871213623859235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6991617438424443638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7de3e8dbdf633e244bf514e219ef6947, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7006301824928990158
 GameObject:
   m_ObjectHideFlags: 0
@@ -1860,7 +1910,7 @@ GameObject:
   - component: {fileID: 3402538193200916668}
   - component: {fileID: 1368754933021049273}
   - component: {fileID: 6769471834215153097}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: health
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1934,7 +1984,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3199649749142089042}
   - component: {fileID: 403586103409230953}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SpritesEnemies
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1982,7 +2032,7 @@ GameObject:
   - component: {fileID: 5394395602412237842}
   - component: {fileID: 2911967658701414439}
   - component: {fileID: 6146455665712797252}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: health
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2057,7 +2107,7 @@ GameObject:
   - component: {fileID: 7734570759422711137}
   - component: {fileID: 7470009383045743779}
   - component: {fileID: 2552317693543867325}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: bg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2133,7 +2183,7 @@ GameObject:
   - component: {fileID: 5929485735366787923}
   - component: {fileID: 4785026298134299109}
   - component: {fileID: 5000625938175422056}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: health
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2208,7 +2258,7 @@ GameObject:
   - component: {fileID: 5680553878068736129}
   - component: {fileID: 4996262646047962949}
   - component: {fileID: 7465914898441000454}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: bg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2283,7 +2333,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5845151812648884058}
   - component: {fileID: 5209952955881854277}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Enemiy00 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2344,7 +2394,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: a2d8bca81ba6ce3408af18b13a1f979f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

@@ -1,4 +1,4 @@
-using System.Collections;
+using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,10 +10,11 @@ public class Utilitis
     public static int DefendingBase = 50;
     public static int IncrementoDefending = 10;
     public static float probabilidadGolpeEnArea = 0.35f;
-    public static ItemProperties GetRandomItem(int level, Owner owner)
+    
+    public static ItemProperties GetRandomItem(int level, Owner owner, string DataFile)
     {
         ItemProperties item = new ItemProperties();        
-        int type = Random.Range(1, 3);
+        int type = UnityEngine.Random.Range(1, 3);        
         if (type == 1)
         {
             item = GetWeapon(level, owner);
@@ -21,17 +22,19 @@ public class Utilitis
         else
         {
             item = GetArmor(level, owner);
-        }            
-        
+        }
+        item.name = RandomString(15);
+        item.DataFile = DataFile;
         return item;
     }
     
     static ItemProperties GetWeapon(int level, Owner owner)
     {
-        float r = Random.Range(DamageBase, DamageBase+IncrementoDamage);
-        ItemProperties item = new ItemProperties();
+        float r = UnityEngine.Random.Range(DamageBase, DamageBase+IncrementoDamage);
+        ItemProperties item = new ItemProperties();        
         item.owner = owner;
         item.tItem = TypeItemInventory.Weapon;
+        item.typeSlot = TypeSlot.SlotWeapon;
         item.level = level;
         item.value = PrecioBase * level;
         item.damageBase = level + r;
@@ -43,7 +46,13 @@ public class Utilitis
 
         return item;
     }
-
+    private static System.Random random = new System.Random();
+    public static string RandomString(int length)
+    {
+        const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+        return new string(Enumerable.Repeat(chars, length)
+            .Select(s => s[random.Next(s.Length)]).ToArray());
+    }
     static bool IsHitArea()
     {
         float r = Random.Range(0f, 1f);
@@ -55,6 +64,7 @@ public class Utilitis
         ItemProperties item = new ItemProperties();
         item.owner = owner;
         item.tItem = TypeItemInventory.Armor;
+        item.typeSlot = TypeSlot.SlotArmor;
         item.level = level;
         item.value = PrecioBase + level;
         item.armor = level * r;
@@ -63,7 +73,7 @@ public class Utilitis
 
         return item;
     }
-    public static ItemProperties GetBestItem(ItemProperties i)
+    public static ItemProperties GetBestItem(ItemProperties i, string dataFile)
     {
         int r = Random.Range(1, 3);
         ItemProperties item = new ItemProperties();
@@ -76,7 +86,8 @@ public class Utilitis
         {
             item = GetWeapon(i.level + r, Owner.player);
         }
-
+        item.name = RandomString(15);
+        item.DataFile = dataFile;
         return item;
     }
 

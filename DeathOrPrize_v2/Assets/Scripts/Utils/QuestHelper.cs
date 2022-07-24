@@ -22,6 +22,7 @@ public class QuestHelper
             quest.middleMessage = GetListMessage((string)row[2]);
             quest.finalMessage = GetListMessage((string)row[3]);
             quest.idkingdom = System.Convert.ToInt32(row[4].ToString());
+            quest.idQuest = System.Convert.ToInt32(row[5].ToString());
             quest.status = QuestStatus.esperando;
             quests.Add(quest);
         }

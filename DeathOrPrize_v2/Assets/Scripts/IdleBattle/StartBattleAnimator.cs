@@ -5,8 +5,13 @@ using UnityEngine;
 public class StartBattleAnimator : MonoBehaviour
 {
     public IdleBattleManager idleBattleManager;
+    public BossQuest idleBattleBoss;
     public void StartBattle()
     {
-        idleBattleManager.InBattle();
+        if(idleBattleManager != null)
+            idleBattleManager.InBattle();
+        
+        if(idleBattleBoss != null)
+            idleBattleBoss.InBattle();
     }
 }

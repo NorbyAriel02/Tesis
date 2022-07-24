@@ -11,30 +11,36 @@ public class HUDController : MonoBehaviour
     public Image barHealth;
     public Text TextHealth;
     public Text TextKimgdom;    
-    private InventoryManager inventory;
+    private InventoryUI inventory;
     PlayerMove playerMove;
     UIDayNight uIDayNight;
     private void OnEnable()
     {
-        IdleBattleManager.OnDamageThePlayer += UpdateBarHealth;
+        IdleBattleManager.OnDamageThePlayer += UpdateBarHealth;        
         BossQuest.OnDamageThePlayer += UpdateBarHealth;
+        LevelController.OnLevelChange += UpdateBarHealth;
     }
     private void OnDisable()
     {
         IdleBattleManager.OnDamageThePlayer -= UpdateBarHealth;
         BossQuest.OnDamageThePlayer -= UpdateBarHealth;
+        LevelController.OnLevelChange -= UpdateBarHealth;
     }
     void Start()
     {
         TextKimgdom.text = "Reino " + PlayerDataHelper.GetIdCurrentKingdom();
         playerMove = GetScript.Type<PlayerMove>("Player");
         btnInventory.onClick.AddListener(Open);
-        inventory = GetScript.Type<InventoryManager>("Inventory");
+        inventory = GetScript.Type<InventoryUI>("Inventory");
         uIDayNight = GetComponent<UIDayNight>();
         UpdateBarHealth(0);
     }
 
     public void UpdateBarHealth(float damege)
+    {
+        UpdateBarHealth();
+    }
+    public void UpdateBarHealth()
     {
         float health = PlayerDataHelper.GetCurrentHealth();
         float maxHealth = PlayerDataHelper.GetMaxHealth();
@@ -44,7 +50,7 @@ public class HUDController : MonoBehaviour
 
     public void Heal()
     {
-        PlayerDataHelper.Heal();
+        DataHelper.Heal();
         UpdateBarHealth(0);
     }
     public void EnterCity()

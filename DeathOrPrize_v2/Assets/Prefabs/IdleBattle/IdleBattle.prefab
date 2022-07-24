@@ -176,6 +176,7 @@ GameObject:
   - component: {fileID: 1307736921158264322}
   - component: {fileID: 4871394800464622547}
   - component: {fileID: 6227691039263665660}
+  - component: {fileID: 93732285340613898}
   m_Layer: 4
   m_Name: IdleBattle
   m_TagString: Battle
@@ -217,7 +218,8 @@ MonoBehaviour:
   prefabDropTemplate: {fileID: 1434962396604645493, guid: 688b0ba4194a79c48ab9d71530c4da90, type: 3}
   animator: {fileID: 7033709924542628266}
   itenDropCount: 1
-  ExpForEnemy: 50
+  ExpForEnemy: 100
+  DataFile: inventory
 --- !u!114 &4871394800464622547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -250,6 +252,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76ad3cec3dac3d541902e6188598e33f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &93732285340613898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1307736921158264325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58e27bb707d4bef4881d05bd45610e54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: -9169716687357734671, guid: 6ee9bd0252ceb674987f29c1b385e9eb, type: 3}
+  - {fileID: -9169716687357734671, guid: 6ee9bd0252ceb674987f29c1b385e9eb, type: 3}
+  - {fileID: 1998921781142416261, guid: 9e15eb4cbef9bbe478e42eca1de6357a, type: 3}
+  - {fileID: 21300000, guid: ed91bc136fefb9f449148a3336bd474a, type: 3}
+  - {fileID: 21300000, guid: 77c32b0d6fc60a84eaee4d5ceac82383, type: 3}
+  - {fileID: 21300000, guid: b30604706e63d92448c8a0956c8e652c, type: 3}
+  - {fileID: 21300000, guid: 112f465f38e7d3244b916dc61ae06ffc, type: 3}
+  - {fileID: 21300000, guid: f8462fa5fd7536a4d97134452eea5067, type: 3}
+  - {fileID: 21300000, guid: 81c5a09f39fba0a41af36a95f24988c8, type: 3}
+  - {fileID: 21300000, guid: bb3c5a6bb30fe69469dbe3cec1679b17, type: 3}
+  - {fileID: 21300000, guid: bb3c5a6bb30fe69469dbe3cec1679b17, type: 3}
+  - {fileID: 21300000, guid: bb3c5a6bb30fe69469dbe3cec1679b17, type: 3}
+  - {fileID: 21300000, guid: d401a6850f7fe2b4aa2572cf00db4247, type: 3}
+  - {fileID: 21300000, guid: 19be2e82d9df9f54089c5a8c571064fe, type: 3}
+  - {fileID: 21300000, guid: 3b2b32b729e033f49a6a3ee8f4bbfd8c, type: 3}
+  - {fileID: 21300000, guid: 65bc623b54cedf04cb907f7ea3f2fc3f, type: 3}
+  - {fileID: 21300000, guid: 8ed7a81abe18259419a61d4c9e3029cd, type: 3}
+  noneSprite: {fileID: 21300000, guid: e6b12d0261b6a274a8a8a08bb7def7bc, type: 3}
 --- !u!1 &8181771002875621979
 GameObject:
   m_ObjectHideFlags: 0
@@ -295,6 +328,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprites:
   - {fileID: -9169716687357734671, guid: 6ee9bd0252ceb674987f29c1b385e9eb, type: 3}
+  - {fileID: 1998921781142416261, guid: 9e15eb4cbef9bbe478e42eca1de6357a, type: 3}
+  - {fileID: 21300000, guid: ed91bc136fefb9f449148a3336bd474a, type: 3}
+  - {fileID: 1998921781142416261, guid: 9e15eb4cbef9bbe478e42eca1de6357a, type: 3}
+  - {fileID: 1998921781142416261, guid: 9e15eb4cbef9bbe478e42eca1de6357a, type: 3}
+  - {fileID: 1998921781142416261, guid: 9e15eb4cbef9bbe478e42eca1de6357a, type: 3}
+  - {fileID: 1998921781142416261, guid: 9e15eb4cbef9bbe478e42eca1de6357a, type: 3}
+  - {fileID: 1998921781142416261, guid: 9e15eb4cbef9bbe478e42eca1de6357a, type: 3}
+  - {fileID: 1998921781142416261, guid: 9e15eb4cbef9bbe478e42eca1de6357a, type: 3}
   - {fileID: 1998921781142416261, guid: 9e15eb4cbef9bbe478e42eca1de6357a, type: 3}
   noneSprite: {fileID: 21300000, guid: e6b12d0261b6a274a8a8a08bb7def7bc, type: 3}
 --- !u!1 &8554842188528694039
@@ -377,6 +418,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   idleBattleManager: {fileID: 1307736921158264322}
+  idleBattleBoss: {fileID: 0}
 --- !u!1001 &6447373354700428772
 PrefabInstance:
   m_ObjectHideFlags: 0

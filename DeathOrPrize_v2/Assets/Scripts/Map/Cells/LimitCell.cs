@@ -4,26 +4,22 @@ using UnityEngine;
 
 public class LimitCell : Cell
 {
-    private NeighboringKingdomsController neighboringKingdomsController;
-    // Start is called before the first frame update
+    public delegate void CellAction(int id);
+    public static CellAction OnCellAction;
+    public delegate void SetPositionKingdom(float x, float y, int sizeKingdom);
+    public static SetPositionKingdom OnSetPositionKingdom;    
+    
     void Start()
-    {
-        neighboringKingdomsController = GetComponentInParent<NeighboringKingdomsController>();
+    {    
         base.StartVar();
     }
-
     public override void ActionCell()
     {
         Limit();
     }
-
     void Limit()
-    {
-        //if (!HasMovements)
-        //    return;
-
-        neighboringKingdomsController.LoadMap(subtype.id);
-
-        SetPositionNextKingdom();
+    {           
+        OnCellAction?.Invoke(subtype.id);
+        OnSetPositionKingdom?.Invoke(this.x, this.y, this.sizeKingdom);
     }
 }

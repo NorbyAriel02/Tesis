@@ -178,25 +178,25 @@ public class WorldCreator : MonoBehaviour
             float x = cells[i].x;
             float y = cells[i].y;
             
-            if (y == (sizeKingdom-1))
+            if (x == (sizeKingdom-1))
             {
                 cells[i].type = CellTypes[3];
                 cells[i].subtype = CellSubTypes[CellTypes[3].id][0];
             }
             
-            if (y == 0)
+            if (x == 0 && y != 0)
             {
                 cells[i].type = CellTypes[3];
                 cells[i].subtype = CellSubTypes[CellTypes[3].id][1];
             }
 
-            if (x == (sizeKingdom - 1))
+            if (y == (sizeKingdom - 1))
             {
                 cells[i].type = CellTypes[3];
                 cells[i].subtype = CellSubTypes[CellTypes[3].id][2];
             }
 
-            if (x == 0)
+            if (y == 0 && x != 0)
             {
                 cells[i].type = CellTypes[3];
                 cells[i].subtype = CellSubTypes[CellTypes[3].id][3];

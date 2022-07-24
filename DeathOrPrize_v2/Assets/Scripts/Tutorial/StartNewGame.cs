@@ -7,7 +7,8 @@ public class StartNewGame : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        PlayerDataHelper.StartNewGame();        
+        //PlayerDataHelper.StartNewGame();        
+        //DataHelper.NewGame();
     }
 
     // Update is called once per frame

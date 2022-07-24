@@ -87,23 +87,6 @@ public class PlayerDataHelper
 
         fileController.SaveEncrypted<PlayerDataModel>(data, PathHelper.PlayerDataFile);
     }
-    //public static void UpdateDeathPosition(Vector3 pos, int idKingdom)
-    //{
-    //    DataFileController fileController = new DataFileController();
-    //    PlayerDataModel data = fileController.GetEncryptedData<PlayerDataModel>(PathHelper.PlayerDataFile);
-    //    if (data != null)
-    //    {
-    //        PlayerPositionModel p = new PlayerPositionModel();
-    //        p.KingdomID = idKingdom;
-    //        p.X = pos.x;
-    //        p.Y = pos.y;
-    //        p.Z = pos.z;
-    //        data.startPosition = p;
-    //        data.position.KingdomID = idKingdom;
-    //    }
-
-    //    fileController.SaveEncrypted<PlayerDataModel>(data, PathHelper.PlayerDataFile);
-    //}
 
     static PlayerPositionModel GetNewObjectPosition(PlayerPositionModel data)
     {
@@ -131,10 +114,10 @@ public class PlayerDataHelper
     }
     public static void StartNewGame()
     {
-        SetTutorialPositionPlayer();
-        Heal();
-        RestCoints();
-        SaveStats(new PlayerStatsModel());
+        
+        
+        
+        
         InventoryHelper.StartInventoryAndEquipmentFile(PathHelper.InventoryDataFile, PathHelper.EquipmentDataFile);
     }
     public static string GetCoins()
@@ -157,23 +140,7 @@ public class PlayerDataHelper
     }
     #endregion
 
-    public static void SetTutorialPositionPlayer()
-    {
-        Vector3 pos = new Vector3(-18,0,0);
-        DataFileController fileController = new DataFileController();
-        PlayerDataModel data = fileController.GetEncryptedData<PlayerDataModel>(PathHelper.PlayerDataFile);
-        
-        if (data != null)
-        {
-            data.position.X = pos.x;
-            data.position.Y = pos.y;
-            data.position.Z = pos.z;
-            data.position.KingdomID = 1;
-            data.stats.maxHealth = 25;
-        }
-
-        fileController.SaveEncrypted<PlayerDataModel>(data, PathHelper.PlayerDataFile);
-    }
+    
     
     public static PlayerStatsModel GetStats()
     {
@@ -187,17 +154,7 @@ public class PlayerDataHelper
         return null;
     }
 
-    public static void SaveStats(PlayerStatsModel stats)
-    {
-        DataFileController fileController = new DataFileController();
-        PlayerDataModel data = fileController.GetEncryptedData<PlayerDataModel>(PathHelper.PlayerDataFile);
-        if (data != null)
-        {
-            data.stats = stats;
-        }
-
-        fileController.SaveEncrypted<PlayerDataModel>(data, PathHelper.PlayerDataFile);
-    }
+    
 
     #region Salud
     public static void RestHealth(float value)
@@ -211,17 +168,7 @@ public class PlayerDataHelper
 
         fileController.SaveEncrypted<PlayerDataModel>(data, PathHelper.PlayerDataFile);
     }
-    public static void RestCoints()
-    {
-        DataFileController fileController = new DataFileController();
-        PlayerDataModel data = fileController.GetEncryptedData<PlayerDataModel>(PathHelper.PlayerDataFile);
-        if (data != null)
-        {
-            data.coins = 0;
-        }
-
-        fileController.SaveEncrypted<PlayerDataModel>(data, PathHelper.PlayerDataFile);
-    }
+    
     public static float GetCurrentHealth()
     {
         DataFileController fileController = new DataFileController();
@@ -244,16 +191,6 @@ public class PlayerDataHelper
 
         return 0;
     }
-    public static void Heal()
-    {
-        DataFileController fileController = new DataFileController();
-        PlayerDataModel data = fileController.GetEncryptedData<PlayerDataModel>(PathHelper.PlayerDataFile);
-        if (data != null)
-        {
-            data.stats.currentHealth = data.stats.maxHealth;
-        }
-
-        fileController.SaveEncrypted<PlayerDataModel>(data, PathHelper.PlayerDataFile);
-    }
+    
     #endregion
 }

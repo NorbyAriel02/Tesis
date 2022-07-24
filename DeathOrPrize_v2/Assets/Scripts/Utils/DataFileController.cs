@@ -36,6 +36,25 @@ public class DataFileController
 			fs.Close();
 		}
 	}
+	public static void SaveEncryptedV2<T>(object obj, string path)
+	{
+		FileStream fs = new FileStream(path, FileMode.OpenOrCreate);
+		try
+		{
+			T _obj = (T)obj;
+
+			BinaryFormatter formatter = new BinaryFormatter();
+			formatter.Serialize(fs, _obj);
+		}
+		catch (SerializationException e)
+		{
+			Debug.Log(e.Message + " " + e.StackTrace);
+		}
+		finally
+		{
+			fs.Close();
+		}
+	}
 	public void Log(string msj, string path)
 	{	
 		try
@@ -66,6 +85,28 @@ public class DataFileController
 		catch (SerializationException e)
 		{
 			Debug.Log(e.Message + " " + e.StackTrace);			
+		}
+		finally
+		{
+			fs.Close();
+		}
+		return deserializedObject;
+	}
+	public static T GetEncryptedDataV2<T>(string path) where T : class, new()
+	{
+		if (!File.Exists(path))
+			return null;
+
+		T deserializedObject = null;
+		FileStream fs = new FileStream(path, FileMode.Open);
+		try
+		{
+			BinaryFormatter formatter = new BinaryFormatter();
+			deserializedObject = (T)formatter.Deserialize(fs);
+		}
+		catch (SerializationException e)
+		{
+			Debug.Log(e.Message + " " + e.StackTrace);
 		}
 		finally
 		{

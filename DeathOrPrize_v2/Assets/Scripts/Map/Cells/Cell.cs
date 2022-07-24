@@ -42,11 +42,6 @@ public class Cell : MonoBehaviour
             return IsCellAction();
         }
     }
-    public void SetPositionNextKingdom()
-    {
-        //playerMove.SetPositionNewKingdom(x, y, sizeKingdom);
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag.Equals("FacePlayer") && ClickMe)
@@ -54,6 +49,4 @@ public class Cell : MonoBehaviour
                 
         ClickMe = false;
     }
-
-
 }

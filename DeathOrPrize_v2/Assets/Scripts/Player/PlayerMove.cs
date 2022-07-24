@@ -16,6 +16,7 @@ public class PlayerMove : MonoBehaviour
     private float _moveSpeed = 5f;
     private LineRenderer line;
     private Rigidbody rb;
+    private BoxCollider boxCollider;
     
     private void OnEnable()
     {
@@ -25,6 +26,7 @@ public class PlayerMove : MonoBehaviour
         ClickInCell.OnClickMe += SetPosition;
         ClickInCell.OnCursorOver += UpdateCellPosition;
         Cell.IsCellAction += HasMovements;
+        LimitCell.OnSetPositionKingdom += SetPositionNewKingdom;
     }
     private void OnDisable()
     {
@@ -33,6 +35,8 @@ public class PlayerMove : MonoBehaviour
         CityController.OnExitCity -= ExitCity;
         ClickInCell.OnClickMe -= SetPosition;
         ClickInCell.OnCursorOver -= UpdateCellPosition;
+        Cell.IsCellAction -= HasMovements;
+        LimitCell.OnSetPositionKingdom -= SetPositionNewKingdom;
     }
 
     void SetDiceValue(int value)
@@ -49,6 +53,7 @@ public class PlayerMove : MonoBehaviour
         _moveSpeed = moveSpeed;
         playerMovePoint.parent = null;
         rb = GetComponent<Rigidbody>();
+        boxCollider = GetComponent<BoxCollider>();
     }
     bool HasMovements()
     {
@@ -71,6 +76,7 @@ public class PlayerMove : MonoBehaviour
             yield return null;
         }
         OnPlayerArrive?.Invoke();
+        boxCollider.enabled = true;
     }
     void UpdateCellPosition(CellModel cell)
     {
@@ -111,7 +117,8 @@ public class PlayerMove : MonoBehaviour
         StartCoroutine(OnArrive());
     }
     public void SetPositionNewKingdom(float x, float y, int sizeKingdom)
-    {        
+    {
+        boxCollider.enabled = false;
         float[] xy = CalculeNewPos(x, y, sizeKingdom);
         playerMovePoint.position = new Vector3(xy[0], xy[1], playerMovePoint.position.z);
         _moveSpeed = moveSpeed * 100;

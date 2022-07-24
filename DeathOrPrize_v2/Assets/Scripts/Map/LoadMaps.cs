@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class LoadMaps : MonoBehaviour
 {
+    public delegate void LoadMap();
+    public static LoadMap OnLoadMap;
     public bool ActiveText;
     public List<string> paths;
     public GameObject[] prefabTiles;
@@ -51,6 +53,8 @@ public class LoadMaps : MonoBehaviour
             if (cellData.type.id == 4)//limite del mapa
                 InstantiateCell(prefabCave, cellData);
         }
+        DataHelper.UpdateIdCurrentKingdom(idKingdom);        
+        OnLoadMap?.Invoke();
     }
     void InstantiateCell(GameObject[] listGO, CellModel cellData)
     {
@@ -118,9 +122,13 @@ public class LoadMaps : MonoBehaviour
         }
         return data;
     }
-    private void OnDestroy()
+    public void UpdateDataKingdom()
     {
         List<CellModel> data = GetDataCells();
         fileController.SaveEncrypted<List<CellModel>>(data, PathHelper.WolrdDataFile(PlayerDataHelper.GetIdCurrentKingdom()));
+    }
+    private void OnDestroy()
+    {
+        UpdateDataKingdom();
     }
 }

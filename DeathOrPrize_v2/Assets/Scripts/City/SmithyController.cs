@@ -4,9 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class SmithyController : MonoBehaviour
-{
+{    
     public delegate void EventForja();
     public static EventForja OnForja;
+    public string DataFile = "smithy";
     public int cost = 10;
     public Button btnExit;
     public Button btnForjar;
@@ -39,18 +40,16 @@ public class SmithyController : MonoBehaviour
         Slots = ChildrenController.GetChildren(panelItems);
         for (int x = 0; x < Slots.Length; x++)
         {
-            if (Slots[x].GetComponent<Slot>() == null)
+            if (Slots[x].GetComponent<BaseSlot>() == null)
                 continue;
 
-            Slots[x].GetComponent<Slot>().ID = x;
-            Slots[x].GetComponent<Slot>().empty = true;
+            Slots[x].GetComponent<BaseSlot>().ID = x;
+            Slots[x].GetComponent<BaseSlot>().empty = true;
         }
     }
     void Forjar()
-    {
-        
-        List<ItemProperties> items = GetItems();
-        
+    {        
+        List<ItemProperties> items = GetItems();        
 
         if(ValidarItems(items))
         {            
@@ -58,13 +57,13 @@ public class SmithyController : MonoBehaviour
             int coints = PlayerDataHelper.GetCountCoins();
             int totalCost = (items[0].level * cost);
             PlayerDataHelper.UpdateCoins(coints-totalCost);
-            ItemProperties item = Utilitis.GetBestItem(items[0]);
-            Slots[0].GetComponent<Slot>().empty = true;
-            Slots[1].GetComponent<Slot>().empty = true;
+            ItemProperties item = Utilitis.GetBestItem(items[0], DataFile);
+            Slots[0].GetComponent<BaseSlot>().empty = true;
+            Slots[1].GetComponent<BaseSlot>().empty = true;
             ChildrenController.RemoveAllChildren(Slots[0]);
             ChildrenController.RemoveAllChildren(Slots[1]);
             GameObject gItem = Instantiate(prefabItemTemplate, Slots[2].transform);
-            Slots[2].GetComponent<Slot>().empty = false;            
+            Slots[2].GetComponent<BaseSlot>().empty = false;            
             Item scriptItem = gItem.GetComponent<Item>();
             scriptItem.SetItem(item);
             OnForja?.Invoke();
@@ -99,17 +98,16 @@ public class SmithyController : MonoBehaviour
         List<ItemProperties> items = new List<ItemProperties>();
         foreach (GameObject slot in Slots)
         {
-            if (slot.GetComponent<Slot>() == null)
+            if (slot.GetComponent<BaseSlot>() == null)
                 continue;
 
-            if (!slot.GetComponent<Slot>().empty)
+            if (!slot.GetComponent<BaseSlot>().empty)
             {
                 GameObject item = ChildrenController.GetChild(slot);
                 ItemProperties data = item.GetComponent<Item>().properties;
                 items.Add(data);
             }
         }
-
         return items;
     }
     private void Update()

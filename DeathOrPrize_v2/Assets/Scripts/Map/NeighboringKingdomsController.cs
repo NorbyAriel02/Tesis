@@ -10,6 +10,14 @@ public class NeighboringKingdomsController : MonoBehaviour
     private List<KingdomModel> listKingdomNeighbor;    
     private LoadMaps loadMaps;
     private Kingdom kingdom;
+    private void OnEnable()
+    {
+        LimitCell.OnCellAction += LoadMap;
+    }
+    private void OnDisable()
+    {
+        LimitCell.OnCellAction -= LoadMap;
+    }
     void Start()
     {
         kingdom = GetComponent<Kingdom>();
@@ -44,6 +52,7 @@ public class NeighboringKingdomsController : MonoBehaviour
 
     public void LoadMap(int CellLimitId)
     {
+        loadMaps.UpdateDataKingdom();
         switch (CellLimitId)
         {
             case 0:
@@ -58,8 +67,7 @@ public class NeighboringKingdomsController : MonoBehaviour
             case 3:
                 LoadMapSouth();
                 break;
-        }
-        //PlayerDataHelper.UpdateIdKingdom(kingdom.idKingdom);
+        }        
     }
     void Test()
     {

@@ -6,13 +6,22 @@ public class BossQuest : MonoBehaviour
 {
     public delegate void DamageThePlayer(float damage);
     public static DamageThePlayer OnDamageThePlayer;
+    public delegate void BattleStart();
+    public static BattleStart OnBattleStart;
+    public delegate void End();
+    public static End OnBattleEnd;
 
-    
+
     public Transform Content;
-    public GameObject Bosses;    
+    public GameObject Bosses;        
     public PlayerStats playerStats;
     public GameObject prefabDropTemplate;
-    public string IdQuest = "Boss";    
+    public Animator animator;    
+    public int itenDropCount = 1;
+    public int ExpForEnemy = 500;    
+    public string DataFile = "inventory";
+    public string IdQuest = "Boss";
+
     private bool inBattle = false;
     private Transform CameraTranform;
     private GameObject[] goEnemies;
@@ -23,7 +32,9 @@ public class BossQuest : MonoBehaviour
     private float bossAttackSpeed;
     private float timer;
     DataFileController fileController = new DataFileController();
-    private EnemiesBarHealth enemiesBarHealth;
+    private EnemiesBarHealth enemiesBarHealth;    
+    private LevelSystem levelSystem;    
+    
     void Start()
     {        
         SetParent();        
@@ -32,9 +43,21 @@ public class BossQuest : MonoBehaviour
         goEnemies = ChildrenController.GetChildren(Bosses);
         enemiesBarHealth = GetComponent<EnemiesBarHealth>();
     }
+    public void UpdateKingdom()
+    {
+        
+    }
     private void OnEnable()
     {
-
+        LevelController.StartLevelSystem += SetLevelSystem;
+    }
+    private void OnDisable()
+    {
+        LevelController.StartLevelSystem -= SetLevelSystem;
+    }
+    public void SetLevelSystem(LevelSystem levelSystem)
+    {
+        this.levelSystem = levelSystem;
     }
     void SetParent()
     {
@@ -52,10 +75,13 @@ public class BossQuest : MonoBehaviour
         inBattle = false;
     }
     public void StartBattle(int idBoss)
-    {
-        SetBossQuest(idBoss);
-        //playerStats.SetStats();
+    {        
         ActivePanel();
+        SetBossQuest(idBoss);
+        OnBattleStart?.Invoke();
+    }
+    public void InBattle()
+    {
         inBattle = true;
     }
     void SetBossQuest(int IdBoss)
@@ -82,13 +108,14 @@ public class BossQuest : MonoBehaviour
             }
 
         if (playerStats.stats.currentHealth > 0)
-            if (CanAttack(ref playerStats.attackSpeedTimer, playerStats.attackSpeed))
+            if (CanAttack(ref playerStats.stats.equipment.attackSpeedTimer, playerStats.stats.equipment.attackSpeed))
             {
                 PlayerAttack();
             }
 
         if (bossesData[currentBoss].health <= 0)
         {
+            levelSystem.AddExperience(ExpForEnemy * bossesData[currentBoss].level);
             RewardDrop(bossesData[currentBoss].level);
             goEnemies[currentBoss].SetActive(false);
             QuestHelper.CompletedBossQuests(IdQuest, currentBoss);
@@ -109,29 +136,36 @@ public class BossQuest : MonoBehaviour
     }
     void BossAttack()
     {
-        float d = playerStats.stats.armor;
+        float d = playerStats.stats.equipment.armor;
         float a = bossesData[currentBoss].damage;
 
         float damage = IdleBattleHelper.GetRealDamage(d, a);
 
         PlayerDataHelper.RestHealth(damage);
+        playerStats.stats.currentHealth = PlayerDataHelper.GetCurrentHealth();
 
-        playerStats.stats.currentHealth = PlayerDataHelper.GetCurrentHealth();        
+        OnDamageThePlayer?.Invoke(damage);
     }
     void PlayerAttack()
     {
         float d = bossesData[currentBoss].defending;
-        float a = playerStats.stats.damage;
+        float a = playerStats.stats.equipment.damage;
 
         float damage = IdleBattleHelper.GetRealDamage(d, a);
 
         bossesData[currentBoss].health -= damage;
-        enemiesBarHealth.UpdateHealth(currentBoss, bossesData[currentGridIndex].health);
+        enemiesBarHealth.UpdateHealthBoss(currentBoss, bossesData[currentBoss].health);
     }
     private void FixedUpdate()
     {
         if (inBattle)
             Battle();
+    }
+    void EndBattle()
+    {
+        OnBattleEnd?.Invoke();
+        //animator.SetBool("Close", true);
+        inBattle = false;
     }
     bool CanAttack(ref float attackSpeedTimer, float speed)
     {

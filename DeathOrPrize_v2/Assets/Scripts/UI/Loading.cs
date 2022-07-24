@@ -9,17 +9,23 @@ public class Loading : MonoBehaviour
     {
         CityController.OnExitCity += Active;
         PlayerMove.OnPlayerArrive += Desactive;
+        LimitCell.OnCellAction += Active;
     }
     private void OnDisable()
     {
         CityController.OnExitCity -= Active;
         PlayerMove.OnPlayerArrive -= Desactive;
+        LimitCell.OnCellAction -= Active;
     }
     private void Start()
     {
         Desactive();
     }
     void Active(float x, float y)
+    {
+        panel.SetActive(true);
+    }
+    void Active(int idCell)
     {
         panel.SetActive(true);
     }

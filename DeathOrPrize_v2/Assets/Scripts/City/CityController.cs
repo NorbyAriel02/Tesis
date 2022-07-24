@@ -9,6 +9,8 @@ public class CityController : MonoBehaviour
     public static EnterCity OnEnterCity;
     public delegate void ExitCity(float x, float y);
     public static ExitCity OnExitCity;
+    public delegate void OpenMarket();
+    public static OpenMarket OnOpenMarket;
 
     public Button btnDoorEast;
     public Button btnDoorWest;
@@ -24,12 +26,6 @@ public class CityController : MonoBehaviour
     public GameObject panelQuest;
     public GameObject LoadKingdom;
     public GameObject prefabItemTemplate;
-    public GameObject inventoryPanel;
-    public GameObject EquipmentPanel;
-    public GameObject[] SlotsInventory;
-    public GameObject[] SlotsEquipment;
-    public List<ItemProperties> itemsInventory;
-    public List<ItemProperties> itemsEquipment;
     public HUDController hud;
     private List<Vector3> doors;
     
@@ -45,48 +41,9 @@ public class CityController : MonoBehaviour
     }
     void Start()
     {        
-        AsignEventButtons();
-        LoadItems();
+        AsignEventButtons();    
         panelCity.SetActive(false);
     }
-    void LoadItems()
-    {
-        itemsInventory = InventoryHelper.GetListItemsFromFile(PathHelper.InventoryDataFile);
-        itemsEquipment = InventoryHelper.GetListItemsFromFile(PathHelper.EquipmentDataFile);
-        GetSlotsEquipment();
-        GetSlotsInventory();
-        LoadInventory();
-        LoadEquipment();
-    }
-    void GetSlotsInventory()
-    {
-        SlotsInventory = ChildrenController.GetChildren(inventoryPanel);
-        for (int x = 0; x < SlotsInventory.Length; x++)
-        {
-            SlotsInventory[x].GetComponent<Slot>().ID = x;
-            SlotsInventory[x].GetComponent<Slot>().empty = true;
-        }
-    }
-    void GetSlotsEquipment()
-    {        
-        SlotsEquipment = ChildrenController.GetChildren(EquipmentPanel);
-        for (int x = 0; x < SlotsEquipment.Length; x++)
-        {
-            if (SlotsEquipment[x].GetComponent<Slot>() == null)
-                continue;
-
-            SlotsEquipment[x].GetComponent<Slot>().ID = x;
-            SlotsEquipment[x].GetComponent<Slot>().empty = true;
-        }
-    }
-    void LoadInventory()
-    {
-        InventoryHelper.ShowItems(SlotsInventory, prefabItemTemplate, PathHelper.InventoryDataFile);
-    }
-    void LoadEquipment()
-    {
-        InventoryHelper.ShowItems(SlotsEquipment, prefabItemTemplate, PathHelper.EquipmentDataFile);
-    }    
     void AsignEventButtons()
     {
         //ExitNorth door 0
@@ -112,6 +69,7 @@ public class CityController : MonoBehaviour
         panelSmithy.SetActive(false);
         panelMarked.SetActive(true);
         panelQuest.SetActive(false);
+        OnOpenMarket?.Invoke();
     }
     void OpenQuestPanel()
     {
@@ -120,24 +78,14 @@ public class CityController : MonoBehaviour
         panelQuest.SetActive(true);
     }
     void Exit(int door)
-    {
-        UpdateData();        
+    {        
         panelCity.SetActive(false);
         OnExitCity?.Invoke(doors[door].x, doors[door].y);
-    }        
-    void UpdateData()
-    {
-        itemsInventory = InventoryHelper.GetListItemsFromPanel(SlotsInventory);
-        InventoryHelper.Save(itemsInventory, PathHelper.InventoryDataFile);
-        itemsEquipment = InventoryHelper.GetListItemsFromPanel(SlotsEquipment);
-        InventoryHelper.Save(itemsEquipment, PathHelper.EquipmentDataFile);
-    }
+    }            
     public void Enter(float x, float y, int subTypeId)
     {
         hud.EnterCity();
-        SetExits(x, y, subTypeId);
-        LoadItems();             
-        //PlayerDataHelper.UpdateIdKingdom();
+        SetExits(x, y, subTypeId);        
         panelCity.SetActive(true);
         OnEnterCity?.Invoke();
     }

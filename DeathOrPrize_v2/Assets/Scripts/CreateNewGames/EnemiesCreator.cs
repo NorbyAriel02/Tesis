@@ -99,8 +99,8 @@ public class EnemiesCreator : MonoBehaviour
         for (int j = 0; j < enemiesCount; j++)
         {
             EnemiesType type = new EnemiesType();
-            type.id = 1;
-            type.type = "Default";
+            type.id = idkindom;
+            type.type = "Enemigo tipo " + _type;
             EnemyModel enemyModel = new EnemyModel();
             enemyModel.type = type;
             enemyModel = AssignDiffisulted(enemyModel, x, y, idkindom);

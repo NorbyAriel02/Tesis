@@ -7,10 +7,12 @@ public class BattleSound : MonoBehaviour
     private void OnEnable()
     {
         IdleBattleManager.OnBattleStart += Battle;
+        BossQuest.OnBattleStart += Battle;
     }
     private void OnDisable()
     {
         IdleBattleManager.OnBattleStart -= Battle;
+        BossQuest.OnBattleStart -= Battle;
     }
     void Start()
     {

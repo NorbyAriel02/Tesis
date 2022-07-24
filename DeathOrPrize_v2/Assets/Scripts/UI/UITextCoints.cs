@@ -9,18 +9,19 @@ public class UITextCoints : MonoBehaviour
     private void OnEnable()
     {
         SmithyController.OnForja += UpdateTexts;
-        MarketController.OnSell += UpdateTexts;
-        MarketController.OnBuy += UpdateTexts;
+        MarketSlot.OnSell += UpdateTexts;
+        CitySlot.OnBuy += UpdateTexts;
+        UpdateTexts();
     }
     private void OnDisable()
     {
         SmithyController.OnForja -= UpdateTexts;
-        MarketController.OnSell -= UpdateTexts;
-        MarketController.OnBuy -= UpdateTexts;
+        MarketSlot.OnSell -= UpdateTexts;
+        CitySlot.OnBuy -= UpdateTexts;
     }
     void UpdateTexts()
     {
-        string coins = PlayerDataHelper.GetCoins();
+        string coins = DataHelper.GetCoins().ToString();
         foreach (Text t in texts)
             t.text = coins;
     }

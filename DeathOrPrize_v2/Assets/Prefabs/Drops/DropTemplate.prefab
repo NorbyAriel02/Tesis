@@ -111,8 +111,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item:
     owner: 0
-    tItem: 0
+    tItem: 1
+    typeSlot: 1
+    name: none
     IndexSlot: -1
+    DataFile: inventory
     strength: 0
     dexterity: 0
     agility: 0
@@ -120,24 +123,24 @@ MonoBehaviour:
     constitution: 0
     value: 1
     SubType: 0
-    level: 0
+    level: 1
     area: 0
     labelData: 
     EnergyPerAttacksEquipped: 0
     EnergyPerAttacksBase: 0
-    timeBetweenAttacksEquipped: 0
+    timeBetweenAttacksEquipped: 1
     timeBetweenAttacksBase: 0
-    attackSpeedEquipped: 0
+    attackSpeedEquipped: 0.25
     attackSpeedBase: 0
-    weight: 0
+    weight: 1
     critical: 0
     damageAreaEquipped: 0
     damageAreaBase: 0
     damageAreaMax: 0
     damageEquipped: 0
-    damageBase: 0
+    damageBase: 10
     damageMax: 0
-    defending: 0
+    armor: 0
     plusEnergy: 0
     plusHealth: 0
     regenereHelth: 0

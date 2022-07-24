@@ -87,6 +87,15 @@ public class PathHelper {
             return GetPlatformPath(FilePath);
         }
     }
+    public static string DataFiles
+    {
+        get
+        {
+            string FilePath = MyAppConfig.DataFiles;
+
+            return GetPlatformPath(FilePath);
+        }
+    }
     public static string CSVQuestDataFile
     {
         get
@@ -122,7 +131,7 @@ public class PathHelper {
 
             return GetPlatformPath(FilePath);
         }
-    }
+    }    
     public static string QuestsDataFile(string idQuest)
     {
         string FilePath = string.Format(MyAppConfig.QuestsDataFile, idQuest);

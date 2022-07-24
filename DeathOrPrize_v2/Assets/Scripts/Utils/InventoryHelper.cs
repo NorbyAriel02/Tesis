@@ -44,7 +44,7 @@ public class InventoryHelper
             if (item.IndexSlot != -1 && IsIndexSlotEmpty(item.IndexSlot, _Slots))
                 index = item.IndexSlot;
             else
-                index = GetIndexSlotEmpty(_Slots);
+                index = GetIndexSlotEmpty(_Slots, item);
 
             GameObject gItem = GameObject.Instantiate(prefabItem, _Slots[index].transform);
             _Slots[index].GetComponent<Slot>().empty = false;
@@ -60,7 +60,7 @@ public class InventoryHelper
         if (items.Count >= Slots.Length)
             return false;
 
-        newItem.IndexSlot = GetIndexSlotEmpty(Slots);
+        newItem.IndexSlot = GetIndexSlotEmpty(Slots, newItem);
         items.Add(newItem);
         Save(items, path);
         
@@ -88,12 +88,13 @@ public class InventoryHelper
         DataFileController fileController = new DataFileController();
         fileController.SaveEncrypted<List<ItemProperties>>(items, path);
     }
-    private static int GetIndexSlotEmpty(GameObject[] _Slots)
+    private static int GetIndexSlotEmpty(GameObject[] _Slots, ItemProperties item)
     {
         int index = 0;
         foreach (GameObject slot in _Slots)
         {
-            if (slot.GetComponent<Slot>().empty)
+            Slot sslot = slot.GetComponent<Slot>();
+            if (sslot.empty)// && sslot.tSlot == item.tItem)
                 return index;
 
             index++;
@@ -102,7 +103,7 @@ public class InventoryHelper
     }
     private static bool IsIndexSlotEmpty(int index, GameObject[] _Slots)
     {
-        if (_Slots[index].GetComponent<Slot>().empty)
+        if (index < _Slots.Length && _Slots[index].GetComponent<Slot>().empty)
             return true;
 
         return false;

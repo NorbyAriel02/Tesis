@@ -16,8 +16,8 @@ public class CityCell : Cell
         Enter();
     }
     void Enter()
-    {        
-        PlayerDataHelper.UpdateIdCurrentKingdom(cellData.IDkingdom);
+    {
+        DataHelper.UpdateIdCurrentKingdom(cellData.IDkingdom);
         ClicOnDoorCity?.Invoke(x, y, subtype.id);        
     }
 }

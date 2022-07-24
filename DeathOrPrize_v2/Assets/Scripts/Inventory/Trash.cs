@@ -10,7 +10,7 @@ public class Trash : MonoBehaviour, IDropHandler
     public Button btnDelete;
     public Button btnCancel;
     private GameObject item;
-    private Slot slot;
+    private BaseSlot slot;
     InventoryManager inventory;
     
     private void OnEnable()
@@ -25,11 +25,11 @@ public class Trash : MonoBehaviour, IDropHandler
     }
     void AssignScript(GameObject go)
     {
-        slot = go.GetComponentInParent<Slot>();        
+        slot = go.GetComponentInParent<BaseSlot>();        
     }
     void SlotEmptyFalse()
     {
-        slot = item.GetComponentInParent<Slot>();
+        slot = item.GetComponentInParent<BaseSlot>();
         if (slot != null)
             slot.empty = false;
 
@@ -37,7 +37,7 @@ public class Trash : MonoBehaviour, IDropHandler
     }
     void SlotEmptyTrue()
     {
-        slot = item.GetComponentInParent<Slot>();
+        slot = item.GetComponentInParent<BaseSlot>();
         if (slot != null)
             slot.empty = true;        
 

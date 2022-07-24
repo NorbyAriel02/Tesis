@@ -16,12 +16,12 @@ public class ScreemGameOver : MonoBehaviour
     void Menu()
     {
         //aca cargar escena de menu
-        PlayerDataHelper.Heal();
+        DataHelper.Heal();
         SceneManager.LoadScene("Menu");
     }
     void Continue()
     {
-        PlayerDataHelper.Heal();
+        DataHelper.Heal();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

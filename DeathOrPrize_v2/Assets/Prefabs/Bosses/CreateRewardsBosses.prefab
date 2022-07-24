@@ -46,7 +46,10 @@ MonoBehaviour:
   items:
   - owner: 0
     tItem: 1
+    typeSlot: 0
+    name: quebrantahuesos
     IndexSlot: 0
+    DataFile: inventory
     strength: 0
     dexterity: 0
     agility: 0
@@ -71,14 +74,17 @@ MonoBehaviour:
     damageEquipped: 0
     damageBase: 65
     damageMax: 0
-    defending: 0
+    armor: 0
     plusEnergy: 0
     plusHealth: 0
     regenereHelth: 0
     regenereEnergy: 0
   - owner: 0
     tItem: 1
+    typeSlot: 0
+    name: "romperi\xF1ones"
     IndexSlot: 0
+    DataFile: inventory
     strength: 0
     dexterity: 0
     agility: 0
@@ -103,14 +109,17 @@ MonoBehaviour:
     damageEquipped: 0
     damageBase: 130
     damageMax: 0
-    defending: 0
+    armor: 0
     plusEnergy: 0
     plusHealth: 0
     regenereHelth: 0
     regenereEnergy: 0
   - owner: 0
     tItem: 1
+    typeSlot: 0
+    name: qwerqwerqer
     IndexSlot: 0
+    DataFile: inventory
     strength: 0
     dexterity: 0
     agility: 0
@@ -135,14 +144,17 @@ MonoBehaviour:
     damageEquipped: 0
     damageBase: 200
     damageMax: 0
-    defending: 0
+    armor: 0
     plusEnergy: 0
     plusHealth: 0
     regenereHelth: 0
     regenereEnergy: 0
   - owner: 0
     tItem: 1
+    typeSlot: 0
+    name: lolas
     IndexSlot: 0
+    DataFile: inventory
     strength: 0
     dexterity: 0
     agility: 0
@@ -167,14 +179,17 @@ MonoBehaviour:
     damageEquipped: 0
     damageBase: 265
     damageMax: 0
-    defending: 0
+    armor: 0
     plusEnergy: 0
     plusHealth: 0
     regenereHelth: 0
     regenereEnergy: 0
   - owner: 0
     tItem: 1
+    typeSlot: 0
+    name: none
     IndexSlot: 0
+    DataFile: default
     strength: 0
     dexterity: 0
     agility: 0
@@ -199,14 +214,17 @@ MonoBehaviour:
     damageEquipped: 0
     damageBase: 300
     damageMax: 0
-    defending: 0
+    armor: 0
     plusEnergy: 0
     plusHealth: 0
     regenereHelth: 0
     regenereEnergy: 0
   - owner: 0
     tItem: 1
+    typeSlot: 0
+    name: none
     IndexSlot: 0
+    DataFile: default
     strength: 0
     dexterity: 0
     agility: 0
@@ -231,14 +249,17 @@ MonoBehaviour:
     damageEquipped: 0
     damageBase: 365
     damageMax: 0
-    defending: 0
+    armor: 0
     plusEnergy: 0
     plusHealth: 0
     regenereHelth: 0
     regenereEnergy: 0
   - owner: 0
     tItem: 1
+    typeSlot: 0
+    name: none
     IndexSlot: 0
+    DataFile: default
     strength: 0
     dexterity: 0
     agility: 0
@@ -263,14 +284,17 @@ MonoBehaviour:
     damageEquipped: 0
     damageBase: 400
     damageMax: 0
-    defending: 0
+    armor: 0
     plusEnergy: 0
     plusHealth: 0
     regenereHelth: 0
     regenereEnergy: 0
   - owner: 0
     tItem: 1
+    typeSlot: 0
+    name: none
     IndexSlot: 0
+    DataFile: default
     strength: 0
     dexterity: 0
     agility: 0
@@ -295,14 +319,17 @@ MonoBehaviour:
     damageEquipped: 0
     damageBase: 465
     damageMax: 0
-    defending: 0
+    armor: 0
     plusEnergy: 0
     plusHealth: 0
     regenereHelth: 0
     regenereEnergy: 0
   - owner: 0
     tItem: 1
+    typeSlot: 0
+    name: none
     IndexSlot: 0
+    DataFile: default
     strength: 0
     dexterity: 0
     agility: 0
@@ -327,7 +354,7 @@ MonoBehaviour:
     damageEquipped: 0
     damageBase: 600
     damageMax: 0
-    defending: 0
+    armor: 0
     plusEnergy: 0
     plusHealth: 0
     regenereHelth: 0
