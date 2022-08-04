@@ -6,6 +6,8 @@ public class Drop : MonoBehaviour
 {
     public delegate void Pickup(GameObject item);
     public static Pickup OnPickupItem;
+    public delegate void CantPickup();
+    public static CantPickup OnCantPickupItem;
     public ItemProperties item;    
     
     // Start is called before the first frame update
@@ -14,10 +16,7 @@ public class Drop : MonoBehaviour
         
     }
 
-    public void CantGetUp()
-    {
-        AkSoundEngine.PostEvent("Field_Error", this.gameObject);
-    }
+    
 
     void OnMouseOver()
     {        
@@ -32,11 +31,11 @@ public class Drop : MonoBehaviour
                 if (current < slots)
                 {
                     DataHelper.AddItemList(item);
-                    Destroy(gameObject);
                     OnPickupItem?.Invoke(gameObject);
+                    Destroy(gameObject);                    
                 }
                 else
-                    CantGetUp();
+                    OnCantPickupItem?.Invoke();
 
                 //if (inventory.AddItem(item))
                 //{

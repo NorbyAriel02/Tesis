@@ -328,7 +328,9 @@ public class DataHelper
         files = new Dictionary<string, string>();
         foreach(DataRow row in dt.Rows)
         {
-            files.Add(row[0].ToString(), row[1].ToString());
+            string path = PathHelper.GetPlatformPath(row[1].ToString());
+            files.Add(row[0].ToString(), path);
+            Logger.WriteLog(row[0].ToString() + " es la llave del path " + path);
         }
     }
 }

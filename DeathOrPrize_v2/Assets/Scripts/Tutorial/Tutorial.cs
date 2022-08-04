@@ -26,7 +26,7 @@ public class Tutorial : MonoBehaviour
         DiceController.OnRollDice += DeactivateSignDice;
         Drop.OnPickupItem += ActivateSignInventory;
         HUDController.OnInventoryOpenOrClose += DesactiveSignInventory;
-        Slot.OnEquipedWeapon += DesactiveSignWeapon;
+        EquipSlot.OnEquiped += DesactiveSignWeapon;
     }
     private void OnDisable()
     {
@@ -102,7 +102,7 @@ public class Tutorial : MonoBehaviour
         itemDrop.SetActive(true);
         textMsj.text = "¡¡Mira adelante!! ¿puedes ver ese objeto? ¡Recogelo!";        
     }
-    public void DesactiveSignWeapon(ItemProperties item)
+    public void DesactiveSignWeapon()
     {
         if(StepTutorial == 3)
         {

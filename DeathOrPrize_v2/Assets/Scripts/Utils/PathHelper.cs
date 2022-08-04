@@ -2,7 +2,7 @@
 using UnityEngine;
 
 public class PathHelper {
-    private static string GetPlatformPath(string file)
+    public static string GetPlatformPath(string file)
     {
         if (Application.platform == RuntimePlatform.Android)
         {
@@ -157,7 +157,7 @@ public class PathHelper {
     {
         get
         {
-            string FilePath = System.DateTime.Now.ToString("yyyyMMdd") + MyAppConfig.LogFile;
+            string FilePath = MyAppConfig.LogFile;
 
             return GetPlatformPath(FilePath);
         }

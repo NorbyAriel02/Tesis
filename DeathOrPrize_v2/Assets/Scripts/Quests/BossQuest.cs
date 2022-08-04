@@ -91,12 +91,12 @@ public class BossQuest : MonoBehaviour
         {
             goEnemies[x].SetActive(false);
         }
-        goEnemies[IdBoss].SetActive(true);
+        goEnemies[IdBoss-1].SetActive(true);
         enemiesBarHealth.StartBars();
-        enemiesBarHealth.AddMaxHealth(bossesData[IdBoss].health);
-        bossAttackSpeed = bossesData[IdBoss].attackSpeed;
+        enemiesBarHealth.AddMaxHealthBoss(bossesData[IdBoss-1].health);
+        bossAttackSpeed = bossesData[IdBoss-1].attackSpeed;
         bossTimerAttack = 0f;
-        currentBoss = IdBoss;
+        currentBoss = IdBoss-1;
     }
     void Battle()
     {

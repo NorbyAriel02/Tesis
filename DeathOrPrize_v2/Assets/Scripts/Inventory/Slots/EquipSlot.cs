@@ -2,7 +2,9 @@ using UnityEngine.EventSystems;
 using UnityEngine;
 
 public class EquipSlot : BaseSlot, IDropHandler
-{    
+{
+    public delegate void Equiped();
+    public static Equiped OnEquiped;
     public override bool ActionSlot(ItemProperties item)
     {        
         if (item.typeSlot != this.tSlot)
@@ -16,6 +18,7 @@ public class EquipSlot : BaseSlot, IDropHandler
         if (LevelPlayer() < item.level)
             return false;
 
+        OnEquiped?.Invoke();
         return true;
     }
 

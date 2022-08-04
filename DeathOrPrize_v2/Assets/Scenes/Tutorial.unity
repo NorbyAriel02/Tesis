@@ -1566,7 +1566,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8030219662303108220, guid: 688b0ba4194a79c48ab9d71530c4da90, type: 3}
       propertyPath: item.damageBase
-      value: 65
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1434962396604645451, guid: 688b0ba4194a79c48ab9d71530c4da90, type: 3}
       propertyPath: m_RootOrder

@@ -28,11 +28,6 @@ public class InventoryManager : MonoBehaviour
         CityController.OnEnterCity -= UpdateView;
     }    
      
-    public void CantPickUp()
-    {
-        //AkSoundEngine.PostEvent("Field_Error", this.gameObject);
-    }
-
     public void UpdateView()
     {
         if (SlotsInventory == null)

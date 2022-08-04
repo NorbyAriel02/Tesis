@@ -20,6 +20,13 @@ public class EnemiesBarHealth : MonoBehaviour
         maxHealth.Add(value);
         health[maxHealth.Count - 1].fillAmount = 1;
     }
+    public void AddMaxHealthBoss(float value)
+    {
+        //work at run
+        maxHealth = new List<float>();
+        maxHealth.Add(value);
+        health[maxHealth.Count - 1].fillAmount = 1;
+    }
 
     public void UpdateHealth(int index, float currentHealth)
     {
@@ -27,8 +34,8 @@ public class EnemiesBarHealth : MonoBehaviour
     }
 
     public void UpdateHealthBoss(int index, float currentHealth)
-    {
+    {        
         //un work at run
-        health[index].fillAmount = currentHealth / maxHealth[0];
+        health[0].fillAmount = currentHealth / maxHealth[0];
     }
 }
