@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{9DCF080A-E3C0-436B-882C-EF076FC18B1D}" SchemaVersion="103">
+<WwiseDocument Type="WorkUnit" ID="{9DCF080A-E3C0-436B-882C-EF076FC18B1D}" SchemaVersion="110">
 	<AudioObjects>
 		<WorkUnit Name="UI" ID="{9DCF080A-E3C0-436B-882C-EF076FC18B1D}" PersistMode="Standalone">
 			<PropertyList>
@@ -35,7 +35,6 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
-							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="Button_Click_FX01" ID="{32E2F335-31CF-4D39-894A-9CF1FBA95549}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -63,7 +62,6 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
-							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="Button_Click_FX02" ID="{867295F1-151C-4454-AEBD-A80085310B18}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -92,13 +90,11 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
-							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="UI_dragtool_mouseup" ID="{7B1CA597-501C-4087-BD35-1011F38C32FF}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
-					<ObjectLists/>
 				</ActorMixer>
 			</ChildrenList>
 		</WorkUnit>

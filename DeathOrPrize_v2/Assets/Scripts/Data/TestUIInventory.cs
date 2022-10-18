@@ -14,7 +14,7 @@ public class TestUIInventory : MonoBehaviour
     }
     void AddItem()
     {
-        ItemProperties item = Utilitis.GetRandomItem(Random.Range(1,10), Owner.player, DataFile);
+        ItemModel item = Utilitis.GetRandomItem(Random.Range(1,10), Owner.player, DataFile);
         DataHelper.AddItemInventory(item);
     }
 }

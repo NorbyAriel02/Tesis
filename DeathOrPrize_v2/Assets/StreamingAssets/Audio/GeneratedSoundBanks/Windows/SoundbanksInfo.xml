@@ -1,25 +1,495 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="140">
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="144">
 	<RootPaths>
-		<ProjectRoot>D:\Projects\Unity\2D\DeathOrPrize_v2\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>D:\Projects\Unity\2D\DeathOrPrize_v2\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>D:\Projects\Unity\2D\DeathOrPrize_v2\DeathOrPrize_v2\Assets\StreamingAssets\Audio\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>../../../../../DeathOrPrize_v2_WwiseProject</ProjectRoot>
+		<SourceFilesRoot>../../../../../DeathOrPrize_v2_WwiseProject/.cache/Windows</SourceFilesRoot>
+		<SoundBanksRoot>.</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>D:\Projects\Unity\2D\DeathOrPrize_v2\DeathOrPrize_v2\DeathOrPrize_v2_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>../../../../../DeathOrPrize_v2_WwiseProject/GeneratedSoundBanks/Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
-	<StreamedFiles/>
-	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="3690994985">
-			<ObjectPath>Init</ObjectPath>
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{56361E7B-611E-A540-5D69-616903751484}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
+			<Plugins>
+				<AudioDevices>
+					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
+				</AudioDevices>
+			</Plugins>
+			<Busses>
+				<Bus Id="85412153" Name="Ambience"/>
+				<Bus Id="1551306167" Name="UI"/>
+				<Bus Id="2151963051" Name="Items"/>
+				<Bus Id="2299321487" Name="Enemy"/>
+				<Bus Id="3094055254" Name="Main_Character"/>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+				<Bus Id="3922907557" Name="Enviromental"/>
+				<Bus Id="3991942870" Name="Music"/>
+			</Busses>
+			<StateGroups>
+				<StateGroup Id="1690668539" Name="Music_States">
+					<States>
+						<State Id="89505537" Name="Gameplay"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="1560169506" Name="Boss"/>
+						<State Id="2607556080" Name="Menu"/>
+						<State Id="2764240573" Name="Combat"/>
+						<State Id="3888786832" Name="City"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="3092587493" Name="Pause">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="930712164" Name="Off"/>
+						<State Id="1651971902" Name="On"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="1077138683">
-			<ObjectPath>\SoundBanks\Default Work Unit\main</ObjectPath>
-			<ShortName>main</ShortName>
-			<Path>main.bnk</Path>
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{4CE57146-4411-25EC-8C30-C630B2FE40AA}">
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<Media>
+				<File Id="4162732" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX Render\Wolf_Snarl.wav</ShortName>
+					<CachePath>SFX/SFX Render/Wolf_Snarl_2CBAEABE.wem</CachePath>
+				</File>
+				<File Id="9903972" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BEAST 01 Attack 08.wav</ShortName>
+					<CachePath>SFX/BEAST 01 Attack 08_10C4C929.wem</CachePath>
+				</File>
+				<File Id="15491015" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX Render\Hit_Claws.wav</ShortName>
+					<CachePath>SFX/SFX Render/Hit_Claws_206EFDD1.wem</CachePath>
+				</File>
+				<File Id="17779941" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>WAVES\UI_dragtool_mouseup.wav</ShortName>
+					<CachePath>SFX/WAVES/UI_dragtool_mouseup_5B5BAD7C.wem</CachePath>
+				</File>
+				<File Id="46192698" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>WAVES\golpes humano.wav</ShortName>
+					<CachePath>SFX/WAVES/golpes humano_6B62A200.wem</CachePath>
+				</File>
+				<File Id="124953481" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>WAVES\Sword Whip 01.wav</ShortName>
+					<CachePath>SFX/WAVES/Sword Whip 01_D8E821CD.wem</CachePath>
+				</File>
+				<File Id="125981456" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>DoP_ItemForge.wav</ShortName>
+					<CachePath>SFX/DoP_ItemForge_F52BEFC5.wem</CachePath>
+				</File>
+				<File Id="135649228" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Death Or price Music\Battle\Seccion A.wav</ShortName>
+					<CachePath>SFX/Death Or price Music/Battle/Seccion A_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="140147036" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>WAVES\Sword Whip 02.wav</ShortName>
+					<CachePath>SFX/WAVES/Sword Whip 02_E3AA9698.wem</CachePath>
+				</File>
+				<File Id="188609878" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX Render\Wolf_Pain.wav</ShortName>
+					<CachePath>SFX/SFX Render/Wolf_Pain_10C4C929.wem</CachePath>
+				</File>
+				<File Id="207955913" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>WAVES\Button_Click_FX02.wav</ShortName>
+					<CachePath>SFX/WAVES/Button_Click_FX02_891B31B6.wem</CachePath>
+				</File>
+				<File Id="220870596" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Death Or price Music\Death Or Price Gameplay Music\Death Or Price Gameplay Menu\Seccion D.wav</ShortName>
+					<CachePath>SFX/Death Or price Music/Death Or Price Gameplay Music/Death Or Price Gameplay Menu/Seccion D_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="244211960" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stinger_Combat.wav</ShortName>
+					<CachePath>SFX/Stinger_Combat_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="245711146" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Death Or price Music\Death Or Price Gameplay Music\Gameplay\Loop4.wav</ShortName>
+					<CachePath>SFX/Death Or price Music/Death Or Price Gameplay Music/Gameplay/Loop4_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="274960203" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ambience.wav</ShortName>
+					<CachePath>SFX/Ambience_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="323258582" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>WAVES\Button_Click_FX01.wav</ShortName>
+					<CachePath>SFX/WAVES/Button_Click_FX01_10C4C929.wem</CachePath>
+				</File>
+				<File Id="339738078" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Death Or price Music\Death Or Price Gameplay Music\Death Or Price Gameplay Menu\Seccion A.wav</ShortName>
+					<CachePath>SFX/Death Or price Music/Death Or Price Gameplay Music/Death Or Price Gameplay Menu/Seccion A_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="344405229" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Death Or price Music\Death Or Price Gameplay Music\Gameplay\Loop3.wav</ShortName>
+					<CachePath>SFX/Death Or price Music/Death Or Price Gameplay Music/Gameplay/Loop3_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="349308188" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Death Or price Music\Battle\Intro.wav</ShortName>
+					<CachePath>SFX/Death Or price Music/Battle/Intro_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="366954167" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>WestCity_Music_70bpm.wav</ShortName>
+					<CachePath>SFX/WestCity_Music_70bpm_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="395106706" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX Render\Wolf_Snarl.wav</ShortName>
+					<CachePath>SFX/SFX Render/Wolf_Snarl_82F28B36.wem</CachePath>
+				</File>
+				<File Id="416759349" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>WAVES\UI_dragtool_mousedown.wav</ShortName>
+					<CachePath>SFX/WAVES/UI_dragtool_mousedown_1BB9F8D7.wem</CachePath>
+				</File>
+				<File Id="425520142" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BEAST 01 Threaten Short 06.wav</ShortName>
+					<CachePath>SFX/BEAST 01 Threaten Short 06_AAFD3010.wem</CachePath>
+				</File>
+				<File Id="432486154" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player_Move.wav</ShortName>
+					<CachePath>SFX/Player_Move_F208236E.wem</CachePath>
+				</File>
+				<File Id="448948900" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>WAVES\UI_dragtool_place.wav</ShortName>
+					<CachePath>SFX/WAVES/UI_dragtool_place_0520335D.wem</CachePath>
+				</File>
+				<File Id="458050083" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BEAST 01 Threaten Short 06.wav</ShortName>
+					<CachePath>SFX/BEAST 01 Threaten Short 06_1E43FCAF.wem</CachePath>
+				</File>
+				<File Id="479342574" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player_Move.wav</ShortName>
+					<CachePath>SFX/Player_Move_201E23E0.wem</CachePath>
+				</File>
+				<File Id="511837392" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Death Or price Music\Death Or Price Gameplay Music\Gameplay\Loop1.wav</ShortName>
+					<CachePath>SFX/Death Or price Music/Death Or Price Gameplay Music/Gameplay/Loop1_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="524129632" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>WAVES\Amb_Forest_dayligth.wav</ShortName>
+					<CachePath>SFX/WAVES/Amb_Forest_dayligth_F8F6AFF3.wem</CachePath>
+				</File>
+				<File Id="539087109" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Death Or price Music\Battle\Seccion B.wav</ShortName>
+					<CachePath>SFX/Death Or price Music/Battle/Seccion B_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="554564913" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>WAVES\golpe grito.wav</ShortName>
+					<CachePath>SFX/WAVES/golpe grito_331E1307.wem</CachePath>
+				</File>
+				<File Id="562222609" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX Render\Wolf_Die.wav</ShortName>
+					<CachePath>SFX/SFX Render/Wolf_Die_9C5B99C4.wem</CachePath>
+				</File>
+				<File Id="567069083" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>DoP_ItemTrash.wav</ShortName>
+					<CachePath>SFX/DoP_ItemTrash_10C4C929.wem</CachePath>
+				</File>
+				<File Id="613176126" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>WAVES\Sword hit.wav</ShortName>
+					<CachePath>SFX/WAVES/Sword hit_E24D71F8.wem</CachePath>
+				</File>
+				<File Id="624205737" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX Render\Wolf_Snarl.wav</ShortName>
+					<CachePath>SFX/SFX Render/Wolf_Snarl_0E885EC6.wem</CachePath>
+				</File>
+				<File Id="692738358" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>DoP_ItemSell.wav</ShortName>
+					<CachePath>SFX/DoP_ItemSell_10C4C929.wem</CachePath>
+				</File>
+				<File Id="717322625" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX Render\Hit_Claws.wav</ShortName>
+					<CachePath>SFX/SFX Render/Hit_Claws_17D639A8.wem</CachePath>
+				</File>
+				<File Id="736013773" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player_Move.wav</ShortName>
+					<CachePath>SFX/Player_Move_B091E274.wem</CachePath>
+				</File>
+				<File Id="756658447" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>WAVES\golpe grito.wav</ShortName>
+					<CachePath>SFX/WAVES/golpe grito_DB933146.wem</CachePath>
+				</File>
+				<File Id="785554652" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Reverse 01.wav</ShortName>
+					<CachePath>SFX/Reverse 01_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="811353901" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Death Or price Music\Death Or Price Gameplay Music\Death Or Price Gameplay Menu\Outro.wav</ShortName>
+					<CachePath>SFX/Death Or price Music/Death Or Price Gameplay Music/Death Or Price Gameplay Menu/Outro_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="826605613" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX Render\Hit_Claws.wav</ShortName>
+					<CachePath>SFX/SFX Render/Hit_Claws_68D420AE.wem</CachePath>
+				</File>
+				<File Id="842089692" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>WAVES\FX_Dados.wav</ShortName>
+					<CachePath>SFX/WAVES/FX_Dados_791D12AA.wem</CachePath>
+				</File>
+				<File Id="894239645" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Death Or price Music\Battle\Bridge.wav</ShortName>
+					<CachePath>SFX/Death Or price Music/Battle/Bridge_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="919259822" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>medieval-city-sample.wav</ShortName>
+					<CachePath>SFX/medieval-city-sample_CB9571EB.wem</CachePath>
+				</File>
+				<File Id="944771054" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Death Or price Music\Death Or Price Gameplay Music\Gameplay\Loop2.wav</ShortName>
+					<CachePath>SFX/Death Or price Music/Death Or Price Gameplay Music/Gameplay/Loop2_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="961381286" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Death Or price Music\Death Or Price Gameplay Music\Death Or Price Gameplay Menu\Seccion C.wav</ShortName>
+					<CachePath>SFX/Death Or price Music/Death Or Price Gameplay Music/Death Or Price Gameplay Menu/Seccion C_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="983152262" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Death Or price Music\Death Or Price Gameplay Music\Death Or Price Gameplay Menu\Seccion B.wav</ShortName>
+					<CachePath>SFX/Death Or price Music/Death Or Price Gameplay Music/Death Or Price Gameplay Menu/Seccion B_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="1046693264" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>WAVES\Error_seleecion.wav</ShortName>
+					<CachePath>SFX/WAVES/Error_seleecion_BC2A8BA9.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="4059359267" Name="Amb_City" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="919259822"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1006024461" Name="Amb_Forest" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="274960203"/>
+						<MediaRef Id="524129632"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1137411260" Name="Combat_Start" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="1690668539" Id="2764240573" Name="Combat"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="324522332" Name="Defeated_Bear" DurationType="OneShot" DurationMin="1.2889792" DurationMax="1.2889792">
+					<MediaRefs>
+						<MediaRef Id="9903972"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="21539389" Name="Defeated_Boss" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="4105703822" Name="Defeated_Wolf" DurationType="OneShot" DurationMin="1.3352234" DurationMax="1.3352234">
+					<MediaRefs>
+						<MediaRef Id="562222609"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3331084404" Name="Field_Error" DurationType="OneShot" DurationMin="0.19128874" DurationMax="0.19128874">
+					<MediaRefs>
+						<MediaRef Id="1046693264"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1567541412" Name="Field_Ok" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="733168346" Name="Game_Start" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="1690668539" Id="748895195" Name="None"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="695575702" Name="Grunt_Bear" DurationType="OneShot" DurationMin="1.3695129" DurationMax="2.013058">
+					<MediaRefs>
+						<MediaRef Id="4162732"/>
+						<MediaRef Id="395106706"/>
+						<MediaRef Id="624205737"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="995998759" Name="Grunt_Boss" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="717982404" Name="Grunt_Wolf" DurationType="OneShot" DurationMin="1.3695129" DurationMax="2.013058">
+					<MediaRefs>
+						<MediaRef Id="4162732"/>
+						<MediaRef Id="395106706"/>
+						<MediaRef Id="624205737"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1236431331" Name="Hit_Sword_Enemy" DurationType="OneShot" DurationMin="0.5009244" DurationMax="0.6311252">
+					<MediaRefs>
+						<MediaRef Id="46192698"/>
+						<MediaRef Id="124953481"/>
+						<MediaRef Id="140147036"/>
+						<MediaRef Id="613176126"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2146777153" Name="Item_Equip" DurationType="OneShot" DurationMin="0.2156347" DurationMax="0.2156347">
+					<MediaRefs>
+						<MediaRef Id="416759349"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="213563888" Name="Item_Forge" DurationType="OneShot" DurationMin="1.5" DurationMax="1.5">
+					<MediaRefs>
+						<MediaRef Id="125981456"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1699323996" Name="Item_Move" DurationType="OneShot" DurationMin="0.21256039" DurationMax="0.24558224">
+					<MediaRefs>
+						<MediaRef Id="448948900"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1331156295" Name="Item_Sell" DurationType="OneShot" DurationMin="1.3124943" DurationMax="1.3124943">
+					<MediaRefs>
+						<MediaRef Id="692738358"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="795457351" Name="Item_Trash" DurationType="OneShot" DurationMin="1.0624943" DurationMax="1.0624943">
+					<MediaRefs>
+						<MediaRef Id="567069083"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="958305526" Name="Pain_Bear" DurationType="OneShot" DurationMin="0.5009244" DurationMax="0.6311252">
+					<MediaRefs>
+						<MediaRef Id="46192698"/>
+						<MediaRef Id="124953481"/>
+						<MediaRef Id="140147036"/>
+						<MediaRef Id="425520142"/>
+						<MediaRef Id="458050083"/>
+						<MediaRef Id="613176126"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1258625159" Name="Pain_Boss" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="980711972" Name="Pain_Wolf" DurationType="OneShot" DurationMin="0.54097015" DurationMax="0.72210854">
+					<MediaRefs>
+						<MediaRef Id="46192698"/>
+						<MediaRef Id="124953481"/>
+						<MediaRef Id="140147036"/>
+						<MediaRef Id="188609878"/>
+						<MediaRef Id="613176126"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2659475283" Name="Pausa_Off" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="3092587493" Id="930712164" Name="Off"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="549173535" Name="Pausa_On" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="3092587493" Id="1651971902" Name="On"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="3366829419" Name="Play_City" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="4059359267" Name="Amb_City"/>
+					</ActionPostEvent>
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="1690668539" Id="3888786832" Name="City"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="3737014274" Name="Play_Gameplay" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="1006024461" Name="Amb_Forest"/>
+					</ActionPostEvent>
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="1690668539" Id="89505537" Name="Gameplay"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="1278378707" Name="Play_Menu" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="1690668539" Id="2607556080" Name="Menu"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="2932040671" Name="Play_Music" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="244211960"/>
+						<MediaRef Id="785554652"/>
+					</MediaRefs>
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="1690668539" Id="2764240573"/>
+							<MediaRefs>
+								<MediaRef Id="135649228"/>
+								<MediaRef Id="349308188"/>
+								<MediaRef Id="539087109"/>
+								<MediaRef Id="894239645"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="1690668539" Id="89505537"/>
+							<MediaRefs>
+								<MediaRef Id="245711146"/>
+								<MediaRef Id="344405229"/>
+								<MediaRef Id="511837392"/>
+								<MediaRef Id="944771054"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="1690668539" Id="2607556080"/>
+							<MediaRefs>
+								<MediaRef Id="220870596"/>
+								<MediaRef Id="339738078"/>
+								<MediaRef Id="811353901"/>
+								<MediaRef Id="961381286"/>
+								<MediaRef Id="983152262"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="1690668539" Id="3888786832"/>
+							<MediaRefs>
+								<MediaRef Id="366954167"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="1690668539" Id="748895195" Name="None"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="2226114503" Name="Player_Dead" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3941789246" Name="Player_GetClawsDamage" DurationType="OneShot" DurationMin="0.5431742" DurationMax="0.78513765">
+					<MediaRefs>
+						<MediaRef Id="15491015"/>
+						<MediaRef Id="554564913"/>
+						<MediaRef Id="717322625"/>
+						<MediaRef Id="756658447"/>
+						<MediaRef Id="826605613"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2248092158" Name="Player_Move" DurationType="OneShot" DurationMin="0.020524893" DurationMax="0.06549023">
+					<MediaRefs>
+						<MediaRef Id="432486154"/>
+						<MediaRef Id="479342574"/>
+						<MediaRef Id="736013773"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2334012187" Name="Throw_Dice" DurationType="OneShot" DurationMin="0.68017364" DurationMax="0.68017364">
+					<MediaRefs>
+						<MediaRef Id="842089692"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2027123568" Name="UI_ButtonHover" DurationType="OneShot" DurationMin="0.22951755" DurationMax="0.22951755">
+					<MediaRefs>
+						<MediaRef Id="17779941"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2249769530" Name="UI_Click" DurationType="OneShot" DurationMin="0.055850342" DurationMax="0.055850342">
+					<MediaRefs>
+						<MediaRef Id="323258582"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="502835106" Name="UI_Exit" DurationType="OneShot" DurationMin="0.04667008" DurationMax="0.04667008">
+					<MediaRefs>
+						<MediaRef Id="207955913"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+			<StateGroups>
+				<StateGroup Id="1690668539" Name="Music_States">
+					<States>
+						<State Id="89505537" Name="Gameplay"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="1560169506" Name="Boss"/>
+						<State Id="2607556080" Name="Menu"/>
+						<State Id="2764240573" Name="Combat"/>
+						<State Id="3888786832" Name="City"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="3092587493" Name="Pause">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="930712164" Name="Off"/>
+						<State Id="1651971902" Name="On"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
+	<FileHash>{F3A28CD1-9324-2774-A15D-1E494E4BD111}</FileHash>
 </SoundBanksInfo>

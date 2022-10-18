@@ -51,6 +51,6 @@ public class Menu : MonoBehaviour
     }
     public void MouseOver()
     {
-        AkSoundEngine.PostEvent("UI_ButtonHover", this.gameObject);
+        //AkSoundEngine.PostEvent("UI_ButtonHover", this.gameObject);
     }
 }

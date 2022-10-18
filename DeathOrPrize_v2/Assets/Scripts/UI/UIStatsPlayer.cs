@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class UIStatsPlayer : MonoBehaviour
 {
+    public Text[] txtLevel;
     public Text[] txtDamage;
     public Text[] txtArmor;
     public Text[] txtAttackSpeed;
@@ -21,25 +22,26 @@ public class UIStatsPlayer : MonoBehaviour
     {
         ChangeStats();
     }
-    public void SetTextWeapon(ItemProperties item)
+    public void SetTextWeapon(ItemWeapon item)
     {
-        if(item != null)
+        if (item != null)
         {
-            UpdateTexts(txtDamage, "Damage " + item.damageBase);
-            UpdateTexts(txtAttackSpeed, "Attack Speed " + item.attackSpeedEquipped.ToString("0.00"));
+            UpdateTexts(txtDamage, "Damage " + item.damage);
+            UpdateTexts(txtAttackSpeed, "Attack Speed " + item.attackSpeed.ToString("0.00"));
         }
         else
         {
             UpdateTexts(txtDamage, "Damage " + 0);
             UpdateTexts(txtAttackSpeed, "Attack Speed " + 0);
-        }        
+        }
     }
-    public void SetTextArmor(ItemProperties item)
+    public void SetTextArmor(float value)
     {
-        if (item != null)
-            UpdateTexts(txtArmor, "Armor " + item.armor);
-        else
-            UpdateTexts(txtArmor, "Armor " + 0);
+        UpdateTexts(txtArmor, "Armor " + value);
+    }
+    public void SetTextLevel(int level)
+    {
+        UpdateTexts(txtLevel, "Level " + level);
     }
     void UpdateTexts(Text[] texts, string textValue)
     {        
@@ -48,16 +50,22 @@ public class UIStatsPlayer : MonoBehaviour
     }
     void ChangeStats()
     {
-        SetTextArmor(null);
+        SetTextArmor(0);
         SetTextWeapon(null);
-        List<ItemProperties> equip = DataHelper.GetListEquip();
-        foreach (ItemProperties i in equip)
+        SetTextLevel(DataHelper.GetStats().level);        
+        List<ItemModel> equip = DataHelper.GetListEquip();
+        float totalArmor = 0;
+        foreach (ItemModel i in equip)
         {
-            if (i.tItem == TypeItemInventory.Armor)
-                SetTextArmor(i);
+            if(i.GetType().GetField("armor") != null)
+            {
+                ItemArmor item = (ItemArmor)i;
+                totalArmor += item.armor;
+            }                
 
-            if (i.tItem == TypeItemInventory.Weapon)
-                SetTextWeapon(i);
+            if (i.GetType() == typeof(ItemWeapon))
+                SetTextWeapon((ItemWeapon)i);
         }
+        SetTextArmor(totalArmor);
     }
 }

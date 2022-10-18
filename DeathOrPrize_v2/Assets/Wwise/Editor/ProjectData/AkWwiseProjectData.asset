@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 1996617914148c498d487b6eba06a7cb
     GuidInternal: 
-    m_lastTime: -8585497410513966902
+    m_lastTime: -8585401510736484734
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: e1c684f0bee0494596e19af9ba3b6675
     GuidInternal: 
-    m_lastTime: -8585467875059128254
+    m_lastTime: -8585401510736865077
     List:
     - name: Ambience
       guid: 02f6c9937cb3214a927c9d13d3012a8b
@@ -200,7 +200,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 5051a84958e5ab48a887e3ce797407f9
     GuidInternal: 
-    m_lastTime: -8585467875027216310
+    m_lastTime: -8585401510736414668
     List:
     - name: Main
       guid: 29f19fac8b1f7e4abadcf7929c50ad64
@@ -228,7 +228,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: cc05bc9df8583942a1cb27584f9220ec
     GuidInternal: 
-    m_lastTime: -8585467875072947115
+    m_lastTime: -8585401510736534778
     List:
     - name: Amb_City
       guid: 21f38bb21a66d44d8d5fe2823325ae08
@@ -248,8 +248,8 @@ MonoBehaviour:
         guid: 21f38bb21a66d44d8d5fe2823325ae08
       Path: Events\Default Work Unit\Ambience\Amb_City
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Amb_Forest
       guid: 8b7765bf4a4b0b408ff09533895187c0
       id: 1006024461
@@ -439,8 +439,8 @@ MonoBehaviour:
         guid: fb5c4b989927ed4b8448513b9ff43183
       Path: Events\Default Work Unit\Game Engine\Game_Start
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Grunt_Bear
       guid: b0afd350f1d3aa49b17b5e1b4b9f34e8
       id: 695575702
@@ -539,8 +539,8 @@ MonoBehaviour:
         guid: aa057980d79fb5428411e6c84494de10
       Path: Events\Default Work Unit\Miscellaneous\Item_Equip
       maxAttenuation: 0
-      maxDuration: 0.215635
-      minDuration: 0.215635
+      maxDuration: 0.228457
+      minDuration: 0.203532
     - name: Item_Forge
       guid: be29ac30b51e5748824a4b8561db1c2e
       id: 213563888
@@ -559,8 +559,8 @@ MonoBehaviour:
         guid: be29ac30b51e5748824a4b8561db1c2e
       Path: Events\Default Work Unit\Miscellaneous\Item_Forge
       maxAttenuation: 0
-      maxDuration: 1.5
-      minDuration: 1.5
+      maxDuration: 1.589195
+      minDuration: 1.415811
     - name: Item_Move
       guid: 32f9ec7875681e40a9f31e791e13bd96
       id: 1699323996
@@ -579,7 +579,7 @@ MonoBehaviour:
         guid: 32f9ec7875681e40a9f31e791e13bd96
       Path: Events\Default Work Unit\Miscellaneous\Item_Move
       maxAttenuation: 0
-      maxDuration: 0.245582
+      maxDuration: 0.238591
       minDuration: 0.21256
     - name: Item_Sell
       guid: cf4d2e725dcd36428845cb392906c0a6
@@ -599,8 +599,8 @@ MonoBehaviour:
         guid: cf4d2e725dcd36428845cb392906c0a6
       Path: Events\Default Work Unit\Miscellaneous\Item_Sell
       maxAttenuation: 0
-      maxDuration: 1.312494
-      minDuration: 1.312494
+      maxDuration: 1.516394
+      minDuration: 1.136012
     - name: Item_Trash
       guid: 42a7202a7361594b88dec5f37c29a482
       id: 795457351
@@ -619,8 +619,8 @@ MonoBehaviour:
         guid: 42a7202a7361594b88dec5f37c29a482
       Path: Events\Default Work Unit\Miscellaneous\Item_Trash
       maxAttenuation: 0
-      maxDuration: 1.062494
-      minDuration: 1.062494
+      maxDuration: 1.125674
+      minDuration: 1.002861
     - name: Miscellaneous
       guid: b77d0e98afccf44094c10f69e8099335
       id: 3643806643
@@ -719,8 +719,8 @@ MonoBehaviour:
         guid: 9acf2e813c036a449845af59fa0d8d6f
       Path: Events\Default Work Unit\Game Engine\Pause\Pausa_Off
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Pausa_On
       guid: efa2e9e5b130734b8d92398297165a7f
       id: 549173535
@@ -742,8 +742,8 @@ MonoBehaviour:
         guid: efa2e9e5b130734b8d92398297165a7f
       Path: Events\Default Work Unit\Game Engine\Pause\Pausa_On
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Pause
       guid: 22273039c0dc794c9bc99c0f1ac49ecf
       id: 3092587493
@@ -949,7 +949,7 @@ MonoBehaviour:
     ParentPath: Events\Music
     guid: 37d4fe2ae1105f46ab9a2a5e27f72e99
     GuidInternal: 
-    m_lastTime: -8585467875072947115
+    m_lastTime: -8585401510736434687
     List:
     - name: Combat_Start
       guid: 4f82a125001bfa4da04961dd6be92166
@@ -983,8 +983,8 @@ MonoBehaviour:
         guid: 2c4d58dc317e164b973d47d41b59461b
       Path: Events\Music\Play_City
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Gameplay
       guid: 8c9b83bcaa02324ebfd60dbaa1ce2994
       id: 3737014274
@@ -1017,8 +1017,8 @@ MonoBehaviour:
         guid: 7ff9aef46c3f23409a90dee82f2aebfb
       Path: Events\Music\Play_Menu
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Music
       guid: e13a997770a6914797a63e0c5e603b18
       id: 2932040671
@@ -1048,7 +1048,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: e9844e2a9a05b243ae2376a6497c702f
     GuidInternal: 
-    m_lastTime: -8585497410513766709
+    m_lastTime: -8585401510736684916
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -1062,7 +1062,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 915c272030c00e478b872c280ea5db06
     GuidInternal: 
-    m_lastTime: -8585467875027206300
+    m_lastTime: -8585401510736624864
     List:
     - name: Pause
       guid: 43531bd1d391f04ea32afe959b655b22
@@ -1141,7 +1141,7 @@ MonoBehaviour:
     ParentPath: States\Music
     guid: 5d5df94951fd0446bac86c411b8e9111
     GuidInternal: 
-    m_lastTime: -8585467875027206300
+    m_lastTime: -8585401510736474728
     List:
     - name: Music_States
       guid: c400e05a4faecb4e9fb6cead6aea8972
@@ -1269,7 +1269,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 9228b857040d8945bc8d7f86541385f3
     GuidInternal: 
-    m_lastTime: -8585497410513786736
+    m_lastTime: -8585401510736444701
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -1283,7 +1283,7 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: 2e84798d3e185840b65ab734a2f25dba
     GuidInternal: 
-    m_lastTime: -8585497410513826769
+    m_lastTime: -8585401510736514756
     List: []
   ExpandedFileSystemItemIds: 
   ExpandedWaapiItemIds: 

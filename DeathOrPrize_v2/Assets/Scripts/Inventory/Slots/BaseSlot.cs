@@ -12,7 +12,7 @@ public class BaseSlot : MonoBehaviour, IDropHandler
     public static EventCantBuy OnCantBuy;
 
     public GameObject Item;
-    public TypeSlot tSlot;
+    public TypeSlot typeSlot;
     public int ID;
     public string description;
     public Sprite icon;
@@ -41,14 +41,14 @@ public class BaseSlot : MonoBehaviour, IDropHandler
             if (i == null)
                 return;
 
-            if (ActionSlot(i.properties))
+            if (ActionSlot(i.item))
             {
-                UpdateData(i.properties);
+                UpdateData(i.item);
                 PositionItem(eventData.pointerDrag.transform);
             }
         }
     }
-    void UpdateData(ItemProperties item)
+    void UpdateData(ItemModel item)
     {
         item.DataFile = this.DataFiles;
         item.IndexSlot = this.ID;
@@ -64,18 +64,18 @@ public class BaseSlot : MonoBehaviour, IDropHandler
         get
         {
             if(this.empty)
-                if (tSlot != TypeSlot.NoDropSlot)
+                if (typeSlot != TypeSlot.NoDropSlot)
                     return true;
 
             return false;
         }
     }
-    public virtual bool ActionSlot(ItemProperties item)
+    public virtual bool ActionSlot(ItemModel item)
     {
 
         return true;
     }
-    public bool Buy(ItemProperties item)
+    public bool Buy(ItemModel item)
     {
         int current = DataHelper.GetCoins();
         if (current >= item.value)
@@ -90,7 +90,7 @@ public class BaseSlot : MonoBehaviour, IDropHandler
 
         return false;
     }
-    public void Sell(ItemProperties item)
+    public void Sell(ItemModel item)
     {
         int price = Mathf.RoundToInt(item.value - (item.value * SalesCommission));        
         DataHelper.AddCoins(price);

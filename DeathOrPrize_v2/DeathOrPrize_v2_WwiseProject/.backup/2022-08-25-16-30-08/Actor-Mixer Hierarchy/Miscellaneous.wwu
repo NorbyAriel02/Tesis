@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{81E63BD0-AB22-4615-8E4C-E3CCFAD3EEC7}" SchemaVersion="103">
+	<AudioObjects>
+		<WorkUnit Name="Miscellaneous" ID="{81E63BD0-AB22-4615-8E4C-E3CCFAD3EEC7}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="17"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<ActorMixer Name="Items" ID="{7721B7F0-2790-4194-8155-78E8DDFA9340}" ShortID="12288571">
+					<PropertyList>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>25</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{130AEB6F-0BE7-4821-A21A-FF5FE42A2FB5}">
+										<PropertyList>
+											<Property Name="Max" Type="Real64" Value="100"/>
+											<Property Name="Min" Type="Real64" Value="-100"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCA1DF01-6F8C-472F-B87F-732CAB749F66}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Items" ID="{9B75C770-FC29-4766-B08D-8C2AB1EC05C6}" WorkUnitID="{F084C6E1-E0BE-4549-96E1-9AF9BA3B6675}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="Item_Sales" ID="{85563223-F6B8-4101-8525-B2CFED927628}" ShortID="21835226">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{BFEA775C-B0A3-41B7-83E6-F624706C1637}">
+												<PropertyList>
+													<Property Name="Max" Type="Real64" Value="150"/>
+													<Property Name="Min" Type="Real64" Value="-150"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCA1DF01-6F8C-472F-B87F-732CAB749F66}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F084C6E1-E0BE-4549-96E1-9AF9BA3B6675}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="DoP_ItemSell" ID="{5D3D4EFF-C1A4-40FF-8602-29F1EB62EB53}" ShortID="79986101">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-9</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCA1DF01-6F8C-472F-B87F-732CAB749F66}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F084C6E1-E0BE-4549-96E1-9AF9BA3B6675}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="DoP_ItemSell" ID="{729B3F7F-326A-484F-BE56-224683176087}">
+											<Language>SFX</Language>
+											<AudioFile>DoP_ItemSell.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="692738358"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="DoP_ItemSell" ID="{729B3F7F-326A-484F-BE56-224683176087}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists/>
+						</RandomSequenceContainer>
+						<Sound Name="DoP_ItemTrash" ID="{29EF3EBD-3C2B-4E31-B03A-4FC4C0DFAE59}" ShortID="9219434">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCA1DF01-6F8C-472F-B87F-732CAB749F66}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F084C6E1-E0BE-4549-96E1-9AF9BA3B6675}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="DoP_ItemTrash" ID="{A02A3696-47A9-4F77-93B8-B0AE8381E5A6}">
+									<Language>SFX</Language>
+									<AudioFile>DoP_ItemTrash.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="567069083"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="DoP_ItemTrash" ID="{A02A3696-47A9-4F77-93B8-B0AE8381E5A6}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Item_Equip" ID="{1F829751-A8AF-4F6C-ADE2-A2F0281F118B}" ShortID="23128526">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCA1DF01-6F8C-472F-B87F-732CAB749F66}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F084C6E1-E0BE-4549-96E1-9AF9BA3B6675}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="UI_dragtool_mousedown" ID="{5BF9385E-18CB-4412-B02B-5BCFD9A70DD0}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0292981940424506"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.147662897973951"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.0433613271828268"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.258996035335263"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>WAVES\UI_dragtool_mousedown.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="416759349"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="UI_dragtool_mousedown" ID="{5BF9385E-18CB-4412-B02B-5BCFD9A70DD0}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Item_Move" ID="{957A4304-A962-4F01-A144-4420692CCF93}" ShortID="202079870">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{09024ED7-7BB5-4B57-8CF8-FD2A7C79DCED}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="100"/>
+													<Property Name="Min" Type="Real64" Value="-150"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCA1DF01-6F8C-472F-B87F-732CAB749F66}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F084C6E1-E0BE-4549-96E1-9AF9BA3B6675}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="UI_dragtool_place" ID="{47B5F2E4-3674-4311-AD57-856B4214BB36}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0243459358417752"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0417358900144718"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.0234764381331404"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.248676344669561"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>WAVES\UI_dragtool_place.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="448948900"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="UI_dragtool_place" ID="{47B5F2E4-3674-4311-AD57-856B4214BB36}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="ItemForge" ID="{DEFBF97C-B48F-418B-8011-D9CBC4A61236}" ShortID="826062410">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCA1DF01-6F8C-472F-B87F-732CAB749F66}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F084C6E1-E0BE-4549-96E1-9AF9BA3B6675}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="DoP_ItemForge" ID="{4197B0B8-28B0-4A26-A2BE-B5446E47F841}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0262390670553936"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0830903790087463"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>DoP_ItemForge.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="125981456"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="DoP_ItemForge" ID="{4197B0B8-28B0-4A26-A2BE-B5446E47F841}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists/>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

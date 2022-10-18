@@ -8,7 +8,7 @@ public class EquipmentManager : MonoBehaviour
     [Tooltip("Agrega el panel contenedor del Equipamiento")]
     public GameObject viewEquipment;
     [Header("Prefeb del modelo item para inventario")]
-    public GameObject prefabItemTemplate;
+    public GameObject[] prefabItemTemplate;
     private GameObject[] SlotsEquipment;
     private void OnEnable()
     {        
@@ -22,11 +22,6 @@ public class EquipmentManager : MonoBehaviour
         DragAndDrop.OnMoveItem -= UpdateView;
         CityController.OnEnterCity -= UpdateView;
     }
-    void Start()
-    {
-        
-    }
-
     public void UpdateView()
     {        
         if (SlotsEquipment == null)

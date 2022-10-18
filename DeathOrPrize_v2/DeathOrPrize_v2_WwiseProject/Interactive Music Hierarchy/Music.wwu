@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{1F7EC7EE-F9CF-49C4-93AC-DB599DCADDED}" SchemaVersion="103">
+<WwiseDocument Type="WorkUnit" ID="{1F7EC7EE-F9CF-49C4-93AC-DB599DCADDED}" SchemaVersion="110">
 	<InteractiveMusic>
 		<WorkUnit Name="Music" ID="{1F7EC7EE-F9CF-49C4-93AC-DB599DCADDED}" PersistMode="Standalone">
 			<PropertyList>
@@ -381,7 +381,6 @@
 									<TransitionInfo/>
 								</MusicTransition>
 							</TransitionList>
-							<ObjectLists/>
 							<Playlist>
 								<MusicPlaylistItem Name="" ID="{637BB2BD-4958-4A1E-A037-C6D1F4DCDBC3}" ShortID="314586794">
 									<PropertyList>
@@ -875,7 +874,6 @@
 									<TransitionInfo/>
 								</MusicTransition>
 							</TransitionList>
-							<ObjectLists/>
 							<Playlist>
 								<MusicPlaylistItem Name="" ID="{A6262F51-D60F-401D-890D-8A8735062537}" ShortID="968517055">
 									<PropertyList>
@@ -1354,7 +1352,6 @@
 									<TransitionInfo/>
 								</MusicTransition>
 							</TransitionList>
-							<ObjectLists/>
 							<Playlist>
 								<MusicPlaylistItem Name="" ID="{4997F38A-33D7-48D0-BF5B-59285460D840}" ShortID="846392914">
 									<PropertyList>
@@ -1819,7 +1816,6 @@
 									<TransitionInfo/>
 								</MusicTransition>
 							</TransitionList>
-							<ObjectLists/>
 							<Playlist>
 								<MusicPlaylistItem Name="" ID="{852C900E-DF71-4D0A-B7B7-982A6D6A3FAF}" ShortID="191997977">
 									<PropertyList>
@@ -2125,7 +2121,6 @@
 							<TransitionInfo/>
 						</MusicTransition>
 					</TransitionList>
-					<ObjectLists/>
 					<ArgumentList>
 						<ArgumentRef Name="Music_States" ID="{5AE000C4-AE4F-4ECB-9FB6-CEAD6AEA8972}"/>
 					</ArgumentList>

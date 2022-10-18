@@ -19,23 +19,28 @@ public class HUDController : MonoBehaviour
         IdleBattleManager.OnDamageThePlayer += UpdateBarHealth;        
         BossQuest.OnDamageThePlayer += UpdateBarHealth;
         LevelController.OnLevelChange += UpdateBarHealth;
+        NeighboringKingdomsController.OnKingdomChange += UpdateTextkingdom;
     }
     private void OnDisable()
     {
         IdleBattleManager.OnDamageThePlayer -= UpdateBarHealth;
         BossQuest.OnDamageThePlayer -= UpdateBarHealth;
         LevelController.OnLevelChange -= UpdateBarHealth;
+        NeighboringKingdomsController.OnKingdomChange -= UpdateTextkingdom;
     }
     void Start()
     {
-        TextKimgdom.text = "Reino " + PlayerDataHelper.GetIdCurrentKingdom();
+        UpdateTextkingdom(0);
         playerMove = GetScript.Type<PlayerMove>("Player");
         btnInventory.onClick.AddListener(Open);
-        inventory = GetScript.Type<InventoryUI>("Inventory");
+        //inventory = GetScript.Type<InventoryUI>("Inventory");
         uIDayNight = GetComponent<UIDayNight>();
         UpdateBarHealth(0);
     }
-
+    void UpdateTextkingdom(int idCellLimit)
+    {
+        TextKimgdom.text = "Reino " + PlayerDataHelper.GetIdCurrentKingdom();
+    }
     public void UpdateBarHealth(float damege)
     {
         UpdateBarHealth();
@@ -59,7 +64,7 @@ public class HUDController : MonoBehaviour
     }
     void Open()
     {        
-        inventory.OpenOrClose();
+        //inventory.OpenOrClose();
         OnInventoryOpenOrClose?.Invoke();
     }
     void RollDice()

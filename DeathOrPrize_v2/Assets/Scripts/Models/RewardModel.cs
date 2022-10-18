@@ -5,5 +5,5 @@ using UnityEngine;
 public class RewardModel 
 {
     public int idKingdom;
-    public ItemProperties reward;
+    public ItemModel reward;
 }

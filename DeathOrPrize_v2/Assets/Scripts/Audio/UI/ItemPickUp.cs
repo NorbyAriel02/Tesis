@@ -16,11 +16,11 @@ public class ItemPickUp : MonoBehaviour
     }
     public void PlaySound(GameObject item)
     {
-        AkSoundEngine.PostEvent("UI_Click", this.gameObject);
+        //AkSoundEngine.PostEvent("UI_Click", this.gameObject);
     }
 
     public void CantGetUp()
     {
-        AkSoundEngine.PostEvent("Field_Error", this.gameObject);
+        //AkSoundEngine.PostEvent("Field_Error", this.gameObject);
     }
 }

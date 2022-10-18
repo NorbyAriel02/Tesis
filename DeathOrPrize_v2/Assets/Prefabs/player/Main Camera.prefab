@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 6733667253839968011}
   - component: {fileID: 6733667253839968244}
   - component: {fileID: 1231344982696880409}
-  - component: {fileID: 6733667253839968245}
   - component: {fileID: 6733667253393952649}
   - component: {fileID: 6733667253393952646}
   - component: {fileID: 6733667252556806274}
@@ -32,9 +31,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 20, y: 27, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &6733667253839968244
 Camera:
@@ -99,22 +99,6 @@ MonoBehaviour:
   m_CropFrameX: 0
   m_CropFrameY: 0
   m_StretchFill: 0
---- !u!114 &6733667253839968245
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6733667253839968247}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0700516dd6063342a0cc167f3915e07, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 8
-  playerPosition: {fileID: 0}
-  LoadKingdom: {fileID: 0}
-  animator: {fileID: 0}
 --- !u!114 &6733667253393952649
 MonoBehaviour:
   m_ObjectHideFlags: 0

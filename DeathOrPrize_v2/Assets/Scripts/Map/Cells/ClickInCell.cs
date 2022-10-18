@@ -26,11 +26,11 @@ public class ClickInCell : MonoBehaviour
     }
     void OnMouseOver()
     {
+        if (IsMouseOverUI())
+            return;
+
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            if (IsMouseOverUI())
-                return;
-
             cell.ClickMe = true;
             OnClickMe?.Invoke(cell.cellData);
         }

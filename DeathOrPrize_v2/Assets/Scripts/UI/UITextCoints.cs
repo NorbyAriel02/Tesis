@@ -10,14 +10,14 @@ public class UITextCoints : MonoBehaviour
     {
         SmithyController.OnForja += UpdateTexts;
         MarketSlot.OnSell += UpdateTexts;
-        CitySlot.OnBuy += UpdateTexts;
+        BaseSlot.OnBuy += UpdateTexts;
         UpdateTexts();
     }
     private void OnDisable()
     {
         SmithyController.OnForja -= UpdateTexts;
         MarketSlot.OnSell -= UpdateTexts;
-        CitySlot.OnBuy -= UpdateTexts;
+        BaseSlot.OnBuy -= UpdateTexts;
     }
     void UpdateTexts()
     {

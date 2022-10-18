@@ -7,12 +7,16 @@ public class ItemProperties
 {
     public Owner owner;
     /*Esta clase es variable, dependiendo del proyecto tendra mas o menos propiedades
-     en teoria creo que solo propiedades, ahora no veo razo para qie tenga algun metodo*/
-    public TypeItemInventory tItem;
+     en teoria creo que solo propiedades, ahora no veo razo para que tenga algun metodo*/
+    public TypeItemInventory typeItem;
     public TypeSlot typeSlot;
     public string name = "none";
+    public string sprite = "default";
     public int IndexSlot = -1;
     public string DataFile = "default";
+    public bool IsStackable = false;
+    public int Stack = 9999;
+
     /*Requisitos del player para poder utilizar el item*/
     public float strength;
     public float dexterity;
@@ -48,38 +52,3 @@ public class ItemProperties
     public float regenereHelth;
     public float regenereEnergy;
 }
-
-
-//void AssignData()
-//{
-//    //itemData = new ItemData();
-//    //itemData.strength = strength;
-//    //itemData.dexterity = dexterity;
-//    //itemData.agility = agility;
-//    //itemData.resistance = resistance;
-//    //itemData.constitution = constitution;
-//    //itemData.type = type;
-//    //itemData.SubType = SubType;
-//    //itemData.level = level;
-//    //itemData.area = area;
-//    //itemData.labelData = labelData;
-//    //itemData.EnergyPerAttacksEquipped = EnergyPerAttacksEquipped;
-//    //itemData.EnergyPerAttacksBase = EnergyPerAttacksBase;
-//    //itemData.timeBetweenAttacksEquipped = timeBetweenAttacksEquipped;
-//    //itemData.timeBetweenAttacksBase = timeBetweenAttacksBase;
-//    //itemData.attackSpeedEquipped = attackSpeedEquipped;
-//    //itemData.attackSpeedBase = attackSpeedBase;
-//    //itemData.weight = weight;
-//    //itemData.critical = critical;
-//    //itemData.damageAreaEquipped = damageAreaEquipped;
-//    //itemData.damageAreaBase = damageAreaBase;
-//    //itemData.damageAreaMax = damageAreaMax;
-//    //itemData.damageEquipped = damageEquipped;
-//    //itemData.damageBase = damageBase;
-//    //itemData.damageMax = damageMax;
-//    //itemData.defending = defending;
-//    //itemData.plusEnergy = plusEnergy;
-//    //itemData.plusHealth = plusHealth;
-//    //itemData.regenereHelth = regenereHelth;
-//    //itemData.regenereEnergy = regenereEnergy;
-//}

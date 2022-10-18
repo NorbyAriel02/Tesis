@@ -1,7 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/*Que quiero de esto, que sea independiente de todo el resto del juego
+ lo eventos seria:
+comienza la batalla
+termina la batalla*/
 public class IdleBattleManager : MonoBehaviour
 {
     public delegate void DamageThePlayer(float damage);
@@ -35,12 +38,25 @@ public class IdleBattleManager : MonoBehaviour
     private SpriteEnemiesController spriteEC;
     void Start()
     {
+        /*no deberia cargar los sprites este script*/
         spriteEC = GetComponent<SpriteEnemiesController>();
+        
+        /*Esto tiene que estar en un script aparte*/
         SetParent();       
+        /*Los stats del player los tiene que leer del helperdata*/
         playerStats = GetScript.Type<PlayerStats>("Player");
+        
+        /*Esto tiene que estar en un script aparte*/
         DesactivePanel();
+        
+        /*Estoy en duda con esto, creo que no deberia estar aca, asi puedo aislar los 
+         graficos del juego de la logica del ataque*/
         goEnemies = ChildrenController.GetChildren(Enemies);
+
+        /*Esto tiene que estar en un script aparte*/
         enemiesBarHealth = GetComponent<EnemiesBarHealth>();
+
+        /*Esto no se deberia ni llamar aca, a menos que cambie mucho la performan del juego*/
         UpdateKingdom();
     }
     public void UpdateKingdom()
@@ -94,11 +110,11 @@ public class IdleBattleManager : MonoBehaviour
         {
             goEnemies[x].SetActive(false);
         }
-        enemiesBarHealth.StartBars();
+        //enemiesBarHealth.StartBars();
         for (int x = 0; x < enemiesXcell[index].enemies.Count; x++)
         {
             goEnemies[x].SetActive(true);
-            enemiesBarHealth.AddMaxHealth(enemiesXcell[index].enemies[x].health);
+          //  enemiesBarHealth.AddMaxHealth(enemiesXcell[index].enemies[x].health);
             enemiesAttackSpeed.Add(enemiesXcell[index].enemies[x].attackSpeed);
             enemiesTimerAttack.Add(0f);
         }
@@ -112,7 +128,7 @@ public class IdleBattleManager : MonoBehaviour
         foreach (EnemyModel enemy in enemiesXcell[i].enemies)
         {
             float eTimerAttack = enemiesTimerAttack[index];
-            if (enemy.health > 0)
+            if (enemy.currentHealth > 0)
                 if (CanAttack(ref eTimerAttack, enemiesAttackSpeed[index]))
                 {
                     EnemyAttack(index);
@@ -129,7 +145,7 @@ public class IdleBattleManager : MonoBehaviour
                 PlayerAttack();
             }
 
-        if (enemiesXcell[i].enemies[currentEnemy].health <= 0)
+        if (enemiesXcell[i].enemies[currentEnemy].currentHealth <= 0)
         {
             levelSystem.AddExperience(ExpForEnemy * enemiesXcell[currentGridIndex].enemies[currentEnemy].level);
             goEnemies[currentEnemy].SetActive(false);
@@ -144,7 +160,7 @@ public class IdleBattleManager : MonoBehaviour
 
         if (playerStats.stats.currentHealth <= 0)
         {
-            AkSoundEngine.PostEvent("Player_Dead", this.gameObject);            
+            //AkSoundEngine.PostEvent("Player_Dead", this.gameObject);            
             EndBattle();
         }
     }
@@ -171,7 +187,7 @@ public class IdleBattleManager : MonoBehaviour
     }    
     void EnemyAttack(int index)
     {        
-        AkSoundEngine.PostEvent("Player_GetClawsDamage", this.gameObject);
+        //AkSoundEngine.PostEvent("Player_GetClawsDamage", this.gameObject);
         
         float d = playerStats.stats.equipment.armor;
         float a = enemiesXcell[currentGridIndex].enemies[index].damage;        
@@ -186,15 +202,15 @@ public class IdleBattleManager : MonoBehaviour
     }
     void PlayerAttack()
     {        
-        AkSoundEngine.PostEvent("Hit_Sword_Enemy", this.gameObject);
-        AkSoundEngine.PostEvent("Pain_Bear", this.gameObject);
-        float d = enemiesXcell[currentGridIndex].enemies[currentEnemy].defending;
+        //AkSoundEngine.PostEvent("Hit_Sword_Enemy", this.gameObject);
+        //AkSoundEngine.PostEvent("Pain_Bear", this.gameObject);
+        float d = enemiesXcell[currentGridIndex].enemies[currentEnemy].armor;
         float a = playerStats.stats.equipment.damage;
         
         float damage = IdleBattleHelper.GetRealDamage(d, a);
 
-        enemiesXcell[currentGridIndex].enemies[currentEnemy].health -= damage;
-        enemiesBarHealth.UpdateHealth(currentEnemy, enemiesXcell[currentGridIndex].enemies[currentEnemy].health);
+        enemiesXcell[currentGridIndex].enemies[currentEnemy].currentHealth -= damage;
+        //enemiesBarHealth.UpdateHealth(currentEnemy, enemiesXcell[currentGridIndex].enemies[currentEnemy].health);
     }
     private void FixedUpdate()
     {

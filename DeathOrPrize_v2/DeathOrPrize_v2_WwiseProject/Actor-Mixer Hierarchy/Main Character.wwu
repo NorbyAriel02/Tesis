@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{7F3C75E3-B15C-45EE-B5F1-E000DDC6DB97}" SchemaVersion="103">
+<WwiseDocument Type="WorkUnit" ID="{7F3C75E3-B15C-45EE-B5F1-E000DDC6DB97}" SchemaVersion="110">
 	<AudioObjects>
 		<WorkUnit Name="Main Character" ID="{7F3C75E3-B15C-45EE-B5F1-E000DDC6DB97}" PersistMode="Standalone">
 			<PropertyList>
@@ -50,7 +50,6 @@
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
-									<ObjectLists/>
 									<ActiveSourceList>
 										<ActiveSource Name="FX_Dados" ID="{BEB0AD40-075D-4B97-B4A1-4C50B4EAE979}" Platform="Linked"/>
 									</ActiveSourceList>
@@ -113,7 +112,6 @@
 													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
-											<ObjectLists/>
 											<ActiveSourceList>
 												<ActiveSource Name="Player_Move" ID="{0D1B85E1-0C3F-4DD4-9358-DF701F49181F}" Platform="Linked"/>
 											</ActiveSourceList>
@@ -141,7 +139,6 @@
 													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
-											<ObjectLists/>
 											<ActiveSourceList>
 												<ActiveSource Name="Player_Move" ID="{7B3155F0-9A3B-453C-B6A8-2A7258E6B1E1}" Platform="Linked"/>
 											</ActiveSourceList>
@@ -169,13 +166,11 @@
 													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
-											<ObjectLists/>
 											<ActiveSourceList>
 												<ActiveSource Name="Player_Move" ID="{ECB58F0A-9924-4D02-9255-9D7A15918445}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
-									<ObjectLists/>
 								</RandomSequenceContainer>
 								<Sound Name="Error_seleecion" ID="{81EE17E1-1A4D-46F8-A3C2-8FE4337461D2}" ShortID="44783615">
 									<ReferenceList>
@@ -200,13 +195,11 @@
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
-									<ObjectLists/>
 									<ActiveSourceList>
 										<ActiveSource Name="Error_seleecion" ID="{4E77686E-2F9A-4DE0-86EB-FEEDF6546B85}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
-							<ObjectLists/>
 						</ActorMixer>
 						<ActorMixer Name="Weapons" ID="{B557B582-94BC-4C69-B7D9-22D51EE3AF00}" ShortID="266861359">
 							<ReferenceList>
@@ -287,7 +280,6 @@
 																	</MediaIDList>
 																</AudioFileSource>
 															</ChildrenList>
-															<ObjectLists/>
 															<ActiveSourceList>
 																<ActiveSource Name="Sword Whip 01" ID="{1CE576BE-32A4-4AAF-9FFE-D4BC68BD1AE8}" Platform="Linked"/>
 															</ActiveSourceList>
@@ -317,13 +309,11 @@
 																	</MediaIDList>
 																</AudioFileSource>
 															</ChildrenList>
-															<ObjectLists/>
 															<ActiveSourceList>
 																<ActiveSource Name="Sword Whip 02" ID="{1D25387C-65E1-4157-90A7-5D7860EBA470}" Platform="Linked"/>
 															</ActiveSourceList>
 														</Sound>
 													</ChildrenList>
-													<ObjectLists/>
 												</RandomSequenceContainer>
 												<Sound Name="golpes humano" ID="{8F525271-EA49-42FB-8F9F-D5BA34F8C3E1}" ShortID="318379591">
 													<PropertyList>
@@ -365,7 +355,6 @@
 															</MediaIDList>
 														</AudioFileSource>
 													</ChildrenList>
-													<ObjectLists/>
 													<ActiveSourceList>
 														<ActiveSource Name="golpes humano" ID="{AA9F740D-259F-461F-A957-D2F60C4B9641}" Platform="Linked"/>
 													</ActiveSourceList>
@@ -413,19 +402,15 @@
 															</MediaIDList>
 														</AudioFileSource>
 													</ChildrenList>
-													<ObjectLists/>
 													<ActiveSourceList>
 														<ActiveSource Name="Sword hit" ID="{2251FD84-F995-4E88-AAF3-AC5866377B6D}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
 											</ChildrenList>
-											<ObjectLists/>
 										</BlendContainer>
 									</ChildrenList>
-									<ObjectLists/>
 								</ActorMixer>
 							</ChildrenList>
-							<ObjectLists/>
 						</ActorMixer>
 						<RandomSequenceContainer Name="Get_Damage" ID="{CD4C1287-7A7A-4A9A-89E0-087D758E1F0A}" ShortID="816972734">
 							<PropertyList>
@@ -487,7 +472,6 @@
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
-									<ObjectLists/>
 									<ActiveSourceList>
 										<ActiveSource Name="golpe grito" ID="{5805B292-CF3C-4DB5-807F-7EA3F0E2F0A4}" Platform="Linked"/>
 									</ActiveSourceList>
@@ -517,16 +501,13 @@
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
-									<ObjectLists/>
 									<ActiveSourceList>
 										<ActiveSource Name="golpe grito" ID="{78D98E90-61A4-40BF-9445-978672BCCF01}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
-							<ObjectLists/>
 						</RandomSequenceContainer>
 					</ChildrenList>
-					<ObjectLists/>
 				</ActorMixer>
 			</ChildrenList>
 		</WorkUnit>

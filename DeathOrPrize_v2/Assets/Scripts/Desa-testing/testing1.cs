@@ -5,60 +5,31 @@ using UnityEngine.UI;
 
 public class testing1 : MonoBehaviour
 {
-    public Button btnTest;
-    public Image imgAttack;
-    public Text mensaje;
-    public Text mensaje2;
-    public float timer;
-    public float attackSpeed = 5;
-    public float speed = 5;
-    public float oneAttack = 0;
-    private int ataques = 0;
-    
+    public GameObject drop;
+
     void Start()
     {
-        btnTest.onClick.AddListener(test);
+    
     }
-    void test()
-    {
-        speed = 1 / attackSpeed;
-        mensaje.text = "Ataque ";
-        timer = 0;
-        ataques = 0;
-    }
-
+    
     private void Update()
     {
-        if(CanAttack(ref oneAttack, speed))
+        if(Input.GetKeyDown(KeyCode.C))
         {
-            ataques++;
-            mensaje.text = "Ataque " + ataques;
+            DataHelper.Heal();
+        }
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            DataHelper.UpdateIdCurrentKingdom(9);
+        }
+        if(Input.GetKeyDown(KeyCode.D))
+        {
+            DataHelper.UpdateSlotsNumberInventory(18);
+            ItemModel w = Utilitis.GetWeapon(1, Owner.player, "inventory");
+            GameObject d = Instantiate(drop, new Vector3(0,0,0), Quaternion.identity);
+            d.GetComponent<Drop>().item = w;
         }
     }
 
-    bool CanAttack(ref float oneAttack, float speed)
-    {
-        if (PassASeg())
-        {
-            oneAttack += speed;
-        }            
-
-        if(oneAttack >= 1)
-        {
-            oneAttack = 0;            
-            return true;
-        }
-        return false;         
-    }
-    bool PassASeg()
-    {
-        timer += Time.deltaTime;
-
-        if(timer >= 1)
-        {
-            timer = 0;
-            return true;
-        }
-        return false;
-    }
+    
 }

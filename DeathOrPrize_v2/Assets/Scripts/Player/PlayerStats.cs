@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
-{
+{    
     public float attackSpeed = 0.5f;
     public float attackSpeedTimer = 0f;
     public PlayerStatsModel stats;
     private void OnEnable()
     {
         DragAndDrop.OnMoveItem += UpdateEquip;
-        LevelController.OnLevelChange += LevelChange;
+        LevelController.OnLevelChange += LevelChange;        
     }
     private void OnDisable()
     {
@@ -29,32 +29,33 @@ public class PlayerStats : MonoBehaviour
         this.stats.experience = _stats.experience;
         this.stats.level = _stats.level;
     }
-    public void EquipArmor(ItemProperties item)
+    public void EquipArmor(ItemArmor item)
     {
-        stats.equipment.armor = item.armor;
-        DataHelper.UpdateEquipment(stats.equipment);
+        stats.equipment.armor += item.armor;        
     }
-    public void EquipWeapon(ItemProperties item)
+    public void EquipWeapon(ItemWeapon item)
     {
-        stats.equipment.damage = item.damageBase;
-        stats.equipment.attackSpeed = item.attackSpeedEquipped;
+        stats.equipment.damage = item.damage;
+        stats.equipment.attackSpeed = item.attackSpeed;
         attackSpeed = stats.equipment.attackSpeed;
-        attackSpeedTimer = 0f;
-        DataHelper.UpdateEquipment(stats.equipment);
+        attackSpeedTimer = 0f;        
     }
     public void UpdateEquip()
     {
-        ResetEquip();
-        DataHelper.UpdateEquipment(stats.equipment);
-        List<ItemProperties> equip = DataHelper.GetListEquip();
-        foreach (ItemProperties i in equip)
-        {
-            if (i.tItem == TypeItemInventory.Armor)
-                EquipArmor(i);
-
-            if (i.tItem == TypeItemInventory.Weapon)
-                EquipWeapon(i);
+        ResetEquip();        
+        List<ItemModel> equip = DataHelper.GetListEquip();
+        for(int x = 0; x < equip.Count; x++)
+        {            
+            if (equip[x].GetType().GetField("armor") != null)
+            {
+                EquipArmor((ItemArmor)equip[x]);                
+            }
+            if (equip[x].GetType().GetField("damage") != null)
+            {
+                EquipWeapon((ItemWeapon)equip[x]);
+            }
         }
+        DataHelper.UpdateEquipment(stats.equipment);
     }
     void ResetEquip()
     {

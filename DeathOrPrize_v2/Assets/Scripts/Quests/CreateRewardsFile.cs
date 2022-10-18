@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CreateRewardsFile : MonoBehaviour
 {
-    public List<ItemProperties> items;
+    public List<ItemModel> items;
     public string idRewads;
     void Start()
     {

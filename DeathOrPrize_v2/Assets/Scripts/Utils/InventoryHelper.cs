@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class InventoryHelper 
 {
-    public static List<ItemProperties> GetListItemsFromFile(string path)
+    public static List<ItemModel> GetListItemsFromFile(string path)
     {
         DataFileController fileController = new DataFileController();
-        List<ItemProperties> items = fileController.GetEncryptedData<List<ItemProperties>>(path);
+        List<ItemModel> items = fileController.GetEncryptedData<List<ItemModel>>(path);
         if (items == null)
-            items = new List<ItemProperties>();
+            items = new List<ItemModel>();
 
         return items;
     }
-    public static List<ItemProperties> GetListItemsFromPanel(GameObject[] _Slots)
+    public static List<ItemModel> GetListItemsFromPanel(GameObject[] _Slots)
     {
-        List<ItemProperties> items = new List<ItemProperties>();
+        List<ItemModel> items = new List<ItemModel>();
         foreach (GameObject slot in _Slots)
         {
             if (slot.GetComponent<Slot>() == null)
@@ -24,8 +24,8 @@ public class InventoryHelper
             if (!slot.GetComponent<Slot>().empty)
             {
                 GameObject item = ChildrenController.GetChild(slot);
-                ItemProperties data = item.GetComponent<Item>().properties;
-                items.Add(data);
+                //ItemModel data = item.GetComponent<Item>().properties;
+                //items.Add(data);
             }
         }
         return items;
@@ -33,12 +33,12 @@ public class InventoryHelper
     public static void ShowItems(GameObject[] _Slots, GameObject prefabItem, string path)
     {
         EmptySlots(_Slots);
-        List<ItemProperties> items = GetListItemsFromFile(path);
+        List<ItemModel> items = GetListItemsFromFile(path);
         
         if (items == null)
             return;
 
-        foreach (ItemProperties item in items)
+        foreach (ItemModel item in items)
         {
             int index = -1;
             if (item.IndexSlot != -1 && IsIndexSlotEmpty(item.IndexSlot, _Slots))
@@ -51,12 +51,12 @@ public class InventoryHelper
             _Slots[index].GetComponent<Slot>().Item = gItem;
             item.IndexSlot = index;
             Item scriptItem = gItem.GetComponent<Item>();
-            scriptItem.SetItem(item);
+            //scriptItem.SetItem(item);
         }
     }    
-    public static bool AddItem(ItemProperties newItem, GameObject[] Slots, string path)
+    public static bool AddItem(ItemModel newItem, GameObject[] Slots, string path)
     {
-        List<ItemProperties> items = GetListItemsFromFile(path);
+        List<ItemModel> items = GetListItemsFromFile(path);
         if (items.Count >= Slots.Length)
             return false;
 
@@ -66,9 +66,9 @@ public class InventoryHelper
         
         return true;
     }
-    public static void RemoveItemFromFile(ItemProperties item, string path)
+    public static void RemoveItemFromFile(ItemModel item, string path)
     {
-        List<ItemProperties> items = GetListItemsFromFile(path);
+        List<ItemModel> items = GetListItemsFromFile(path);
         items.Remove(item);
         Save(items, path);
     }
@@ -83,12 +83,12 @@ public class InventoryHelper
             ChildrenController.RemoveAllChildren(slot);
         }
     }    
-    public static void Save(List<ItemProperties> items, string path)
+    public static void Save(List<ItemModel> items, string path)
     {
         DataFileController fileController = new DataFileController();
-        fileController.SaveEncrypted<List<ItemProperties>>(items, path);
+        fileController.SaveEncrypted<List<ItemModel>>(items, path);
     }
-    private static int GetIndexSlotEmpty(GameObject[] _Slots, ItemProperties item)
+    private static int GetIndexSlotEmpty(GameObject[] _Slots, ItemModel item)
     {
         int index = 0;
         foreach (GameObject slot in _Slots)
@@ -111,8 +111,8 @@ public class InventoryHelper
     public static void StartInventoryAndEquipmentFile(string pathInventory, string pathEquipment)
     {
         DataFileController fileController = new DataFileController();
-        List<ItemProperties> items = new List<ItemProperties>();
-        fileController.SaveEncrypted<List<ItemProperties>>(items, pathInventory);
-        fileController.SaveEncrypted<List<ItemProperties>>(items, pathEquipment);
+        List<ItemModel> items = new List<ItemModel>();
+        fileController.SaveEncrypted<List<ItemModel>>(items, pathInventory);
+        fileController.SaveEncrypted<List<ItemModel>>(items, pathEquipment);
     }
 }

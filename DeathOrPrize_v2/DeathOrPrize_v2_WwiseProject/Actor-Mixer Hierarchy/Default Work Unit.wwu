@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{6B4AFCAD-D07D-4F63-85EC-788922BBC621}" SchemaVersion="103">
+<WwiseDocument Type="WorkUnit" ID="{6B4AFCAD-D07D-4F63-85EC-788922BBC621}" SchemaVersion="110">
 	<AudioObjects>
 		<WorkUnit Name="Default Work Unit" ID="{6B4AFCAD-D07D-4F63-85EC-788922BBC621}" PersistMode="Standalone">
 			<ChildrenList>
@@ -28,7 +28,6 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
-							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="Ringing hit_DIE" ID="{49C586CE-7CFD-4221-BA7D-E8E67B580694}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -56,7 +55,6 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
-							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="FX_Swish_Weapon" ID="{6B74B99C-3A1F-4DA4-8537-B16D6BC394C3}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -79,7 +77,6 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
-							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="golpes humanos 01" ID="{A8B1968F-F5D3-4F5E-9516-8BE7C453A624}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -108,7 +105,6 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
-							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="Error_Fallo_En_Celda" ID="{B582014F-C587-41C6-A38A-8370EA233A51}" Platform="Linked"/>
 							</ActiveSourceList>

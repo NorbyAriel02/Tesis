@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{F1DB5054-C665-4254-8891-376B2C7010A6}" SchemaVersion="103">
+	<AudioObjects>
+		<WorkUnit Name="Monsters" ID="{F1DB5054-C665-4254-8891-376B2C7010A6}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="12"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<ActorMixer Name="Monsters" ID="{62D43127-3409-48BE-A0E8-C0A52170EDBC}" ShortID="56486660">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCA1DF01-6F8C-472F-B87F-732CAB749F66}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Enemy" ID="{05496FD0-2418-41BC-B93C-D9622842C6C3}" WorkUnitID="{F084C6E1-E0BE-4549-96E1-9AF9BA3B6675}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<ActorMixer Name="Bear" ID="{1F836C43-998F-4A66-B820-A9FED0BD054D}" ShortID="988246503">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCA1DF01-6F8C-472F-B87F-732CAB749F66}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Enemy" ID="{05496FD0-2418-41BC-B93C-D9622842C6C3}" WorkUnitID="{F084C6E1-E0BE-4549-96E1-9AF9BA3B6675}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Defeated_Bear" ID="{1AFCED68-B7F8-47C5-8C85-FCBD6133D93C}" ShortID="419924497">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCA1DF01-6F8C-472F-B87F-732CAB749F66}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F084C6E1-E0BE-4549-96E1-9AF9BA3B6675}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="BEAST 01 Attack 08" ID="{8A3A2B9A-F57F-48EF-87BD-EF7BF6FA7B27}">
+											<Language>SFX</Language>
+											<AudioFile>BEAST 01 Attack 08.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="9903972"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="BEAST 01 Attack 08" ID="{8A3A2B9A-F57F-48EF-87BD-EF7BF6FA7B27}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<RandomSequenceContainer Name="Pain_Bear" ID="{95B5BF0D-A1C8-44AD-A565-E56DA4B571BD}" ShortID="845064290">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-4</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCA1DF01-6F8C-472F-B87F-732CAB749F66}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F084C6E1-E0BE-4549-96E1-9AF9BA3B6675}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Pain_Bear" ID="{B6AE0436-E1B1-495B-8288-AF5608455768}" ShortID="951211531">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>10</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCA1DF01-6F8C-472F-B87F-732CAB749F66}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F084C6E1-E0BE-4549-96E1-9AF9BA3B6675}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="BEAST 01 Threaten Short 06" ID="{D0F2B8F6-E28A-4839-A920-E531B9C5CE15}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.14592700729927"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0329051094890511"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.356233576642336"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>BEAST 01 Threaten Short 06.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="425520142"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="BEAST 01 Threaten Short 06" ID="{D0F2B8F6-E28A-4839-A920-E531B9C5CE15}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Pain_Bear_01" ID="{7459D565-3760-42A3-847C-E2B42B172A1D}" ShortID="579800908">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCA1DF01-6F8C-472F-B87F-732CAB749F66}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F084C6E1-E0BE-4549-96E1-9AF9BA3B6675}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="BEAST 01 Threaten Short 06" ID="{57A9FAF4-415D-4028-887A-F2A0B5CC063F}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.174540145985401"/>
+														<Property Name="LoopBegin" Type="Real64" Value="0.384846715328467"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.324759124087591"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.819766423357664"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>BEAST 01 Threaten Short 06.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="458050083"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="BEAST 01 Threaten Short 06" ID="{57A9FAF4-415D-4028-887A-F2A0B5CC063F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists/>
+								</RandomSequenceContainer>
+							</ChildrenList>
+							<ObjectLists/>
+						</ActorMixer>
+						<ActorMixer Name="Wolf" ID="{3C049DFE-4A51-49F1-833A-4FBDAFEE19CF}" ShortID="251908800">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCA1DF01-6F8C-472F-B87F-732CAB749F66}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Enemy" ID="{05496FD0-2418-41BC-B93C-D9622842C6C3}" WorkUnitID="{F084C6E1-E0BE-4549-96E1-9AF9BA3B6675}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Pain_wolf" ID="{33EBD00B-9E64-4A04-8CF8-A4AF8337550B}" ShortID="995332932">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{31327A92-7371-43B0-85A4-81C9BF7DDEA6}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="250"/>
+															<Property Name="Min" Type="Real64" Value="-250"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-4</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCA1DF01-6F8C-472F-B87F-732CAB749F66}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F084C6E1-E0BE-4549-96E1-9AF9BA3B6675}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Wolf_Pain" ID="{6203C36E-3F2A-42DA-A279-E1FC46CAA3D0}" ShortID="1035038656">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCA1DF01-6F8C-472F-B87F-732CAB749F66}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F084C6E1-E0BE-4549-96E1-9AF9BA3B6675}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Wolf_Pain" ID="{C728717D-A7D6-4B88-8250-7D56958D9B4D}">
+													<Language>SFX</Language>
+													<AudioFile>SFX Render\Wolf_Pain.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="188609878"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Wolf_Pain" ID="{C728717D-A7D6-4B88-8250-7D56958D9B4D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists/>
+								</RandomSequenceContainer>
+								<Sound Name="Defeated_Wolf" ID="{61E804F5-C13C-4BAB-8CD9-C28223AAAD9D}" ShortID="604159065">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCA1DF01-6F8C-472F-B87F-732CAB749F66}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F084C6E1-E0BE-4549-96E1-9AF9BA3B6675}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Wolf_Die" ID="{A999DB43-1094-4B5A-9A25-4D2D9175FCA4}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.463140241984872"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.33522346359468"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>SFX Render\Wolf_Die.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="562222609"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Wolf_Die" ID="{A999DB43-1094-4B5A-9A25-4D2D9175FCA4}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists/>
+						</ActorMixer>
+						<RandomSequenceContainer Name="Monster_Attack" ID="{BE0F8E1F-B900-4AFE-86F5-A4776AA6C5E0}" ShortID="859963163">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{4CA8D9D5-4889-438A-886D-575523484E09}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="250"/>
+													<Property Name="Min" Type="Real64" Value="-250"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-13</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCA1DF01-6F8C-472F-B87F-732CAB749F66}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Enemy" ID="{05496FD0-2418-41BC-B93C-D9622842C6C3}" WorkUnitID="{F084C6E1-E0BE-4549-96E1-9AF9BA3B6675}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Hit_Claws" ID="{74D269E4-EDAB-480F-8F7F-59647EA5716B}" ShortID="162194567">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCA1DF01-6F8C-472F-B87F-732CAB749F66}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F084C6E1-E0BE-4549-96E1-9AF9BA3B6675}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Hit_Claws" ID="{B70ABE3A-A5D8-4612-BE83-EF800F0D177E}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.384855851829783"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.679565287915653"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>SFX Render\Hit_Claws.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="15491015"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Hit_Claws" ID="{B70ABE3A-A5D8-4612-BE83-EF800F0D177E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Hit_Claws_01" ID="{D2768ADD-9FBE-4607-B621-A11A29142CBA}" ShortID="1060949156">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCA1DF01-6F8C-472F-B87F-732CAB749F66}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F084C6E1-E0BE-4549-96E1-9AF9BA3B6675}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Hit_Claws" ID="{A00E38B6-D838-4D2B-B6F4-85A15853C7FD}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.384855851829783"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.877193968585001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.50475170895609"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>SFX Render\Hit_Claws.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="717322625"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Hit_Claws" ID="{A00E38B6-D838-4D2B-B6F4-85A15853C7FD}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Hit_Claws_02" ID="{2C7749A4-C693-4572-B2C4-F69773AB216F}" ShortID="1003403489">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCA1DF01-6F8C-472F-B87F-732CAB749F66}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F084C6E1-E0BE-4549-96E1-9AF9BA3B6675}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Hit_Claws" ID="{E04453FC-CD3F-4E85-AE41-DA4DC9DD6E16}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.384855851829783"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="1.74745359749739"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>SFX Render\Hit_Claws.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="826605613"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Hit_Claws" ID="{E04453FC-CD3F-4E85-AE41-DA4DC9DD6E16}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists/>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Monster_Grunt" ID="{7CDCC1C6-4B61-4154-995E-A068E55C44BC}" ShortID="812214928">
+							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>13</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{791EA323-7364-4867-99AA-D3393E783CA2}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="200"/>
+													<Property Name="Min" Type="Real64" Value="-200"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCA1DF01-6F8C-472F-B87F-732CAB749F66}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Enemy" ID="{05496FD0-2418-41BC-B93C-D9622842C6C3}" WorkUnitID="{F084C6E1-E0BE-4549-96E1-9AF9BA3B6675}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Wolf_Snarl" ID="{EF537B99-BE9B-4EFB-960C-3D3A43DDDCED}" ShortID="87390132">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCA1DF01-6F8C-472F-B87F-732CAB749F66}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F084C6E1-E0BE-4549-96E1-9AF9BA3B6675}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Wolf_Snarl" ID="{193C7B75-0CC7-4DD6-8CD2-5837BED5B100}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.66021897810219"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.53722627737226"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>SFX Render\Wolf_Snarl.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="624205737"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Wolf_Snarl" ID="{193C7B75-0CC7-4DD6-8CD2-5837BED5B100}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Bear_Snarl" ID="{206D7141-1F9C-4EF4-A54C-C098D75D8024}" ShortID="869138450">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCA1DF01-6F8C-472F-B87F-732CAB749F66}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F084C6E1-E0BE-4549-96E1-9AF9BA3B6675}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Wolf_Snarl" ID="{DC47257F-55E3-443A-8C12-8561E4882120}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.66021897810219"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="4.20766423357665"/>
+												<Property Name="TrimEnd" Type="Real64" Value="6.00109489051095"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>SFX Render\Wolf_Snarl.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="395106706"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Wolf_Snarl" ID="{DC47257F-55E3-443A-8C12-8561E4882120}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Bear_Snarl_01" ID="{ED3D1B6B-E6CA-4DDF-8A4F-583A7D9312AF}" ShortID="369986596">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCA1DF01-6F8C-472F-B87F-732CAB749F66}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F084C6E1-E0BE-4549-96E1-9AF9BA3B6675}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Wolf_Snarl" ID="{7DA6D776-BB52-473B-9DF6-A65B98F85ACF}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.66021897810219"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="1.92153284671533"/>
+												<Property Name="TrimEnd" Type="Real64" Value="3.69525547445255"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>SFX Render\Wolf_Snarl.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="4162732"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Wolf_Snarl" ID="{7DA6D776-BB52-473B-9DF6-A65B98F85ACF}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists/>
+						</RandomSequenceContainer>
+					</ChildrenList>
+					<ObjectLists/>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

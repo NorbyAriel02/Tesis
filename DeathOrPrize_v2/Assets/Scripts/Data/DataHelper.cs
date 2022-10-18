@@ -6,9 +6,9 @@ using System.Data;
 
 public class DataHelper 
 {    
-    public delegate void ItemPickup(ItemProperties item);
+    public delegate void ItemPickup(ItemModel item);
     public static ItemPickup OnItemPickup;
-    public delegate void RemoveItem(ItemProperties item);
+    public delegate void RemoveItem(ItemModel item);
     public static RemoveItem OnRemoveItem;
  
     static string pathInventory = PathHelper.InventoryDataFile;
@@ -31,21 +31,21 @@ public class DataHelper
     }
     #endregion
     #region City
-    public static List<ItemProperties> GetListMarket()
+    public static List<ItemModel> GetListMarket()
     {
         return GetListItems(pathMarket);
     }
-    public static void AddItemMarket(ItemProperties item)
+    public static void AddItemMarket(ItemModel item)
     {
         Add(item, pathMarket);        
     }
-    public static void CreateMarket(List<ItemProperties> items)
+    public static void CreateMarket(List<ItemModel> items)
     {
         InventoryModel market = GetInventory(pathMarket);
-        market.items = items;
+        market.items = items;        
         DataFileController.SaveEncryptedV2<InventoryModel>(market, pathMarket);
     }
-    public static void RemoveItemMarket(ItemProperties item)
+    public static void RemoveItemMarket(ItemModel item)
     {
         Remove(item, pathMarket);        
     }
@@ -133,6 +133,16 @@ public class DataHelper
 
         DataFileController.SaveEncryptedV2<PlayerDataModel>(data, PathHelper.PlayerDataFile);
     }
+    public static void RestHealth(float value)
+    {
+        PlayerDataModel data = GetDataPlayer();
+        if (data != null)
+        {
+            data.stats.currentHealth -= value;
+        }
+
+        DataFileController.SaveEncryptedV2<PlayerDataModel>(data, PathHelper.PlayerDataFile);
+    }
     public static void UpdateEquipment(Equipment equipment)
     {
         PlayerDataModel data = GetDataPlayer();
@@ -170,24 +180,24 @@ public class DataHelper
         inventory.SlotsNumber = slotsNumber;
         SaveInvemtory(inventory);
     }
-    public static void AddItemInventory(ItemProperties item)
+    public static void AddItemInventory(ItemModel item)
     {        
         Add(item, pathInventory);
         OnItemPickup?.Invoke(item);
     }
-    public static void RemoveItemInventory(ItemProperties item)
+    public static void RemoveItemInventory(ItemModel item)
     {        
         Remove(item, pathInventory);         
     }
-    public static void UpdateItemInventory(ItemProperties item)
+    public static void UpdateItemInventory(ItemModel item)
     {        
         UpdateItem(item, pathInventory);
     }
-    public static bool ItemExistsInInventory(ItemProperties item)
+    public static bool ItemExistsInInventory(ItemModel item)
     {        
         return ItemExists(item, pathInventory);
     }
-    public static List<ItemProperties> GetListInventory()
+    public static List<ItemModel> GetListInventory()
     {
         return GetListItems(pathInventory);
     }
@@ -201,27 +211,27 @@ public class DataHelper
     }
     #endregion
     #region Equipo
-    public static void ToEquip(ItemProperties item)
+    public static void ToEquip(ItemModel item)
     {
         Add(item, pathEquip);        
     }
-    public static void Unequip(ItemProperties item)
+    public static void Unequip(ItemModel item)
     {
         Remove(item, pathEquip);        
     }
-    public static List<ItemProperties> GetListEquip()
+    public static List<ItemModel> GetListEquip()
     {
         return GetListItems(pathEquip);
     }
     #endregion
     #region genericos
-    static bool ItemExists(ItemProperties item, string path)
+    static bool ItemExists(ItemModel item, string path)
     {
         InventoryModel inventory = GetInventory(path);
 
         for (int i = 0; i < inventory.items.Count; i++)
         {
-            ItemProperties auxItem = inventory.items[i];
+            ItemModel auxItem = inventory.items[i];
             if (item.name == auxItem.name)
             {
                 return true;
@@ -230,13 +240,14 @@ public class DataHelper
 
         return false;
     }
-    static void UpdateItem(ItemProperties item, string path)
+    //Tengo que arreglar este metodo
+    static void UpdateItem(ItemModel item, string path)
     {
         InventoryModel inventory = GetInventory(path);
 
         for (int i = 0; i < inventory.items.Count; i++)
         {
-            ItemProperties auxItem = inventory.items[i];
+            ItemModel auxItem = inventory.items[i];
             if (item.name == auxItem.name)
             {
                 inventory.items.Remove(auxItem);
@@ -247,20 +258,48 @@ public class DataHelper
 
         DataFileController.SaveEncryptedV2<InventoryModel>(inventory, path);
     }
-    static void Add(ItemProperties item, string path)
+    static void Add(ItemModel item, string path)
     {
         InventoryModel inventory = GetInventory(path);
-        
-        inventory.items.Add(item);
+        if (item.IsStackable)
+        {
+            ItemModel aux = GetStack(item, inventory);
+            if(aux != null)
+            {
+                aux.Stack++;
+                UpdateItem(aux, path);
+            }
+            else
+                inventory.items.Add(item);
+        }
+        else
+        {
+            inventory.items.Add(item);
+        }
         DataFileController.SaveEncryptedV2<InventoryModel>(inventory, path);
+    }  
+    static ItemModel GetStack(ItemModel item, InventoryModel inventory)
+    {
+        for (int i = 0; i < inventory.items.Count; i++)
+        {
+            ItemModel auxItem = inventory.items[i];
+            if (!auxItem.IsStackable)
+                continue;
+
+            if (item.GetType() == auxItem.GetType())
+            {
+                return auxItem;
+            }
+        }
+        return null;
     }
-    static void Remove(ItemProperties item, string path)
+    static void Remove(ItemModel item, string path)
     {
         InventoryModel inventory = GetInventory(path);
 
         for (int i = 0; i < inventory.items.Count; i++)
         {
-            ItemProperties auxItem = inventory.items[i];
+            ItemModel auxItem = inventory.items[i];
             if (item.name == auxItem.name)
             {
                 inventory.items.Remove(auxItem);
@@ -281,14 +320,20 @@ public class DataHelper
         return inventory;
     }
 
-    static List<ItemProperties> GetListItems(string path)
+    static List<ItemModel> GetListItems(string path)
     {
         InventoryModel inventory = GetInventory(path);
 
         return inventory.items;
     }
     #endregion
-    public static void RemoveItemList(ItemProperties item)
+    
+    public static EnemiesXcellModel GetStatsEnemies(int idCell, int idKingdom)
+    {        
+        List<EnemiesXcellModel> enemies = DataFileController.GetEncryptedDataV2<List<EnemiesXcellModel>>(PathHelper.EnemiesDataFile(idKingdom));
+        return enemies[idCell];
+    }
+    public static void RemoveItemList(ItemModel item)
     {
         string path = PathHelper.PlayerDataFile; 
         if (files == null)
@@ -299,7 +344,7 @@ public class DataHelper
 
         Remove(item, path);
     }
-    public static List<ItemProperties> GetItems(string dataFile)
+    public static List<ItemModel> GetItems(string dataFile)
     {
         string path = "";
         if (files == null)
@@ -310,7 +355,7 @@ public class DataHelper
 
         return GetListItems(path);
     }
-    public static void AddItemList(ItemProperties item)
+    public static void AddItemList(ItemModel item)
     {
         string path = PathHelper.PlayerDataFile;
         if (files == null)
@@ -329,8 +374,9 @@ public class DataHelper
         foreach(DataRow row in dt.Rows)
         {
             string path = PathHelper.GetPlatformPath(row[1].ToString());
-            files.Add(row[0].ToString(), path);
-            Logger.WriteLog(row[0].ToString() + " es la llave del path " + path);
+            files.Add(row[0].ToString(), path);            
         }
     }
+
+
 }

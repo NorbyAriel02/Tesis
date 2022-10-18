@@ -4,7 +4,7 @@ using UnityEngine;
 public class CitySlot : BaseSlot, IDropHandler
 {
     
-    public override bool ActionSlot(ItemProperties item)
+    public override bool ActionSlot(ItemModel item)
     {
         if (item.owner == Owner.seller)
         {

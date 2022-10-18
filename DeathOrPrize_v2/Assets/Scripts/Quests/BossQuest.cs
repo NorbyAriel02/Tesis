@@ -92,8 +92,8 @@ public class BossQuest : MonoBehaviour
             goEnemies[x].SetActive(false);
         }
         goEnemies[IdBoss-1].SetActive(true);
-        enemiesBarHealth.StartBars();
-        enemiesBarHealth.AddMaxHealthBoss(bossesData[IdBoss-1].health);
+        //enemiesBarHealth.StartBars();
+        //enemiesBarHealth.AddMaxHealthBoss(bossesData[IdBoss-1].health);
         bossAttackSpeed = bossesData[IdBoss-1].attackSpeed;
         bossTimerAttack = 0f;
         currentBoss = IdBoss-1;
@@ -101,7 +101,7 @@ public class BossQuest : MonoBehaviour
     void Battle()
     {
         timer += Time.deltaTime;
-        if (bossesData[currentBoss].health > 0)
+        if (bossesData[currentBoss].currentHealth > 0)
             if (CanAttack(ref bossTimerAttack, bossAttackSpeed))
             {
                 BossAttack();
@@ -113,7 +113,7 @@ public class BossQuest : MonoBehaviour
                 PlayerAttack();
             }
 
-        if (bossesData[currentBoss].health <= 0)
+        if (bossesData[currentBoss].currentHealth <= 0)
         {
             levelSystem.AddExperience(ExpForEnemy * bossesData[currentBoss].level);
             RewardDrop(bossesData[currentBoss].level);
@@ -148,13 +148,13 @@ public class BossQuest : MonoBehaviour
     }
     void PlayerAttack()
     {
-        float d = bossesData[currentBoss].defending;
+        float d = bossesData[currentBoss].armor;
         float a = playerStats.stats.equipment.damage;
 
         float damage = IdleBattleHelper.GetRealDamage(d, a);
 
-        bossesData[currentBoss].health -= damage;
-        enemiesBarHealth.UpdateHealthBoss(currentBoss, bossesData[currentBoss].health);
+        bossesData[currentBoss].currentHealth -= damage;
+        //enemiesBarHealth.UpdateHealthBoss(currentBoss, bossesData[currentBoss].health);
     }
     private void FixedUpdate()
     {

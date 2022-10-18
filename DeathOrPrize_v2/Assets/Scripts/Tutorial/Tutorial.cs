@@ -55,7 +55,7 @@ public class Tutorial : MonoBehaviour
     }
     void NextDialogue()
     {
-        AkSoundEngine.PostEvent("UI_Click", this.gameObject);
+        //AkSoundEngine.PostEvent("UI_Click", this.gameObject);
         OnNextAction?.Invoke();
     }
     void StartDialogueTutorial(int index)

@@ -36,7 +36,7 @@ public class EnemiesCreator : MonoBehaviour
     List<EnemiesXcellModel> GetDataEnemiesKingdom(int idKingdom)
     {
         enemiesXcell = new List<EnemiesXcellModel>();
-        CreateEnemies(0, idKingdom);        
+        CreateEnemies(idKingdom, idKingdom);        
         return enemiesXcell;
     }
     void CreateEnemies(int biome, int idKingdom)
@@ -111,8 +111,9 @@ public class EnemiesCreator : MonoBehaviour
     EnemyModel AssignDiffisulted(EnemyModel enemy, int x, int y, int level)
     {
         enemy.level = level;
-        enemy.health = Balance[0].baseValue + level * Balance[0].balanceValue;
-        enemy.defending = Balance[1].baseValue + level * Balance[1].balanceValue;
+        enemy.maxHealth = Balance[0].baseValue + level * Balance[0].balanceValue;
+        enemy.currentHealth = enemy.maxHealth;
+        enemy.armor = Balance[1].baseValue + level * Balance[1].balanceValue;
         enemy.attackSpeed = Utilitis.AttackSpeed(level);
         enemy.damage = Balance[3].baseValue + level * Balance[3].balanceValue;
 

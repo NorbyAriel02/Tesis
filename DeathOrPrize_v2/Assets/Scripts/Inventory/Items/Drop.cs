@@ -8,7 +8,7 @@ public class Drop : MonoBehaviour
     public static Pickup OnPickupItem;
     public delegate void CantPickup();
     public static CantPickup OnCantPickupItem;
-    public ItemProperties item;    
+    public ItemModel item;    
     
     // Start is called before the first frame update
     void Start()
@@ -36,14 +36,6 @@ public class Drop : MonoBehaviour
                 }
                 else
                     OnCantPickupItem?.Invoke();
-
-                //if (inventory.AddItem(item))
-                //{
-                //    AkSoundEngine.PostEvent("UI_Click", this.gameObject);
-                //    Destroy(gameObject);
-                //}
-                //else
-                //    CantGetUp();
             }
         }
     }

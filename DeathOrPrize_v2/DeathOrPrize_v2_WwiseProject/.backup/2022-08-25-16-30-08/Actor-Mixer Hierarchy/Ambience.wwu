@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{B3658681-0240-4FA9-881B-B69F39B68550}" SchemaVersion="103">
+	<AudioObjects>
+		<WorkUnit Name="Ambience" ID="{B3658681-0240-4FA9-881B-B69F39B68550}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="10"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<ActorMixer Name="Ambience" ID="{C8E0649E-5AF1-4C41-A8DE-2479F97C495C}" ShortID="993362231">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCA1DF01-6F8C-472F-B87F-732CAB749F66}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Ambience" ID="{93C9F602-B37C-4A21-927C-9D13D3012A8B}" WorkUnitID="{F084C6E1-E0BE-4549-96E1-9AF9BA3B6675}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<BlendContainer Name="Forest" ID="{1CC22651-0DF8-41CD-89F0-5D43CDCEA2EE}" ShortID="257850850">
+							<PropertyList>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>11</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCA1DF01-6F8C-472F-B87F-732CAB749F66}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Ambience" ID="{93C9F602-B37C-4A21-927C-9D13D3012A8B}" WorkUnitID="{F084C6E1-E0BE-4549-96E1-9AF9BA3B6675}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Amb_Forest_dayligth" ID="{C20A3D93-C452-4459-9125-4AA3D1C2AF4B}" ShortID="636961472">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-10</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCA1DF01-6F8C-472F-B87F-732CAB749F66}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F084C6E1-E0BE-4549-96E1-9AF9BA3B6675}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Amb_Forest_dayligth" ID="{59BA3260-6D1E-4116-9263-2590B599F151}">
+											<PropertyList>
+												<Property Name="CrossfadeDuration" Type="Real64" Value="1627.579"/>
+												<Property Name="LoopBegin" Type="Real64" Value="1.09287006391478"/>
+												<Property Name="LoopEnd" Type="Real64" Value="119.248275492285"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.910112110481758"/>
+												<Property Name="TrimEnd" Type="Real64" Value="119.604638538508"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>WAVES\Amb_Forest_dayligth.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="524129632"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Amb_Forest_dayligth" ID="{59BA3260-6D1E-4116-9263-2590B599F151}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Calm wind in pine tree forest_2_0" ID="{9EC0D9C7-2441-47B7-8D62-B5393CF555B3}" ShortID="407847889">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCA1DF01-6F8C-472F-B87F-732CAB749F66}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F084C6E1-E0BE-4549-96E1-9AF9BA3B6675}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Ambience" ID="{16AD0671-6877-424A-AAF9-54AE83825028}">
+											<Language>SFX</Language>
+											<AudioFile>Ambience.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="274960203"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Ambience" ID="{16AD0671-6877-424A-AAF9-54AE83825028}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists/>
+						</BlendContainer>
+						<Sound Name="medieval-city-sample" ID="{0ED64093-2245-40AB-9180-F8D682FCB781}" ShortID="656406301">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-16</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCA1DF01-6F8C-472F-B87F-732CAB749F66}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Ambience" ID="{93C9F602-B37C-4A21-927C-9D13D3012A8B}" WorkUnitID="{F084C6E1-E0BE-4549-96E1-9AF9BA3B6675}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="medieval-city-sample" ID="{BBE05D55-09DA-47AE-9D07-EADD74A9122E}">
+									<PropertyList>
+										<Property Name="CrossfadeDuration" Type="Real64" Value="602.252"/>
+										<Property Name="LoopBegin" Type="Real64" Value="0.501144247480014"/>
+										<Property Name="LoopEnd" Type="Real64" Value="28.1058398795041"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>medieval-city-sample.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="919259822"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="medieval-city-sample" ID="{BBE05D55-09DA-47AE-9D07-EADD74A9122E}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<BlendContainer Name="GrassLand" ID="{1B20DB19-B5C8-4ED9-9683-2EF41B8FD154}" ShortID="778932003">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCA1DF01-6F8C-472F-B87F-732CAB749F66}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F084C6E1-E0BE-4549-96E1-9AF9BA3B6675}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Amb_WIND" ID="{C90E067C-FD5B-4E10-963C-36A0EA2021B8}" ShortID="281065344">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DCA1DF01-6F8C-472F-B87F-732CAB749F66}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Ambience" ID="{93C9F602-B37C-4A21-927C-9D13D3012A8B}" WorkUnitID="{F084C6E1-E0BE-4549-96E1-9AF9BA3B6675}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Amb_WIND" ID="{643CD453-CF72-48C0-830E-1C56156018CF}">
+											<PropertyList>
+												<Property Name="CrossfadeDuration" Type="Real64" Value="782.147"/>
+												<Property Name="LoopBegin" Type="Real64" Value="5.87836758321274"/>
+												<Property Name="LoopEnd" Type="Real64" Value="44.4461939218524"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>WAVES\Amb_WIND.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="860002716"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Amb_WIND" ID="{643CD453-CF72-48C0-830E-1C56156018CF}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists/>
+						</BlendContainer>
+					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="Pause" ID="{D11B5343-91D3-4EF0-A32A-FE959B655B22}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="Off" ID="{E4415D89-828A-41EF-B041-44A21C89FF16}"/>
+								<CustomState Name="" ID="{4E4CFA3D-C344-45DC-BACD-471445E606ED}" ShortID="428988242"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="On" ID="{C0141CB5-6EC8-4D78-9C8B-EC6724AE3029}"/>
+								<CustomState Name="" ID="{6FE5648C-F01E-438B-85E5-EFD72A175E72}" ShortID="254304901">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16" Value="52"/>
+										<Property Name="MakeUpGain" Type="Real64" Value="-4"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
+					<ObjectLists/>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

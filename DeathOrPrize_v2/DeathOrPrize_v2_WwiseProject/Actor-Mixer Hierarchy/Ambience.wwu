@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{B3658681-0240-4FA9-881B-B69F39B68550}" SchemaVersion="103">
+<WwiseDocument Type="WorkUnit" ID="{B3658681-0240-4FA9-881B-B69F39B68550}" SchemaVersion="110">
 	<AudioObjects>
 		<WorkUnit Name="Ambience" ID="{B3658681-0240-4FA9-881B-B69F39B68550}" PersistMode="Standalone">
 			<PropertyList>
@@ -73,7 +73,6 @@
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
-									<ObjectLists/>
 									<ActiveSourceList>
 										<ActiveSource Name="Amb_Forest_dayligth" ID="{59BA3260-6D1E-4116-9263-2590B599F151}" Platform="Linked"/>
 									</ActiveSourceList>
@@ -104,13 +103,11 @@
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
-									<ObjectLists/>
 									<ActiveSourceList>
 										<ActiveSource Name="Ambience" ID="{16AD0671-6877-424A-AAF9-54AE83825028}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
-							<ObjectLists/>
 						</BlendContainer>
 						<Sound Name="medieval-city-sample" ID="{0ED64093-2245-40AB-9180-F8D682FCB781}" ShortID="656406301">
 							<PropertyList>
@@ -144,7 +141,6 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
-							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="medieval-city-sample" ID="{BBE05D55-09DA-47AE-9D07-EADD74A9122E}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -186,13 +182,11 @@
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
-									<ObjectLists/>
 									<ActiveSourceList>
 										<ActiveSource Name="Amb_WIND" ID="{643CD453-CF72-48C0-830E-1C56156018CF}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
-							<ObjectLists/>
 						</BlendContainer>
 					</ChildrenList>
 					<StateInfo>
@@ -217,7 +211,6 @@
 							</CustomState>
 						</CustomStateList>
 					</StateInfo>
-					<ObjectLists/>
 				</ActorMixer>
 			</ChildrenList>
 		</WorkUnit>

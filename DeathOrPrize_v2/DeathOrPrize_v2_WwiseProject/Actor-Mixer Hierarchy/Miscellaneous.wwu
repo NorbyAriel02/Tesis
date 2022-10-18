@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{81E63BD0-AB22-4615-8E4C-E3CCFAD3EEC7}" SchemaVersion="103">
+<WwiseDocument Type="WorkUnit" ID="{81E63BD0-AB22-4615-8E4C-E3CCFAD3EEC7}" SchemaVersion="110">
 	<AudioObjects>
 		<WorkUnit Name="Miscellaneous" ID="{81E63BD0-AB22-4615-8E4C-E3CCFAD3EEC7}" PersistMode="Standalone">
 			<PropertyList>
@@ -90,13 +90,11 @@
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
-									<ObjectLists/>
 									<ActiveSourceList>
 										<ActiveSource Name="DoP_ItemSell" ID="{729B3F7F-326A-484F-BE56-224683176087}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
-							<ObjectLists/>
 						</RandomSequenceContainer>
 						<Sound Name="DoP_ItemTrash" ID="{29EF3EBD-3C2B-4E31-B03A-4FC4C0DFAE59}" ShortID="9219434">
 							<PropertyList>
@@ -123,7 +121,6 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
-							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="DoP_ItemTrash" ID="{A02A3696-47A9-4F77-93B8-B0AE8381E5A6}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -160,7 +157,6 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
-							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="UI_dragtool_mousedown" ID="{5BF9385E-18CB-4412-B02B-5BCFD9A70DD0}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -205,7 +201,6 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
-							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="UI_dragtool_place" ID="{47B5F2E4-3674-4311-AD57-856B4214BB36}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -240,13 +235,11 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
-							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="DoP_ItemForge" ID="{4197B0B8-28B0-4A26-A2BE-B5446E47F841}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
-					<ObjectLists/>
 				</ActorMixer>
 			</ChildrenList>
 		</WorkUnit>

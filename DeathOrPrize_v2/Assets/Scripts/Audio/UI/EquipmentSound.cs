@@ -8,8 +8,8 @@ public class EquipmentSound : MonoBehaviour, IDropHandler
         if (eventData.pointerDrag != null)
         {
             Item i = eventData.pointerDrag.GetComponent<Item>();
-            if (i.properties.tItem == TypeItemInventory.Armor || i.properties.tItem == TypeItemInventory.Weapon)
-                AkSoundEngine.PostEvent("Item_Equip", this.gameObject);
+            //if (i.properties.typeItem == TypeItemInventory.Armor || i.properties.typeItem == TypeItemInventory.Weapon)
+            //    AkSoundEngine.PostEvent("Item_Equip", this.gameObject);
 
         }
     }

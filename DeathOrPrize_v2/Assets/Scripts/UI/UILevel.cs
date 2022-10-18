@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class UILevel : MonoBehaviour
 {
+    public string prefijo = "Level ";
     public Text textLevel;
     public Image experienceBarImage;
     private LevelSystem levelSystem;
@@ -15,6 +16,7 @@ public class UILevel : MonoBehaviour
     {
         LevelController.StartLevelSystem -= SetLevelSystem;
     }
+    
     private void SetExperienceBarSize(float experienceNormalized)
     {
         experienceBarImage.fillAmount = experienceNormalized;
@@ -22,7 +24,7 @@ public class UILevel : MonoBehaviour
 
     private void SetLevelNumber(int level)
     {
-        textLevel.text = "Level " + level;
+        textLevel.text = prefijo + level;
     }
 
     public void SetLevelSystem(LevelSystem levelSystem)

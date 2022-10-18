@@ -30,13 +30,13 @@ public class LevelMusic : MonoBehaviour
     }
     void City()
     {
-        AkSoundEngine.PostEvent("Play_City", this.gameObject);
-        AkSoundEngine.PostEvent("Amb_City", this.gameObject);
+        //AkSoundEngine.PostEvent("Play_City", this.gameObject);
+        //AkSoundEngine.PostEvent("Amb_City", this.gameObject);
     }
     void Battle()
     {
-        if(this.gameObject != null)
-            AkSoundEngine.PostEvent("Combat_Start", this.gameObject);
+        //if(this.gameObject != null)
+        //    AkSoundEngine.PostEvent("Combat_Start", this.gameObject);
     }
     void GamePlay(float x = 0f, float y = 0f)
     {
@@ -44,15 +44,15 @@ public class LevelMusic : MonoBehaviour
     }
     void GamePlay()
     {
-        AkSoundEngine.PostEvent("Play_Gameplay", this.gameObject);
-        AkSoundEngine.PostEvent("Amb_Forest", this.gameObject);
+        //AkSoundEngine.PostEvent("Play_Gameplay", this.gameObject);
+        //AkSoundEngine.PostEvent("Amb_Forest", this.gameObject);
     }
     void MenuOn()
     {
-        AkSoundEngine.PostEvent("Pausa_On", this.gameObject);
+        //AkSoundEngine.PostEvent("Pausa_On", this.gameObject);
     }
     void MenuOff()
     {
-        AkSoundEngine.PostEvent("Pausa_Off", this.gameObject);
+        //AkSoundEngine.PostEvent("Pausa_Off", this.gameObject);
     }
 }

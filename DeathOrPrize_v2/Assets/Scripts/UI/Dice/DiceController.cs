@@ -50,7 +50,7 @@ public class DiceController : MonoBehaviour
     }
     void GetNewValueDeci()
     {
-        AkSoundEngine.PostEvent("Throw_Dice", this.gameObject);
+        //AkSoundEngine.PostEvent("Throw_Dice", this.gameObject);
         currentValueDice = Random.Range(1, maxValueDice);
     }
     void SetInteractiveBtnDice()

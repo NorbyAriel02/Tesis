@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{2AFED437-10E1-465F-AB9A-2A5E27F72E99}" SchemaVersion="103">
+	<Events>
+		<WorkUnit Name="Music" ID="{2AFED437-10E1-465F-AB9A-2A5E27F72E99}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="26"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<Event Name="Play_Music" ID="{77993AE1-A670-4791-97A6-3E0C5E603B18}">
+					<ChildrenList>
+						<Action Name="" ID="{A5F9082A-7264-4B48-9AC5-CDC09182BB0A}" ShortID="227127056">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
+						<Action Name="" ID="{58E6A1D0-4B0E-47F4-B9CA-E89A560FBA0F}" ShortID="524863630">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Death Or price Music" ID="{CF5C73D8-0E2B-4F37-8726-7DDB029D99F8}" WorkUnitID="{1F7EC7EE-F9CF-49C4-93AC-DB599DCADDED}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{2FF46083-F88C-42B3-8A19-9A70400777E6}" ShortID="753948074">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="None" ID="{8FDA0FE8-C977-4510-BE3A-B377BC3DB025}" WorkUnitID="{49F95D5D-FD51-4604-BAC8-6C411B8E9111}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{96E2DD7C-E0A9-457E-9F4E-49746B762477}" ShortID="309888406">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Death Or price Music" ID="{CF5C73D8-0E2B-4F37-8726-7DDB029D99F8}" WorkUnitID="{1F7EC7EE-F9CF-49C4-93AC-DB599DCADDED}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Combat_Start" ID="{25A1824F-1B00-4DFA-A049-61DD6BE92166}">
+					<ChildrenList>
+						<Action Name="" ID="{8BDC449A-A311-4F55-974C-E128D25983E1}" ShortID="611226533">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Forest" ID="{1CC22651-0DF8-41CD-89F0-5D43CDCEA2EE}" WorkUnitID="{B3658681-0240-4FA9-881B-B69F39B68550}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{8B1E5550-2AB3-4793-A96C-AF5A62483609}" ShortID="224558770">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Combat" ID="{109EB317-7F35-4F1C-A7EA-B35E30340A04}" WorkUnitID="{49F95D5D-FD51-4604-BAC8-6C411B8E9111}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Gameplay" ID="{BC839B8C-02AA-4E32-BFD6-0DBAA1CE2994}">
+					<ChildrenList>
+						<Action Name="" ID="{ECC3188D-3C27-4661-83F7-0C369268106B}" ShortID="820379841">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="medieval-city-sample" ID="{0ED64093-2245-40AB-9180-F8D682FCB781}" WorkUnitID="{B3658681-0240-4FA9-881B-B69F39B68550}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{0306C350-D448-477B-8D68-2ED35605FB14}" ShortID="80532340">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Gameplay" ID="{13CC7356-818C-4196-9659-68455C95CCD2}" WorkUnitID="{49F95D5D-FD51-4604-BAC8-6C411B8E9111}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{66AA48EA-2F91-47F1-A936-B34C396FEE3B}" ShortID="853661228">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Amb_Forest" ID="{BF65778B-4B4A-400B-8FF0-9533895187C0}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Menu" ID="{F4AEF97F-3F6C-4023-9A90-DEE82F2AEBFB}">
+					<ChildrenList>
+						<Action Name="" ID="{49F5B55E-3912-4BC6-8B29-9E55CCE8167D}" ShortID="715930947">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Menu" ID="{10CA2C0A-F4B2-420F-A11D-882D390B5B65}" WorkUnitID="{49F95D5D-FD51-4604-BAC8-6C411B8E9111}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_City" ID="{DC584D2C-7E31-4B16-973D-47D41B59461B}">
+					<ChildrenList>
+						<Action Name="" ID="{403EA4E3-D907-4FBA-8AE8-B42CA027B590}" ShortID="221736492">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Forest" ID="{1CC22651-0DF8-41CD-89F0-5D43CDCEA2EE}" WorkUnitID="{B3658681-0240-4FA9-881B-B69F39B68550}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{8BA4F2BF-2D02-4E30-B364-17F7032A1D2A}" ShortID="1000668370">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="City" ID="{628FD47E-06BB-482B-ADA4-B465943749FB}" WorkUnitID="{49F95D5D-FD51-4604-BAC8-6C411B8E9111}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{67679E9E-839E-4E01-AD6C-8DE9F1CAE3A0}" ShortID="224208574">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Amb_City" ID="{B28BF321-661A-4DD4-8D5F-E2823325AE08}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

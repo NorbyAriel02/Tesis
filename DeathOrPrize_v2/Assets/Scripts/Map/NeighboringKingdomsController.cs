@@ -5,7 +5,9 @@ using UnityEngine.UI;
 
 public class NeighboringKingdomsController : MonoBehaviour
 {
-    public Text textReino;    
+    public delegate void KingdomChange(int id);
+    public static KingdomChange OnKingdomChange;
+    
     private DataFileController fileController = new DataFileController();
     private List<KingdomModel> listKingdomNeighbor;    
     private LoadMaps loadMaps;
@@ -27,26 +29,22 @@ public class NeighboringKingdomsController : MonoBehaviour
     }
     public void LoadMapNorth()
     {
-        kingdom.idKingdom = listKingdomNeighbor[kingdom.idKingdom - 1].NorthernNeighbor;
-        textReino.text = "Reino " + kingdom.idKingdom;
+        kingdom.idKingdom = listKingdomNeighbor[kingdom.idKingdom - 1].NorthernNeighbor;    
         loadMaps.LoadGrid(kingdom.idKingdom);         
     }
     public void LoadMapSouth()
     {
-        kingdom.idKingdom = listKingdomNeighbor[kingdom.idKingdom - 1].SouthNeighbor;
-        textReino.text = "Reino " + kingdom.idKingdom;
+        kingdom.idKingdom = listKingdomNeighbor[kingdom.idKingdom - 1].SouthNeighbor;        
         loadMaps.LoadGrid(kingdom.idKingdom);
     }
     public void LoadMapEast()
     {
-        kingdom.idKingdom = listKingdomNeighbor[kingdom.idKingdom-1].EastNeighbor;
-        textReino.text = "Reino " + kingdom.idKingdom;
+        kingdom.idKingdom = listKingdomNeighbor[kingdom.idKingdom-1].EastNeighbor;        
         loadMaps.LoadGrid(kingdom.idKingdom);
     }
     public void LoadMapWest()
     {
-        kingdom.idKingdom = listKingdomNeighbor[kingdom.idKingdom-1].WestNeighbor;
-        textReino.text = "Reino " + kingdom.idKingdom;
+        kingdom.idKingdom = listKingdomNeighbor[kingdom.idKingdom-1].WestNeighbor;        
         loadMaps.LoadGrid(kingdom.idKingdom);
     }
 
@@ -67,7 +65,8 @@ public class NeighboringKingdomsController : MonoBehaviour
             case 3:
                 LoadMapSouth();
                 break;
-        }        
+        }
+        OnKingdomChange?.Invoke(CellLimitId);
     }
     void Test()
     {
@@ -87,9 +86,5 @@ public class NeighboringKingdomsController : MonoBehaviour
         {
             LoadMapNorth();
         }
-    }
-    void Update()
-    {
-        Test();
     }
 }

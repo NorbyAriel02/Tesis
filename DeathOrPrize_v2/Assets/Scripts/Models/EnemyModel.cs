@@ -7,7 +7,8 @@ public class EnemyModel
     public int y;
     public float attackSpeed = 5;
     public float damage = 5;
-    public float defending = 5;
-    public float health = 25;
+    public float armor = 5;
+    public float currentHealth = 25;
+    public float maxHealth = 25;
     public int level = 1;
 }

@@ -4,22 +4,21 @@ using UnityEngine;
 
 public class ViewHelper
 {
-    public static void ShowItemsMarket(GameObject[] _Slots, GameObject prefabItem)
+    public static void ShowItemsMarket(GameObject[] _Slots, GameObject[] prefabItem)
     {
-        List<ItemProperties> items = DataHelper.GetListMarket();
+        List<ItemModel> items = DataHelper.GetListMarket();
         ShowItems(_Slots, prefabItem, items);
     }
-    public static void ShowItemsEquip(GameObject[] _Slots, GameObject prefabItem)
+    public static void ShowItemsEquip(GameObject[] _Slots, GameObject[] prefabItem)
     {
-        List<ItemProperties> items = DataHelper.GetListEquip();
+        List<ItemModel> items = DataHelper.GetListEquip();
         ShowItems(_Slots, prefabItem, items);
     }
-    public static void ShowItemsInventory(GameObject[] _Slots, GameObject prefabItem)
+    public static void ShowItemsInventory(GameObject[] _Slots, GameObject[] prefabItem)
     {
         try
-        {
-            Logger.WriteLog("Hola desde la builda");
-            List<ItemProperties> items = DataHelper.GetListInventory();
+        {            
+            List<ItemModel> items = DataHelper.GetListInventory();
             ShowItems(_Slots, prefabItem, items);
         }
         catch (System.Exception ex)
@@ -27,12 +26,12 @@ public class ViewHelper
             Logger.WriteLog(ex.Message);
         }
     }
-    public static void ShowItems(GameObject[] _Slots, GameObject prefabItem, string dataFile)
+    public static void ShowItems(GameObject[] _Slots, GameObject[] prefabItem, string dataFile)
     {
-        List<ItemProperties> items = DataHelper.GetItems(dataFile);
+        List<ItemModel> items = DataHelper.GetItems(dataFile);
         ShowItems(_Slots, prefabItem, items);
     }
-    private static void ShowItems(GameObject[] _Slots, GameObject prefabItem, List<ItemProperties> items)
+    private static void ShowItems(GameObject[] _Slots, GameObject[] prefabItem, List<ItemModel> items)
     {
         
             EmptySlots(_Slots);
@@ -40,7 +39,7 @@ public class ViewHelper
             if (items == null)
                 return;
 
-            foreach (ItemProperties item in items)
+            foreach (ItemModel item in items)
             {
                 int index = -1;
                 if (item.IndexSlot != -1 && IsIndexSlotEmpty(item.IndexSlot, _Slots))
@@ -48,7 +47,15 @@ public class ViewHelper
                 else
                     index = GetIndexSlotEmpty(_Slots);
 
-                GameObject gItem = GameObject.Instantiate(prefabItem, _Slots[index].transform);
+                GameObject gItem = null;
+                if(item.IsStackable)
+                {
+                    gItem = GameObject.Instantiate(prefabItem[1], _Slots[index].transform);
+                }
+                else
+                {
+                    gItem = GameObject.Instantiate(prefabItem[0], _Slots[index].transform);
+                }                
                 _Slots[index].GetComponent<BaseSlot>().empty = false;
                 _Slots[index].GetComponent<BaseSlot>().Item = gItem;
                 item.IndexSlot = index;

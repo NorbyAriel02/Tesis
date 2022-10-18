@@ -170,10 +170,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -212,6 +214,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -799,9 +802,34 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Biome8_3: 7161479654217763615
+      Biome8_11: -5816276565004941672
+      Biome8_10: 3679946088336121649
+      Biome8_13: 5711301337565828143
+      Biome8_14: 4863892782783157426
+      Biome8_17: -6174257247217761628
+      Biome8_2: -9140011610608223975
+      Biome8_0: -39183238860541879
+      Biome8_9: -4209699021534347761
+      Biome8_6: -4775980696383540693
+      Biome8_24: 383968838639145810
+      Biome8_12: 2426467834347158324
+      Biome8_15: -5351142466567793930
+      Biome8_20: -8499517310962995912
+      Biome8_7: -8523808415872035220
+      Biome8_5: 1822036266161826058
+      Biome8_16: -3668524549023531366
+      Biome8_18: -8636471092247966403
+      Biome8_8: 574903379233511458
+      Biome8_19: -2021139767441802230
+      Biome8_23: -6812084873249099875
+      Biome8_22: -5659579841191127797
+      Biome8_4: 3894135535490336722
+      Biome8_21: -4214742876798781748
+      Biome8_1: 7216765712271422954
   spritePackingTag: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

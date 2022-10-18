@@ -6,7 +6,7 @@ public class Cell : MonoBehaviour
 {
     public delegate bool CanAction();
     public static CanAction IsCellAction;
-    public delegate void InCell();
+    public delegate void InCell(int index);
     public static InCell OnPlayerInCell;
     public delegate void Action(int i);
     public static Action OnAction;
@@ -28,12 +28,15 @@ public class Cell : MonoBehaviour
     }
     public virtual void StartVar()
     {   
-        battleManager = GetScript.Type<IdleBattleManager>("Battle", this.name);        
+        //battleManager = GetScript.Type<IdleBattleManager>("Battle", this.name);        
     }
     public virtual void ActionCell()
     {
         if (!HasMovements)
-            battleManager.StartBattle(index);        
+        {
+            OnPlayerInCell?.Invoke(index);
+            //battleManager.StartBattle(index);
+        }            
     }
     public bool HasMovements
     {

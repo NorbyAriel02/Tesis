@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{77CC5426-1514-41C3-A6C5-F81161621419}" SchemaVersion="103">
+<WwiseDocument Type="WorkUnit" ID="{77CC5426-1514-41C3-A6C5-F81161621419}" SchemaVersion="110">
 	<AudioObjects>
 		<WorkUnit Name="Enemy" ID="{77CC5426-1514-41C3-A6C5-F81161621419}" PersistMode="Standalone">
 			<PropertyList>

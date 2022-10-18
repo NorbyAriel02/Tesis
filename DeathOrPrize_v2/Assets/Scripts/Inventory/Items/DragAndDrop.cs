@@ -40,7 +40,7 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IDragHandler, IEn
 
         transform.SetParent(fatherMaster);
 
-        RemoveItemFromList(item.properties);
+        RemoveItemFromList(item.item);
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -55,7 +55,7 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IDragHandler, IEn
             if (transform.parent.gameObject.GetComponent<BaseSlot>() != null)
                 transform.parent.gameObject.GetComponent<BaseSlot>().empty = false;
         }
-        AddItemToList(item.properties);
+        AddItemToList(item.item);
         OnMoveItem?.Invoke();
     }
     public void OnDrag(PointerEventData eventData)
@@ -66,11 +66,11 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IDragHandler, IEn
     {
         //gameObject.SetActive(false);
     }
-    void RemoveItemFromList(ItemProperties item)
+    void RemoveItemFromList(ItemModel item)
     {
         DataHelper.RemoveItemList(item);
     }
-    void AddItemToList(ItemProperties item)
+    void AddItemToList(ItemModel item)
     {
         DataHelper.AddItemList(item);
     }

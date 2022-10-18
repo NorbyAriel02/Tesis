@@ -96,6 +96,15 @@ public class PathHelper {
             return GetPlatformPath(FilePath);
         }
     }
+    public static string SpriteFile
+    {
+        get
+        {
+            string FilePath = MyAppConfig.SpriteFile;
+
+            return GetPlatformPath(FilePath);
+        }
+    }
     public static string CSVQuestDataFile
     {
         get

@@ -12,7 +12,15 @@ public class InventoryUI : MonoBehaviour
     public KeyCode keyInventory;
     public GameObject inventory;
     public Animator animator;
-    
+    private void OnEnable()
+    {
+        HUDController.OnInventoryOpenOrClose += OpenOrClose;
+    }
+    private void OnDisable()
+    {
+        HUDController.OnInventoryOpenOrClose -= OpenOrClose;
+    }
+
     void Start()
     {
         inventory.SetActive(false);

@@ -20,7 +20,7 @@ public class BattleSound : MonoBehaviour
     }
     void Battle()
     {
-        AkSoundEngine.PostEvent("Combat_Start", this.gameObject);
+        //AkSoundEngine.PostEvent("Combat_Start", this.gameObject);
     }
     // Update is called once per frame
     void Update()

@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}" SchemaVersion="103">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Ambience" ID="{98F3C2E8-C8BE-41CE-9855-9469267F3516}" ShortID="790472022">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="10"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Event Name="Amb_City" ID="{B28BF321-661A-4DD4-8D5F-E2823325AE08}">
+							<ChildrenList>
+								<Action Name="" ID="{3C6FA0F4-93B7-47BC-A22D-B92744F0AC62}" ShortID="594932793">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="medieval-city-sample" ID="{0ED64093-2245-40AB-9180-F8D682FCB781}" WorkUnitID="{B3658681-0240-4FA9-881B-B69F39B68550}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Amb_Forest" ID="{BF65778B-4B4A-400B-8FF0-9533895187C0}">
+							<ChildrenList>
+								<Action Name="" ID="{61A39E31-784F-4E08-940C-9720B0C8AE48}" ShortID="213373693">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Forest" ID="{1CC22651-0DF8-41CD-89F0-5D43CDCEA2EE}" WorkUnitID="{B3658681-0240-4FA9-881B-B69F39B68550}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Player" ID="{C2DC2FE8-923A-4118-9CA1-CD5525B48FAF}" ShortID="747834697">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="2"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Event Name="Player_Move" ID="{C4F9748B-891C-44BE-8D89-05FE27BDAADF}">
+							<ChildrenList>
+								<Action Name="" ID="{544FA629-144F-46A3-BCE4-F3FE258193CA}" ShortID="862248520">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Move foward" ID="{81CDAEE3-A944-4777-9182-83FD32A8544D}" WorkUnitID="{7F3C75E3-B15C-45EE-B5F1-E000DDC6DB97}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Hit_Sword_Enemy" ID="{8C01F106-D472-4909-A640-F935485D3332}">
+							<ChildrenList>
+								<Action Name="" ID="{2FE4B066-5359-40A4-B3F3-5C9ACE2618F1}" ShortID="831496894">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Hit_Sword_enemy" ID="{F50E0167-3D05-4F1C-9607-0C175AFD87F3}" WorkUnitID="{7F3C75E3-B15C-45EE-B5F1-E000DDC6DB97}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Player_GetClawsDamage" ID="{188AD642-EFFC-4A6E-8B62-7390C39C3FB2}">
+							<ChildrenList>
+								<Action Name="" ID="{DB3812BB-D9E8-4343-81A7-FC98DF361E88}" ShortID="190578161">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Get_Damage" ID="{CD4C1287-7A7A-4A9A-89E0-087D758E1F0A}" WorkUnitID="{7F3C75E3-B15C-45EE-B5F1-E000DDC6DB97}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{9195CF1A-5E4A-4CFD-88D7-80B81E7C4F47}" ShortID="85259330">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Monster_Attack" ID="{BE0F8E1F-B900-4AFE-86F5-A4776AA6C5E0}" WorkUnitID="{F1DB5054-C665-4254-8891-376B2C7010A6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Field_Ok" ID="{B4E12758-13EE-4B53-A199-21D76D5126C7}"/>
+						<Event Name="Field_Error" ID="{5D79E7CB-56F8-43EA-B68F-8864115E302E}">
+							<ChildrenList>
+								<Action Name="" ID="{B8040F58-9531-41DB-88FB-37658DB97A27}" ShortID="280777731">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Error_seleecion" ID="{81EE17E1-1A4D-46F8-A3C2-8FE4337461D2}" WorkUnitID="{7F3C75E3-B15C-45EE-B5F1-E000DDC6DB97}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Throw_Dice" ID="{2F30D40F-315C-4791-A88B-1EC8426606AA}">
+							<ChildrenList>
+								<Action Name="" ID="{F0C5D92F-B909-40A4-B3D9-5E157C88FF78}" ShortID="837967426">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="FX_Dados" ID="{7DF10589-E3F0-4CE3-953B-7E598C271FD8}" WorkUnitID="{7F3C75E3-B15C-45EE-B5F1-E000DDC6DB97}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Player_Dead" ID="{31843B21-1D86-42BE-918A-907596990997}"/>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Enemys" ID="{DCBBFF13-7B61-4958-A141-BF58E46B02A9}" ShortID="348455301">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="12"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Event Name="Defeated_Wolf" ID="{7BDABDBC-2EDD-4C75-BD46-8ED31297BD41}">
+							<ChildrenList>
+								<Action Name="" ID="{D1C722A2-B5F9-4A23-95AA-A3EB44818CA3}" ShortID="309396802">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Defeated_Wolf" ID="{61E804F5-C13C-4BAB-8CD9-C28223AAAD9D}" WorkUnitID="{F1DB5054-C665-4254-8891-376B2C7010A6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Defeated_Boss" ID="{307E7AE1-EE03-44A7-B276-CB4FB2E61313}"/>
+						<Event Name="Defeated_Bear" ID="{A33AF27B-074F-45BE-8D19-9160161F1EB9}">
+							<ChildrenList>
+								<Action Name="" ID="{17912244-20F9-4438-9C5D-423A509E7710}" ShortID="278097188">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Defeated_Bear" ID="{1AFCED68-B7F8-47C5-8C85-FCBD6133D93C}" WorkUnitID="{F1DB5054-C665-4254-8891-376B2C7010A6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Pain_Wolf" ID="{2227881C-0FC4-45FA-9458-D96431B654A9}">
+							<ChildrenList>
+								<Action Name="" ID="{1D937F05-F45C-4740-9E38-7F1E719DE2DE}" ShortID="505825666">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Pain_wolf" ID="{33EBD00B-9E64-4A04-8CF8-A4AF8337550B}" WorkUnitID="{F1DB5054-C665-4254-8891-376B2C7010A6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{D38C3DDC-1574-4FAB-8098-262CA3F56F94}" ShortID="661050394">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Hit_Sword_enemy" ID="{F50E0167-3D05-4F1C-9607-0C175AFD87F3}" WorkUnitID="{7F3C75E3-B15C-45EE-B5F1-E000DDC6DB97}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Pain_Bear" ID="{54FE987A-B3E5-4322-9D86-0BACF57F2C70}">
+							<ChildrenList>
+								<Action Name="" ID="{FEDC6853-7EB4-4ED1-B798-9D21F1F6172E}" ShortID="36727332">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Pain_Bear" ID="{95B5BF0D-A1C8-44AD-A565-E56DA4B571BD}" WorkUnitID="{F1DB5054-C665-4254-8891-376B2C7010A6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{92412C6B-0CCE-450C-A85F-6DD4461A39C1}" ShortID="142650550">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Hit_Sword_enemy" ID="{F50E0167-3D05-4F1C-9607-0C175AFD87F3}" WorkUnitID="{7F3C75E3-B15C-45EE-B5F1-E000DDC6DB97}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Pain_Boss" ID="{F1A1D095-88D7-426C-B887-9219CFA652C7}"/>
+						<Event Name="Grunt_Wolf" ID="{CF6BCFA6-2301-41B5-9BC0-D0FAAEF52838}">
+							<ChildrenList>
+								<Action Name="" ID="{33355E21-4049-48F1-AA53-F263CD4A0F06}" ShortID="602150865">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Monster_Grunt" ID="{7CDCC1C6-4B61-4154-995E-A068E55C44BC}" WorkUnitID="{F1DB5054-C665-4254-8891-376B2C7010A6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Grunt_Bear" ID="{50D3AFB0-D3F1-49AA-B17B-5E1B4B9F34E8}">
+							<ChildrenList>
+								<Action Name="" ID="{EE493961-B375-44E8-BBA9-85EECC077407}" ShortID="793915602">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Monster_Grunt" ID="{7CDCC1C6-4B61-4154-995E-A068E55C44BC}" WorkUnitID="{F1DB5054-C665-4254-8891-376B2C7010A6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Grunt_Boss" ID="{5EB3936C-D997-4DF2-AE2B-F18D43801415}"/>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="UI" ID="{92794AB5-C3B1-4DAB-A911-B51C2439C700}" ShortID="1062878688">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="19"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Event Name="UI_Click" ID="{9129C108-8BCC-4622-B996-7658F3458CD2}">
+							<ChildrenList>
+								<Action Name="" ID="{9D215699-4A53-49BC-BFAC-9224CEB00A58}" ShortID="992011786">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_Button_Click" ID="{8297399D-5046-4DF1-B48C-E7D2EB78E1E0}" WorkUnitID="{9DCF080A-E3C0-436B-882C-EF076FC18B1D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="UI_Exit" ID="{957819AB-4C6F-4495-889D-0E4846E65F7A}">
+							<ChildrenList>
+								<Action Name="" ID="{1601A6AD-7491-4C6B-91CD-56B8736550A1}" ShortID="551742935">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_Button_Exit" ID="{47287558-A904-4940-A62B-75CEDC0429E7}" WorkUnitID="{9DCF080A-E3C0-436B-882C-EF076FC18B1D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="UI_ButtonHover" ID="{754F5B96-6FE6-46F4-B053-F112BC19B3DF}">
+							<ChildrenList>
+								<Action Name="" ID="{F20A4D89-E3E2-4CD3-8BAE-99C6C630DE45}" ShortID="1040634047">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_Buttonhover" ID="{4E9DAFDB-BC55-47BC-8F26-DE90337DD220}" WorkUnitID="{9DCF080A-E3C0-436B-882C-EF076FC18B1D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Miscellaneous" ID="{980E7DB7-CCAF-40F4-94C1-0F69E8099335}" ShortID="126279983">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="8"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Event Name="Item_Move" ID="{78ECF932-6875-401E-A9F3-1E791E13BD96}">
+							<ChildrenList>
+								<Action Name="" ID="{0525005E-9B95-4DFD-9A4E-9F4F9FFE85CF}" ShortID="853692130">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Item_Move" ID="{957A4304-A962-4F01-A144-4420692CCF93}" WorkUnitID="{81E63BD0-AB22-4615-8E4C-E3CCFAD3EEC7}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Item_Trash" ID="{2A20A742-6173-4B59-88DE-C5F37C29A482}">
+							<ChildrenList>
+								<Action Name="" ID="{2FB8410D-BCDD-4500-95C9-63308633CB6C}" ShortID="431380654">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="DoP_ItemTrash" ID="{29EF3EBD-3C2B-4E31-B03A-4FC4C0DFAE59}" WorkUnitID="{81E63BD0-AB22-4615-8E4C-E3CCFAD3EEC7}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Item_Sell" ID="{722E4DCF-CD5D-4236-8845-CB392906C0A6}">
+							<ChildrenList>
+								<Action Name="" ID="{EC3AEE35-8419-4695-855A-24286A7A1A11}" ShortID="867981806">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="DoP_ItemSell" ID="{5D3D4EFF-C1A4-40FF-8602-29F1EB62EB53}" WorkUnitID="{81E63BD0-AB22-4615-8E4C-E3CCFAD3EEC7}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Item_Forge" ID="{30AC29BE-1EB5-4857-824A-4B8561DB1C2E}">
+							<ChildrenList>
+								<Action Name="" ID="{A71F8228-B016-4C38-A481-7D657A2C2589}" ShortID="385087203">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ItemForge" ID="{DEFBF97C-B48F-418B-8011-D9CBC4A61236}" WorkUnitID="{81E63BD0-AB22-4615-8E4C-E3CCFAD3EEC7}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Item_Equip" ID="{807905AA-9FD7-42B5-8411-E6C84494DE10}">
+							<ChildrenList>
+								<Action Name="" ID="{B36B5CE8-F3A3-4DAC-BED3-6D40D81DA7C0}" ShortID="473896691">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Item_Equip" ID="{1F829751-A8AF-4F6C-ADE2-A2F0281F118B}" WorkUnitID="{81E63BD0-AB22-4615-8E4C-E3CCFAD3EEC7}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Game Engine" ID="{840602DE-6490-4C97-8872-1AE5A97963A9}" ShortID="484324298">
+					<ChildrenList>
+						<Event Name="Game_Start" ID="{984B5CFB-2799-4BED-8448-513B9FF43183}">
+							<Comment>Evento al comienzo de todo el codigo
+</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{069CF0C9-6703-415E-947F-A2479B22D1DC}" ShortID="999505839">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="3"/>
+									</PropertyList>
+									<ReferenceList/>
+								</Action>
+								<Action Name="" ID="{38BC3B74-DF99-4EB7-AC67-7B30A0CE1779}" ShortID="830158269">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="None" ID="{8FDA0FE8-C977-4510-BE3A-B377BC3DB025}" WorkUnitID="{49F95D5D-FD51-4604-BAC8-6C411B8E9111}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Folder Name="Pause" ID="{39302722-DCC0-4C79-9BC9-9C0F1AC49ECF}" ShortID="846899447">
+							<ChildrenList>
+								<Event Name="Pausa_Off" ID="{812ECF9A-033C-446A-9845-AF59FA0D8D6F}">
+									<ChildrenList>
+										<Action Name="" ID="{92703597-8977-4E31-99BA-E152C06B84FC}" ShortID="457271829">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="22"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Off" ID="{E4415D89-828A-41EF-B041-44A21C89FF16}" WorkUnitID="{20275C91-C030-470E-8B87-2C280EA5DB06}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Pausa_On" ID="{E5E9A2EF-30B1-4B73-8D92-398297165A7F}">
+									<ChildrenList>
+										<Action Name="" ID="{1E0331A1-B796-487D-B477-5E54243C2942}" ShortID="716802557">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="22"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="On" ID="{C0141CB5-6EC8-4D78-9C8B-EC6724AE3029}" WorkUnitID="{20275C91-C030-470E-8B87-2C280EA5DB06}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

@@ -5,14 +5,14 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 
-public enum TypeSlot { SlotInventory, SlotWeapon, SlotArmor, NoDropSlot }
+
 public class Slot : MonoBehaviour, IDropHandler
 {
-    public delegate void EquipedArmor(ItemProperties item);
+    public delegate void EquipedArmor(ItemModel item);
     public static EquipedArmor OnEquipedArmor;
-    public delegate void EquipedWeapon(ItemProperties item);
+    public delegate void EquipedWeapon(ItemModel item);
     public static EquipedWeapon OnEquipedWeapon;
-    public delegate void MoveItem(ItemProperties item);
+    public delegate void MoveItem(ItemModel item);
     public static MoveItem OnMoveItem;
     
     public GameObject Item;
@@ -46,39 +46,39 @@ public class Slot : MonoBehaviour, IDropHandler
         if (eventData.pointerDrag != null)
         {
             Item i = eventData.pointerDrag.GetComponent<Item>();     
-            if (this.empty && !cancelar && ValidateTypeSlot(i.properties))
-            {
-                this.empty = false;
-                Destroy(eventData.pointerDrag.gameObject);
-            }
+            //if (this.empty && !cancelar && ValidateTypeSlot(i.properties))
+            //{
+            //    this.empty = false;
+            //    Destroy(eventData.pointerDrag.gameObject);
+            //}
         }        
     }
     
-    bool ValidateTypeSlot(ItemProperties item)
+    bool ValidateTypeSlot(ItemModel item)
     {
-        if (tSlot == TypeSlot.NoDropSlot)
-            return false;
+        //if (tSlot == TypeSlot.NoDropSlot)
+        //    return false;
 
-        if (tSlot == TypeSlot.SlotArmor && item.tItem == TypeItemInventory.Armor)
-        {            
-            item.IndexSlot = this.ID;
-            OnEquipedArmor?.Invoke(item);
-            return true;
-        }      
+        //if (tSlot == TypeSlot.SlotArmor && item.typeItem == TypeItemInventory.Armor)
+        //{            
+        //    item.IndexSlot = this.ID;
+        //    OnEquipedArmor?.Invoke(item);
+        //    return true;
+        //}      
 
-        if (tSlot == TypeSlot.SlotWeapon && item.tItem == TypeItemInventory.Weapon)
-        {
-            item.IndexSlot = this.ID;
-            OnEquipedWeapon?.Invoke(item);
-            return true;
-        }
+        //if (tSlot == TypeSlot.SlotWeapon && item.typeItem == TypeItemInventory.Weapon)
+        //{
+        //    item.IndexSlot = this.ID;
+        //    OnEquipedWeapon?.Invoke(item);
+        //    return true;
+        //}
 
-        if (tSlot == TypeSlot.SlotInventory)
-        {
-            item.IndexSlot = this.ID;            
-            OnMoveItem?.Invoke(item);
-            return true;
-        }
+        //if (tSlot == TypeSlot.SlotInventory)
+        //{
+        //    item.IndexSlot = this.ID;            
+        //    OnMoveItem?.Invoke(item);
+        //    return true;
+        //}
 
         return false;
     }

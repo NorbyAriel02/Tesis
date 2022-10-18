@@ -5,7 +5,7 @@ public class MarketSlot : BaseSlot, IDropHandler
 {
     public delegate void EventSell();
     public static EventSell OnSell;
-    public override bool ActionSlot(ItemProperties item)
+    public override bool ActionSlot(ItemModel item)
     {  
         if(item.owner == Owner.player)
         {

@@ -8,7 +8,7 @@ public class LoadSlots : MonoBehaviour
     [Tooltip("Agrega el panel contenedor del inventario")]
     public GameObject panel;
     [Header("Prefeb del modelo item para inventario")]
-    public GameObject prefabItemTemplate;
+    public GameObject[] prefabItemTemplate;
     [Header("El Archivo donde se guardan los item que mostrara es controller")]
     public string dataFile = "default";
     private GameObject[] Slots;

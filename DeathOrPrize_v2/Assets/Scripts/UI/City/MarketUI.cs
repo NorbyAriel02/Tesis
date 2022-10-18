@@ -8,29 +8,18 @@ public class MarketUI : MonoBehaviour
     public delegate void Close();
     public static Close OnClose;
 
-    public GameObject panelMarket;
-    public GameObject panelMenu;
-    public Button btnExit;
-    public Text textCoins;
-    public bool IsClose;
-    private void OnEnable()
-    {
-        
-    }
-    private void OnDisable()
-    {
-       
-    }
+    public GameObject panelMarket;    
+    public Button btnExit;    
+    public bool IsClose;    
     void Start()
     {
         btnExit.onClick.AddListener(Exit);
-        panelMarket.SetActive(false);
+        //panelMarket.SetActive(false);
     }
     void Exit()
     {                
         IsClose = true;
-        panelMarket.SetActive(false);
-        panelMenu.SetActive(true);
+        panelMarket.SetActive(false);        
         OnClose?.Invoke();
     }
 }

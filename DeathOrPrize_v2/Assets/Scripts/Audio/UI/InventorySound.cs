@@ -20,14 +20,14 @@ public class InventorySound : MonoBehaviour
     }
     void MoveItem()
     {
-        AkSoundEngine.PostEvent("Item_Move", this.gameObject);
+        //AkSoundEngine.PostEvent("Item_Move", this.gameObject);
     }
     void OpenCloseInventory()
     {
-        AkSoundEngine.PostEvent("UI_Click", this.gameObject);
+        //AkSoundEngine.PostEvent("UI_Click", this.gameObject);
     }
     void Market()
     {
-        AkSoundEngine.PostEvent("Item_Sell", this.gameObject);
+        //AkSoundEngine.PostEvent("Item_Sell", this.gameObject);
     }
 }

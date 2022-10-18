@@ -23,9 +23,9 @@ public class CreateBossFile : MonoBehaviour
         {
             EnemyModel boss = new EnemyModel();
             boss.level = index;
-            boss.health = health * index;
+            boss.currentHealth = health * index;
             boss.damage = damage * index;
-            boss.defending = defending * index;
+            boss.armor = defending * index;
             boss.attackSpeed = Utilitis.AttackSpeed(index);
             bosses.Add(boss);
         }

@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class RoadCell : Cell
 {
-    public delegate void RoadDialogue();
+    public delegate void RoadDialogue(int diceRollNumber);
     public static RoadDialogue OnRoadDialogue;
     public delegate void RoadBattle();
     public static RoadBattle OnRoadBattle;
     
-    public Dialogue dialogs;
+    //public Dialogue dialogs;
     public DayNightCicle cicle;
     void Start()
     {
         cicle = GameObject.FindGameObjectWithTag("Game").GetComponent<DayNightCicle>();
-        dialogs = GameObject.FindGameObjectWithTag("Story").GetComponent<Dialogue>();
+        //dialogs = GameObject.FindGameObjectWithTag("Story").GetComponent<Dialogue>();
         StartVar();
     }
     public override void StartVar()
@@ -26,10 +26,18 @@ public class RoadCell : Cell
     {
         if (HasMovements)
             return;
-
+        
         if (cicle.IsDay)
-            dialogs.StartDialogue(cicle.diceRollNumber);
+            OnRoadDialogue?.Invoke(cicle.diceRollNumber);
         else
             base.ActionCell();
     }
+
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.tag.Equals("FacePlayer") && ClickMe)
+    //        ActionCell();
+
+    //    ClickMe = false;
+    //}
 }

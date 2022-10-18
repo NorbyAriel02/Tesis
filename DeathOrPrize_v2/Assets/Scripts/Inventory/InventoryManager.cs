@@ -9,7 +9,7 @@ public class InventoryManager : MonoBehaviour
     [Tooltip("Agrega el panel contenedor del inventario")]
     public GameObject viewInventory;    
     [Header("Prefeb del modelo item para inventario")]
-    public GameObject prefabItemTemplate;
+    public GameObject[] prefabItemTemplate;    
     private GameObject[] SlotsInventory;
     
     
@@ -38,45 +38,14 @@ public class InventoryManager : MonoBehaviour
                         
         ViewHelper.ShowItemsInventory(SlotsInventory, prefabItemTemplate);        
     }
-    private void ItemPickup(ItemProperties item)
+    private void ItemPickup(ItemModel item)
     {
         if (item.IndexSlot == -1 && SlotsInventory != null)
         {
             item.IndexSlot = ViewHelper.GetIndexSlotEmpty(SlotsInventory);
-            DataHelper.UpdateItemInventory(item);
+            DataHelper.AddItemInventory(item);
         }
 
         UpdateView();
     }
-    //void InventoryToInventory(ItemProperties item)
-    //{
-    //    //cambiar idex item        
-    //    DataHelper.UpdateItemInventory(item);
-    //    UpdateView();
-    //}
-    //void OnMoveItem(ItemProperties item)
-    //{
-    //    if (DataHelper.ItemExistsInInventory(item))
-    //        InventoryToInventory(item);
-    //    else
-    //        EquipToInventory(item);
-    //}
-    //void InventoryToEquip(ItemProperties item)
-    //{                
-    //    UpdateView();
-    //}
-    //void EquipToInventory(ItemProperties item)
-    //{
-    //    DataHelper.Unequip(item);
-    //    DataHelper.AddItemInventory(item);
-    //    UpdateView();
-    //}
-    //void InventoryToTrash(ItemProperties item)
-    //{
-    //    //Actualizar vista
-    //}
-    //void EquipToTrash(ItemProperties item)
-    //{
-    //    //Actualizar vista
-    //}
 }

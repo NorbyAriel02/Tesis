@@ -5,9 +5,9 @@ using UnityEngine;
 public class IdleBattleHelper 
 {
     static float oneSeg;
-    public static float GetRealDamage(float defending, float damage)
+    public static float GetRealDamage(float armor, float damage)
     {
-        float multi = 100 / (100 + defending);        
+        float multi = 100 / (100 + armor);        
         return damage * multi;
     }
 

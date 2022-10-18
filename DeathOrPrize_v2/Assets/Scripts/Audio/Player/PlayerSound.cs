@@ -25,7 +25,7 @@ public class PlayerSound : MonoBehaviour
     {
         for (int x = 0; x < dezplazamiento; x++)
         {            
-            AkSoundEngine.PostEvent("Player_Move", this.gameObject);            
+            //AkSoundEngine.PostEvent("Player_Move", this.gameObject);            
             yield return new WaitForSeconds(0.7f);
 
         }

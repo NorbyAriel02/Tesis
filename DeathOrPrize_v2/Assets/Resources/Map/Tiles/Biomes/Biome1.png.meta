@@ -170,10 +170,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -212,6 +214,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -799,9 +802,34 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Biome1_20: -4327376516960665949
+      Biome1_2: 8664951619880052728
+      Biome1_10: -4110579389477803984
+      Biome1_11: 942623497113864878
+      Biome1_12: -6695889935427916637
+      Biome1_16: 9114557242471493208
+      Biome1_0: -3651679317040884635
+      Biome1_13: 630491178639773158
+      Biome1_7: 5202302195528860247
+      Biome1_15: -8186667017040808889
+      Biome1_1: -8926011828718352042
+      Biome1_22: -9086586670938054721
+      Biome1_17: 591681531929916452
+      Biome1_8: -7466977858470277066
+      Biome1_21: 5969208632339359851
+      Biome1_14: 7996713892117125527
+      Biome1_24: 6501027013290893380
+      Biome1_18: 429271149399632965
+      Biome1_19: 500560213170433917
+      Biome1_23: -6906869933716696364
+      Biome1_3: 3991820094899048579
+      Biome1_5: -3381582014416072020
+      Biome1_4: -4384823453386679424
+      Biome1_6: -558450421634572873
+      Biome1_9: -97640472143364917
   spritePackingTag: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

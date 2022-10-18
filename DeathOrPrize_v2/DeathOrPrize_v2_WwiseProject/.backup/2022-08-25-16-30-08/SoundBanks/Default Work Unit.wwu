@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{49A85150-E558-48AB-A887-E3CE797407F9}" SchemaVersion="103">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{49A85150-E558-48AB-A887-E3CE797407F9}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Main" ID="{AC9FF129-1F8B-4A7E-BADC-F7929C50AD64}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Amb_Forest" ID="{BF65778B-4B4A-400B-8FF0-9533895187C0}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Item_Move" ID="{78ECF932-6875-401E-A9F3-1E791E13BD96}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Menu" ID="{F4AEF97F-3F6C-4023-9A90-DEE82F2AEBFB}" WorkUnitID="{2AFED437-10E1-465F-AB9A-2A5E27F72E99}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Grunt_Wolf" ID="{CF6BCFA6-2301-41B5-9BC0-D0FAAEF52838}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Item_Sell" ID="{722E4DCF-CD5D-4236-8845-CB392906C0A6}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Pain_Boss" ID="{F1A1D095-88D7-426C-B887-9219CFA652C7}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Item_Equip" ID="{807905AA-9FD7-42B5-8411-E6C84494DE10}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Player_Dead" ID="{31843B21-1D86-42BE-918A-907596990997}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Pain_Bear" ID="{54FE987A-B3E5-4322-9D86-0BACF57F2C70}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Field_Error" ID="{5D79E7CB-56F8-43EA-B68F-8864115E302E}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Pausa_Off" ID="{812ECF9A-033C-446A-9845-AF59FA0D8D6F}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="UI_Exit" ID="{957819AB-4C6F-4495-889D-0E4846E65F7A}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Defeated_Boss" ID="{307E7AE1-EE03-44A7-B276-CB4FB2E61313}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Player_Move" ID="{C4F9748B-891C-44BE-8D89-05FE27BDAADF}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Defeated_Bear" ID="{A33AF27B-074F-45BE-8D19-9160161F1EB9}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Pain_Wolf" ID="{2227881C-0FC4-45FA-9458-D96431B654A9}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="UI_Click" ID="{9129C108-8BCC-4622-B996-7658F3458CD2}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="UI_ButtonHover" ID="{754F5B96-6FE6-46F4-B053-F112BC19B3DF}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Throw_Dice" ID="{2F30D40F-315C-4791-A88B-1EC8426606AA}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Music" ID="{77993AE1-A670-4791-97A6-3E0C5E603B18}" WorkUnitID="{2AFED437-10E1-465F-AB9A-2A5E27F72E99}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Item_Forge" ID="{30AC29BE-1EB5-4857-824A-4B8561DB1C2E}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Hit_Sword_Enemy" ID="{8C01F106-D472-4909-A640-F935485D3332}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Grunt_Bear" ID="{50D3AFB0-D3F1-49AA-B17B-5E1B4B9F34E8}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Player_GetClawsDamage" ID="{188AD642-EFFC-4A6E-8B62-7390C39C3FB2}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_City" ID="{DC584D2C-7E31-4B16-973D-47D41B59461B}" WorkUnitID="{2AFED437-10E1-465F-AB9A-2A5E27F72E99}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Field_Ok" ID="{B4E12758-13EE-4B53-A199-21D76D5126C7}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Item_Trash" ID="{2A20A742-6173-4B59-88DE-C5F37C29A482}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Pausa_On" ID="{E5E9A2EF-30B1-4B73-8D92-398297165A7F}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Game_Start" ID="{984B5CFB-2799-4BED-8448-513B9FF43183}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Defeated_Wolf" ID="{7BDABDBC-2EDD-4C75-BD46-8ED31297BD41}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Amb_City" ID="{B28BF321-661A-4DD4-8D5F-E2823325AE08}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Grunt_Boss" ID="{5EB3936C-D997-4DF2-AE2B-F18D43801415}" WorkUnitID="{9DBC05CC-58F8-4239-A1CB-27584F9220EC}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Combat_Start" ID="{25A1824F-1B00-4DFA-A049-61DD6BE92166}" WorkUnitID="{2AFED437-10E1-465F-AB9A-2A5E27F72E99}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Gameplay" ID="{BC839B8C-02AA-4E32-BFD6-0DBAA1CE2994}" WorkUnitID="{2AFED437-10E1-465F-AB9A-2A5E27F72E99}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>
